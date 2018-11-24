@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>HardyDou</title>
+  <icon>https://www.gravatar.com/avatar/00cba6d8148c9a58d238d0ed338918c0</icon>
+  <subtitle>HardyDou&#39;blog</subtitle>
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="http://www.hardydou.com/"/>
+  <updated>2018-11-13T04:34:36.635Z</updated>
+  <id>http://www.hardydou.com/</id>
+  
+  <author>
+    <name>Hardy Dou</name>
+    <email>doouxiaoyu@163.com</email>
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>sss</title>
+    <link href="http://www.hardydou.com/2018/11/13/sss/"/>
+    <id>http://www.hardydou.com/2018/11/13/sss/</id>
+    <published>2018-11-13T04:34:36.000Z</published>
+    <updated>2018-11-13T04:34:36.635Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Hello World</title>
+    <link href="http://www.hardydou.com/2018/11/13/hello-world/"/>
+    <id>http://www.hardydou.com/2018/11/13/hello-world/</id>
+    <published>2018-11-13T04:29:55.722Z</published>
+    <updated>2018-11-13T04:29:55.722Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a
+        
+      
+    
+    </summary>
+    
+    
+  </entry>
+  
+</feed>
