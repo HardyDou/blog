@@ -1856,7 +1856,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #ffc3c3;
+  background: #c93774;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -2854,6 +2854,7 @@ ul.breadcrumb li+li:last-child {
   background: #fff;
   box-shadow: initial;
   border-radius: initial;
+  opacity: 0;
 }
 .sidebar-inner.affix {
   position: fixed;
