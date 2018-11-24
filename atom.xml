@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>HardyDou</title>
-  <icon>https://www.gravatar.com/avatar/00cba6d8148c9a58d238d0ed338918c0</icon>
+  
   <subtitle>HardyDou&#39;blog</subtitle>
   <link href="/atom.xml" rel="self"/>
   
@@ -11,7 +11,7 @@
   
   <author>
     <name>Hardy Dou</name>
-    <email>doouxiaoyu@163.com</email>
+    
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
