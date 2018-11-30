@@ -457,19 +457,24 @@
       
         
           
-            <ol>
-<li>凡事顺其自然。遇事之时泰然，成功之时淡然，失败之时坦然</li>
-<li>岁月本长，而亡者自促；天地本宽，而鄙者自隘；风花雪月本闲，而扰攘者自冗。</li>
-<li>风来疏竹，风过而竹不留声；雁渡寒潭，雁去而谭不留影。故君子事来而心始现，事去而心随空。</li>
-<li>鱼得水逝，而相忘乎水，鸟乘风飞，而不知有风。</li>
-<li>交友须带三分侠气，做人要存一点素心。</li>
-<li>邀千百人之欢，不如释一人之怨；希千百事之荣，不如免一事之丑。</li>
-<li>世态有炎凉，而我无嗔喜；世味有浓淡，而我无欣厌；</li>
-<li>觉人之诈，不形于言；受人之侮，不动于色。</li>
-<li>遍阅人情，始识疏狂之足贵；备尝世味，方知淡泊之为真。</li>
-</ol>
-
           
+凡事顺其自然。遇事之时泰然，成功之时淡然，失败之时坦然
+岁月本长，而亡者自促；天地本宽，而鄙者自隘；风花雪月本闲，而扰攘者自冗。
+风来疏竹，风过而竹不留声；雁渡寒潭，雁去而谭不留影。故君子事来而心始现，事去而心随空。
+鱼得水逝，而相忘乎水，鸟乘风飞，而不知有风。
+交友须带三分侠气，做人要存一点素心。
+邀千百人之欢，不如释一人之怨；希千百事之荣，不如免一事之丑。
+世态有炎凉，而我无嗔喜；世味有浓淡
+          ...
+          <!--noindex-->
+          
+            <div class="post-button text-center">
+              <a class="btn" href="/2018/11/30/人生处世/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          
+          <!--/noindex-->
         
       
     </div>
@@ -631,125 +636,31 @@
       
         
           
-            <h3 id="常见博客系统"><a href="#常见博客系统" class="headerlink" title="常见博客系统"></a>常见博客系统</h3><ol>
-<li>wordpress</li>
-<li>Zblog</li>
-<li>Typecho</li>
-<li>hexo</li>
-</ol>
-<h3 id="应该选择哪个"><a href="#应该选择哪个" class="headerlink" title="应该选择哪个"></a>应该选择哪个</h3><p>选择是恐惧的，所以我总在尝试进行降维选择。这里不会对几个主流博客进行一一对比了，问自己两个问题即可：</p>
-<ol>
-<li>工具：你喜欢用word写？还是用md语法写？</li>
-<li>成本：你准备投入多少钱？</li>
-</ol>
-<p>结论：</p>
-<ol>
-<li>工具选择md语法，别犹豫直接选择 hexo  因为可以是0成本</li>
-<li>工具选择word，别犹豫直接选择wordpress 成本为100+/年</li>
-<li>你想用word 又想降低成本，选择云平台：简书 等</li>
-</ol>
-<h3 id="搭建hexo平台"><a href="#搭建hexo平台" class="headerlink" title="搭建hexo平台"></a>搭建hexo平台</h3><h4 id="步骤概览"><a href="#步骤概览" class="headerlink" title="步骤概览"></a>步骤概览</h4><ol>
-<li>安装node</li>
-<li>安装git</li>
-<li>安装hexo</li>
-<li>注册 coding 账号</li>
-<li>注册 github 账号（非必须）</li>
-<li>买域名（非必须）</li>
-<li>开通云主机（非必须）</li>
-</ol>
-<h4 id="步骤拆解"><a href="#步骤拆解" class="headerlink" title="步骤拆解"></a>步骤拆解</h4><h5 id="安装node-已经安装的忽略"><a href="#安装node-已经安装的忽略" class="headerlink" title="安装node(已经安装的忽略)"></a>安装node(已经安装的忽略)</h5><ul>
-<li><p>MAC环境</p>
-<p>  <a href="https://brew.sh/index_zh-cn" target="_blank" rel="noopener">安装homebrew</a></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/usr/bin/ruby -e &quot;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)&quot;</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-<p><a href="https://nodejs.org/zh-cn/download/package-manager" target="_blank" rel="noopener">安装node</a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">brew install node</span><br></pre></td></tr></table></figure></p>
-<ul>
-<li><p>WIN环境</p>
-<p>  <a href="https://nodejs.org/zh-cn/download/package-manager" target="_blank" rel="noopener">安装node</a></p>
-</li>
-</ul>
-<h5 id="安装GIT"><a href="#安装GIT" class="headerlink" title="安装GIT"></a>安装GIT</h5><ul>
-<li><p>MAC环境</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">brew install git</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>WIN环境</p>
-<p>  <a href="https://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000/00137396287703354d8c6c01c904c7d9ff056ae23da865a000" target="_blank" rel="noopener">参考安装教程</a></p>
-</li>
-</ul>
-<h5 id="安装Hexo"><a href="#安装Hexo" class="headerlink" title="安装Hexo"></a>安装Hexo</h5><pre><code>npm install hexo-cli -g
-hexo init blog
-cd blog
-npm install
-hexo server
-</code></pre><p>浏览器打开 <a href="http://localhost:4000" target="_blank" rel="noopener">http://localhost:4000</a> 就可以访问你刚才安装的hexo了</p>
-<h5 id="搞定Coding环境"><a href="#搞定Coding环境" class="headerlink" title="搞定Coding环境"></a>搞定Coding环境</h5><ul>
-<li><a href="https://coding.net/" target="_blank" rel="noopener">注册</a></li>
-<li><a href="https://coding.net/user/projects" target="_blank" rel="noopener">创建一个项目</a></li>
-<li>配置Page属性，项目—&gt;代码—&gt;Page服务<br>到此，你会得到一个xxx.coding.me/项目名称 网络地址。</li>
-</ul>
-<h5 id="发布"><a href="#发布" class="headerlink" title="发布"></a>发布</h5><ul>
-<li>生成静态文件<pre><code>hexo generate
-</code></pre></li>
-<li>配置发布地址<pre><code>_config.yml 
-deploy:
-    type: git
-    repo:
-      coding: git@git.coding.net:xxx/xxx.git,master
-    name:your name 
-    email: doouxiaoyu@163.com
-</code></pre></li>
-<li>配置GIT账号<pre><code>git config --global user.name
-git config --global user.email
-</code></pre></li>
-<li><p>配置GIT证书</p>
-<pre><code>#生成证书
-#配置coding 部署公钥
-</code></pre></li>
-<li><p>发布文件</p>
-<pre><code>hexo deploy
-</code></pre></li>
-</ul>
-<p>到此，你访问你的coding 地址就会看到你的hexo文章信息了。</p>
-<p>这只是开始，你还得学习hexo的以下内容：</p>
-<ol>
-<li>模版 </li>
-<li>主题</li>
-<li>插件</li>
-</ol>
-<h5 id="添加github支持"><a href="#添加github支持" class="headerlink" title="添加github支持"></a>添加github支持</h5><p><strong>目的</strong><br>github功能跟coding一样一样的，增加它的目的有两个</p>
-<ol>
-<li>不要钱，也不增加工作量</li>
-<li>有自己域名的可以 配置中国访问coding，外国访问 github内容。</li>
-</ol>
-<p><strong>开通步骤</strong> </p>
-<ul>
-<li>注册github账号</li>
-<li>创建项目</li>
-<li>开通page功能</li>
-<li>配置公钥证书</li>
-<li>修改hexo博客配置文件_config.yml<pre><code>deploy:
-    type: git
-    repo:
-      coding: git@git.coding.net:xxx/xxx.git,master
-      github:xxxxxxx,master
-    name:your name 
-    email: xxx@163.com
-</code></pre></li>
-</ul>
-<h5 id="购买域名"><a href="#购买域名" class="headerlink" title="购买域名"></a>购买域名</h5><p><strong>目的</strong></p>
-<ol>
-<li>牛逼</li>
-<li>方便</li>
-</ol>
-<h5 id="开通云主机"><a href="#开通云主机" class="headerlink" title="开通云主机"></a>开通云主机</h5><p><strong>目的</strong></p>
-<ol>
-<li>牛逼</li>
-<li>hexo 部署到云主机上面可以随时写文字</li>
-<li>可以直接部署自己的博客从而不再依赖coding，github。访问速度更快</li>
-</ol>
+          常见博客系统
+wordpress
+Zblog
+Typecho
+hexo
 
+应该选择哪个选择是恐惧的，所以我总在尝试进行降维选择。这里不会对几个主流博客进行一一对比了，问自己两个问题即可：
+
+工具：你喜欢用word写？还是用md语法写？
+成本：你准备投入多少钱？
+
+结论：
+
+工具选择md语法，别犹豫直接选择 hexo  因为可以是0成本
+工具选择word，别犹豫直接选择wordpress 成本为10
+          ...
+          <!--noindex-->
           
+            <div class="post-button text-center">
+              <a class="btn" href="/2018/11/28/选定-搭建博客/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          
+          <!--/noindex-->
         
       
     </div>
@@ -899,8 +810,17 @@ git config --global user.email
       
         
           
-            <h3 id="一、准备工作"><a href="#一、准备工作" class="headerlink" title="一、准备工作"></a>一、准备工作</h3><h4 id="选定-amp-搭建好博客环境"><a href="#选定-amp-搭建好博客环境" class="headerlink" title="选定&amp;搭建好博客环境"></a><strong><em>选定&amp;搭建好博客环境</em></strong></h4><h4 id="制定渐进步骤"><a href="#制定渐进步骤" class="headerlink" title="制定渐进步骤"></a><strong><em>制定渐进步骤</em></strong></h4><h3 id="二、java基础"><a href="#二、java基础" class="headerlink" title="二、java基础"></a>二、java基础</h3><h4 id="java简介"><a href="#java简介" class="headerlink" title="java简介"></a>java简介</h4><h4 id="java的基础数据类型"><a href="#java的基础数据类型" class="headerlink" title="java的基础数据类型"></a>java的基础数据类型</h4><h4 id="java数据结构"><a href="#java数据结构" class="headerlink" title="java数据结构"></a>java数据结构</h4><h4 id="待完善……"><a href="#待完善……" class="headerlink" title="待完善……"></a>待完善……</h4><h3 id="三、常见系统架构"><a href="#三、常见系统架构" class="headerlink" title="三、常见系统架构"></a>三、常见系统架构</h3><h4 id="待完善……-1"><a href="#待完善……-1" class="headerlink" title="待完善……"></a>待完善……</h4><h3 id="四、常见问题-amp-解决方案"><a href="#四、常见问题-amp-解决方案" class="headerlink" title="四、常见问题&amp;解决方案"></a>四、常见问题&amp;解决方案</h3><h4 id="等待完善"><a href="#等待完善" class="headerlink" title="等待完善"></a>等待完善</h4><h3 id="五、常见面试题"><a href="#五、常见面试题" class="headerlink" title="五、常见面试题"></a>五、常见面试题</h3><h4 id="待完善……-2"><a href="#待完善……-2" class="headerlink" title="待完善……"></a>待完善……</h4>
+          一、准备工作选定&amp;搭建好博客环境制定渐进步骤二、java基础java简介java的基础数据类型java数据结构待完善……三、常见系统架构待完善……四、常见问题&amp;解决方案等待完善五、常见面试题待完善……
           
+          <!--noindex-->
+          
+            <div class="post-button text-center">
+              <a class="btn" href="/2018/11/28/作战计划/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          
+          <!--/noindex-->
         
       
     </div>
@@ -1062,17 +982,18 @@ git config --global user.email
       
         
           
-            <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
-
+          Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.
+Quick
+          ...
+          <!--noindex-->
           
+            <div class="post-button text-center">
+              <a class="btn" href="/2018/11/13/hello-world/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          
+          <!--/noindex-->
         
       
     </div>
