@@ -20,6 +20,29 @@
     </entry>
     
     <entry>
+      <title>java简介</title>
+      <link href="/2018/11/29/java%E7%AE%80%E4%BB%8B/"/>
+      <url>/2018/11/29/java%E7%AE%80%E4%BB%8B/</url>
+      
+        <content type="html"><![CDATA[<h2 id="是什么"><a href="#是什么" class="headerlink" title="是什么"></a>是什么</h2><p>java是开发语言，你需要掌握它的语法规则。</p><p>jdk(Java Development Kit)是用java语言写的sdk，你需要了解它提供的能力。</p><p>JVM java虚拟机</p><h2 id="有什么特点"><a href="#有什么特点" class="headerlink" title="有什么特点"></a>有什么特点</h2><h3 id="面向对象"><a href="#面向对象" class="headerlink" title="面向对象"></a>面向对象</h3><p>面向对象出现之前的编程方式被称作：结构化编程（面向过程编程）。在我看来本质是方法组合方式的变化，面向对象编程更接近现实生活。</p><p>结构化编程：针对问题设计解决问题的步骤，第一步、第二步、第三步…..等，将这些步骤以方法（function）为载体组合成为一个结构。</p><p>面向对象编程：针对问题设计解决问题步骤，第一步 由谁做什么，第二步由谁做什么…..等，最后将 “谁” 定义出来 且将他们做什么以function的形式声明到它的结构体上面。</p><p>对比：行为关联给对象，可以更好地管理行为。</p><h4 id="封装"><a href="#封装" class="headerlink" title="封装"></a>封装</h4><p>以对象为主体，对象内的东西（属性、方法）与其它对象互相独立。</p><h4 id="继承"><a href="#继承" class="headerlink" title="继承"></a>继承</h4><p>就像你可以集成你父亲的财产，手艺一样。但是你跟你父亲真的是两个独立主体。</p><h4 id="多态"><a href="#多态" class="headerlink" title="多态"></a>多态</h4><p>你跟你兄弟姐妹都继承了你父亲的手艺但多少有些不同就产生了多样性。</p><p>高级语言之所以高级是因为：他的理念越来越接近你与人交往沟通方式。面向对象是很重要的里程碑，它是定义了对象并且给予对象拥有万物一样的一些特性：个体独立，可繁衍等。</p><p><img src="/images/pasted-1.png" alt="高级语言的位置"></p><h3 id="与平台无关"><a href="#与平台无关" class="headerlink" title="与平台无关"></a>与平台无关</h3><p>先编译后执行，编写的程序统一由javac 编译成字节码class文件，然后在jvm中解释执行。<br><img src="/images/pasted-0.png" alt="java执行过程"></p><h3 id="其它同级别高级语言特点"><a href="#其它同级别高级语言特点" class="headerlink" title="其它同级别高级语言特点"></a>其它同级别高级语言特点</h3><h4 id="数据结构更直观简单"><a href="#数据结构更直观简单" class="headerlink" title="数据结构更直观简单"></a>数据结构更直观简单</h4><h4 id="自动垃圾回收"><a href="#自动垃圾回收" class="headerlink" title="自动垃圾回收"></a>自动垃圾回收</h4><h4 id="安全、可靠、多线程-等"><a href="#安全、可靠、多线程-等" class="headerlink" title="安全、可靠、多线程 等"></a>安全、可靠、多线程 等</h4><h2 id="你该做什么"><a href="#你该做什么" class="headerlink" title="你该做什么"></a>你该做什么</h2><ul><li>掌握java基础语法</li><li>熟悉SDK提供的能力</li><li>熟悉Jre提供的能力</li><li>深入JVM的原理<ul><li>内存管理</li></ul></li></ul>]]></content>
+      
+      
+      <categories>
+          
+          <category> java </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> java </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    <entry>
       <title>选定&amp;搭建博客</title>
       <link href="/2018/11/28/%E9%80%89%E5%AE%9A-%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/"/>
       <url>/2018/11/28/%E9%80%89%E5%AE%9A-%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/</url>
