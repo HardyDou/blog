@@ -54,6 +54,17 @@
     </entry>
     
     <entry>
+      <title>熟悉 IntelliJ IDEA</title>
+      <link href="/2018/11/29/%E6%B8%90%E8%BF%9B%E6%AD%A5%E9%AA%A4/"/>
+      <url>/2018/11/29/%E6%B8%90%E8%BF%9B%E6%AD%A5%E9%AA%A4/</url>
+      
+        <content type="html"><![CDATA[<h2 id="安装IntelliJ"><a href="#安装IntelliJ" class="headerlink" title="安装IntelliJ"></a>安装IntelliJ</h2><h3 id="下载地址"><a href="#下载地址" class="headerlink" title="下载地址"></a>下载地址</h3><pre><code>http://www.jetbrains.com/idea/download/</code></pre><h3 id="激活教程"><a href="#激活教程" class="headerlink" title="激活教程"></a>激活教程</h3><pre><code>http://idea.lanyus.com/</code></pre><h3 id="安装插件"><a href="#安装插件" class="headerlink" title="安装插件"></a>安装插件</h3><pre><code>MavenFindBugsCheckStyleGsonFormatJrebelAceJumpmarkdownKey promoterAlibaba Java Coding </code></pre><h2 id="熟悉快捷键"><a href="#熟悉快捷键" class="headerlink" title="熟悉快捷键"></a>熟悉快捷键</h2><h3 id="ctrl"><a href="#ctrl" class="headerlink" title="ctrl+?"></a>ctrl+?</h3><ul><li>ctrl+E,打开最近文件</li><li>ctrl+J,快速打开帮助文档</li><li>ctrl+enter ,生成代码</li><li>ctrl+O ,覆盖方法</li><li>ctrl+I,实现接口方法</li><li>ctrl+R,运行程序</li><li>ctrl+D,调试程序 </li></ul><h3 id="ctrl-alt"><a href="#ctrl-alt" class="headerlink" title="ctrl+alt+?"></a>ctrl+alt+?</h3><ul><li>ctrl+alt+o，移除未使用 imports</li><li>ctrl+alt+I, 调整光标所在行缩进</li><li>ctrl+alt+R ,列出可执行菜单</li><li>ctrl+alt+H, 方法调用记录 </li></ul>]]></content>
+      
+      
+      
+    </entry>
+    
+    <entry>
       <title>选定&amp;搭建博客</title>
       <link href="/2018/11/28/%E9%80%89%E5%AE%9A-%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/"/>
       <url>/2018/11/28/%E9%80%89%E5%AE%9A-%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/</url>
@@ -83,9 +94,9 @@
       
         <tags>
             
-            <tag> java </tag>
-            
             <tag> plan </tag>
+            
+            <tag> java </tag>
             
         </tags>
       
