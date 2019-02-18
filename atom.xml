@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.hardydou.com/"/>
-  <updated>2019-02-18T16:28:18.611Z</updated>
+  <updated>2019-02-18T16:29:23.814Z</updated>
   <id>http://www.hardydou.com/</id>
   
   <author>
@@ -20,8 +20,8 @@
     <title>人工智能</title>
     <link href="http://www.hardydou.com/2019/02/18/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/"/>
     <id>http://www.hardydou.com/2019/02/18/人工智能/</id>
-    <published>2019-02-18T15:20:23.000Z</published>
-    <updated>2019-02-18T16:28:18.611Z</updated>
+    <published>2019-02-18T15:20:00.000Z</published>
+    <updated>2019-02-18T16:29:23.814Z</updated>
     
     <summary type="html">
     
@@ -37,14 +37,16 @@
     </summary>
     
     
+      <category term="AI" scheme="http://www.hardydou.com/tags/AI/"/>
+    
   </entry>
   
   <entry>
     <title>财务报表</title>
     <link href="http://www.hardydou.com/2019/02/13/%E8%B4%A2%E5%8A%A1%E6%8A%A5%E8%A1%A8/"/>
     <id>http://www.hardydou.com/2019/02/13/财务报表/</id>
-    <published>2019-02-13T14:05:47.000Z</published>
-    <updated>2019-02-14T15:40:50.268Z</updated>
+    <published>2019-02-13T14:05:00.000Z</published>
+    <updated>2019-02-18T16:29:40.167Z</updated>
     
     <summary type="html">
     
