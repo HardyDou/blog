@@ -1,0 +1,818 @@
+<!DOCTYPE html>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion" lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
+
+<link href="/css/main.css?v=6.5.0" rel="stylesheet" type="text/css">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=6.5.0">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=6.5.0">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=6.5.0">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=6.5.0" color="#222">
+
+
+
+
+
+
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    version: '6.5.0',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":true,"scrollpercent":true,"onmobile":false,"width":240},
+    fancybox: true,
+    fastclick: false,
+    lazyload: false,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+  
+
+
+
+
+  <meta name="description" content="&amp;lt;!DOCTYPE html&amp;gt;                             菠菜助手            .box{            border: 1px solid red;            display:inline-block;            margin:0px 0px 20px 0px;            padding:5px;">
+<meta name="keywords" content="blog">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Kit">
+<meta property="og:url" content="http://www.hardydou.com/Kit/index.html">
+<meta property="og:site_name" content="HardyDou">
+<meta property="og:description" content="&amp;lt;!DOCTYPE html&amp;gt;                             菠菜助手            .box{            border: 1px solid red;            display:inline-block;            margin:0px 0px 20px 0px;            padding:5px;">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2019-03-09T21:04:52.340Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Kit">
+<meta name="twitter:description" content="&amp;lt;!DOCTYPE html&amp;gt;                             菠菜助手            .box{            border: 1px solid red;            display:inline-block;            margin:0px 0px 20px 0px;            padding:5px;">
+
+
+
+  <link rel="alternate" href="/atom.xml" title="HardyDou" type="application/atom+xml" />
+
+
+
+
+  <link rel="canonical" href="http://www.hardydou.com/Kit/"/>
+
+
+
+<script type="text/javascript" id="page.configurations">
+  CONFIG.page = {
+    sidebar: "",
+  };
+</script>
+
+  <title>Kit | HardyDou</title>
+  
+
+
+
+
+
+
+
+
+
+
+
+  <noscript>
+  <style type="text/css">
+    .use-motion .motion-element,
+    .use-motion .brand,
+    .use-motion .menu-item,
+    .sidebar-inner,
+    .use-motion .post-block,
+    .use-motion .pagination,
+    .use-motion .comments,
+    .use-motion .post-header,
+    .use-motion .post-body,
+    .use-motion .collection-title { opacity: initial; }
+
+    .use-motion .logo,
+    .use-motion .site-title,
+    .use-motion .site-subtitle {
+      opacity: initial;
+      top: initial;
+    }
+
+    .use-motion {
+      .logo-line-before i { left: initial; }
+      .logo-line-after i { right: initial; }
+    }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">HardyDou</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+    
+      
+        <p class="site-subtitle">HardyDou'blog</p>
+      
+    
+  </div>
+
+  <div class="site-nav-toggle">
+    <button aria-label="切换导航栏">
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  
+    <ul id="menu" class="menu">
+      
+        
+        
+        
+          
+          <li class="menu-item menu-item-home">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/" rel="section"><i class="menu-item-icon fa fa-fw fa-home"></i> <br />首页</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-archives">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/archives" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br />归档</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-tags">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/tags" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br />标签</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-categories">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/categories" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br />分类</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-about">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/about" rel="section"><i class="menu-item-icon fa fa-fw fa-user"></i> <br />关于</a>
+
+  </li>
+
+      
+      
+    </ul>
+  
+
+  
+
+  
+</nav>
+
+
+
+  
+
+
+
+</div>
+    </header>
+
+    
+
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+            
+
+    
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+    
+
+  
+
+
+          
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+    
+    
+    <div class="post-block page">
+      <header class="post-header">
+
+<h1 class="post-title" itemprop="name headline">Kit</h1>
+
+<div class="post-meta">
+  
+  
+
+
+
+</div>
+
+</header>
+
+      
+      
+      
+      <div class="post-body">
+        
+        
+          <p>&lt;!DOCTYPE html&gt;</p>
+<html lang="zh-CN"><br><head><meta name="generator" content="Hexo 3.8.0"><br>    <meta charset="UTF-8"><br>    <meta http-equiv="X-UA-Compatible" content="IE=edge"><br>    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2"><br>    <meta name="theme-color" content="#222"><br>    <meta http-equiv="Cache-Control" content="no-transform"><br>    <meta http-equiv="Cache-Control" content="no-siteapp"><br>    <title>菠菜助手</title><br>    <style><br>        .box{<br>            border: 1px solid red;<br>            display:inline-block;<br>            margin:0px 0px 20px 0px;<br>            padding:5px;<br>        }<br>        h3{<br>            padding:0px;<br>            margin:0px;<br>        }<br>        .n_box{<br>            color: red;<br>            display: inline-block;<br>            float: left;<br>            clear:both;<br>            padding: 0px 10px 0px 20px;<br>        }<br>        .jg_box{<br>            display:inline-block;<br>        }<br>        .jg_box span , .n_box span{<br>            display:inline-block;<br>            float:left;<br>            width:50px;<br>            height:50px;<br>            border:1px solid black;<br>            padding:2px;<br>            margin:4px;<br>            text-align:center;<br>            font-size: x-large;<br>            line-height: 50px;<br>        }<br>        .jg_box span{<br>            width:90px;<br>        }<br>        .on{<br>            background:red;<br>            color:white;<br>        }<br>        .btn{<br>            width:100%;<br>            height:50px;<br>            background:white;<br>            color:black;<br>            font-size:x-large;<br>            position:fixed;<br>            bottom:1px;<br>            left:1px;<br>        }<br>        .fuceng{<br>            background: black;<br>            width: 100%;<br>            height: 100%;<br>            position: fixed;<br>            top: 0px;<br>            left: -3px;<br>            opacity: 0.75;<br>        }<br>    </style><br></head><br><body><br><br><div class="box"><br>    <h3>胆码</h3><br>    <div id="danma" class="n_box"><br>    </div><br></div><br><div class="box"><br>    <h3>百位</h3><br>    <div id="bai" class="n_box"><br>    </div><br></div><br><div class="box"><br>    <h3>十位</h3><br>    <div id="shi" class="n_box"><br>    </div><br></div><br><div class="box"><br>    <h3>个位</h3><br>    <div id="ge" class="n_box"><br>    </div><br></div><br><div class="box"><br>    <h3>和值</h3><br>    <div id="he" class="n_box"><br>    </div><br></div><br><br><div class="box"><br>    <h3>临号</h3><br>    <div id="linhao" class="n_box"><br>    </div><br></div><br><br><div id="alt_box" style="display:none;"><br><div class="fuceng"></div><br><div style="position:absolute;z-index:1000;color:white;top:20px;left:45px"><br>    <h3>试算结果</h3><br>    <div id="jieguo" class="jg_box"><br>    </div><br>    <div style="height:50px;display:block"></div><br>    <button onclick="back()" class="btn">返回</button><br></div><br></div><br><div style="height:50px;display:block"></div><br><button onclick="cal()" class="btn">试算组合</button><br></body><br><script><br><br>    //保持 交互结果<br>    var result={<br>        danma:[],<br>        bai:[],<br>        shi:[],<br>        ge:[],<br>        he:[],<br>        linhao:[],<br>        jieguo:[]<br>    };<br><br>    var data={<br>        danma:base(),<br>        bai:base(),<br>        shi:base(),<br>        ge:base(),<br>        he:[6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27],<br>        linhao:lihaoOfAll(),<br>    }<br><br>    /*<em><br>    胆码： 百、十、个 为 一定要出现一个 选中的胆码之一。<br>    百十个：选中的 从此不再出现<br>    和：生成三个数的和 不能是 选中的数字<br>    临号：生成的三个数组合 不能出现 已经选中的任何一个 临号。
+    </em>/<br><br>    // 初始化数据<br>    var items=[“danma”,”bai”,”shi”,”ge”,”he”,”linhao”];<br>    var itemNames=[“胆码”,”百位”,”十位”,”个位”,”临号”]<br>    for(var a in items){<br>        buildHtml(items[a],data[items[a]]);<br>    }<br>    function buildHtml(item,itemData){<br>        var itemBox=find(item);<br>        var str=””;<br>        for(var b in itemData){<br>            var isOn=result[item].indexOf(itemData[b])&gt;-1;<br>            str+=”<span onclick='cc(this);' d='"+item+"_"+itemData[b]+"' class='"+(isOn?"on":"")+"' >“+itemData[b]+”</span>“;<br>        }<br>        itemBox.innerHTML=str;<br>     }<br>    function base(){<br>        var base=[];<br>        for(var i=1;i&lt;=10;i++){<br>            base[base.length]=i;<br>        }<br>        return base;<br>    }<br>    function lihaoOfAll(){<br>        var lh=[];<br>        for(var a=1;a&lt;=10;a++){<br>            if(result.bai.indexOf(a.toString())!=-1){<br>                continue;<br>            }<br>            for(var b=1;b&lt;=10;b++){<br>                if(result.shi.indexOf(b.toString())!=-1||a==b||lh.indexOf(a+”,”+b)!=-1){<br>                    continue;<br>                }<br>                lh[lh.length]=a+”,”+b;<br>                for(var c=1;c&lt;=10;c++){<br>                    if(result.ge.indexOf(c.toString())!=-1||a==c||b==c||lh.indexOf(b+”,”+c)!=-1){<br>                        continue;<br>                    }<br>                    lh[lh.length]=b+”,”+c;<br>                }<br>            }<br>        }<br>        return lh;<br>    }<br>    function cc(ele){<br>        var item_id=ele.getAttribute(‘d’);<br>        var tmp=item_id.split(‘_’);<br>        if(containsClass(ele,’on’)){//去除<br>            var r=handle(tmp[0],tmp[1],false);<br>            if(“ok”==r){<br>                removeClass(ele,’on’);<br>            }else{<br>                notice(r);<br>            }<br>        }else{//添加<br>             var r=handle(tmp[0],tmp[1],true);<br>            if(“ok”==r){<br>                addClass(ele,’on’);<br>            }else{<br>                notice(r)<br>            }<br>        }<br>        buildHtml(“linhao”,lihaoOfAll());<br>    }<br><br>    function handle(item,num,isAdd){<br>            if(isAdd){<br>                add(result[item],num);<br>            }else{<br>                remove(result[item],num);<br>            };<br>        console.info((isAdd?”add “:”remove “)+item+” , “+num);<br>        return “ok”;<br>    }<br><br>    function cal(){<br>        var all=[];<br>        for(var a=1;a&lt;=10;a++){<br>            if(result.bai.indexOf(a.toString())!=-1){<br>                continue;<br>            }<br>            for(var b=1;b&lt;=10;b++){<br>                if(result.shi.indexOf(b.toString())!=-1||a==b){<br>                    continue;<br>                }<br>                for(var c=1;c&lt;10;c++){<br>                    if(result.ge.indexOf(c.toString())!=-1||a==c||b==c){<br>                        continue;<br>                    }<br>                    all[all.length]=a+”,”+b+”,”+c;<br>                }<br>            }<br>        }<br>        console.info(“gen “+all.length);<br>        var r=[];<br>        for(var i=0;i&lt;all.length;i++){<br>            var tmp=all[i];<br>           //检查 胆码<br>           var hasDanma=false;<br>           for(var j=0;j&lt;result.danma.length;j++){<br>                if(-1!=tmp.indexOf(result.danma[j])){<br>                    //包含胆码<br>                    hasDanma=true;<br>                    break;<br>                }<br>            }<br>            if(!hasDanma){<br>                continue;<br>            }<br>            //检查 和值<br>            var hitHe=false;<br>            for(var j=0;j&lt;result.he.length;j++){<br>                var tts=tmp.split(‘,’);<br>                var h=parseInt(tts[0])+parseInt(tts[1])+parseInt(tts[2]);<br>                if(h.toString()==result.he[j]){<br>                    hitHe=true;<br>                    break;<br>                }<br>            }<br>            if(hitHe){<br>                continue;<br>            }<br>            //检查 临号<br>            var hasLinhao=false;<br>            for(var j=0;j&lt;result.linhao.length;j++){<br>                if(-1!=tmp.indexOf(result.linhao[j])){<br>                    hasLinhao=true;<br>                    break;<br>                }<br>            }<br>            if(hasLinhao){<br>                continue;<br>            }<br>            r[r.length]=tmp;<br>        }<br><br>        if(r.length==0){<br>            alert(“无结果”);<br>            return r;<br>        }<br>        result.jieguo=r;<br>        buildHtml(“jieguo”,r);<br>        find(“alt_box”).style.display=’block’;<br><br>        return r;<br>    }<br>    function back(){<br>        find(“alt_box”).style.display=’none’;<br>    }<br><br>    function removeClass(ele,className){<br>        ele.classList.remove(className);<br>    }<br>    function addClass(ele,className){<br>        ele.classList.add(className);<br>    }<br>    function containsClass(ele,className){<br>        return ele.classList.contains(className);<br>    }<br><br>    function notice( msg){<br>        alert(msg);<br>    }<br><br>    function remove(array,item){<br>        var pos=array.indexOf(item);<br>        array.splice(pos,1);<br>        return array;<br>    }<br><br>    function add(array,item){<br>        array[array.length]=item;<br>        return array;<br>    }<br>    function find(id){<br>        return document.getElementById(id);<br>    }<br><br></script><br></html>
+
+        
+      </div>
+      
+      
+      
+    </div>
+    
+
+
+
+    
+    
+    
+  </div>
+
+
+          </div>
+          
+
+  
+    <div class="comments" id="comments">
+    </div>
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image"
+                src="/images/avatar.jpg"
+                alt="Hardy Dou" />
+            
+              <p class="site-author-name" itemprop="name">Hardy Dou</p>
+              <p class="site-description motion-element" itemprop="description">HardyDou的博客</p>
+          </div>
+
+          
+            <nav class="site-state motion-element">
+              
+                <div class="site-state-item site-state-posts">
+                
+                  <a href="/archives">
+                
+                    <span class="site-state-item-count">13</span>
+                    <span class="site-state-item-name">日志</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-categories">
+                  <a href="/categories/index.html">
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">3</span>
+                    <span class="site-state-item-name">分类</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-tags">
+                  <a href="/tags/index.html">
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">8</span>
+                    <span class="site-state-item-name">标签</span>
+                  </a>
+                </div>
+              
+            </nav>
+          
+
+          
+            <div class="feed-link motion-element">
+              <a href="/atom.xml" rel="alternate">
+                <i class="fa fa-rss"></i>
+                RSS
+              </a>
+            </div>
+          
+
+          
+            <div class="links-of-author motion-element">
+              
+                <span class="links-of-author-item">
+                  
+                  
+                    
+                  
+                  
+                    
+                  
+                  <a href="https://github.com/HardyDou" title="GitHub &rarr; https://github.com/HardyDou" rel="noopener" target="_blank"><i class="fa fa-fw fa-github"></i>GitHub</a>
+                </span>
+              
+                <span class="links-of-author-item">
+                  
+                  
+                    
+                  
+                  
+                    
+                  
+                  <a href="mailto:doouxiaoyu@163.com" title="E-Mail &rarr; mailto:doouxiaoyu@163.com" rel="noopener" target="_blank"><i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                </span>
+              
+            </div>
+          
+
+          
+
+          
+          
+
+          
+            
+          
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#undefined"><span class="nav-number">1.</span> <span class="nav-text">胆码</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#undefined"><span class="nav-number">2.</span> <span class="nav-text">百位</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#undefined"><span class="nav-number">3.</span> <span class="nav-text">十位</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#undefined"><span class="nav-number">4.</span> <span class="nav-text">个位</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#undefined"><span class="nav-number">5.</span> <span class="nav-text">和值</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#undefined"><span class="nav-number">6.</span> <span class="nav-text">临号</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#undefined"><span class="nav-number">7.</span> <span class="nav-text">试算结果</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+        <div class="back-to-top">
+          <i class="fa fa-arrow-up"></i>
+          
+            <span id="scrollpercent"><span>0</span>%</span>
+          
+        </div>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">  <a href="http://www.miitbeian.gov.cn" rel="noopener" target="_blank">京ICP备18050184号 </a>&copy; <span itemprop="copyrightYear">2019</span>
+  <span class="with-love" id="animate">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Hardy Dou</span>
+
+  
+
+  
+</div>
+
+
+
+
+
+
+
+
+
+        
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+
+    
+	
+    
+
+    
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=6.5.0"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=6.5.0"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=6.5.0"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=6.5.0"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=6.5.0"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=6.5.0"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=6.5.0"></script>
+
+
+
+  
+
+
+
+  
+
+
+
+
+
+
+
+
+  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+  
+  
+  <script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+  
+  <script type="text/javascript">
+    var GUEST = ['nick','mail','link'];
+    var guest = 'nick,mail,link';
+    guest = guest.split(',').filter(function (item) {
+      return GUEST.indexOf(item)>-1;
+    });
+    new Valine({
+        el: '#comments' ,
+        verify: true,
+        notify: true,
+        appId: 'fF3IzJ6TkcmNPCPo4nYayNln-gzGzoHsz',
+        appKey: 'CaEuIN0359VyWiygnoDPQxx1',
+        placeholder: '有话就直说!!',
+        avatar:'mp',
+        meta:guest,
+        pageSize:'10' || 10,
+        visitor: false
+    });
+  </script>
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
