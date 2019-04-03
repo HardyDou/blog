@@ -112,21 +112,24 @@
 
 
 
-  <meta name="description" content="单例模式介绍程序运行周期内这个对象最多被创建一次，这类对象我们称之为单例，这个设计模式称作单例模式。 特点 私有化构造； 通过调用静态方法获取对象；    123456private Singleton() &amp;#123;//do something&amp;#125;public static Singleton getInstance() &amp;#123;  return instance;&amp;#125; 实">
-<meta name="keywords" content="blog">
+  <meta name="description" content="介绍架构图是展示软件系统的 整体全貌、组件关系、部署情况、演进方向  视图语言。 作用传递架构师要表达的信息，快速评估架构的可行性、安全性、以及问题所在。 分类分类较多，目前以 4+1视图（场景视图、逻辑视图、物理视图、处理流程图、开发视图）、4C（上下文、容器图、组件图、代码图）为主流。 4+1视图场景视图描述 参与者与功能用力的关系，通常以用例图表示。 逻辑视图描述软件功能拆解后的组件关系，组">
+<meta name="keywords" content="架构,UML">
 <meta property="og:type" content="article">
-<meta property="og:title" content="设计模式-单例模式">
-<meta property="og:url" content="http://www.hardydou.com/2019/03/04/设计模式-单例模式/index.html">
+<meta property="og:title" content="架构图">
+<meta property="og:url" content="http://www.hardydou.com/2019/04/03/画架构图/index.html">
 <meta property="og:site_name" content="HardyDou">
-<meta property="og:description" content="单例模式介绍程序运行周期内这个对象最多被创建一次，这类对象我们称之为单例，这个设计模式称作单例模式。 特点 私有化构造； 通过调用静态方法获取对象；    123456private Singleton() &amp;#123;//do something&amp;#125;public static Singleton getInstance() &amp;#123;  return instance;&amp;#125; 实">
+<meta property="og:description" content="介绍架构图是展示软件系统的 整体全貌、组件关系、部署情况、演进方向  视图语言。 作用传递架构师要表达的信息，快速评估架构的可行性、安全性、以及问题所在。 分类分类较多，目前以 4+1视图（场景视图、逻辑视图、物理视图、处理流程图、开发视图）、4C（上下文、容器图、组件图、代码图）为主流。 4+1视图场景视图描述 参与者与功能用力的关系，通常以用例图表示。 逻辑视图描述软件功能拆解后的组件关系，组">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="http://www.hardydou.com/images/pasted-38.png">
-<meta property="og:image" content="http://www.hardydou.com/images/pasted-39.png">
-<meta property="og:updated_time" content="2019-03-05T14:36:35.726Z">
+<meta property="og:image" content="http://www.hardydou.com/images/pasted-50.png">
+<meta property="og:image" content="http://www.hardydou.com/images/pasted-52.png">
+<meta property="og:image" content="http://www.hardydou.com/images/pasted-54.png">
+<meta property="og:image" content="http://www.hardydou.com/images/pasted-55.png">
+<meta property="og:image" content="http://www.hardydou.com/images/pasted-56.png">
+<meta property="og:updated_time" content="2019-04-03T18:22:04.289Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="设计模式-单例模式">
-<meta name="twitter:description" content="单例模式介绍程序运行周期内这个对象最多被创建一次，这类对象我们称之为单例，这个设计模式称作单例模式。 特点 私有化构造； 通过调用静态方法获取对象；    123456private Singleton() &amp;#123;//do something&amp;#125;public static Singleton getInstance() &amp;#123;  return instance;&amp;#125; 实">
-<meta name="twitter:image" content="http://www.hardydou.com/images/pasted-38.png">
+<meta name="twitter:title" content="架构图">
+<meta name="twitter:description" content="介绍架构图是展示软件系统的 整体全貌、组件关系、部署情况、演进方向  视图语言。 作用传递架构师要表达的信息，快速评估架构的可行性、安全性、以及问题所在。 分类分类较多，目前以 4+1视图（场景视图、逻辑视图、物理视图、处理流程图、开发视图）、4C（上下文、容器图、组件图、代码图）为主流。 4+1视图场景视图描述 参与者与功能用力的关系，通常以用例图表示。 逻辑视图描述软件功能拆解后的组件关系，组">
+<meta name="twitter:image" content="http://www.hardydou.com/images/pasted-50.png">
 
 
 
@@ -135,7 +138,7 @@
 
 
 
-  <link rel="canonical" href="http://www.hardydou.com/2019/03/04/设计模式-单例模式/">
+  <link rel="canonical" href="http://www.hardydou.com/2019/04/03/画架构图/">
 
 
 
@@ -145,7 +148,7 @@
   };
 </script>
 
-  <title>设计模式-单例模式 | HardyDou</title>
+  <title>架构图 | HardyDou</title>
   
 
 
@@ -365,7 +368,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://www.hardydou.com/2019/03/04/设计模式-单例模式/">
+    <link itemprop="mainEntityOfPage" href="http://www.hardydou.com/2019/04/03/画架构图/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Hardy Dou">
@@ -382,7 +385,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">设计模式-单例模式
+          <h1 class="post-title" itemprop="name headline">架构图
               
             
           </h1>
@@ -407,7 +410,7 @@
                 
               
 
-              <time title="创建时间：2019-03-04 18:15:02" itemprop="dateCreated datePublished" datetime="2019-03-04T18:15:02+08:00">2019-03-04</time>
+              <time title="创建时间：2019-04-03 16:42:00" itemprop="dateCreated datePublished" datetime="2019-04-03T16:42:00+08:00">2019-04-03</time>
             
 
             
@@ -424,7 +427,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2019-03-05 22:36:35" itemprop="dateModified" datetime="2019-03-05T22:36:35+08:00">2019-03-05</time>
+                <time title="修改时间：2019-04-04 02:22:04" itemprop="dateModified" datetime="2019-04-04T02:22:04+08:00">2019-04-04</time>
               
             
           </span>
@@ -438,8 +441,8 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2019/03/04/设计模式-单例模式/#comments" itemprop="discussionUrl">
-                  <span class="post-meta-item-text">评论数：</span> <span class="post-comments-count valine-comment-count" data-xid="/2019/03/04/设计模式-单例模式/" itemprop="commentCount"></span>
+                <a href="/2019/04/03/画架构图/#comments" itemprop="discussionUrl">
+                  <span class="post-meta-item-text">评论数：</span> <span class="post-comments-count valine-comment-count" data-xid="/2019/04/03/画架构图/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -467,41 +470,28 @@
       
 
       
-        <h1 id="单例模式"><a href="#单例模式" class="headerlink" title="单例模式"></a>单例模式</h1><h2 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h2><p>程序运行周期内这个对象最多被创建一次，这类对象我们称之为单例，这个设计模式称作单例模式。</p>
-<h2 id="特点"><a href="#特点" class="headerlink" title="特点"></a>特点</h2><ul>
-<li>私有化构造；</li>
-<li>通过调用静态方法获取对象；  </li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">private Singleton() &#123;</span><br><span class="line">//do something</span><br><span class="line">&#125;</span><br><span class="line">public static Singleton getInstance() &#123;</span><br><span class="line">  return instance;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h2 id="实现方式"><a href="#实现方式" class="headerlink" title="实现方式"></a>实现方式</h2><h3 id="饿汉式"><a href="#饿汉式" class="headerlink" title="饿汉式"></a>饿汉式</h3><h4 id="代码示例"><a href="#代码示例" class="headerlink" title="代码示例"></a>代码示例</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">private static Singleton instance = new Singleton();</span><br></pre></td></tr></table></figure>
-<h4 id="优势"><a href="#优势" class="headerlink" title="优势"></a>优势</h4><ul>
-<li>简单</li>
-<li>线程安全</li>
-</ul>
-<h4 id="劣势"><a href="#劣势" class="headerlink" title="劣势"></a>劣势</h4><ul>
-<li>资源效率不高，当执行其它静态方法 或者 class.forName 时就会被初始化。</li>
-</ul>
-<h3 id="懒汉式"><a href="#懒汉式" class="headerlink" title="懒汉式"></a>懒汉式</h3><h4 id="代码示例-1"><a href="#代码示例-1" class="headerlink" title="代码示例"></a>代码示例</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">public synchronized static Singleton getInstance() &#123;</span><br><span class="line">        if (instance == null) &#123;</span><br><span class="line">            instance = new Singleton();</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        return instance;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h4 id="优势-1"><a href="#优势-1" class="headerlink" title="优势"></a>优势</h4><ul>
-<li>线程安全<h4 id="劣势-1"><a href="#劣势-1" class="headerlink" title="劣势"></a>劣势</h4></li>
-<li>synchronized 的使用造成资源消耗较大</li>
-</ul>
-<h3 id="双重检查"><a href="#双重检查" class="headerlink" title="双重检查"></a>双重检查</h3><h4 id="代码示例-2"><a href="#代码示例-2" class="headerlink" title="代码示例"></a>代码示例</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">public static Singleton getInstance() &#123;</span><br><span class="line">		if (instance == null) &#123;</span><br><span class="line">			synchronized (Singleton.class) &#123;</span><br><span class="line">				if (instance == null) &#123;</span><br><span class="line">					instance = new Singleton();</span><br><span class="line">				&#125;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">		return instance;</span><br><span class="line">	&#125;</span><br></pre></td></tr></table></figure>
-<h4 id="优势-2"><a href="#优势-2" class="headerlink" title="优势"></a>优势</h4><ul>
-<li>线程安全</li>
-<li>第一次以后调用 不再受到 synchronize 影响；<h4 id="劣势-2"><a href="#劣势-2" class="headerlink" title="劣势"></a>劣势</h4></li>
-<li>java内存模型（jmm）无序写入可能会引发，对象创建失败问题；<h3 id="静态内部类"><a href="#静态内部类" class="headerlink" title="静态内部类"></a>静态内部类</h3><h4 id="代码示例-3"><a href="#代码示例-3" class="headerlink" title="代码示例"></a>代码示例</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">private static class NoThing &#123;</span><br><span class="line">   private static Singleton instance = new Singleton();</span><br><span class="line">   &#125;</span><br><span class="line">public static Singleton getInstance() &#123;</span><br><span class="line">        return NoThing.instance;</span><br><span class="line">  &#125;</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-<h4 id="优势-3"><a href="#优势-3" class="headerlink" title="优势"></a>优势</h4><ul>
-<li>线程安全</li>
-<li>延迟加载</li>
-<li>资源消耗低<h4 id="劣势-3"><a href="#劣势-3" class="headerlink" title="劣势"></a>劣势</h4></li>
-<li>较饿汉模式代码较复杂<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2></li>
-</ul>
-<h3 id="关系图谱"><a href="#关系图谱" class="headerlink" title="关系图谱"></a>关系图谱</h3><p><img src="/images/pasted-38.png" alt="upload successful"></p>
-<h3 id="对比"><a href="#对比" class="headerlink" title="对比"></a>对比</h3><p><img src="/images/pasted-39.png" alt="upload successful"></p>
-<h3 id="个人观点"><a href="#个人观点" class="headerlink" title="个人观点"></a>个人观点</h3><p>你会写一个 消耗资源且可能不被调用的单例吗？所以 就用饿汉模式吧。</p>
+        <h2 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h2><p>架构图是展示软件系统的<font size="6"> 整体全貌、组件关系、部署情况、演进方向</font>  视图语言。</p>
+<h2 id="作用"><a href="#作用" class="headerlink" title="作用"></a>作用</h2><p>传递架构师要表达的信息，快速评估架构的可行性、安全性、以及问题所在。</p>
+<h2 id="分类"><a href="#分类" class="headerlink" title="分类"></a>分类</h2><p>分类较多，目前以 4+1视图（场景视图、逻辑视图、物理视图、处理流程图、开发视图）、4C（上下文、容器图、组件图、代码图）为主流。</p>
+<h2 id="4-1视图"><a href="#4-1视图" class="headerlink" title="4+1视图"></a>4+1视图</h2><h3 id="场景视图"><a href="#场景视图" class="headerlink" title="场景视图"></a>场景视图</h3><p>描述 参与者与功能用力的关系，通常以用例图表示。<br><img src="/images/pasted-50.png" alt="upload successful"></p>
+<h3 id="逻辑视图"><a href="#逻辑视图" class="headerlink" title="逻辑视图"></a>逻辑视图</h3><p>描述软件功能拆解后的组件关系，组件约束和边界，通常用 组件图来表示<br>//TODO 添加组件图图片</p>
+<h3 id="物理视图"><a href="#物理视图" class="headerlink" title="物理视图"></a>物理视图</h3><p>描述软件到硬件的映射关系，反映出系统的组件是如何部署到一组计算器节点上的，通常以 部署图表示</p>
+<h3 id="处理流程图"><a href="#处理流程图" class="headerlink" title="处理流程图"></a>处理流程图</h3><p>描述系统之间、组件之间通信时序，数据的输入输出，反应系统的功能流程与数据流程，通常由时序图和流程图表示。</p>
+<h3 id="开发视图"><a href="#开发视图" class="headerlink" title="开发视图"></a>开发视图</h3><p>描述系统的模块划分和组成，以及细化到内部包的组成设计，服务于开发人员，反映系统开发实施过程。</p>
+<h2 id="4C图"><a href="#4C图" class="headerlink" title="4C图"></a>4C图</h2><h3 id="上下文（语境图Context）"><a href="#上下文（语境图Context）" class="headerlink" title="上下文（语境图Context）"></a>上下文（语境图Context）</h3><p><img src="/images/pasted-52.png" alt="语境图"></p>
+<p>参与者、系统之间的关系，系统状态进度。</p>
+<font color="red">抽象说：<br>  人、ofo 是2个独立存在的事物，可以称作context。<br></font><br>### 容器图<br><img src="/images/pasted-54.png" alt="容器图"><br>互相独立存在的应用（占用独立的pid 就可以看做一个容器）例如：<br><em> 终端应用：<br>APP、API接口、WEB
+</em> Web服务器：<br>apache、 nginx<br><em> Web应用:<br>部署在 Tomcat、jetty、resion、jboss、Weblogic、Websphere 一个应用
+</em> 数据库应用：<br>Mysql、Oracle、Mongodb<br>* 其它<br>ELK、文件系统、dns服务<br><font color="red"><br>  抽象说：<br>  ofo 可以分解为 车子、APP、其它 这些可以被称为容器。<br></font>  
+
+<h3 id="组件图"><a href="#组件图" class="headerlink" title="组件图"></a>组件图</h3><p>这张组件图不是很严格，没有表示清楚组件提供的能力名称。<br><img src="/images/pasted-55.png" alt="组件图"><br>容器是由多个组件构成，所有组件应当运行在同一个进程中。   </p>
+<font color="red"><br>  抽象说：<br>  车子 可以分解为 车胎、车把、车蹬子、车座子、链条、车架、其它 这些可以被称为组件。<br></font>
+
+<h3 id="代码图"><a href="#代码图" class="headerlink" title="代码图"></a>代码图</h3><p><img src="/images/pasted-56.png" alt="类图"></p>
+<font color="red"><br>  抽象说：<br>  外胎、内胎、辐条、轮圈、轴承 生产方式，轮胎 组装方式 。<br></font>
+
+
+
 
       
     </div>
@@ -535,7 +525,7 @@
   <li class="post-copyright-link">
     <strong>本文链接：</strong>
     
-    <a href="http://www.hardydou.com/2019/03/04/设计模式-单例模式/" title="设计模式-单例模式">http://www.hardydou.com/2019/03/04/设计模式-单例模式/</a>
+    <a href="http://www.hardydou.com/2019/04/03/画架构图/" title="架构图">http://www.hardydou.com/2019/04/03/画架构图/</a>
   </li>
   <li class="post-copyright-license">
     <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fa fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！</li>
@@ -546,6 +536,14 @@
 
     <footer class="post-footer">
       
+        <div class="post-tags">
+          
+            <a href="/tags/架构/" rel="tag"># 架构</a>
+          
+            <a href="/tags/UML/" rel="tag"># UML</a>
+          
+        </div>
+      
 
       
       
@@ -555,8 +553,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/02/20/种植业利润表/" rel="next" title="种植业财务报表">
-                <i class="fa fa-chevron-left"></i> 种植业财务报表
+              <a href="/2019/03/05/Java内存模型（JMM）/" rel="next" title="Java内存模型（JMM）">
+                <i class="fa fa-chevron-left"></i> Java内存模型（JMM）
               </a>
             
           </div>
@@ -564,10 +562,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2019/03/05/Java内存模型（JMM）/" rel="prev" title="Java内存模型（JMM）">
-                Java内存模型（JMM） <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -762,7 +756,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#单例模式"><span class="nav-number">1.</span> <span class="nav-text">单例模式</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#介绍"><span class="nav-number">1.1.</span> <span class="nav-text">介绍</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#特点"><span class="nav-number">1.2.</span> <span class="nav-text">特点</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#实现方式"><span class="nav-number">1.3.</span> <span class="nav-text">实现方式</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#饿汉式"><span class="nav-number">1.3.1.</span> <span class="nav-text">饿汉式</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#代码示例"><span class="nav-number">1.3.1.1.</span> <span class="nav-text">代码示例</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#优势"><span class="nav-number">1.3.1.2.</span> <span class="nav-text">优势</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#劣势"><span class="nav-number">1.3.1.3.</span> <span class="nav-text">劣势</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#懒汉式"><span class="nav-number">1.3.2.</span> <span class="nav-text">懒汉式</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#代码示例-1"><span class="nav-number">1.3.2.1.</span> <span class="nav-text">代码示例</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#优势-1"><span class="nav-number">1.3.2.2.</span> <span class="nav-text">优势</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#劣势-1"><span class="nav-number">1.3.2.3.</span> <span class="nav-text">劣势</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#双重检查"><span class="nav-number">1.3.3.</span> <span class="nav-text">双重检查</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#代码示例-2"><span class="nav-number">1.3.3.1.</span> <span class="nav-text">代码示例</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#优势-2"><span class="nav-number">1.3.3.2.</span> <span class="nav-text">优势</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#劣势-2"><span class="nav-number">1.3.3.3.</span> <span class="nav-text">劣势</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#静态内部类"><span class="nav-number">1.3.4.</span> <span class="nav-text">静态内部类</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#代码示例-3"><span class="nav-number">1.3.4.1.</span> <span class="nav-text">代码示例</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#优势-3"><span class="nav-number">1.3.4.2.</span> <span class="nav-text">优势</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#劣势-3"><span class="nav-number">1.3.4.3.</span> <span class="nav-text">劣势</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#总结"><span class="nav-number">1.4.</span> <span class="nav-text">总结</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#关系图谱"><span class="nav-number">1.4.1.</span> <span class="nav-text">关系图谱</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#对比"><span class="nav-number">1.4.2.</span> <span class="nav-text">对比</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#个人观点"><span class="nav-number">1.4.3.</span> <span class="nav-text">个人观点</span></a></li></ol></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#介绍"><span class="nav-number">1.</span> <span class="nav-text">介绍</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#作用"><span class="nav-number">2.</span> <span class="nav-text">作用</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#分类"><span class="nav-number">3.</span> <span class="nav-text">分类</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-1视图"><span class="nav-number">4.</span> <span class="nav-text">4+1视图</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#场景视图"><span class="nav-number">4.1.</span> <span class="nav-text">场景视图</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#逻辑视图"><span class="nav-number">4.2.</span> <span class="nav-text">逻辑视图</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#物理视图"><span class="nav-number">4.3.</span> <span class="nav-text">物理视图</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#处理流程图"><span class="nav-number">4.4.</span> <span class="nav-text">处理流程图</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#开发视图"><span class="nav-number">4.5.</span> <span class="nav-text">开发视图</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4C图"><span class="nav-number">5.</span> <span class="nav-text">4C图</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#上下文（语境图Context）"><span class="nav-number">5.1.</span> <span class="nav-text">上下文（语境图Context）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#组件图"><span class="nav-number">5.2.</span> <span class="nav-text">组件图</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#代码图"><span class="nav-number">5.3.</span> <span class="nav-text">代码图</span></a></li></ol></li></ol></div>
             
 
           </div>

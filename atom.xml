@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.hardydou.com/"/>
-  <updated>2019-03-08T14:25:02.488Z</updated>
+  <updated>2019-04-03T18:22:04.289Z</updated>
   <id>http://www.hardydou.com/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>架构图</title>
+    <link href="http://www.hardydou.com/2019/04/03/%E7%94%BB%E6%9E%B6%E6%9E%84%E5%9B%BE/"/>
+    <id>http://www.hardydou.com/2019/04/03/画架构图/</id>
+    <published>2019-04-03T08:42:00.000Z</published>
+    <updated>2019-04-03T18:22:04.289Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;介绍&quot;&gt;&lt;a href=&quot;#介绍&quot; class=&quot;headerlink&quot; title=&quot;介绍&quot;&gt;&lt;/a&gt;介绍&lt;/h2&gt;&lt;p&gt;架构图是展示软件系统的&lt;font size=&quot;6&quot;&gt; 整体全貌、组件关系、部署情况、演进方向&lt;/font&gt;  视图语言。&lt;/p&gt;
+&lt;h2
+        
+      
+    
+    </summary>
+    
+    
+      <category term="架构" scheme="http://www.hardydou.com/tags/%E6%9E%B6%E6%9E%84/"/>
+    
+      <category term="UML" scheme="http://www.hardydou.com/tags/UML/"/>
+    
+  </entry>
   
   <entry>
     <title>Java内存模型（JMM）</title>
