@@ -125,7 +125,7 @@
 <meta property="og:image" content="http://www.hardydou.com/images/pasted-54.png">
 <meta property="og:image" content="http://www.hardydou.com/images/pasted-55.png">
 <meta property="og:image" content="http://www.hardydou.com/images/pasted-56.png">
-<meta property="og:updated_time" content="2019-04-03T18:22:04.289Z">
+<meta property="og:updated_time" content="2019-04-03T18:27:34.932Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="架构图">
 <meta name="twitter:description" content="介绍架构图是展示软件系统的 整体全貌、组件关系、部署情况、演进方向  视图语言。 作用传递架构师要表达的信息，快速评估架构的可行性、安全性、以及问题所在。 分类分类较多，目前以 4+1视图（场景视图、逻辑视图、物理视图、处理流程图、开发视图）、4C（上下文、容器图、组件图、代码图）为主流。 4+1视图场景视图描述 参与者与功能用力的关系，通常以用例图表示。 逻辑视图描述软件功能拆解后的组件关系，组">
@@ -427,7 +427,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2019-04-04 02:22:04" itemprop="dateModified" datetime="2019-04-04T02:22:04+08:00">2019-04-04</time>
+                <time title="修改时间：2019-04-04 02:27:34" itemprop="dateModified" datetime="2019-04-04T02:27:34+08:00">2019-04-04</time>
               
             
           </span>
@@ -480,19 +480,23 @@
 <h3 id="开发视图"><a href="#开发视图" class="headerlink" title="开发视图"></a>开发视图</h3><p>描述系统的模块划分和组成，以及细化到内部包的组成设计，服务于开发人员，反映系统开发实施过程。</p>
 <h2 id="4C图"><a href="#4C图" class="headerlink" title="4C图"></a>4C图</h2><h3 id="上下文（语境图Context）"><a href="#上下文（语境图Context）" class="headerlink" title="上下文（语境图Context）"></a>上下文（语境图Context）</h3><p><img src="/images/pasted-52.png" alt="语境图"></p>
 <p>参与者、系统之间的关系，系统状态进度。</p>
-<font color="red">抽象说：<br>  人、ofo 是2个独立存在的事物，可以称作context。<br></font><br>### 容器图<br><img src="/images/pasted-54.png" alt="容器图"><br>互相独立存在的应用（占用独立的pid 就可以看做一个容器）例如：<br><em> 终端应用：<br>APP、API接口、WEB
-</em> Web服务器：<br>apache、 nginx<br><em> Web应用:<br>部署在 Tomcat、jetty、resion、jboss、Weblogic、Websphere 一个应用
-</em> 数据库应用：<br>Mysql、Oracle、Mongodb<br>* 其它<br>ELK、文件系统、dns服务<br><font color="red"><br>  抽象说：<br>  ofo 可以分解为 车子、APP、其它 这些可以被称为容器。<br></font>  
+<font color="red">抽象说：<br>  人、ofo 是2个独立存在的事物，可以称作context。<br></font>
 
+<h3 id="容器图"><a href="#容器图" class="headerlink" title="容器图"></a>容器图</h3><p><img src="/images/pasted-54.png" alt="容器图"><br>互相独立存在的应用（占用独立的pid 就可以看做一个容器）例如：</p>
+<ul>
+<li>终端应用：<br>APP、API接口、WEB</li>
+<li>Web服务器：<br>apache、 nginx </li>
+<li>Web应用:<br>部署在 Tomcat、jetty、resion、jboss、Weblogic、Websphere 一个应用</li>
+<li>数据库应用：<br>Mysql、Oracle、Mongodb</li>
+<li>其它<br>ELK、文件系统、dns服务  <font color="red"><br>抽象说：<br>ofo 可以分解为 车子、APP、其它 这些可以被称为容器。<br></font>  
+
+</li>
+</ul>
 <h3 id="组件图"><a href="#组件图" class="headerlink" title="组件图"></a>组件图</h3><p>这张组件图不是很严格，没有表示清楚组件提供的能力名称。<br><img src="/images/pasted-55.png" alt="组件图"><br>容器是由多个组件构成，所有组件应当运行在同一个进程中。   </p>
 <font color="red"><br>  抽象说：<br>  车子 可以分解为 车胎、车把、车蹬子、车座子、链条、车架、其它 这些可以被称为组件。<br></font>
 
 <h3 id="代码图"><a href="#代码图" class="headerlink" title="代码图"></a>代码图</h3><p><img src="/images/pasted-56.png" alt="类图"></p>
 <font color="red"><br>  抽象说：<br>  外胎、内胎、辐条、轮圈、轴承 生产方式，轮胎 组装方式 。<br></font>
-
-
-
-
       
     </div>
 
@@ -756,7 +760,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#介绍"><span class="nav-number">1.</span> <span class="nav-text">介绍</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#作用"><span class="nav-number">2.</span> <span class="nav-text">作用</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#分类"><span class="nav-number">3.</span> <span class="nav-text">分类</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-1视图"><span class="nav-number">4.</span> <span class="nav-text">4+1视图</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#场景视图"><span class="nav-number">4.1.</span> <span class="nav-text">场景视图</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#逻辑视图"><span class="nav-number">4.2.</span> <span class="nav-text">逻辑视图</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#物理视图"><span class="nav-number">4.3.</span> <span class="nav-text">物理视图</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#处理流程图"><span class="nav-number">4.4.</span> <span class="nav-text">处理流程图</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#开发视图"><span class="nav-number">4.5.</span> <span class="nav-text">开发视图</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4C图"><span class="nav-number">5.</span> <span class="nav-text">4C图</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#上下文（语境图Context）"><span class="nav-number">5.1.</span> <span class="nav-text">上下文（语境图Context）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#组件图"><span class="nav-number">5.2.</span> <span class="nav-text">组件图</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#代码图"><span class="nav-number">5.3.</span> <span class="nav-text">代码图</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#介绍"><span class="nav-number">1.</span> <span class="nav-text">介绍</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#作用"><span class="nav-number">2.</span> <span class="nav-text">作用</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#分类"><span class="nav-number">3.</span> <span class="nav-text">分类</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-1视图"><span class="nav-number">4.</span> <span class="nav-text">4+1视图</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#场景视图"><span class="nav-number">4.1.</span> <span class="nav-text">场景视图</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#逻辑视图"><span class="nav-number">4.2.</span> <span class="nav-text">逻辑视图</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#物理视图"><span class="nav-number">4.3.</span> <span class="nav-text">物理视图</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#处理流程图"><span class="nav-number">4.4.</span> <span class="nav-text">处理流程图</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#开发视图"><span class="nav-number">4.5.</span> <span class="nav-text">开发视图</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4C图"><span class="nav-number">5.</span> <span class="nav-text">4C图</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#上下文（语境图Context）"><span class="nav-number">5.1.</span> <span class="nav-text">上下文（语境图Context）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#容器图"><span class="nav-number">5.2.</span> <span class="nav-text">容器图</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#组件图"><span class="nav-number">5.3.</span> <span class="nav-text">组件图</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#代码图"><span class="nav-number">5.4.</span> <span class="nav-text">代码图</span></a></li></ol></li></ol></div>
             
 
           </div>
