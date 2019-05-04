@@ -22,6 +22,46 @@
     </entry>
     
     <entry>
+      <title>JVM-类加载机制</title>
+      <link href="/2019/03/20/JVM-%E7%B1%BB%E5%8A%A0%E8%BD%BD%E6%9C%BA%E5%88%B6/"/>
+      <url>/2019/03/20/JVM-%E7%B1%BB%E5%8A%A0%E8%BD%BD%E6%9C%BA%E5%88%B6/</url>
+      
+        <content type="html"><![CDATA[<p><img src="/images/pasted-48.png" alt="upload successful"><br><img src="/images/pasted-49.png" alt="upload successful"></p><h2 id="加载器类型"><a href="#加载器类型" class="headerlink" title="加载器类型"></a>加载器类型</h2><h3 id="启动加载器"><a href="#启动加载器" class="headerlink" title="启动加载器"></a>启动加载器</h3><ul><li>BootstrapClassLoader  </li><li>C++语言实现</li><li>负责加载&lt;JAVA_HOME&gt;\lib (或者 -Xbootclasspath 参数指定路径)目录中的类库加载到内存</li></ul><h3 id="扩展加载类"><a href="#扩展加载类" class="headerlink" title="扩展加载类"></a>扩展加载类</h3><ul><li>ExtensionClassLoader</li><li>Java实现</li><li>负责加载&lt;JAVA_HOME&gt;\lib\ext目录（或者java.ext.dirs系统变量指定的路径）所有类库</li></ul><h3 id="应用程序类加载器"><a href="#应用程序类加载器" class="headerlink" title="应用程序类加载器"></a>应用程序类加载器</h3><ul><li>ApplicationClassLoader</li><li>负责加载 classpath 上的指定类库，我们可以直接使用这个类加载器</li></ul><h2 id="双亲委派模式"><a href="#双亲委派模式" class="headerlink" title="双亲委派模式"></a>双亲委派模式</h2><p>类架加载器在加载一个类时先咨询自己发父亲是否已经加载如果已经加载就直接返回，没有加载子加载器就进行加载。<br><img src="/images/pasted-47.png" alt="upload successful"></p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> java </tag>
+            
+            <tag> jvm </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    <entry>
+      <title>注解介绍</title>
+      <link href="/2019/03/10/%E5%B9%B6%E5%8F%91%E5%8C%85/"/>
+      <url>/2019/03/10/%E5%B9%B6%E5%8F%91%E5%8C%85/</url>
+      
+        <content type="html"><![CDATA[<p><img src="/images/pasted-57.png" alt="upload successful"></p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> java </tag>
+            
+            <tag> 注解 </tag>
+            
+            <tag> java基础 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    <entry>
       <title>Java内存模型（JMM）</title>
       <link href="/2019/03/05/Java%E5%86%85%E5%AD%98%E6%A8%A1%E5%9E%8B%EF%BC%88JMM%EF%BC%89/"/>
       <url>/2019/03/05/Java%E5%86%85%E5%AD%98%E6%A8%A1%E5%9E%8B%EF%BC%88JMM%EF%BC%89/</url>

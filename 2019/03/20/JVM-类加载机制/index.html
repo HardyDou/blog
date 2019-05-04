@@ -112,22 +112,22 @@
 
 
 
-  <meta name="description" content="背景从小在梨树下长大，与梨树相关的工作没有没干过的：    10+次浇地  （2月-11月） 10次打药 （2月-9月） 疏花疏果     （4月） 套袋    （5月） 卸梨、包梨、装箱、入库（8月-10月） 卖梨（8月-次年5月）  2010年以后人均收入快速上升，非农产品物价上涨飞速，最重要的房价坐上火箭一般窜。老乡们能出国，能进城的绝对不会留下来种地。财务里面讲的是利润率、投资回报率，我">
-<meta name="keywords" content="刻意练习">
+  <meta name="description" content="加载器类型启动加载器 BootstrapClassLoader   C++语言实现 负责加载&amp;lt;JAVA_HOME&amp;gt;\lib (或者 -Xbootclasspath 参数指定路径)目录中的类库加载到内存  扩展加载类 ExtensionClassLoader Java实现 负责加载&amp;lt;JAVA_HOME&amp;gt;\lib\ext目录（或者java.ext.dirs系统变量指定的路径）">
+<meta name="keywords" content="java,jvm">
 <meta property="og:type" content="article">
-<meta property="og:title" content="果农利润表">
-<meta property="og:url" content="http://www.hardydou.com/2019/02/19/果农财务报表/index.html">
+<meta property="og:title" content="JVM-类加载机制">
+<meta property="og:url" content="http://www.hardydou.com/2019/03/20/JVM-类加载机制/index.html">
 <meta property="og:site_name" content="HardyDou">
-<meta property="og:description" content="背景从小在梨树下长大，与梨树相关的工作没有没干过的：    10+次浇地  （2月-11月） 10次打药 （2月-9月） 疏花疏果     （4月） 套袋    （5月） 卸梨、包梨、装箱、入库（8月-10月） 卖梨（8月-次年5月）  2010年以后人均收入快速上升，非农产品物价上涨飞速，最重要的房价坐上火箭一般窜。老乡们能出国，能进城的绝对不会留下来种地。财务里面讲的是利润率、投资回报率，我">
+<meta property="og:description" content="加载器类型启动加载器 BootstrapClassLoader   C++语言实现 负责加载&amp;lt;JAVA_HOME&amp;gt;\lib (或者 -Xbootclasspath 参数指定路径)目录中的类库加载到内存  扩展加载类 ExtensionClassLoader Java实现 负责加载&amp;lt;JAVA_HOME&amp;gt;\lib\ext目录（或者java.ext.dirs系统变量指定的路径）">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="http://www.hardydou.com/images/pasted-14.png">
-<meta property="og:image" content="http://www.hardydou.com/images/pasted-19.png">
-<meta property="og:image" content="http://www.hardydou.com/images/pasted-20.png">
-<meta property="og:updated_time" content="2019-02-20T06:31:15.420Z">
+<meta property="og:image" content="http://www.hardydou.com/images/pasted-48.png">
+<meta property="og:image" content="http://www.hardydou.com/images/pasted-49.png">
+<meta property="og:image" content="http://www.hardydou.com/images/pasted-47.png">
+<meta property="og:updated_time" content="2019-04-26T11:19:40.989Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="果农利润表">
-<meta name="twitter:description" content="背景从小在梨树下长大，与梨树相关的工作没有没干过的：    10+次浇地  （2月-11月） 10次打药 （2月-9月） 疏花疏果     （4月） 套袋    （5月） 卸梨、包梨、装箱、入库（8月-10月） 卖梨（8月-次年5月）  2010年以后人均收入快速上升，非农产品物价上涨飞速，最重要的房价坐上火箭一般窜。老乡们能出国，能进城的绝对不会留下来种地。财务里面讲的是利润率、投资回报率，我">
-<meta name="twitter:image" content="http://www.hardydou.com/images/pasted-14.png">
+<meta name="twitter:title" content="JVM-类加载机制">
+<meta name="twitter:description" content="加载器类型启动加载器 BootstrapClassLoader   C++语言实现 负责加载&amp;lt;JAVA_HOME&amp;gt;\lib (或者 -Xbootclasspath 参数指定路径)目录中的类库加载到内存  扩展加载类 ExtensionClassLoader Java实现 负责加载&amp;lt;JAVA_HOME&amp;gt;\lib\ext目录（或者java.ext.dirs系统变量指定的路径）">
+<meta name="twitter:image" content="http://www.hardydou.com/images/pasted-48.png">
 
 
 
@@ -136,7 +136,7 @@
 
 
 
-  <link rel="canonical" href="http://www.hardydou.com/2019/02/19/果农财务报表/">
+  <link rel="canonical" href="http://www.hardydou.com/2019/03/20/JVM-类加载机制/">
 
 
 
@@ -146,7 +146,7 @@
   };
 </script>
 
-  <title>果农利润表 | HardyDou</title>
+  <title>JVM-类加载机制 | HardyDou</title>
   
 
 
@@ -366,7 +366,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://www.hardydou.com/2019/02/19/果农财务报表/">
+    <link itemprop="mainEntityOfPage" href="http://www.hardydou.com/2019/03/20/JVM-类加载机制/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Hardy Dou">
@@ -383,7 +383,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">果农利润表
+          <h1 class="post-title" itemprop="name headline">JVM-类加载机制
               
             
           </h1>
@@ -408,7 +408,7 @@
                 
               
 
-              <time title="创建时间：2019-02-19 00:32:00" itemprop="dateCreated datePublished" datetime="2019-02-19T00:32:00+08:00">2019-02-19</time>
+              <time title="创建时间：2019-03-20 11:05:00" itemprop="dateCreated datePublished" datetime="2019-03-20T11:05:00+08:00">2019-03-20</time>
             
 
             
@@ -425,29 +425,11 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2019-02-20 14:31:15" itemprop="dateModified" datetime="2019-02-20T14:31:15+08:00">2019-02-20</time>
+                <time title="修改时间：2019-04-26 19:19:40" itemprop="dateModified" datetime="2019-04-26T19:19:40+08:00">2019-04-26</time>
               
             
           </span>
 
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/财务/" itemprop="url" rel="index"><span itemprop="name">财务</span></a></span>
-
-                
-                
-              
-            </span>
           
 
           
@@ -457,8 +439,8 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2019/02/19/果农财务报表/#comments" itemprop="discussionUrl">
-                  <span class="post-meta-item-text">评论数：</span> <span class="post-comments-count valine-comment-count" data-xid="/2019/02/19/果农财务报表/" itemprop="commentCount"></span>
+                <a href="/2019/03/20/JVM-类加载机制/#comments" itemprop="discussionUrl">
+                  <span class="post-meta-item-text">评论数：</span> <span class="post-comments-count valine-comment-count" data-xid="/2019/03/20/JVM-类加载机制/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -486,36 +468,22 @@
       
 
       
-        <p><img src="/images/pasted-14.png" width="400" div="" align="/"></p>
-<h2 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h2><p>从小在梨树下长大，与梨树相关的工作没有没干过的：  </p>
-<ul>
-<li>10+次浇地  （2月-11月）</li>
-<li>10次打药 （2月-9月）</li>
-<li>疏花疏果     （4月）</li>
-<li>套袋    （5月）</li>
-<li>卸梨、包梨、装箱、入库（8月-10月）</li>
-<li>卖梨（8月-次年5月）</li>
+        <p><img src="/images/pasted-48.png" alt="upload successful"><br><img src="/images/pasted-49.png" alt="upload successful"></p>
+<h2 id="加载器类型"><a href="#加载器类型" class="headerlink" title="加载器类型"></a>加载器类型</h2><h3 id="启动加载器"><a href="#启动加载器" class="headerlink" title="启动加载器"></a>启动加载器</h3><ul>
+<li>BootstrapClassLoader  </li>
+<li>C++语言实现</li>
+<li>负责加载&lt;JAVA_HOME&gt;\lib (或者 -Xbootclasspath 参数指定路径)目录中的类库加载到内存</li>
 </ul>
-<p>2010年以后人均收入快速上升，非农产品物价上涨飞速，最重要的房价坐上火箭一般窜。老乡们能出国，能进城的绝对不会留下来种地。财务里面讲的是利润率、投资回报率，我们来为果农算一笔账。</p>
-<h2 id="抽离-成本项"><a href="#抽离-成本项" class="headerlink" title="抽离 成本项"></a>抽离 成本项</h2><h3 id="调研问题："><a href="#调研问题：" class="headerlink" title="调研问题："></a>调研问题：</h3><ul>
-<li>雪梨有几亩地：4亩</li>
-<li>多少棵雪梨树：80</li>
-<li>一年收多少件雪梨：750</li>
-<li>15-19年价格：25、35、35、</li>
-<li>一年浇几次地：5 次  2次肥料1000/次</li>
-<li>一年打几次药：6次    </li>
-<li>几次药 分别多少钱：300/次</li>
-<li>一件梨包装费：11</li>
-<li>一件梨制冷费：5</li>
+<h3 id="扩展加载类"><a href="#扩展加载类" class="headerlink" title="扩展加载类"></a>扩展加载类</h3><ul>
+<li>ExtensionClassLoader</li>
+<li>Java实现</li>
+<li>负责加载&lt;JAVA_HOME&gt;\lib\ext目录（或者java.ext.dirs系统变量指定的路径）所有类库</li>
 </ul>
-<h3 id="成本项以及条件假设"><a href="#成本项以及条件假设" class="headerlink" title="成本项以及条件假设"></a>成本项以及条件假设</h3><p><img src="/images/pasted-19.png" alt="upload successful"></p>
-<h2 id="利润表"><a href="#利润表" class="headerlink" title="利润表"></a>利润表</h2><p><img src="/images/pasted-20.png" alt="upload successful"></p>
-<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>分析利润表，关键因素有 售价、包装、冷藏、人工上面。其中 包装、冷藏成本上涨较小，人工成本上涨十分剧烈 但售价基本无变化。导致 2010年以后种地 远远不如 外出务工收入高。</p>
-<h2 id="改进"><a href="#改进" class="headerlink" title="改进"></a>改进</h2><p>物价上涨是趋势所以 包装、冷藏、人工成本无法降低，只能想法提升售价。提升售价方式：</p>
-<ul>
-<li>更换品种例如 皇冠 近些年售价在40-100元/件。</li>
-<li>减少中间环节 直接铺货到零售商。</li>
+<h3 id="应用程序类加载器"><a href="#应用程序类加载器" class="headerlink" title="应用程序类加载器"></a>应用程序类加载器</h3><ul>
+<li>ApplicationClassLoader</li>
+<li>负责加载 classpath 上的指定类库，我们可以直接使用这个类加载器</li>
 </ul>
+<h2 id="双亲委派模式"><a href="#双亲委派模式" class="headerlink" title="双亲委派模式"></a>双亲委派模式</h2><p>类架加载器在加载一个类时先咨询自己发父亲是否已经加载如果已经加载就直接返回，没有加载子加载器就进行加载。<br><img src="/images/pasted-47.png" alt="upload successful"></p>
 
       
     </div>
@@ -549,7 +517,7 @@
   <li class="post-copyright-link">
     <strong>本文链接：</strong>
     
-    <a href="http://www.hardydou.com/2019/02/19/果农财务报表/" title="果农利润表">http://www.hardydou.com/2019/02/19/果农财务报表/</a>
+    <a href="http://www.hardydou.com/2019/03/20/JVM-类加载机制/" title="JVM-类加载机制">http://www.hardydou.com/2019/03/20/JVM-类加载机制/</a>
   </li>
   <li class="post-copyright-license">
     <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fa fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！</li>
@@ -562,7 +530,9 @@
       
         <div class="post-tags">
           
-            <a href="/tags/刻意练习/" rel="tag"># 刻意练习</a>
+            <a href="/tags/java/" rel="tag"># java</a>
+          
+            <a href="/tags/jvm/" rel="tag"># jvm</a>
           
         </div>
       
@@ -575,8 +545,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/02/18/人工智能/" rel="next" title="人工智能">
-                <i class="fa fa-chevron-left"></i> 人工智能
+              <a href="/2019/03/10/并发包/" rel="next" title="注解介绍">
+                <i class="fa fa-chevron-left"></i> 注解介绍
               </a>
             
           </div>
@@ -585,8 +555,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2019/02/20/种植业利润表/" rel="prev" title="种植业财务报表">
-                种植业财务报表 <i class="fa fa-chevron-right"></i>
+              <a href="/2019/04/03/画架构图/" rel="prev" title="架构图">
+                架构图 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -788,7 +758,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#背景"><span class="nav-number">1.</span> <span class="nav-text">背景</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#抽离-成本项"><span class="nav-number">2.</span> <span class="nav-text">抽离 成本项</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#调研问题："><span class="nav-number">2.1.</span> <span class="nav-text">调研问题：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#成本项以及条件假设"><span class="nav-number">2.2.</span> <span class="nav-text">成本项以及条件假设</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#利润表"><span class="nav-number">3.</span> <span class="nav-text">利润表</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#总结"><span class="nav-number">4.</span> <span class="nav-text">总结</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#改进"><span class="nav-number">5.</span> <span class="nav-text">改进</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#加载器类型"><span class="nav-number">1.</span> <span class="nav-text">加载器类型</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#启动加载器"><span class="nav-number">1.1.</span> <span class="nav-text">启动加载器</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#扩展加载类"><span class="nav-number">1.2.</span> <span class="nav-text">扩展加载类</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#应用程序类加载器"><span class="nav-number">1.3.</span> <span class="nav-text">应用程序类加载器</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#双亲委派模式"><span class="nav-number">2.</span> <span class="nav-text">双亲委派模式</span></a></li></ol></div>
             
 
           </div>

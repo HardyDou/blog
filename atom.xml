@@ -44,6 +44,61 @@
   </entry>
   
   <entry>
+    <title>JVM-类加载机制</title>
+    <link href="http://www.hardydou.com/2019/03/20/JVM-%E7%B1%BB%E5%8A%A0%E8%BD%BD%E6%9C%BA%E5%88%B6/"/>
+    <id>http://www.hardydou.com/2019/03/20/JVM-类加载机制/</id>
+    <published>2019-03-20T03:05:00.000Z</published>
+    <updated>2019-04-26T11:19:40.989Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;&lt;img src=&quot;/images/pasted-48.png&quot; alt=&quot;upload successful&quot;&gt;&lt;br&gt;&lt;img src=&quot;/images/pasted-49.png&quot; alt=&quot;upload successful&quot;&gt;&lt;/p&gt;
+&lt;h2
+        
+      
+    
+    </summary>
+    
+    
+      <category term="java" scheme="http://www.hardydou.com/tags/java/"/>
+    
+      <category term="jvm" scheme="http://www.hardydou.com/tags/jvm/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>注解介绍</title>
+    <link href="http://www.hardydou.com/2019/03/10/%E5%B9%B6%E5%8F%91%E5%8C%85/"/>
+    <id>http://www.hardydou.com/2019/03/10/并发包/</id>
+    <published>2019-03-10T09:39:00.000Z</published>
+    <updated>2019-05-04T05:22:21.154Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;&lt;img src=&quot;/images/pasted-57.png&quot; alt=&quot;upload
+        
+      
+    
+    </summary>
+    
+    
+      <category term="java" scheme="http://www.hardydou.com/tags/java/"/>
+    
+      <category term="注解" scheme="http://www.hardydou.com/tags/%E6%B3%A8%E8%A7%A3/"/>
+    
+      <category term="java基础" scheme="http://www.hardydou.com/tags/java%E5%9F%BA%E7%A1%80/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Java内存模型（JMM）</title>
     <link href="http://www.hardydou.com/2019/03/05/Java%E5%86%85%E5%AD%98%E6%A8%A1%E5%9E%8B%EF%BC%88JMM%EF%BC%89/"/>
     <id>http://www.hardydou.com/2019/03/05/Java内存模型（JMM）/</id>
