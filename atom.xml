@@ -272,7 +272,7 @@
     <link href="http://www.hardydou.com/2019/02/13/%E6%B8%90%E8%BF%9B%E6%AD%A5%E9%AA%A4/"/>
     <id>http://www.hardydou.com/2019/02/13/渐进步骤/</id>
     <published>2019-02-12T16:39:00.000Z</published>
-    <updated>2019-05-05T05:14:57.124Z</updated>
+    <updated>2019-05-05T05:35:45.205Z</updated>
     
     <summary type="html">
     
@@ -285,6 +285,8 @@
       
     
     </summary>
+    
+      <category term="工具" scheme="http://www.hardydou.com/categories/%E5%B7%A5%E5%85%B7/"/>
     
     
       <category term="java" scheme="http://www.hardydou.com/tags/java/"/>
@@ -381,7 +383,7 @@
     <link href="http://www.hardydou.com/2018/11/28/%E9%80%89%E5%AE%9A-%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/"/>
     <id>http://www.hardydou.com/2018/11/28/选定-搭建博客/</id>
     <published>2018-11-28T11:33:00.000Z</published>
-    <updated>2018-11-28T16:34:22.079Z</updated>
+    <updated>2019-05-05T05:36:02.940Z</updated>
     
     <summary type="html">
     
@@ -395,10 +397,10 @@
     
     </summary>
     
+      <category term="工具" scheme="http://www.hardydou.com/categories/%E5%B7%A5%E5%85%B7/"/>
+    
     
       <category term="hexo" scheme="http://www.hardydou.com/tags/hexo/"/>
-    
-      <category term="plan" scheme="http://www.hardydou.com/tags/plan/"/>
     
   </entry>
   
