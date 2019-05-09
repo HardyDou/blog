@@ -3,7 +3,7 @@
   
     
     <entry>
-      <title>Gradle构建</title>
+      <title>Gradle构建项目</title>
       <link href="/2019/05/05/Gradle%E6%9E%84%E5%BB%BA/"/>
       <url>/2019/05/05/Gradle%E6%9E%84%E5%BB%BA/</url>
       
@@ -19,9 +19,9 @@
       
         <tags>
             
-            <tag> idea </tag>
-            
             <tag> gradle </tag>
+            
+            <tag> idea </tag>
             
         </tags>
       
@@ -263,9 +263,9 @@
       
         <tags>
             
-            <tag> java </tag>
-            
             <tag> idea </tag>
+            
+            <tag> java </tag>
             
         </tags>
       

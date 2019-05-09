@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.hardydou.com/"/>
-  <updated>2019-05-05T08:21:39.074Z</updated>
+  <updated>2019-05-09T03:16:08.028Z</updated>
   <id>http://www.hardydou.com/</id>
   
   <author>
@@ -17,11 +17,11 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>Gradle构建</title>
+    <title>Gradle构建项目</title>
     <link href="http://www.hardydou.com/2019/05/05/Gradle%E6%9E%84%E5%BB%BA/"/>
     <id>http://www.hardydou.com/2019/05/05/Gradle构建/</id>
     <published>2019-05-05T06:50:00.000Z</published>
-    <updated>2019-05-05T08:21:39.074Z</updated>
+    <updated>2019-05-09T03:16:08.028Z</updated>
     
     <summary type="html">
     
@@ -39,9 +39,9 @@
       <category term="工具" scheme="http://www.hardydou.com/categories/%E5%B7%A5%E5%85%B7/"/>
     
     
-      <category term="idea" scheme="http://www.hardydou.com/tags/idea/"/>
-    
       <category term="gradle" scheme="http://www.hardydou.com/tags/gradle/"/>
+    
+      <category term="idea" scheme="http://www.hardydou.com/tags/idea/"/>
     
   </entry>
   
@@ -318,9 +318,9 @@
       <category term="工具" scheme="http://www.hardydou.com/categories/%E5%B7%A5%E5%85%B7/"/>
     
     
-      <category term="java" scheme="http://www.hardydou.com/tags/java/"/>
-    
       <category term="idea" scheme="http://www.hardydou.com/tags/idea/"/>
+    
+      <category term="java" scheme="http://www.hardydou.com/tags/java/"/>
     
   </entry>
   
