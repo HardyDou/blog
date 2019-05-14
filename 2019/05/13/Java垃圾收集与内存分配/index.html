@@ -1,0 +1,1118 @@
+<!DOCTYPE html>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion" lang="zh-CN">
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
+
+<link href="/css/main.css?v=6.5.0" rel="stylesheet" type="text/css">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=6.5.0">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=6.5.0">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=6.5.0">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=6.5.0" color="#222">
+
+
+
+
+
+
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    version: '6.5.0',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":true,"scrollpercent":true,"onmobile":false,"width":240},
+    fancybox: true,
+    fastclick: false,
+    lazyload: false,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+  
+
+
+
+
+  <meta name="description" content="概述GC(Garbage Collection),1960年在MIT的Lisp语言。在java中被发扬光大。GC主要控制内存区域是：堆、方法区（元数据空间）。GC主要完成的3件事情：  哪些内存需要回收？（Who） 什么时候回收？（When） 如何回收？（How）     学习目的，对GC的监控和调节。 确定需要回收对象引用计数算法每个对象都有一个引用计数器，为0时回收。  逻辑简单清晰 循环引用">
+<meta name="keywords" content="java,jvm">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Java垃圾收集与内存分配">
+<meta property="og:url" content="http://www.hardydou.com/2019/05/13/Java垃圾收集与内存分配/index.html">
+<meta property="og:site_name" content="HardyDou">
+<meta property="og:description" content="概述GC(Garbage Collection),1960年在MIT的Lisp语言。在java中被发扬光大。GC主要控制内存区域是：堆、方法区（元数据空间）。GC主要完成的3件事情：  哪些内存需要回收？（Who） 什么时候回收？（When） 如何回收？（How）     学习目的，对GC的监控和调节。 确定需要回收对象引用计数算法每个对象都有一个引用计数器，为0时回收。  逻辑简单清晰 循环引用">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="http://www.hardydou.com/images/pasted-90.png">
+<meta property="og:image" content="http://www.hardydou.com/images/pasted-91.png">
+<meta property="og:image" content="http://www.hardydou.com/images/pasted-93.png">
+<meta property="og:image" content="http://www.hardydou.com/images/pasted-94.png">
+<meta property="og:image" content="http://www.hardydou.com/images/pasted-95.png">
+<meta property="og:image" content="http://www.hardydou.com/images/pasted-96.png">
+<meta property="og:image" content="http://www.hardydou.com/images/pasted-97.png">
+<meta property="og:image" content="http://www.hardydou.com/images/pasted-98.png">
+<meta property="og:updated_time" content="2019-05-14T17:34:55.861Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Java垃圾收集与内存分配">
+<meta name="twitter:description" content="概述GC(Garbage Collection),1960年在MIT的Lisp语言。在java中被发扬光大。GC主要控制内存区域是：堆、方法区（元数据空间）。GC主要完成的3件事情：  哪些内存需要回收？（Who） 什么时候回收？（When） 如何回收？（How）     学习目的，对GC的监控和调节。 确定需要回收对象引用计数算法每个对象都有一个引用计数器，为0时回收。  逻辑简单清晰 循环引用">
+<meta name="twitter:image" content="http://www.hardydou.com/images/pasted-90.png">
+
+
+
+  <link rel="alternate" href="/atom.xml" title="HardyDou" type="application/atom+xml">
+
+
+
+
+  <link rel="canonical" href="http://www.hardydou.com/2019/05/13/Java垃圾收集与内存分配/">
+
+
+
+<script type="text/javascript" id="page.configurations">
+  CONFIG.page = {
+    sidebar: "",
+  };
+</script>
+
+  <title>Java垃圾收集与内存分配 | HardyDou</title>
+  
+
+
+
+
+
+
+
+
+
+
+
+  <noscript>
+  <style type="text/css">
+    .use-motion .motion-element,
+    .use-motion .brand,
+    .use-motion .menu-item,
+    .sidebar-inner,
+    .use-motion .post-block,
+    .use-motion .pagination,
+    .use-motion .comments,
+    .use-motion .post-header,
+    .use-motion .post-body,
+    .use-motion .collection-title { opacity: initial; }
+
+    .use-motion .logo,
+    .use-motion .site-title,
+    .use-motion .site-subtitle {
+      opacity: initial;
+      top: initial;
+    }
+
+    .use-motion {
+      .logo-line-before i { left: initial; }
+      .logo-line-after i { right: initial; }
+    }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope="" itemtype="http://schema.org/WebPage" lang="zh-CN">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope="" itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">HardyDou</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+    
+      
+        <p class="site-subtitle">HardyDou'blog</p>
+      
+    
+  </div>
+
+  <div class="site-nav-toggle">
+    <button aria-label="切换导航栏">
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  
+    <ul id="menu" class="menu">
+      
+        
+        
+        
+          
+          <li class="menu-item menu-item-home">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/" rel="section"><i class="menu-item-icon fa fa-fw fa-home"></i> <br>首页</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-archives">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/archives" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-tags">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/tags" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br>标签</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-categories">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/categories" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br>分类</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-about">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/about" rel="section"><i class="menu-item-icon fa fa-fw fa-user"></i> <br>关于</a>
+
+  </li>
+
+      
+      
+    </ul>
+  
+
+  
+
+  
+</nav>
+
+
+
+  
+
+
+
+</div>
+    </header>
+
+    
+
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+            
+
+          
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://www.hardydou.com/2019/05/13/Java垃圾收集与内存分配/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Hardy Dou">
+      <meta itemprop="description" content="HardyDou的博客">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="HardyDou">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">Java垃圾收集与内存分配
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2019-05-13 16:43:00" itemprop="dateCreated datePublished" datetime="2019-05-13T16:43:00+08:00">2019-05-13</time>
+            
+
+            
+              
+
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2019-05-15 01:34:55" itemprop="dateModified" datetime="2019-05-15T01:34:55+08:00">2019-05-15</time>
+              
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/java/" itemprop="url" rel="index"><span itemprop="name">java</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2019/05/13/Java垃圾收集与内存分配/#comments" itemprop="discussionUrl">
+                  <span class="post-meta-item-text">评论数：</span> <span class="post-comments-count valine-comment-count" data-xid="/2019/05/13/Java垃圾收集与内存分配/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h2 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h2><p>GC(Garbage Collection),1960年在MIT的Lisp语言。在java中被发扬光大。GC主要控制内存区域是：堆、方法区（元数据空间）。GC主要完成的3件事情：</p>
+<ul>
+<li>哪些内存需要回收？（Who）</li>
+<li>什么时候回收？（When）</li>
+<li>如何回收？（How）   </li>
+</ul>
+<p>学习目的，对GC的监控和调节。</p>
+<h2 id="确定需要回收对象"><a href="#确定需要回收对象" class="headerlink" title="确定需要回收对象"></a>确定需要回收对象</h2><h3 id="引用计数算法"><a href="#引用计数算法" class="headerlink" title="引用计数算法"></a>引用计数算法</h3><p>每个对象都有一个引用计数器，为0时回收。</p>
+<ul>
+<li>逻辑简单清晰</li>
+<li>循环引用无法回收</li>
+</ul>
+<p>循环引用示例<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">class ReferenceObj &#123;</span><br><span class="line">    public Object ref = null;</span><br><span class="line">    static final int _1MB = 1024 * 1024;</span><br><span class="line">    private byte[] bigSize = new byte[10 * _1MB];</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">@Test</span><br><span class="line">public void sence1() &#123;</span><br><span class="line">        ReferenceObj one = new ReferenceObj();</span><br><span class="line">        ReferenceObj two = new ReferenceObj();</span><br><span class="line">        one.ref = two;</span><br><span class="line">        two.ref = one;</span><br><span class="line">        one = null;</span><br><span class="line">        two = null;</span><br><span class="line">        System.gc();</span><br><span class="line">    &#125;</span><br><span class="line">//[GC (System.gc())  28413K-&gt;21768K(62976K), 0.0033033 secs]</span><br><span class="line">//[Full GC (System.gc())  21768K-&gt;1192K(62976K), 0.0085810 secs]</span><br></pre></td></tr></table></figure></p>
+<p>循环引用对象也被回收了。这说明当前虚拟机并不是通过 引用计数算法来判断对象是否可回收的。</p>
+<h3 id="可达性分析算法"><a href="#可达性分析算法" class="headerlink" title="可达性分析算法"></a>可达性分析算法</h3><p>猪油语言Java，C#,Lisp 都是通过可达性分析（Reachability Analysis）来判断对象是否存货的。算法基本思路是通过一系列的成为GC Roots的对象作为起始点，从这些节点开始向下搜索，搜索所走过的路径称为引用链（Reference Chain），当一个对象到GC Roots 没有任何引用链相连时，则证明此对象是不可用的。<br><img src="/images/pasted-90.png" alt="upload successful"></p>
+<p>可以作为GC Roots的对象包含如下：</p>
+<ul>
+<li>虚拟机栈 （栈帧中的本地变量表）中引用对象。</li>
+<li>方法区中静态属性引用的对象</li>
+<li>方法区中常量引用的对象</li>
+<li>本地方法栈中JNI（即Native方法）引用对象</li>
+</ul>
+<h3 id="引用"><a href="#引用" class="headerlink" title="引用"></a>引用</h3><p>JDK1.2之前引用有两种状态：被引用 or 没有被引用。JDK1.2之后引入了：</p>
+<ul>
+<li>强引用（Strong Reference）</li>
+<li>软引用（Soft Reference）</li>
+<li>弱引用（Weak Reference）</li>
+<li>虚引用（Phantom Reference）</li>
+</ul>
+<p>这四种引用强度依次减弱。</p>
+<h4 id="强引用"><a href="#强引用" class="headerlink" title="强引用"></a>强引用</h4><pre><code>Object obj=new Object();
+</code></pre><p>obj 就是强引用，只要强引用存在 就不会回收。</p>
+<h4 id="软引用"><a href="#软引用" class="headerlink" title="软引用"></a>软引用</h4><pre><code>SoftReference&lt;ReferenceObj&gt; softRef = new SoftReference(new ReferenceObj(&quot;softRef&quot;));
+</code></pre><p>抛出异常前回收</p>
+<h4 id="弱引用"><a href="#弱引用" class="headerlink" title="弱引用"></a>弱引用</h4><pre><code>WeakReference&lt;ReferenceObj&gt; weakRef = new WeakReference(new ReferenceObj(&quot;weakRef&quot;));
+</code></pre><p>下次垃圾回收执行时回收</p>
+<h4 id="虚引用"><a href="#虚引用" class="headerlink" title="虚引用"></a>虚引用</h4><pre><code>PhantomReference&lt;ReferenceObj&gt; phantomRef = new PhantomReference(new ReferenceObj(&quot;phantomRef&quot;), new ReferenceQueue());
+</code></pre><p>下次垃圾回收执行时回收，永远无法获取到被引用对象。理论上可以通过虚引用+ finalize 获取gc执行情况。</p>
+<h4 id="示例代码"><a href="#示例代码" class="headerlink" title="示例代码"></a>示例代码</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line">/**</span><br><span class="line">    * 强引用、软引用、弱引用、虚引用 测试</span><br><span class="line">    * &lt;p&gt;</span><br><span class="line">    * 强引用：引用存在，永远不会回收。</span><br><span class="line">    * &lt;p&gt;</span><br><span class="line">    * 软引用：抛出异常前回收。</span><br><span class="line">    * &lt;p&gt;</span><br><span class="line">    * 弱引用：下次垃圾回收时回收。</span><br><span class="line">    * &lt;p&gt;</span><br><span class="line">    * 虚引用：下次垃圾回收时回收，永远无法获取被引用对象。</span><br><span class="line">    */</span><br><span class="line">   @Test</span><br><span class="line">   public void sence2() &#123;</span><br><span class="line"></span><br><span class="line">       ReferenceObj strongRef = new ReferenceObj(&quot;strongRef&quot;);</span><br><span class="line">       SoftReference&lt;ReferenceObj&gt; softRef = new SoftReference(new ReferenceObj(&quot;softRef&quot;));</span><br><span class="line">       WeakReference&lt;ReferenceObj&gt; weakRef = new WeakReference(new ReferenceObj(&quot;weakRef&quot;));</span><br><span class="line">       PhantomReference&lt;ReferenceObj&gt; phantomRef = new PhantomReference(new ReferenceObj(&quot;phantomRef&quot;), new ReferenceQueue());</span><br><span class="line">       System.out.println(&quot;strongRef : &quot; + strongRef);</span><br><span class="line">       System.out.println(&quot;softRef : &quot; + softRef.get());</span><br><span class="line">       System.out.println(&quot;weakRef : &quot; + weakRef.get());</span><br><span class="line">       System.out.println(&quot;phantomRef : &quot; + phantomRef.get());</span><br><span class="line">       System.out.println(&quot;=====================GC======================&quot;);</span><br><span class="line">       System.gc();</span><br><span class="line">       System.out.println(&quot;strongRef : &quot; + strongRef);</span><br><span class="line">       System.out.println(&quot;softRef : &quot; + softRef.get());</span><br><span class="line">       System.out.println(&quot;weakRef : &quot; + weakRef.get());</span><br><span class="line">       System.out.println(&quot;phantomRef : &quot; + phantomRef.get());</span><br><span class="line">       System.out.println(&quot;=====================Alloc(40M)======================&quot;);</span><br><span class="line">       byte[] bs = new byte[1024 * 1024 * 40];</span><br><span class="line">       System.out.println(&quot;strongRef : &quot; + strongRef);</span><br><span class="line">       System.out.println(&quot;softRef : &quot; + softRef.get());</span><br><span class="line">       System.out.println(&quot;weakRef : &quot; + weakRef.get());</span><br><span class="line">       System.out.println(&quot;phantomRef : &quot; + phantomRef.get());</span><br><span class="line">   &#125;</span><br></pre></td></tr></table></figure>
+<p>运行结果<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line">strongRef : com.hardydou.jmm.ReferenceObj@694f9431</span><br><span class="line">softRef : com.hardydou.jmm.ReferenceObj@f2a0b8e</span><br><span class="line">weakRef : com.hardydou.jmm.ReferenceObj@593634ad</span><br><span class="line">phantomRef : null</span><br><span class="line">=====================GC======================</span><br><span class="line">0.337: [GC (System.gc()) [PSYoungGen: 11990K-&gt;2368K(18944K)] 11990K-&gt;5448K(62976K), 0.0045934 secs] [Times: user=0.01 sys=0.00, real=0.01 secs] </span><br><span class="line">0.342: [Full GC (System.gc()) [PSYoungGen: 2368K-&gt;0K(18944K)] [ParOldGen: 3080K-&gt;5298K(44032K)] 5448K-&gt;5298K(62976K), [Metaspace: 5049K-&gt;5049K(1056768K)], 0.0075451 secs] [Times: user=0.02 sys=0.00, real=0.00 secs] </span><br><span class="line">strongRef : com.hardydou.jmm.ReferenceObj@694f9431</span><br><span class="line">[ com.hardydou.jmm.ReferenceObj@593634ad ] weakRef run  finalize </span><br><span class="line">[ com.hardydou.jmm.ReferenceObj@11adfb87 ] phantomRef run  finalize </span><br><span class="line">softRef : com.hardydou.jmm.ReferenceObj@f2a0b8e</span><br><span class="line">weakRef : null</span><br><span class="line">phantomRef : null</span><br><span class="line">=====================Alloc(40M)======================</span><br><span class="line">0.351: [GC (Allocation Failure) [PSYoungGen: 641K-&gt;32K(18944K)] 5940K-&gt;5330K(62976K), 0.0010440 secs] [Times: user=0.01 sys=0.00, real=0.01 secs] </span><br><span class="line">0.352: [GC (Allocation Failure) [PSYoungGen: 32K-&gt;32K(18944K)] 5330K-&gt;5330K(62976K), 0.0009079 secs] [Times: user=0.00 sys=0.00, real=0.00 secs] </span><br><span class="line">0.353: [Full GC (Allocation Failure) [PSYoungGen: 32K-&gt;0K(18944K)] [ParOldGen: 5298K-&gt;3907K(32256K)] 5330K-&gt;3907K(51200K), [Metaspace: 5052K-&gt;5052K(1056768K)], 0.0064555 secs] [Times: user=0.01 sys=0.00, real=0.00 secs] </span><br><span class="line">0.360: [GC (Allocation Failure) [PSYoungGen: 0K-&gt;0K(18944K)] 3907K-&gt;3907K(62976K), 0.0003754 secs] [Times: user=0.00 sys=0.00, real=0.00 secs] </span><br><span class="line">0.360: [Full GC (Allocation Failure) [PSYoungGen: 0K-&gt;0K(18944K)] [ParOldGen: 3907K-&gt;3845K(44032K)] 3907K-&gt;3845K(62976K), [Metaspace: 5052K-&gt;5049K(1056768K)], 0.0078142 secs] [Times: user=0.02 sys=0.00, real=0.01 secs] </span><br><span class="line">[ com.hardydou.jmm.ReferenceObj@f2a0b8e ] softRef run  finalize </span><br><span class="line">java.lang.OutOfMemoryError: Java heap space</span><br><span class="line">Heap</span><br><span class="line"> PSYoungGen      total 18944K, used 1127K [0x00000007beb00000, 0x00000007c0000000, 0x00000007c0000000)</span><br><span class="line">  eden space 16384K, 6% used [0x00000007beb00000,0x00000007bec19cb0,0x00000007bfb00000)</span><br><span class="line">  from space 2560K, 0% used [0x00000007bfd80000,0x00000007bfd80000,0x00000007c0000000)</span><br><span class="line">  to   space 2560K, 0% used [0x00000007bfb00000,0x00000007bfb00000,0x00000007bfd80000)</span><br><span class="line"> ParOldGen       total 44032K, used 3845K [0x00000007bc000000, 0x00000007beb00000, 0x00000007beb00000)</span><br><span class="line">  object space 44032K, 8% used [0x00000007bc000000,0x00000007bc3c14d8,0x00000007beb00000)</span><br><span class="line"> Metaspace       used 5130K, capacity 5184K, committed 5248K, reserved 1056768K</span><br><span class="line">  class space    used 601K, capacity 624K, committed 640K, reserved 1048576K</span><br><span class="line"></span><br><span class="line">Process finished with exit code 255</span><br></pre></td></tr></table></figure></p>
+<h3 id="非生即死吗？"><a href="#非生即死吗？" class="headerlink" title="非生即死吗？"></a>非生即死吗？</h3><p>在可达性分析算法中不可达的对象并非是”非生即死“，还有“缓刑”阶段。一个对象至少要经过两次标记过程.<br><img src="/images/pasted-91.png" alt="upload successful"><br>示例<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br></pre></td><td class="code"><pre><span class="line">class FinalizeEscapeGC &#123;</span><br><span class="line">    public void isAlive() &#123;</span><br><span class="line">        System.out.println(&quot;yes i am still alive !&quot;);</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">    @Override</span><br><span class="line">    protected void finalize() throws Throwable &#123;</span><br><span class="line">        GCTest.HOOK = this;</span><br><span class="line">        System.out.println(&quot;FinalizeEscapeGC.finalize&quot;);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">  	public static FinalizeEscapeGC HOOK = null;</span><br><span class="line">	/**</span><br><span class="line">     * 1、对象可以再被GC市进行自我拯救</span><br><span class="line">     * 2、自我拯救机会只有1次，因为一个对象finalize()方法最多只会被执行1次。</span><br><span class="line">     */</span><br><span class="line">    @Test</span><br><span class="line">    public void sence3() throws Exception &#123;</span><br><span class="line">        HOOK = new FinalizeEscapeGC();</span><br><span class="line">        HOOK = null;</span><br><span class="line">        System.gc();</span><br><span class="line">        Thread.sleep(500L);</span><br><span class="line">        if (HOOK != null) &#123;</span><br><span class="line">            HOOK.isAlive();</span><br><span class="line">        &#125; else &#123;</span><br><span class="line">            System.out.println(&quot;no, i am dead !&quot;);</span><br><span class="line">        &#125;</span><br><span class="line">        System.out.println(&quot;=======second========&quot;);</span><br><span class="line">        HOOK = null;</span><br><span class="line">        System.gc();</span><br><span class="line">        Thread.sleep(500L);</span><br><span class="line">        if (HOOK != null) &#123;</span><br><span class="line">            HOOK.isAlive();</span><br><span class="line">        &#125; else &#123;</span><br><span class="line">            System.out.println(&quot;no, i am dead !&quot;);</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure></p>
+<p>执行结果<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">0.344: [GC (System.gc()) [PSYoungGen: 7891K-&gt;1312K(18944K)] 7891K-&gt;1320K(62976K), 0.0020721 secs] [Times: user=0.00 sys=0.00, real=0.00 secs] </span><br><span class="line">0.346: [Full GC (System.gc()) [PSYoungGen: 1312K-&gt;0K(18944K)] [ParOldGen: 8K-&gt;1201K(44032K)] 1320K-&gt;1201K(62976K), [Metaspace: 5060K-&gt;5060K(1056768K)], 0.0106312 secs] [Times: user=0.02 sys=0.01, real=0.01 secs] </span><br><span class="line">FinalizeEscapeGC.finalize</span><br><span class="line">yes i am still alive !</span><br><span class="line">=======second========</span><br><span class="line">0.866: [GC (System.gc()) [PSYoungGen: 655K-&gt;32K(18944K)] 1857K-&gt;1233K(62976K), 0.0011709 secs] [Times: user=0.01 sys=0.00, real=0.01 secs] </span><br><span class="line">0.867: [Full GC (System.gc()) [PSYoungGen: 32K-&gt;0K(18944K)] [ParOldGen: 1201K-&gt;834K(44032K)] 1233K-&gt;834K(62976K), [Metaspace: 5063K-&gt;5063K(1056768K)], 0.0195988 secs] [Times: user=0.01 sys=0.00, real=0.01 secs] </span><br><span class="line">no, i am dead !</span><br></pre></td></tr></table></figure></p>
+<h3 id="回收方法区"><a href="#回收方法区" class="headerlink" title="回收方法区"></a>回收方法区</h3><p>主要回收：废弃常量，无用的类。</p>
+<h4 id="方法区有哪些数据"><a href="#方法区有哪些数据" class="headerlink" title="方法区有哪些数据"></a>方法区有哪些数据</h4><ul>
+<li>已加载类信息</li>
+<li>类型常量池</li>
+<li>域(Field)信息 </li>
+<li>方法(Method)信息</li>
+<li>所有静态(static)变量（不包含常量）</li>
+</ul>
+<p>详情可以看   <a href="/2019/05/14/Java几种常量池/">Java几种常量池</a></p>
+<h4 id="找到废弃变量"><a href="#找到废弃变量" class="headerlink" title="找到废弃变量"></a>找到废弃变量</h4><p>这个比较简单，变量不存在引用就可以直接回收。(待细细挖掘)</p>
+<h4 id="找到无用类"><a href="#找到无用类" class="headerlink" title="找到无用类"></a>找到无用类</h4><p>这个比较复杂，需要满足三个条件：</p>
+<ul>
+<li>该类所有的实例都已经被回收，也就是Java堆中不存在该类的任何实例。</li>
+<li>加载该类的ClassLoader已经被回收</li>
+<li>该类对应的java.lang.Class 对象没有任何地方引用，无法再任何地方通过反射访问该类的方法。</li>
+</ul>
+<p>虚拟机可以对满足以上3个条件的无用类进行回收，并不是一定会回收。HotSpot虚拟机可以通过 -Xnoclassgc 参数控制，通过-verbose:class 以及 -XX:TraceClassLoading、-XX:TraceClassUnLoading（需要FasetDebug版本的虚拟机支持） 查看类加载卸载信息。</p>
+<h2 id="垃圾收集算法"><a href="#垃圾收集算法" class="headerlink" title="垃圾收集算法"></a>垃圾收集算法</h2><p>不同虚拟机平台操作内存方法不同，GC算法也不相同。以下是几种典型的思想。</p>
+<h3 id="标记-清除算法"><a href="#标记-清除算法" class="headerlink" title="标记-清除算法"></a>标记-清除算法</h3><p>标记-清除（Mark-Sweep）这是最基本的算法，先标记需要清理的垃圾，再对已经标记的垃圾进行回收。此方法不足：</p>
+<ul>
+<li>效率低</li>
+<li>大量内存碎片</li>
+</ul>
+<p>其它算法都是基于对此算法缺点优化所诞生的。<br><img src="/images/pasted-93.png" alt="upload successful"></p>
+<h3 id="复制算法"><a href="#复制算法" class="headerlink" title="复制算法"></a>复制算法</h3><p>将空间分成A、B两等分。同一时间只启用一块空间，当A空间满了，就将存活对象复制到B空间，同时A空间全部销毁。B空间满的时候再将存活对象复制到A空间….如此循环。次算法解决了 内存碎片问题、同时效率也得到了提升。但带来新的缺点：</p>
+<ul>
+<li>内存使用率低</li>
+<li>对象存活率高时，大量复制导致效率变低；</li>
+</ul>
+<p>复制算法-图示：<br><img src="/images/pasted-94.png" alt="upload successful"></p>
+<p>实际使用情况：</p>
+<ul>
+<li>基点：98%对象都是朝生夕死。下面所提到使用都是基点成立时最佳。</li>
+<li>所有商业虚拟机都在新生代采用复制算法作为垃圾回收算法。</li>
+<li>非1：1分配，一块较大的Eden、两块较小Survivor空间。每次使用Eden+一块Survivor，回收时将Eden、Survivor中存活对象复制到另一块 Survivor，然后清理掉Eden与Survivor。当 Survivor内存不够时需要借用老年代内存进行分配担保（Handle Promotion）。</li>
+<li>默认情况下 HotSpot虚拟机，Eden：Survivor(8:1)，也就是说默认情况浪费10%的内存</li>
+</ul>
+<h3 id="标记-整理算法"><a href="#标记-整理算法" class="headerlink" title="标记-整理算法"></a>标记-整理算法</h3><p>根据老年代特点所提出 标记-整理（Mark-Compact)算法，标记阶段与 标记-清除一样，只不过清除阶段不是直接回收，而是向一端移动，然后清理掉边界以外内存。</p>
+<p><img src="/images/pasted-95.png" alt="upload successful"></p>
+<h3 id="分代收集算法"><a href="#分代收集算法" class="headerlink" title="分代收集算法"></a>分代收集算法</h3><p>当前商业虚拟机的垃圾收集都有采用”分代收集”（Generational Collection）算法，这种算法并非新思路。而是根据对象存活周期的不同将内存划分为几块。一般是把Java堆划分为新生代，老年代。然后根据各个年代的特点采用最适合的收集算法。</p>
+<h2 id="HotSpot-算法实现"><a href="#HotSpot-算法实现" class="headerlink" title="HotSpot 算法实现"></a>HotSpot 算法实现</h2><h3 id="枚举根节点"><a href="#枚举根节点" class="headerlink" title="枚举根节点"></a>枚举根节点</h3><p>可作为GC Roots的节点主要在全局性的引用（常量、类静态属性）与上下文（栈帧中的本地变量）中。GC停顿：gc执行时所有Java执行线程必须停顿（Stop The World）。即时在号称（几乎）不会发生停顿的CMS收集器中，枚举根节点时也是必须要停顿的。<br>准确式GC：Jvm知道内存中某个位置数据是什么类型，不用扫描就可以快速找到对象引用的位置。</p>
+<h3 id="安全点"><a href="#安全点" class="headerlink" title="安全点"></a>安全点</h3><p>在OopMap协助下可以快速枚举出根节点。但如果每条指令都操作OopMap 将会占用大量空间，因此 jvm只在一些特定的位置操作OopMap，这些位置就是安全点（SafePoint）。如何确保所有线程都是在安全点停顿呢？</p>
+<ul>
+<li>抢先式中断(Preemptive Suspension)<br>GC发生时，所有线程先中断。再检查中断线程是否在安全点，不在再激活让他跑到安全点上。所有虚拟机不再使用这个方法。</li>
+<li>主动式中断（Voluntary Suspension)<br>当GC要中断线程时，不直接对线程进行操作，设置一个标识，所有线程去轮询标识，发现中断标识就自行挂起。轮询标志的地方和安全点是重合的。</li>
+</ul>
+<h3 id="安全区域"><a href="#安全区域" class="headerlink" title="安全区域"></a>安全区域</h3><p>使用SafePoint 解决了如何进入GC的问题，但实际情况并不一定。假如某些程序一直处于sleep或者Blocked状态，这样就无法进入安全点挂起，该如何处理。这就需要安全区（Safe Region）来解决。<br>安全区是指一段代码片段中，引用关系不会发生变化。在这个区域中的任意地方开始GC都是安全的。也可以吧Safe Region 看做是被扩展的Safepoint。<br>在线程执行到Safe Region中的代码时，首先标识自己进入Safe Region，那样当这段时间JVM发起GC时，就不用管标识自己Safe Region状态的线程了。在线程要离开Safe Region时，要检查系统是否已经完成了根节点枚举（或者GC过程），如果完成了那线程就继续执行，否则就必须等待直到可以安全离开SafeRegion的信号为止。</p>
+<p>还有一种情况是，既不在SafeRegion 又处于 sleep 或者Blocked 的线程 存在时 怎么处理呢？放弃GC？</p>
+<h2 id="垃圾收集器"><a href="#垃圾收集器" class="headerlink" title="垃圾收集器"></a>垃圾收集器</h2><p>垃圾回收算法是方法论，垃圾收集器是具体实现。<br>HotSpot虚拟机垃圾收集器图示：<br><img src="/images/pasted-96.png" alt="upload successful"><br>上图涵盖7中作用于不同分代的收集器，连线的收集器可以搭配使用。重点在CMS、G1这两个收集器。</p>
+<h3 id="Serial收集器"><a href="#Serial收集器" class="headerlink" title="Serial收集器"></a>Serial收集器</h3><p>最基本、最悠久收集器，曾经（dk1.3.1之前）是新生代唯一选择。单线程的收集器（Stop The World），执行它必须停止所有线程。<br>图示：<br><img src="/images/pasted-97.png" alt="upload successful"><br>Stop The World 体验非常差劲，从JDK1.3开始，一直到现在的Jdk1.8 ,HotSpot虚拟机团队为消除或者减少工作线程因为内存回收而导致停顿的努力一直在进行着。从Serial收集器——&gt;Paraller收集器——&gt;Concurrent Mark Sweep（CMS）——&gt;最前沿的G1收集器，越来越复杂，停顿不断再缩短，但还没有办法完全消除。</p>
+<p>Serial收集器特点以及应用：</p>
+<ul>
+<li>简单高效</li>
+<li>Client模式下很好选择</li>
+</ul>
+<h3 id="ParNew收集器"><a href="#ParNew收集器" class="headerlink" title="ParNew收集器"></a>ParNew收集器</h3><p>Serial收集器多线程版本，除了多线程外其余（例如：-XX:SurvivorRation-XX:pretenureSizeThread-XX:HandlePromotionFailure 等）、收集算法、Stop The World 、对象分配规则、回收策略都与Serial完全一样。<br><img src="/images/pasted-98.png" alt="upload successful"></p>
+<p>ParNew收集器特点及应用：</p>
+<ul>
+<li>Server模式下新生代首选</li>
+<li>唯一一个可以与CMS（Jdk1.5推出、划时代意义）收集器配合使用的。</li>
+<li>单Cpu中 ParNew收集器 ≤ Serial收集器，</li>
+<li>通过-XX:ParallelGCThreads 参数限制垃圾收集线程数</li>
+</ul>
+<h3 id="Parallel-Scavenge收集器"><a href="#Parallel-Scavenge收集器" class="headerlink" title="Parallel Scavenge收集器"></a>Parallel Scavenge收集器</h3><p>不同于其他收集器（CMS关注停顿时间）ParallelScavenge 关注吞吐量，吞吐量=运行用户代码时间/（运行用户代码时间+垃圾收集时间），例如虚拟机总运行100分钟，其中垃圾回收划掉1分钟，那么吞吐量=99%</p>
+
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+       
+    
+    
+
+    
+      <div>
+        
+
+
+
+  
+
+
+
+<ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者： </strong>Hardy Dou</li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    
+    <a href="http://www.hardydou.com/2019/05/13/Java垃圾收集与内存分配/" title="Java垃圾收集与内存分配">http://www.hardydou.com/2019/05/13/Java垃圾收集与内存分配/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fa fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！</li>
+</ul>
+
+      </div>
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/java/" rel="tag"># java</a>
+          
+            <a href="/tags/jvm/" rel="tag"># jvm</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/05/11/java泛型/" rel="next" title="java泛型">
+                <i class="fa fa-chevron-left"></i> java泛型
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2019/05/14/Java几种常量池/" rel="prev" title="Java几种常量池">
+                Java几种常量池 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+  </div>
+
+
+          </div>
+          
+
+  
+    <div class="comments" id="comments">
+    </div>
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image" src="/images/avatar.jpg" alt="Hardy Dou">
+            
+              <p class="site-author-name" itemprop="name">Hardy Dou</p>
+              <p class="site-description motion-element" itemprop="description">HardyDou的博客</p>
+          </div>
+
+          
+            <nav class="site-state motion-element">
+              
+                <div class="site-state-item site-state-posts">
+                
+                  <a href="/archives">
+                
+                    <span class="site-state-item-count">21</span>
+                    <span class="site-state-item-name">日志</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-categories">
+                  <a href="/categories/index.html">
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">5</span>
+                    <span class="site-state-item-name">分类</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-tags">
+                  <a href="/tags/index.html">
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">16</span>
+                    <span class="site-state-item-name">标签</span>
+                  </a>
+                </div>
+              
+            </nav>
+          
+
+          
+            <div class="feed-link motion-element">
+              <a href="/atom.xml" rel="alternate">
+                <i class="fa fa-rss"></i>
+                RSS
+              </a>
+            </div>
+          
+
+          
+            <div class="links-of-author motion-element">
+              
+                <span class="links-of-author-item">
+                  
+                  
+                    
+                  
+                  
+                    
+                  
+                  <a href="https://github.com/HardyDou" title="GitHub &rarr; https://github.com/HardyDou" rel="noopener" target="_blank"><i class="fa fa-fw fa-github"></i>GitHub</a>
+                </span>
+              
+                <span class="links-of-author-item">
+                  
+                  
+                    
+                  
+                  
+                    
+                  
+                  <a href="mailto:doouxiaoyu@163.com" title="E-Mail &rarr; mailto:doouxiaoyu@163.com" rel="noopener" target="_blank"><i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                </span>
+              
+            </div>
+          
+
+          
+
+          
+          
+
+          
+            
+          
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#概述"><span class="nav-number">1.</span> <span class="nav-text">概述</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#确定需要回收对象"><span class="nav-number">2.</span> <span class="nav-text">确定需要回收对象</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#引用计数算法"><span class="nav-number">2.1.</span> <span class="nav-text">引用计数算法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#可达性分析算法"><span class="nav-number">2.2.</span> <span class="nav-text">可达性分析算法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#引用"><span class="nav-number">2.3.</span> <span class="nav-text">引用</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#强引用"><span class="nav-number">2.3.1.</span> <span class="nav-text">强引用</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#软引用"><span class="nav-number">2.3.2.</span> <span class="nav-text">软引用</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#弱引用"><span class="nav-number">2.3.3.</span> <span class="nav-text">弱引用</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#虚引用"><span class="nav-number">2.3.4.</span> <span class="nav-text">虚引用</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#示例代码"><span class="nav-number">2.3.5.</span> <span class="nav-text">示例代码</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#非生即死吗？"><span class="nav-number">2.4.</span> <span class="nav-text">非生即死吗？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#回收方法区"><span class="nav-number">2.5.</span> <span class="nav-text">回收方法区</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#方法区有哪些数据"><span class="nav-number">2.5.1.</span> <span class="nav-text">方法区有哪些数据</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#找到废弃变量"><span class="nav-number">2.5.2.</span> <span class="nav-text">找到废弃变量</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#找到无用类"><span class="nav-number">2.5.3.</span> <span class="nav-text">找到无用类</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#垃圾收集算法"><span class="nav-number">3.</span> <span class="nav-text">垃圾收集算法</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#标记-清除算法"><span class="nav-number">3.1.</span> <span class="nav-text">标记-清除算法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#复制算法"><span class="nav-number">3.2.</span> <span class="nav-text">复制算法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#标记-整理算法"><span class="nav-number">3.3.</span> <span class="nav-text">标记-整理算法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#分代收集算法"><span class="nav-number">3.4.</span> <span class="nav-text">分代收集算法</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#HotSpot-算法实现"><span class="nav-number">4.</span> <span class="nav-text">HotSpot 算法实现</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#枚举根节点"><span class="nav-number">4.1.</span> <span class="nav-text">枚举根节点</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#安全点"><span class="nav-number">4.2.</span> <span class="nav-text">安全点</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#安全区域"><span class="nav-number">4.3.</span> <span class="nav-text">安全区域</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#垃圾收集器"><span class="nav-number">5.</span> <span class="nav-text">垃圾收集器</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Serial收集器"><span class="nav-number">5.1.</span> <span class="nav-text">Serial收集器</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#ParNew收集器"><span class="nav-number">5.2.</span> <span class="nav-text">ParNew收集器</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Parallel-Scavenge收集器"><span class="nav-number">5.3.</span> <span class="nav-text">Parallel Scavenge收集器</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+        <div class="back-to-top">
+          <i class="fa fa-arrow-up"></i>
+          
+            <span id="scrollpercent"><span>0</span>%</span>
+          
+        </div>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">  <a href="http://www.miitbeian.gov.cn" rel="noopener" target="_blank">京ICP备18050184号 </a>&copy; <span itemprop="copyrightYear">2019</span>
+  <span class="with-love" id="animate">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Hardy Dou</span>
+
+  
+
+  
+</div>
+
+
+
+
+
+
+
+
+
+        
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+
+    
+	
+    
+
+    
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=6.5.0"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=6.5.0"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=6.5.0"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=6.5.0"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=6.5.0"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=6.5.0"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=6.5.0"></script>
+
+
+
+  
+
+
+
+  
+
+
+
+
+
+
+
+
+  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+  
+  
+  <script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+  
+  <script type="text/javascript">
+    var GUEST = ['nick','mail','link'];
+    var guest = 'nick,mail,link';
+    guest = guest.split(',').filter(function (item) {
+      return GUEST.indexOf(item)>-1;
+    });
+    new Valine({
+        el: '#comments' ,
+        verify: true,
+        notify: true,
+        appId: 'fF3IzJ6TkcmNPCPo4nYayNln-gzGzoHsz',
+        appKey: 'CaEuIN0359VyWiygnoDPQxx1',
+        placeholder: '有话就直说!!',
+        avatar:'mp',
+        meta:guest,
+        pageSize:'10' || 10,
+        visitor: false
+    });
+  </script>
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>

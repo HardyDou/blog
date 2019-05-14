@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.hardydou.com/"/>
-  <updated>2019-05-13T08:40:57.789Z</updated>
+  <updated>2019-05-14T15:50:38.373Z</updated>
   <id>http://www.hardydou.com/</id>
   
   <author>
@@ -15,6 +15,63 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Java几种常量池</title>
+    <link href="http://www.hardydou.com/2019/05/14/Java%E5%87%A0%E7%A7%8D%E5%B8%B8%E9%87%8F%E6%B1%A0/"/>
+    <id>http://www.hardydou.com/2019/05/14/Java几种常量池/</id>
+    <published>2019-05-14T15:46:00.000Z</published>
+    <updated>2019-05-14T15:50:38.373Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;在java的内存分配中，经常听到很多关于常量池的描述，我开始看的时候也是看的很模糊，网上五花八门的说法简直太多了，最后查阅各种资料，终于算是差不多理清了，很多网上说法都有问题，笔者尝试着来区分一下这几个概念。&lt;/p&gt;
+&lt;h2
+        
+      
+    
+    </summary>
+    
+      <category term="java" scheme="http://www.hardydou.com/categories/java/"/>
+    
+    
+      <category term="java" scheme="http://www.hardydou.com/tags/java/"/>
+    
+      <category term="jvm" scheme="http://www.hardydou.com/tags/jvm/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Java垃圾收集与内存分配</title>
+    <link href="http://www.hardydou.com/2019/05/13/Java%E5%9E%83%E5%9C%BE%E6%94%B6%E9%9B%86%E4%B8%8E%E5%86%85%E5%AD%98%E5%88%86%E9%85%8D/"/>
+    <id>http://www.hardydou.com/2019/05/13/Java垃圾收集与内存分配/</id>
+    <published>2019-05-13T08:43:00.000Z</published>
+    <updated>2019-05-14T17:34:55.861Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;概述&quot;&gt;&lt;a href=&quot;#概述&quot; class=&quot;headerlink&quot; title=&quot;概述&quot;&gt;&lt;/a&gt;概述&lt;/h2&gt;&lt;p&gt;GC(Garbage
+        
+      
+    
+    </summary>
+    
+      <category term="java" scheme="http://www.hardydou.com/categories/java/"/>
+    
+    
+      <category term="java" scheme="http://www.hardydou.com/tags/java/"/>
+    
+      <category term="jvm" scheme="http://www.hardydou.com/tags/jvm/"/>
+    
+  </entry>
   
   <entry>
     <title>java泛型</title>
@@ -357,7 +414,7 @@
     <link href="http://www.hardydou.com/2019/02/13/%E6%B8%90%E8%BF%9B%E6%AD%A5%E9%AA%A4/"/>
     <id>http://www.hardydou.com/2019/02/13/渐进步骤/</id>
     <published>2019-02-12T16:39:00.000Z</published>
-    <updated>2019-05-10T03:46:37.270Z</updated>
+    <updated>2019-05-14T01:37:54.111Z</updated>
     
     <summary type="html">
     
@@ -512,30 +569,6 @@
       <category term="java" scheme="http://www.hardydou.com/tags/java/"/>
     
       <category term="plan" scheme="http://www.hardydou.com/tags/plan/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Hello World</title>
-    <link href="http://www.hardydou.com/2018/11/13/hello-world/"/>
-    <id>http://www.hardydou.com/2018/11/13/hello-world/</id>
-    <published>2018-11-13T04:29:00.000Z</published>
-    <updated>2018-11-24T19:27:06.389Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a
-        
-      
-    
-    </summary>
-    
-    
-      <category term="hexo" scheme="http://www.hardydou.com/tags/hexo/"/>
     
   </entry>
   
