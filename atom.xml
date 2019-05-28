@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.hardydou.com/"/>
-  <updated>2019-05-27T07:09:33.360Z</updated>
+  <updated>2019-05-28T08:41:52.571Z</updated>
   <id>http://www.hardydou.com/</id>
   
   <author>
@@ -15,6 +15,34 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Java语法糖</title>
+    <link href="http://www.hardydou.com/2019/05/28/JavaGrammarSugar/"/>
+    <id>http://www.hardydou.com/2019/05/28/JavaGrammarSugar/</id>
+    <published>2019-05-28T04:35:00.000Z</published>
+    <updated>2019-05-28T08:41:52.571Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;概述&quot;&gt;&lt;a href=&quot;#概述&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="java" scheme="http://www.hardydou.com/categories/java/"/>
+    
+    
+      <category term="java" scheme="http://www.hardydou.com/tags/java/"/>
+    
+      <category term="语法糖" scheme="http://www.hardydou.com/tags/%E8%AF%AD%E6%B3%95%E7%B3%96/"/>
+    
+  </entry>
   
   <entry>
     <title>Java虚拟机性能监控工具</title>
@@ -553,33 +581,6 @@
     
     
       <category term="Life" scheme="http://www.hardydou.com/tags/Life/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Java简介</title>
-    <link href="http://www.hardydou.com/2018/11/29/java%E7%AE%80%E4%BB%8B/"/>
-    <id>http://www.hardydou.com/2018/11/29/java简介/</id>
-    <published>2018-11-29T03:37:00.000Z</published>
-    <updated>2019-05-05T06:38:06.956Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h2 id=&quot;是什么&quot;&gt;&lt;a href=&quot;#是什么&quot; class=&quot;headerlink&quot; title=&quot;是什么&quot;&gt;&lt;/a&gt;是什么&lt;/h2&gt;&lt;p&gt;java是开发语言，你需要掌握它的语法规则。&lt;/p&gt;
-&lt;p&gt;jdk(Java Development
-        
-      
-    
-    </summary>
-    
-      <category term="java" scheme="http://www.hardydou.com/categories/java/"/>
-    
-    
-      <category term="java" scheme="http://www.hardydou.com/tags/java/"/>
     
   </entry>
   
