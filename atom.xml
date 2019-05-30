@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.hardydou.com/"/>
-  <updated>2019-05-28T08:41:52.571Z</updated>
+  <updated>2019-05-30T13:52:22.095Z</updated>
   <id>http://www.hardydou.com/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>国家职业资格证</title>
+    <link href="http://www.hardydou.com/2019/05/29/PPP/"/>
+    <id>http://www.hardydou.com/2019/05/29/PPP/</id>
+    <published>2019-05-29T08:02:00.000Z</published>
+    <updated>2019-05-30T13:52:22.095Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;概述&quot;&gt;&lt;a href=&quot;#概述&quot; class=&quot;headerlink&quot; title=&quot;概述&quot;&gt;&lt;/a&gt;概述&lt;/h2&gt;&lt;p&gt;职业资格证分为准入类、水平评价类。其中准入类时从事相关职业必须要取得的证书，水平评价类
+        
+      
+    
+    </summary>
+    
+    
+      <category term="life" scheme="http://www.hardydou.com/tags/life/"/>
+    
+      <category term="软考" scheme="http://www.hardydou.com/tags/%E8%BD%AF%E8%80%83/"/>
+    
+  </entry>
   
   <entry>
     <title>Java语法糖</title>
@@ -554,33 +580,6 @@
       <category term="java" scheme="http://www.hardydou.com/tags/java/"/>
     
       <category term="java数据类型" scheme="http://www.hardydou.com/tags/java%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>人生处世</title>
-    <link href="http://www.hardydou.com/2018/11/30/%E4%BA%BA%E7%94%9F%E5%A4%84%E4%B8%96/"/>
-    <id>http://www.hardydou.com/2018/11/30/人生处世/</id>
-    <published>2018-11-30T12:33:00.000Z</published>
-    <updated>2018-11-30T12:57:49.577Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;ol&gt;
-&lt;li&gt;凡事顺其自然。遇事之时泰然，成功之时淡然，失败之时坦然&lt;/li&gt;
-&lt;li&gt;岁月本长，而亡者自促；天地本宽，而鄙者自隘；风花雪月本闲，而扰攘者自冗。&lt;/li&gt;
-&lt;li&gt;风来疏竹，风过而竹不留声；雁渡寒潭，雁去而谭不留影。故君子事来而心始现，事去而心随空。&lt;/li&gt;
-        
-      
-    
-    </summary>
-    
-    
-      <category term="Life" scheme="http://www.hardydou.com/tags/Life/"/>
     
   </entry>
   
