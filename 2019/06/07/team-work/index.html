@@ -1,0 +1,1183 @@
+<!DOCTYPE html>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion" lang="zh-CN">
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<link href="/lib/kityminder-core/kityminder.core.css?v=1.4.49" rel="stylesheet" type="text/css">
+<style>
+.mindmap{width:90%}
+</style>
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
+
+<link href="/css/main.css?v=6.5.0" rel="stylesheet" type="text/css">
+<style>
+.pullquote{width:auto;}
+</style>
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=6.5.0">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=6.5.0">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=6.5.0">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=6.5.0" color="#222">
+
+
+
+
+
+
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    version: '6.5.0',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":true,"scrollpercent":true,"onmobile":false,"width":240},
+    fancybox: true,
+    fastclick: false,
+    lazyload: false,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+  
+
+
+
+
+  <meta name="description" content="概览协作，让企业和团队实现目标本文所讲“协作平台”并非传统项目管理系统也不是其的延续，协作平台最初的模型是 TODO List的目的是使使用者提高效率，使事情井井有序远离杂乱，最为典型的是它的看板模式的存在。然而有它的交互的确非常棒（相比原有的项目管理软件足够简单），使用者想将所有的需求都转移到此上面，进而使其功能得到延展，从而具备了：OA系统功能、销售系统功能、敏捷项目管理流程、等等。 调研对象">
+<meta name="keywords" content="敏捷,scrum">
+<meta property="og:type" content="article">
+<meta property="og:title" content="协作平台-调研">
+<meta property="og:url" content="http://www.hardydou.com/2019/06/07/team-work/index.html">
+<meta property="og:site_name" content="HardyDou">
+<meta property="og:description" content="概览协作，让企业和团队实现目标本文所讲“协作平台”并非传统项目管理系统也不是其的延续，协作平台最初的模型是 TODO List的目的是使使用者提高效率，使事情井井有序远离杂乱，最为典型的是它的看板模式的存在。然而有它的交互的确非常棒（相比原有的项目管理软件足够简单），使用者想将所有的需求都转移到此上面，进而使其功能得到延展，从而具备了：OA系统功能、销售系统功能、敏捷项目管理流程、等等。 调研对象">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="http://www.hardydou.com/images/pasted-122.png">
+<meta property="og:updated_time" content="2019-06-12T06:36:45.368Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="协作平台-调研">
+<meta name="twitter:description" content="概览协作，让企业和团队实现目标本文所讲“协作平台”并非传统项目管理系统也不是其的延续，协作平台最初的模型是 TODO List的目的是使使用者提高效率，使事情井井有序远离杂乱，最为典型的是它的看板模式的存在。然而有它的交互的确非常棒（相比原有的项目管理软件足够简单），使用者想将所有的需求都转移到此上面，进而使其功能得到延展，从而具备了：OA系统功能、销售系统功能、敏捷项目管理流程、等等。 调研对象">
+<meta name="twitter:image" content="http://www.hardydou.com/images/pasted-122.png">
+
+
+
+  <link rel="alternate" href="/atom.xml" title="HardyDou" type="application/atom+xml">
+
+
+
+
+  <link rel="canonical" href="http://www.hardydou.com/2019/06/07/team-work/">
+
+
+
+<script type="text/javascript" id="page.configurations">
+  CONFIG.page = {
+    sidebar: "",
+  };
+</script>
+
+  <title>协作平台-调研 | HardyDou</title>
+  
+
+
+
+
+
+
+
+
+
+
+
+  <noscript>
+  <style type="text/css">
+    .use-motion .motion-element,
+    .use-motion .brand,
+    .use-motion .menu-item,
+    .sidebar-inner,
+    .use-motion .post-block,
+    .use-motion .pagination,
+    .use-motion .comments,
+    .use-motion .post-header,
+    .use-motion .post-body,
+    .use-motion .collection-title { opacity: initial; }
+
+    .use-motion .logo,
+    .use-motion .site-title,
+    .use-motion .site-subtitle {
+      opacity: initial;
+      top: initial;
+    }
+
+    .use-motion {
+      .logo-line-before i { left: initial; }
+      .logo-line-after i { right: initial; }
+    }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope="" itemtype="http://schema.org/WebPage" lang="zh-CN">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope="" itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">HardyDou</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+    
+      
+        <p class="site-subtitle">HardyDou'blog</p>
+      
+    
+  </div>
+
+  <div class="site-nav-toggle">
+    <button aria-label="切换导航栏">
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  
+    <ul id="menu" class="menu">
+      
+        
+        
+        
+          
+          <li class="menu-item menu-item-home">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/" rel="section"><i class="menu-item-icon fa fa-fw fa-home"></i> <br>首页</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-archives">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/archives" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-tags">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/tags" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br>标签</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-categories">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/categories" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br>分类</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-about">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/about" rel="section"><i class="menu-item-icon fa fa-fw fa-user"></i> <br>关于</a>
+
+  </li>
+
+      
+      
+    </ul>
+  
+
+  
+
+  
+</nav>
+
+
+
+  
+
+
+
+</div>
+    </header>
+
+    
+
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+            
+
+          
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://www.hardydou.com/2019/06/07/team-work/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Hardy Dou">
+      <meta itemprop="description" content="HardyDou的博客">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="HardyDou">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">协作平台-调研
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2019-06-07 11:26:00" itemprop="dateCreated datePublished" datetime="2019-06-07T11:26:00+08:00">2019-06-07</time>
+            
+
+            
+              
+
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2019-06-12 14:36:45" itemprop="dateModified" datetime="2019-06-12T14:36:45+08:00">2019-06-12</time>
+              
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/效率/" itemprop="url" rel="index"><span itemprop="name">效率</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2019/06/07/team-work/#comments" itemprop="discussionUrl">
+                  <span class="post-meta-item-text">评论数：</span> <span class="post-comments-count valine-comment-count" data-xid="/2019/06/07/team-work/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h2 id="概览"><a href="#概览" class="headerlink" title="概览"></a>概览</h2><p></p><h1><center>协作，让企业和团队实现目标</center></h1><br>本文所讲“协作平台”并非传统项目管理系统也不是其的延续，协作平台最初的模型是 TODO List的目的是使使用者提高效率，使事情井井有序远离杂乱，最为典型的是它的看板模式的存在。然而有它的交互的确非常棒（相比原有的项目管理软件足够简单），使用者想将所有的需求都转移到此上面，进而使其功能得到延展，从而具备了：OA系统功能、销售系统功能、敏捷项目管理流程、等等。<p></p>
+<h2 id="调研对象"><a href="#调研对象" class="headerlink" title="调研对象"></a>调研对象</h2><ul>
+<li>tower<ul>
+<li>任务看板</li>
+<li>在线讨论</li>
+<li>在线文档、协作</li>
+<li>文件共享</li>
+<li>团队日历</li>
+<li>汇报功能</li>
+<li>角色控制</li>
+</ul>
+</li>
+<li>teambition<ul>
+<li>账号</li>
+<li>项目</li>
+<li>任务</li>
+<li>文件  </li>
+<li>日程</li>
+<li>分享</li>
+<li>插件中心（wiki、PRD一览、项目概览、敏捷、okr、时间视图、测试用例）</li>
+</ul>
+</li>
+<li>码云企业版  <ul>
+<li>代码托管</li>
+<li>项目全过程管理（需求、缺陷、规划迭代）（任务、看板、燃尽图）</li>
+<li>协作文档（md、多人协作、树形目录、git管理）</li>
+</ul>
+</li>
+<li>worktile  <ul>
+<li>任务</li>
+<li>沟通（IM)</li>
+<li>日历</li>
+<li>网盘</li>
+<li>简报（日报、周报、销售日报、研发周报、产品月报）</li>
+<li>办公（招聘、离职、请假、出差、绩效、用印、采购、仓库储存）</li>
+<li>开放平台（API)</li>
+<li>SSO</li>
+<li>服务集成（印象笔记、zendesk）</li>
+</ul>
+</li>
+</ul>
+<h2 id="核心功能"><a href="#核心功能" class="headerlink" title="核心功能"></a>核心功能</h2><h3 id="项目"><a href="#项目" class="headerlink" title="项目"></a>项目</h3><p>顶级结点，用来聚合有关联的任务、文件、日历、测试用例等等。一个系统、一个部门、一件事情 都可以当做一个项目。</p>
+<h3 id="任务"><a href="#任务" class="headerlink" title="任务"></a>任务</h3><p>一个任务一般包含：人、时间、事件 三要素。它可以是独立存在的，也可以属于某一个项目下的。协作平台几乎所有的东西都是围绕它展开的，它应该是系统里面的最小单元了。</p>
+<h3 id="日历"><a href="#日历" class="headerlink" title="日历"></a>日历</h3><p>从时间角度去排列任务，从而更清晰的了解人、项目、的时间表。</p>
+<h3 id="用户权限"><a href="#用户权限" class="headerlink" title="用户权限"></a>用户权限</h3><p>控制力度细致到，任何一个单位（项目、文件、日程）的读、写操作。</p>
+<h3 id="文件共享"><a href="#文件共享" class="headerlink" title="文件共享"></a>文件共享</h3><p>一般具备功能：在线文档(富文本、md文档)、上传附件、预览、在线编辑、版本管理。</p>
+<h2 id="延展功能"><a href="#延展功能" class="headerlink" title="延展功能"></a>延展功能</h2><p>OA（办公自动化）是面向组织的日常运作和管理，英文全称Office Automation System。</p>
+<ul>
+<li>流程管理</li>
+<li>考勤</li>
+<li>人事（招聘、入职、培训、晋升、离职、绩效）</li>
+</ul>
+<h3 id="资产管理（消耗品、使用权）"><a href="#资产管理（消耗品、使用权）" class="headerlink" title="资产管理（消耗品、使用权）"></a>资产管理（消耗品、使用权）</h3><p>公车、办公室、办公用品等资源利用情况，避免丢失、冲突，明确改进方向。</p>
+<h3 id="知识库"><a href="#知识库" class="headerlink" title="知识库"></a>知识库</h3><p>经验的沉淀，避免 同一个错误两次发生，成功经验快速共享。</p>
+<h3 id="复杂项目管理"><a href="#复杂项目管理" class="headerlink" title="复杂项目管理"></a>复杂项目管理</h3><p>okr绩效管理，scrum敏捷项目管理。</p>
+<h3 id="其它"><a href="#其它" class="headerlink" title="其它"></a>其它</h3><p>财务、IM</p>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>协作平台应该围绕：安全、人 、资产、钱、业务（产品、市场、运营）进行的，沟通是协作的核弹设计图，协作平台是核弹组装厂，以下是的核弹：</p>
+<ul>
+<li>安全<ul>
+<li>权限管理</li>
+<li>备份</li>
+<li>加密</li>
+</ul>
+</li>
+<li>用户管理<ul>
+<li>组织结构</li>
+<li>职责划分</li>
+<li>人才的选用育留（招聘、入职、考核、转正、晋升、转岗、离职）</li>
+<li>团队建设</li>
+<li>成长路线图费</li>
+</ul>
+</li>
+<li>资产管理<ul>
+<li>固定资产<ul>
+<li>独享<ul>
+<li>工位</li>
+<li>电脑</li>
+</ul>
+</li>
+<li>共享<ul>
+<li>打印机</li>
+<li>会议室</li>
+<li>餐吧</li>
+<li>健身器材</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>虚拟资产<ul>
+<li>知识库<ul>
+<li>销售经验</li>
+<li>技术经验</li>
+<li>人事管理经验</li>
+</ul>
+</li>
+<li>产品技术文档</li>
+<li>公司文化（制度、办法）</li>
+<li>培训资料</li>
+<li>合作公司库</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>财务</p>
+<ul>
+<li>对内管理</li>
+<li>对外合规</li>
+</ul>
+</li>
+<li><p>业务</p>
+<ul>
+<li>方法论<ul>
+<li>一件事总可以分解为树形图的任务</li>
+<li>一个任务总明确 人、时间、预期结果</li>
+<li>scrum管理</li>
+<li>看板</li>
+<li>一览（人、时间、进度、资金）</li>
+<li>计划&amp;实际的对比</li>
+<li>任务与任务以及其他财务、资产、用户的关联性、依赖性、先后性。</li>
+<li>前置条件</li>
+<li>流程化</li>
+<li>一件事情总有明确的目的</li>
+<li>过去的事情必须是可以复盘的</li>
+<li>前置标价化：事前就告知任务以及对应奖罚，而非事后。</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li>沟通<ul>
+<li>可基于任何一个元素有效沟通（打印机、文件、会议室、制度、产品、任务、项目、等等）</li>
+<li>沟通可以进行归档为复盘核心数据</li>
+</ul>
+</li>
+</ul>
+<h2 id="主流协作平台功能脑图"><a href="#主流协作平台功能脑图" class="headerlink" title="主流协作平台功能脑图"></a>主流协作平台功能脑图</h2><p><img src="/images/pasted-122.png" alt="协作系统"></p>
+
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+       
+    
+    
+
+    
+      <div>
+        
+
+
+
+  
+
+
+
+<ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者： </strong>Hardy Dou</li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    
+    <a href="http://www.hardydou.com/2019/06/07/team-work/" title="协作平台-调研">http://www.hardydou.com/2019/06/07/team-work/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fa fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！</li>
+</ul>
+
+      </div>
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/敏捷/" rel="tag"># 敏捷</a>
+          
+            <a href="/tags/scrum/" rel="tag"># scrum</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/05/29/PPP/" rel="next" title="国家职业资格证">
+                <i class="fa fa-chevron-left"></i> 国家职业资格证
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2019/06/12/scrum/" rel="prev" title="scrum介绍">
+                scrum介绍 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+  </div>
+
+
+          </div>
+          
+
+  
+    <div class="comments" id="comments">
+    </div>
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image" src="/images/avatar.jpg" alt="Hardy Dou">
+            
+              <p class="site-author-name" itemprop="name">Hardy Dou</p>
+              <p class="site-description motion-element" itemprop="description">HardyDou的博客</p>
+          </div>
+
+          
+            <nav class="site-state motion-element">
+              
+                <div class="site-state-item site-state-posts">
+                
+                  <a href="/archives">
+                
+                    <span class="site-state-item-count">27</span>
+                    <span class="site-state-item-name">日志</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-categories">
+                  <a href="/categories/index.html">
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">7</span>
+                    <span class="site-state-item-name">分类</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-tags">
+                  <a href="/tags/index.html">
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">22</span>
+                    <span class="site-state-item-name">标签</span>
+                  </a>
+                </div>
+              
+            </nav>
+          
+
+          
+            <div class="feed-link motion-element">
+              <a href="/atom.xml" rel="alternate">
+                <i class="fa fa-rss"></i>
+                RSS
+              </a>
+            </div>
+          
+
+          
+            <div class="links-of-author motion-element">
+              
+                <span class="links-of-author-item">
+                  
+                  
+                    
+                  
+                  
+                    
+                  
+                  <a href="https://github.com/HardyDou" title="GitHub &rarr; https://github.com/HardyDou" rel="noopener" target="_blank"><i class="fa fa-fw fa-github"></i>GitHub</a>
+                </span>
+              
+                <span class="links-of-author-item">
+                  
+                  
+                    
+                  
+                  
+                    
+                  
+                  <a href="mailto:doouxiaoyu@163.com" title="E-Mail &rarr; mailto:doouxiaoyu@163.com" rel="noopener" target="_blank"><i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                </span>
+              
+            </div>
+          
+
+          
+
+          
+          
+
+          
+            
+          
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#概览"><span class="nav-number">1.</span> <span class="nav-text">概览</span></a></li></ol><li class="nav-item nav-level-1"><a class="nav-link" href="#undefined"><span class="nav-number"></span> <span class="nav-text">协作，让企业和团队实现目标</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#调研对象"><span class="nav-number">1.</span> <span class="nav-text">调研对象</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#核心功能"><span class="nav-number">2.</span> <span class="nav-text">核心功能</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#项目"><span class="nav-number">2.1.</span> <span class="nav-text">项目</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#任务"><span class="nav-number">2.2.</span> <span class="nav-text">任务</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#日历"><span class="nav-number">2.3.</span> <span class="nav-text">日历</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#用户权限"><span class="nav-number">2.4.</span> <span class="nav-text">用户权限</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#文件共享"><span class="nav-number">2.5.</span> <span class="nav-text">文件共享</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#延展功能"><span class="nav-number">3.</span> <span class="nav-text">延展功能</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#资产管理（消耗品、使用权）"><span class="nav-number">3.1.</span> <span class="nav-text">资产管理（消耗品、使用权）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#知识库"><span class="nav-number">3.2.</span> <span class="nav-text">知识库</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#复杂项目管理"><span class="nav-number">3.3.</span> <span class="nav-text">复杂项目管理</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#其它"><span class="nav-number">3.4.</span> <span class="nav-text">其它</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#总结"><span class="nav-number">4.</span> <span class="nav-text">总结</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#主流协作平台功能脑图"><span class="nav-number">5.</span> <span class="nav-text">主流协作平台功能脑图</span></a></li></ol></li></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+        <div class="back-to-top">
+          <i class="fa fa-arrow-up"></i>
+          
+            <span id="scrollpercent"><span>0</span>%</span>
+          
+        </div>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">  <a href="http://www.miitbeian.gov.cn" rel="noopener" target="_blank">京ICP备18050184号 </a>&copy; <span itemprop="copyrightYear">2019</span>
+  <span class="with-love" id="animate">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Hardy Dou</span>
+
+  
+
+  
+</div>
+
+
+
+
+
+
+
+
+
+        
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+
+    
+	
+    
+
+    
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/kityminder-core/kity.min.js"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/kityminder-core/kityminder.core.js"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=6.5.0"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=6.5.0"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=6.5.0"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=6.5.0"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=6.5.0"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=6.5.0"></script>
+<script type="text/javascript" src="/js/src/kityminder.js?v=6.5.0"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=6.5.0"></script>
+
+
+
+  
+
+
+
+  
+
+
+
+
+
+
+
+
+  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+  
+  
+  <script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+  
+  <script type="text/javascript">
+    var GUEST = ['nick','mail','link'];
+    var guest = 'nick,mail,link';
+    guest = guest.split(',').filter(function (item) {
+      return GUEST.indexOf(item)>-1;
+    });
+    new Valine({
+        el: '#comments' ,
+        verify: true,
+        notify: true,
+        appId: 'fF3IzJ6TkcmNPCPo4nYayNln-gzGzoHsz',
+        appKey: 'CaEuIN0359VyWiygnoDPQxx1',
+        placeholder: '有话就直说!!',
+        avatar:'mp',
+        meta:guest,
+        pageSize:'10' || 10,
+        visitor: false
+    });
+  </script>
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
