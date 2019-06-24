@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.hardydou.com/"/>
-  <updated>2019-06-12T02:40:22.935Z</updated>
+  <updated>2019-06-24T03:43:42.758Z</updated>
   <id>http://www.hardydou.com/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>知识经济</title>
+    <link href="http://www.hardydou.com/2019/06/24/Knowledge/"/>
+    <id>http://www.hardydou.com/2019/06/24/Knowledge/</id>
+    <published>2019-06-24T03:40:22.000Z</published>
+    <updated>2019-06-24T03:43:42.758Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h3&gt;&lt;br&gt;知识如果不能改变行为，就没有用处；&lt;br&gt;但是知识一旦改变了行为，知识本身就立刻失去意义&lt;br&gt;&lt;/h3&gt;&lt;br&gt;&lt;h3 style=&quot;float:right&quot;&gt;——《未来简史》&lt;/h3&gt;
+
+&lt;hr&gt;
+&lt;h2 id=&quot;什么是知识？&quot;&gt;&lt;a
+        
+      
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>scrum介绍</title>
@@ -51,7 +76,7 @@
     <link href="http://www.hardydou.com/2019/06/07/team-work/"/>
     <id>http://www.hardydou.com/2019/06/07/team-work/</id>
     <published>2019-06-07T03:26:00.000Z</published>
-    <updated>2019-06-12T06:36:45.368Z</updated>
+    <updated>2019-06-17T10:26:41.892Z</updated>
     
     <summary type="html">
     
@@ -556,33 +581,6 @@
       <category term="AI" scheme="http://www.hardydou.com/tags/AI/"/>
     
       <category term="人工智能" scheme="http://www.hardydou.com/tags/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>财务报表</title>
-    <link href="http://www.hardydou.com/2019/02/13/%E8%B4%A2%E5%8A%A1%E6%8A%A5%E8%A1%A8/"/>
-    <id>http://www.hardydou.com/2019/02/13/财务报表/</id>
-    <published>2019-02-13T14:05:00.000Z</published>
-    <updated>2019-02-18T16:31:41.075Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h2 id=&quot;三张表&quot;&gt;&lt;a href=&quot;#三张表&quot; class=&quot;headerlink&quot; title=&quot;三张表&quot;&gt;&lt;/a&gt;三张表&lt;/h2&gt;&lt;p&gt;&lt;img src=&quot;/images/pasted-3.png&quot; alt=&quot;upload successful&quot;&gt;&lt;/p&gt;
-&lt;h3
-        
-      
-    
-    </summary>
-    
-      <category term="财务" scheme="http://www.hardydou.com/categories/%E8%B4%A2%E5%8A%A1/"/>
-    
-    
-      <category term="财务" scheme="http://www.hardydou.com/tags/%E8%B4%A2%E5%8A%A1/"/>
     
   </entry>
   
