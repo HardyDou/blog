@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.hardydou.com/"/>
-  <updated>2019-07-02T06:34:45.943Z</updated>
+  <updated>2019-07-02T07:44:14.824Z</updated>
   <id>http://www.hardydou.com/</id>
   
   <author>
@@ -15,6 +15,60 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>代理模式</title>
+    <link href="http://www.hardydou.com/2019/07/02/proxy-pattern/"/>
+    <id>http://www.hardydou.com/2019/07/02/proxy-pattern/</id>
+    <published>2019-07-02T07:28:00.000Z</published>
+    <updated>2019-07-02T07:44:14.824Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;概述&quot;&gt;&lt;a href=&quot;#概述&quot; class=&quot;headerlink&quot; title=&quot;概述&quot;&gt;&lt;/a&gt;概述&lt;/h2&gt;&lt;p&gt;为其它对象提供一种代理以控制这个对象的访问。&lt;/p&gt;
+&lt;h2 id=&quot;类图&quot;&gt;&lt;a href=&quot;#类图&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="架构设计" scheme="http://www.hardydou.com/categories/%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1/"/>
+    
+    
+      <category term="设计模式" scheme="http://www.hardydou.com/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>原型模式</title>
+    <link href="http://www.hardydou.com/2019/07/02/prototype-pattern/"/>
+    <id>http://www.hardydou.com/2019/07/02/prototype-pattern/</id>
+    <published>2019-07-02T06:49:00.000Z</published>
+    <updated>2019-07-02T07:18:04.506Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;概述&quot;&gt;&lt;a href=&quot;#概述&quot; class=&quot;headerlink&quot; title=&quot;概述&quot;&gt;&lt;/a&gt;概述&lt;/h2&gt;&lt;p&gt;用原型实例指定创建对象的种类，并且通过复制这些原型创建新的对象。&lt;/p&gt;
+&lt;h2 id=&quot;类图&quot;&gt;&lt;a href=&quot;#类图&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="架构设计" scheme="http://www.hardydou.com/categories/%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1/"/>
+    
+    
+      <category term="设计模式" scheme="http://www.hardydou.com/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
+    
+  </entry>
   
   <entry>
     <title>创建者模式</title>
@@ -521,60 +575,6 @@
       <category term="java" scheme="http://www.hardydou.com/tags/java/"/>
     
       <category term="jvm" scheme="http://www.hardydou.com/tags/jvm/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Java内存模型（JMM）</title>
-    <link href="http://www.hardydou.com/2019/03/05/Java%E5%86%85%E5%AD%98%E6%A8%A1%E5%9E%8B%EF%BC%88JMM%EF%BC%89/"/>
-    <id>http://www.hardydou.com/2019/03/05/Java内存模型（JMM）/</id>
-    <published>2019-03-05T14:40:00.000Z</published>
-    <updated>2019-05-05T05:13:51.409Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h2 id=&quot;题记&quot;&gt;&lt;a href=&quot;#题记&quot; class=&quot;headerlink&quot;
-        
-      
-    
-    </summary>
-    
-      <category term="java" scheme="http://www.hardydou.com/categories/java/"/>
-    
-    
-      <category term="java" scheme="http://www.hardydou.com/tags/java/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>单例模式</title>
-    <link href="http://www.hardydou.com/2019/03/04/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F-%E5%8D%95%E4%BE%8B%E6%A8%A1%E5%BC%8F/"/>
-    <id>http://www.hardydou.com/2019/03/04/设计模式-单例模式/</id>
-    <published>2019-03-04T10:15:00.000Z</published>
-    <updated>2019-07-01T12:32:26.849Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h1 id=&quot;单例模式&quot;&gt;&lt;a href=&quot;#单例模式&quot; class=&quot;headerlink&quot; title=&quot;单例模式&quot;&gt;&lt;/a&gt;单例模式&lt;/h1&gt;&lt;h2 id=&quot;介绍&quot;&gt;&lt;a href=&quot;#介绍&quot; class=&quot;headerlink&quot;
-        
-      
-    
-    </summary>
-    
-      <category term="架构设计" scheme="http://www.hardydou.com/categories/%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1/"/>
-    
-    
-      <category term="java" scheme="http://www.hardydou.com/tags/java/"/>
-    
-      <category term="设计模式" scheme="http://www.hardydou.com/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
     
   </entry>
   
