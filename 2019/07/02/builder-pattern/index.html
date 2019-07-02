@@ -118,19 +118,19 @@
 
 
 
-  <meta name="description" content="概述将一个复杂对象的构建与它的表示分离，使得同样的构建过程可以创建不同的表示。 类图 角色 抽象建造者 Builder 具体建造者 Concrete Builder 产品 Product 导演者 Director   示例Product.java123public class Product&amp;#123;	&amp;#125; Builder.java1234567public abstract class">
+  <meta name="description" content="概述创建者模式关注的是零件类型和装配工艺顺序，这是与工厂方法模式最大的不同之处，虽然同为创建型模式，但是重点不同。 类图 角色 抽象建造者 Builder 具体建造者 Concrete Builder 产品 Product 导演者 Director   示例Product.java123public class Product&amp;#123;	&amp;#125; Builder.java1234567pub">
 <meta name="keywords" content="设计模式">
 <meta property="og:type" content="article">
 <meta property="og:title" content="创建者模式">
 <meta property="og:url" content="http://www.hardydou.com/2019/07/02/builder-pattern/index.html">
 <meta property="og:site_name" content="HardyDou">
-<meta property="og:description" content="概述将一个复杂对象的构建与它的表示分离，使得同样的构建过程可以创建不同的表示。 类图 角色 抽象建造者 Builder 具体建造者 Concrete Builder 产品 Product 导演者 Director   示例Product.java123public class Product&amp;#123;	&amp;#125; Builder.java1234567public abstract class">
+<meta property="og:description" content="概述创建者模式关注的是零件类型和装配工艺顺序，这是与工厂方法模式最大的不同之处，虽然同为创建型模式，但是重点不同。 类图 角色 抽象建造者 Builder 具体建造者 Concrete Builder 产品 Product 导演者 Director   示例Product.java123public class Product&amp;#123;	&amp;#125; Builder.java1234567pub">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="http://www.hardydou.com/images/pasted-149.png">
-<meta property="og:updated_time" content="2019-07-02T06:31:00.891Z">
+<meta property="og:updated_time" content="2019-07-02T06:34:45.943Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="创建者模式">
-<meta name="twitter:description" content="概述将一个复杂对象的构建与它的表示分离，使得同样的构建过程可以创建不同的表示。 类图 角色 抽象建造者 Builder 具体建造者 Concrete Builder 产品 Product 导演者 Director   示例Product.java123public class Product&amp;#123;	&amp;#125; Builder.java1234567public abstract class">
+<meta name="twitter:description" content="概述创建者模式关注的是零件类型和装配工艺顺序，这是与工厂方法模式最大的不同之处，虽然同为创建型模式，但是重点不同。 类图 角色 抽象建造者 Builder 具体建造者 Concrete Builder 产品 Product 导演者 Director   示例Product.java123public class Product&amp;#123;	&amp;#125; Builder.java1234567pub">
 <meta name="twitter:image" content="http://www.hardydou.com/images/pasted-149.png">
 
 
@@ -412,7 +412,7 @@
                 
               
 
-              <time title="创建时间：2019-07-02 14:10:00 / 修改时间：14:31:00" itemprop="dateCreated datePublished" datetime="2019-07-02T14:10:00+08:00">2019-07-02</time>
+              <time title="创建时间：2019-07-02 14:10:00 / 修改时间：14:34:45" itemprop="dateCreated datePublished" datetime="2019-07-02T14:10:00+08:00">2019-07-02</time>
             
 
             
@@ -478,7 +478,7 @@
       
 
       
-        <h2 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h2><p>将一个复杂对象的构建与它的表示分离，使得同样的构建过程可以创建不同的表示。</p>
+        <h2 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h2><p>创建者模式关注的是零件类型和装配工艺顺序，这是与工厂方法模式最大的不同之处，虽然同为创建型模式，但是重点不同。</p>
 <h2 id="类图"><a href="#类图" class="headerlink" title="类图"></a>类图</h2><p><img src="/images/pasted-149.png" alt="upload successful"></p>
 <h2 id="角色"><a href="#角色" class="headerlink" title="角色"></a>角色</h2><ul>
 <li>抽象建造者 Builder</li>
@@ -490,7 +490,6 @@
 <p>Builder.java<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">public abstract class Builder &#123;</span><br><span class="line">	public abstract void setPart1();</span><br><span class="line">    public abstract void setPart2();</span><br><span class="line">    public abstract void setPart3();</span><br><span class="line">    </span><br><span class="line">    public abstract Product builderProduct();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
 <p>ConcreteBuilder.java<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">public class ConcreteBuilder extends Builder&#123;</span><br><span class="line">	</span><br><span class="line">    public  void setPart1()&#123;</span><br><span class="line">    &#125;</span><br><span class="line">    public  void setPart2()&#123;</span><br><span class="line">    &#125;</span><br><span class="line">    public  void setPart3()&#123;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    public  Product builderProduct()&#123;</span><br><span class="line">    	return product;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
 <p>Diector.java<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">public class Director&#123;</span><br><span class="line">	private Builder builder=new ConcreteBuilder();</span><br><span class="line">    </span><br><span class="line">    public Product build()&#123;</span><br><span class="line">    	builder.setPart1();</span><br><span class="line">        builder.setPart2();</span><br><span class="line">        builder.setPart3();</span><br><span class="line">        </span><br><span class="line">        return builder.builderProduct();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<p>Director 类起到封装作用，避免高层模块深入到建造者内部的实现类。导演类可以有多个，根据项目的实际情况来决定使用哪个。 </p>
 <h2 id="应用"><a href="#应用" class="headerlink" title="应用"></a>应用</h2><h3 id="优点"><a href="#优点" class="headerlink" title="优点"></a>优点</h3><ul>
 <li>封装性</li>
 <li>建造者独立，容易扩展</li>
@@ -502,7 +501,7 @@
 <li>产品非常复杂，或者产品类中的方法调用顺序不同产生了不同的效能，这个时候使用建造者模式。</li>
 <li>在对象创建过程中会使用到系统的一些其他对象，这些对象在产品对象创建过程中不易得到时，也可采用创建者模式。</li>
 </ul>
-<p>创建者模式关注的是零件类型和装配工艺顺序，这是与工厂方法模式最大的不同之处，虽然同为创建型模式，但是重点不同。</p>
+<h2 id="Director"><a href="#Director" class="headerlink" title="Director"></a>Director</h2><p>Director 类起到封装作用，避免高层模块深入到建造者内部的实现类。导演类可以有多个，根据项目的实际情况来决定使用哪个。 </p>
 
       
     </div>
@@ -809,7 +808,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#概述"><span class="nav-number">1.</span> <span class="nav-text">概述</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#类图"><span class="nav-number">2.</span> <span class="nav-text">类图</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#角色"><span class="nav-number">3.</span> <span class="nav-text">角色</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#示例"><span class="nav-number">4.</span> <span class="nav-text">示例</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#应用"><span class="nav-number">5.</span> <span class="nav-text">应用</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#优点"><span class="nav-number">5.1.</span> <span class="nav-text">优点</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#场景"><span class="nav-number">5.2.</span> <span class="nav-text">场景</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#概述"><span class="nav-number">1.</span> <span class="nav-text">概述</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#类图"><span class="nav-number">2.</span> <span class="nav-text">类图</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#角色"><span class="nav-number">3.</span> <span class="nav-text">角色</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#示例"><span class="nav-number">4.</span> <span class="nav-text">示例</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#应用"><span class="nav-number">5.</span> <span class="nav-text">应用</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#优点"><span class="nav-number">5.1.</span> <span class="nav-text">优点</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#场景"><span class="nav-number">5.2.</span> <span class="nav-text">场景</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Director"><span class="nav-number">6.</span> <span class="nav-text">Director</span></a></li></ol></div>
             
 
           </div>

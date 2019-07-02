@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.hardydou.com/"/>
-  <updated>2019-07-02T06:31:00.891Z</updated>
+  <updated>2019-07-02T06:34:45.943Z</updated>
   <id>http://www.hardydou.com/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="http://www.hardydou.com/2019/07/02/builder-pattern/"/>
     <id>http://www.hardydou.com/2019/07/02/builder-pattern/</id>
     <published>2019-07-02T06:10:00.000Z</published>
-    <updated>2019-07-02T06:31:00.891Z</updated>
+    <updated>2019-07-02T06:34:45.943Z</updated>
     
     <summary type="html">
     
@@ -29,8 +29,8 @@
       
         
         
-          &lt;h2 id=&quot;概述&quot;&gt;&lt;a href=&quot;#概述&quot; class=&quot;headerlink&quot; title=&quot;概述&quot;&gt;&lt;/a&gt;概述&lt;/h2&gt;&lt;p&gt;将一个复杂对象的构建与它的表示分离，使得同样的构建过程可以创建不同的表示。&lt;/p&gt;
-&lt;h2 id=&quot;类图&quot;&gt;&lt;a href=&quot;#类图&quot;
+          &lt;h2 id=&quot;概述&quot;&gt;&lt;a href=&quot;#概述&quot; class=&quot;headerlink&quot; title=&quot;概述&quot;&gt;&lt;/a&gt;概述&lt;/h2&gt;&lt;p&gt;创建者模式关注的是零件类型和装配工艺顺序，这是与工厂方法模式最大的不同之处，虽然同为创建型模式，但是重点不同。&lt;/p&gt;
+&lt;h2
         
       
     
