@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.hardydou.com/"/>
-  <updated>2019-07-04T04:20:09.451Z</updated>
+  <updated>2019-07-10T04:15:52.469Z</updated>
   <id>http://www.hardydou.com/</id>
   
   <author>
@@ -15,6 +15,60 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>组合模式</title>
+    <link href="http://www.hardydou.com/2019/07/10/composite-pattern/"/>
+    <id>http://www.hardydou.com/2019/07/10/composite-pattern/</id>
+    <published>2019-07-10T03:35:00.000Z</published>
+    <updated>2019-07-10T04:15:52.469Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;概述&quot;&gt;&lt;a href=&quot;#概述&quot; class=&quot;headerlink&quot; title=&quot;概述&quot;&gt;&lt;/a&gt;概述&lt;/h2&gt;&lt;p&gt;将对象组合成树形结构以表示”部分-整体“的层次结构，使得用户对单个对象和组合对象的使用具有一致性。&lt;/p&gt;
+&lt;h2 id=&quot;类图&quot;&gt;&lt;a
+        
+      
+    
+    </summary>
+    
+      <category term="架构设计" scheme="http://www.hardydou.com/categories/%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1/"/>
+    
+    
+      <category term="设计模式" scheme="http://www.hardydou.com/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>适配器模式</title>
+    <link href="http://www.hardydou.com/2019/07/04/adapter-pattern/"/>
+    <id>http://www.hardydou.com/2019/07/04/adapter-pattern/</id>
+    <published>2019-07-04T04:25:00.000Z</published>
+    <updated>2019-07-10T03:35:19.925Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;概述&quot;&gt;&lt;a href=&quot;#概述&quot; class=&quot;headerlink&quot; title=&quot;概述&quot;&gt;&lt;/a&gt;概述&lt;/h2&gt;&lt;p&gt;将一个类的接口变换成客户端所期待的另一种接口，从而使原本因接口不匹配而无从在一起工作的两个类能够在一起工作&lt;/p&gt;
+&lt;h2
+        
+      
+    
+    </summary>
+    
+      <category term="架构设计" scheme="http://www.hardydou.com/categories/%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1/"/>
+    
+    
+      <category term="设计模式" scheme="http://www.hardydou.com/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
+    
+  </entry>
   
   <entry>
     <title>装饰者模式</title>
@@ -512,63 +566,6 @@
       <category term="gradle" scheme="http://www.hardydou.com/tags/gradle/"/>
     
       <category term="idea" scheme="http://www.hardydou.com/tags/idea/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Java注解</title>
-    <link href="http://www.hardydou.com/2019/05/04/Java%E6%B3%A8%E8%A7%A3/"/>
-    <id>http://www.hardydou.com/2019/05/04/Java注解/</id>
-    <published>2019-05-04T09:39:00.000Z</published>
-    <updated>2019-05-05T06:35:31.813Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h2 id=&quot;背景&quot;&gt;&lt;a href=&quot;#背景&quot; class=&quot;headerlink&quot; title=&quot;背景&quot;&gt;&lt;/a&gt;背景&lt;/h2&gt;&lt;p&gt;今天用idea学习lombok时遇到一个问题，注解@Getter @Setter 编译通过通过struct视图也可以看到动态添加的
-        
-      
-    
-    </summary>
-    
-      <category term="java" scheme="http://www.hardydou.com/categories/java/"/>
-    
-    
-      <category term="java" scheme="http://www.hardydou.com/tags/java/"/>
-    
-      <category term="刻意练习" scheme="http://www.hardydou.com/tags/%E5%88%BB%E6%84%8F%E7%BB%83%E4%B9%A0/"/>
-    
-      <category term="注解" scheme="http://www.hardydou.com/tags/%E6%B3%A8%E8%A7%A3/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>架构图</title>
-    <link href="http://www.hardydou.com/2019/04/03/%E7%94%BB%E6%9E%B6%E6%9E%84%E5%9B%BE/"/>
-    <id>http://www.hardydou.com/2019/04/03/画架构图/</id>
-    <published>2019-04-03T08:42:00.000Z</published>
-    <updated>2019-07-01T17:26:46.974Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h2 id=&quot;介绍&quot;&gt;&lt;a href=&quot;#介绍&quot; class=&quot;headerlink&quot; title=&quot;介绍&quot;&gt;&lt;/a&gt;介绍&lt;/h2&gt;&lt;p&gt;架构图是展示软件系统的&lt;font size=&quot;6&quot;&gt; 整体全貌、组件关系、部署情况、演进方向&lt;/font&gt;  视图语言。&lt;/p&gt;
-&lt;h2
-        
-      
-    
-    </summary>
-    
-      <category term="架构设计" scheme="http://www.hardydou.com/categories/%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1/"/>
-    
-    
-      <category term="UML" scheme="http://www.hardydou.com/tags/UML/"/>
     
   </entry>
   
