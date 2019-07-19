@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.hardydou.com/"/>
-  <updated>2019-07-10T04:15:52.469Z</updated>
+  <updated>2019-07-19T08:14:21.698Z</updated>
   <id>http://www.hardydou.com/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>桥梁模式</title>
+    <link href="http://www.hardydou.com/2019/07/19/bridge-pattern/"/>
+    <id>http://www.hardydou.com/2019/07/19/bridge-pattern/</id>
+    <published>2019-07-19T07:34:00.000Z</published>
+    <updated>2019-07-19T08:14:21.698Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;概述&quot;&gt;&lt;a href=&quot;#概述&quot; class=&quot;headerlink&quot; title=&quot;概述&quot;&gt;&lt;/a&gt;概述&lt;/h2&gt;&lt;p&gt;将抽象和实现解耦，使得两者可以独立变化。&lt;/p&gt;
+&lt;h2 id=&quot;类图&quot;&gt;&lt;a href=&quot;#类图&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="架构设计" scheme="http://www.hardydou.com/categories/%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1/"/>
+    
+    
+      <category term="设计模式" scheme="http://www.hardydou.com/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
+    
+  </entry>
   
   <entry>
     <title>组合模式</title>
@@ -537,35 +564,6 @@
       <category term="java" scheme="http://www.hardydou.com/tags/java/"/>
     
       <category term="jvm" scheme="http://www.hardydou.com/tags/jvm/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Gradle构建项目</title>
-    <link href="http://www.hardydou.com/2019/05/05/Gradle%E6%9E%84%E5%BB%BA/"/>
-    <id>http://www.hardydou.com/2019/05/05/Gradle构建/</id>
-    <published>2019-05-05T06:50:00.000Z</published>
-    <updated>2019-05-09T06:22:34.988Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h2 id=&quot;介绍&quot;&gt;&lt;a href=&quot;#介绍&quot; class=&quot;headerlink&quot; title=&quot;介绍&quot;&gt;&lt;/a&gt;介绍&lt;/h2&gt;&lt;p&gt;自动化构建、分发工具&lt;/p&gt;
-&lt;h2 id=&quot;安装&quot;&gt;&lt;a href=&quot;#安装&quot; class=&quot;headerlink&quot;
-        
-      
-    
-    </summary>
-    
-      <category term="工具" scheme="http://www.hardydou.com/categories/%E5%B7%A5%E5%85%B7/"/>
-    
-    
-      <category term="gradle" scheme="http://www.hardydou.com/tags/gradle/"/>
-    
-      <category term="idea" scheme="http://www.hardydou.com/tags/idea/"/>
     
   </entry>
   

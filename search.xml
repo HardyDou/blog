@@ -3,6 +3,29 @@
   
     
     <entry>
+      <title>桥梁模式</title>
+      <link href="/2019/07/19/bridge-pattern/"/>
+      <url>/2019/07/19/bridge-pattern/</url>
+      
+        <content type="html"><![CDATA[<h2 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h2><p>将抽象和实现解耦，使得两者可以独立变化。</p><h2 id="类图"><a href="#类图" class="headerlink" title="类图"></a>类图</h2><p><img src="/images/pasted-159.png" alt="upload successful"></p><h2 id="角色"><a href="#角色" class="headerlink" title="角色"></a>角色</h2><ul><li>抽象化（Abstraction)角色<br>该角色抽象化的给出定义，并保存一个对实现化对象的引用。</li><li>实现化（Implementor)角色<br>该角色给出实现化角色的接口，但不给出具体的实现。</li><li>修正抽象化（RefinedAbstraction)角色<br>该角色扩展抽象化角色，它引用实现化绝角色并对抽象化角色进行修正。</li><li>具体实现化（ConcreteImplementor)角色<br>该角色对实现化角色接口中的方法进行具体实现。</li></ul><h2 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h2><p>Implementor.java<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">public interface Implementor&#123;</span><br><span class="line">public void operationImp();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p><p>ConcreteImplementor.java<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">public class ConcreteImplementor implements Implementor&#123;</span><br><span class="line">public void operationImp()&#123;</span><br><span class="line">    //业务代码</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p><p>Abstarction.java<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">public class Abstraction &#123;</span><br><span class="line">private Implementor imp;</span><br><span class="line">    public Abstraction(Implementor imp)&#123;</span><br><span class="line">    this.imp=imp;</span><br><span class="line">    &#125;</span><br><span class="line">    public void operation()&#123;</span><br><span class="line">    this.imp.operationImp();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p><p>RefinedAbstraction.java<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">public class RefinedAbstraction extends Abstraction&#123;</span><br><span class="line">public RefinedAbstraction (Implementor imp)&#123;</span><br><span class="line">    super(imp);</span><br><span class="line">    &#125;</span><br><span class="line">    //修正父类的方法</span><br><span class="line">    public void operation()&#123;</span><br><span class="line">    //业务代码</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p><p>Client.java<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">public class Client&#123;</span><br><span class="line">public static void main(String args[])&#123;</span><br><span class="line">    //定义一个实例化角色</span><br><span class="line">        Implementor imp=new ConcreteImplementor();</span><br><span class="line">        Abstraction abs=new RefinedAbstraction(imp);</span><br><span class="line">        abs.operation();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p><h2 id="应用"><a href="#应用" class="headerlink" title="应用"></a>应用</h2><h3 id="优点"><a href="#优点" class="headerlink" title="优点"></a>优点</h3><ul><li>抽象和实现分离是桥梁模式的主要特点，是为了解决继承的缺点而提出的设计模式。该模式下可以不接受抽象的约束，不用绑定在一个固定的抽象层次上。</li><li>实现对客户透明，客户端不用关心细节的实现，它已经由抽象层通过聚合关系完成封装。</li><li>提高灵活性和扩展性</li></ul><h2 id="使用场合"><a href="#使用场合" class="headerlink" title="使用场合"></a>使用场合</h2><ul><li>如果一个系统需要再构件的抽象化角色和具体角色之间增加更多的灵活性，避免在两层次之间建立静态的联系</li><li>设计要求实现化角色的任何改变不影响客户端，或者说实现化角色的改变对客户端完全透明。</li><li>一个构件有多于一个的抽象化角色和实现化角色，系统需要他们之间进行动态耦合。</li><li>不希望或不适合使用继承的场合。继承具有强入侵性质，即父类有的方法子类必须有；而桥梁模式是弱关联关系。</li></ul><h2 id="实例"><a href="#实例" class="headerlink" title="实例"></a>实例</h2><p><img src="/images/pasted-160.png" alt="upload successful"></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 架构设计 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 设计模式 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    <entry>
       <title>组合模式</title>
       <link href="/2019/07/10/composite-pattern/"/>
       <url>/2019/07/10/composite-pattern/</url>
@@ -698,9 +721,9 @@
       
         <tags>
             
-            <tag> java </tag>
-            
             <tag> idea </tag>
+            
+            <tag> java </tag>
             
         </tags>
       
