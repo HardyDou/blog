@@ -3,6 +3,104 @@
   
     
     <entry>
+      <title>策略模式</title>
+      <link href="/2019/07/24/strategy-pattern/"/>
+      <url>/2019/07/24/strategy-pattern/</url>
+      
+        <content type="html"><![CDATA[<h2 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h2><p>行为模式，定义一组算法，将每个算法都封装起来，并且使他们之间可以互换。</p><h2 id="类图"><a href="#类图" class="headerlink" title="类图"></a>类图</h2><p><img src="/images/pasted-179.png" alt="upload successful"></p><h2 id="角色"><a href="#角色" class="headerlink" title="角色"></a>角色</h2><ul><li>环境（Context)角色：<br>该角色也叫上下文角色，起到承上启下的作用，屏蔽高层模块对策略、算法的直接访问，它持有一个Strategy类的引用。</li><li>抽象策略（Strategy）角色：该角色对策略、算法进行抽象，通常定义每一个策略或算法必须具有的方法和属性。</li><li>具体策略（Concrete Strategy)角色：该角色实现抽象策略中的具体操作，含有具体的算法。</li></ul><h2 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h2><p>Strategy.java<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">public abstract Strategy&#123;</span><br><span class="line">public abstract void strategyInterface();</span><br><span class="line">    </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p><p>ConcreteStrategy.java<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">public class ConcreteStrategy extends Strategy&#123;</span><br><span class="line">public void strategyInterface()&#123;</span><br><span class="line">    //do something</span><br><span class="line">     &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p><p>Context.java<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">public class Context&#123;</span><br><span class="line">private Strategy strategy=null;</span><br><span class="line">    public Context(Strategy strategy)&#123;</span><br><span class="line">    this.strategy=strategy;</span><br><span class="line">    &#125;</span><br><span class="line">    public void contextInterface()&#123;</span><br><span class="line">    this.strategy.strategyInterface();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p><h2 id="应用"><a href="#应用" class="headerlink" title="应用"></a>应用</h2><h3 id="优点"><a href="#优点" class="headerlink" title="优点"></a>优点</h3><ul><li>策略模式提供了管理相关的算法族的办法。策略类的登记结构定义一个算法或行为族，恰当地使用继承可以把公共代码迁移到父类中，从而避免代码重复。</li><li>策略模式提供了可以替换继承关系的办法。继承可以处理多种算法或行为，如果不用策略模式，那么使用算法或行为的环境类就可能会有一些子类，每一个子类提供一个不同的算法或行为。但是，这样算法或行为的使用者就和算法本身混在一起，从而不能再独立演化。</li><li>使用策略模式可以规避使用多重条件转移语句。</li></ul><h3 id="缺点"><a href="#缺点" class="headerlink" title="缺点"></a>缺点</h3><ul><li>客户端必须知道所有的策略类，并自行解决使用哪一个策略类。</li><li>策略模式造成很多的策略类。</li></ul><h3 id="场景"><a href="#场景" class="headerlink" title="场景"></a>场景</h3><ul><li>多个类只是在算法或行为上稍有不同的场景。</li><li>算法需要自由切换的场景。</li><li>需要屏蔽算法规则的场景。</li></ul><h2 id="实例"><a href="#实例" class="headerlink" title="实例"></a>实例</h2><p><img src="/images/pasted-180.png" alt="upload successful"></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 架构设计 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 设计模式 </tag>
+            
+            <tag> 行为模式 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    <entry>
+      <title>责任链模式</title>
+      <link href="/2019/07/24/chainofresponsibility-pattern/"/>
+      <url>/2019/07/24/chainofresponsibility-pattern/</url>
+      
+        <content type="html"><![CDATA[<h2 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h2><p>行为模式，使多个对象都有机会处理请求，从而避免请求的发送者和接收者之间的耦合关系。将这些对象连城一条链，并沿着这条链传递请求，直到有对象处理它为止。</p><h2 id="类图"><a href="#类图" class="headerlink" title="类图"></a>类图</h2><p><img src="/images/pasted-177.png" alt="upload successful"></p><h2 id="角色"><a href="#角色" class="headerlink" title="角色"></a>角色</h2><ul><li>抽象处理者（Handler)角色：<br>该角色对请求进行抽象，并定义一个方法以设定和返回对下一个处理者的引用。</li><li>具体处理者（ConcreteHandler)角色：<br>该角色接到请求后，可以选择将请求处理掉，或者将请求传递给下一个处理者。由于具体处理者持有下一个处理者的引用，因此如果需要，具体处理者可以访问下一个处理者。</li></ul><h2 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h2><p>Handler.java<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">public abstract class Handler&#123;</span><br><span class="line">private Handler successor;</span><br><span class="line">    public abstract void handleRequest();</span><br><span class="line">    public Handler getSuccessor()&#123;</span><br><span class="line">    return successor;</span><br><span class="line">    &#125;</span><br><span class="line">    public void setSuccessor(Handler successor)&#123;</span><br><span class="line">    this.successor=successor;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p><p>ConcreteHandler.java<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">public class ConcreteHandler extends Handler&#123;</span><br><span class="line">public void handleRequest()&#123;</span><br><span class="line">    if(getSuccessor()!=null)&#123;</span><br><span class="line">        System.out.println(&quot;请求传递给&quot;+getSuccessor());</span><br><span class="line">            getSuccessor().handleRequest();</span><br><span class="line">        &#125;else&#123;</span><br><span class="line">        System.out.println(&quot;请求处理&quot;);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p><p>Client.java<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">public class Client&#123;</span><br><span class="line">public static void main(String args[])&#123;</span><br><span class="line">    Handler h1=new ConcreteHandler();</span><br><span class="line">        Handler h2=new ConcreteHandler();</span><br><span class="line">        h1.setSuccessor(h2);</span><br><span class="line">        h1.handleRequest();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p><h2 id="应用"><a href="#应用" class="headerlink" title="应用"></a>应用</h2><h3 id="优点"><a href="#优点" class="headerlink" title="优点"></a>优点</h3><ul><li>责任链模式将请求和处理分开，请求者不知道是谁处理的，处理者可以不用知道请求的全貌。</li><li>提高系统的灵活性</li></ul><h3 id="缺点"><a href="#缺点" class="headerlink" title="缺点"></a>缺点</h3><ul><li>降低程序的性能，每个请求都是从链头遍历到链尾，当链比较长的时候，性能会大幅下降。</li><li>不易调试，由于采用了类似递归的方式，调试时逻辑比较复杂。</li></ul><h3 id="注意"><a href="#注意" class="headerlink" title="注意"></a>注意</h3><p>责任链中的节点数量需要控制，避免出现超长链的情况，这就需要设置一个最大的节点数量，超过则不允许增加节点，避免无意识地破坏系统的性能。</p><h2 id="应用场景"><a href="#应用场景" class="headerlink" title="应用场景"></a>应用场景</h2><p>责任链模式是一种常见的模式，Struts2的核心空间FilterDispatcher就是一个Servlet过滤器，该空间就是采用责任链模式，可以对用户请求进行层层过滤处理。责任链模式在实际的项目中使用的比较多。</p><ul><li>一个请求需要一系列的处理工作</li><li>业务流的处理，例如，文件审批。</li><li>对系统进行补充扩展</li></ul><h2 id="实例"><a href="#实例" class="headerlink" title="实例"></a>实例</h2><p><img src="/images/pasted-178.png" alt="upload successful"></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 架构设计 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 设计模式 </tag>
+            
+            <tag> 行为模式 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    <entry>
+      <title>命令模式</title>
+      <link href="/2019/07/23/command-pattern/"/>
+      <url>/2019/07/23/command-pattern/</url>
+      
+        <content type="html"><![CDATA[<h2 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h2><p>行为模式，将一个请求封装成一个对象，从而让你使用不同的请求把客户端参数化，对请求排队或者记录请求日志，可以提供命令的撤销和恢复功能。</p><h2 id="类图"><a href="#类图" class="headerlink" title="类图"></a>类图</h2><p><img src="/images/pasted-176.png" alt="upload successful"></p><h2 id="角色"><a href="#角色" class="headerlink" title="角色"></a>角色</h2><ul><li>命令（Command）角色：<br>该角色声明一个给所有具体命令类的抽象接口，定义需要执行的命令。</li><li>具体命令（Concrete Command）角色：<br>该角色定义一个接受者和行为之间的弱耦合，实现命令方法，并调用接收者的相应操作。</li><li>调用者（Invoker)角色：<br>该角色负责调用命令对象执行请求。</li><li>接受者（Receiver)角色；<br>该角色负责具体实施和执行一个请求。</li></ul><h2 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h2><p>Command.java<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">public interface Command&#123;</span><br><span class="line">public void execute();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p><p>ConcreteCommand.java<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">public class ConcreteCommand implements Command&#123;</span><br><span class="line">private Receiver receiver;</span><br><span class="line">    public ConcreteCommand(Receiver receiver)&#123;</span><br><span class="line">    this.receiver=receiver;</span><br><span class="line">    &#125;</span><br><span class="line">    public void execute()&#123;</span><br><span class="line">    this.receiver.action();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p><p>Receiver.java<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">public class Receiver&#123;</span><br><span class="line">public void action()&#123;</span><br><span class="line">    System.out.println(&quot;执行动作&quot;);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p><p>Invoker.java<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">public class Invoker&#123;</span><br><span class="line">private Command command;</span><br><span class="line">    public void setCommand(Command command)&#123;</span><br><span class="line">    this.command=command;</span><br><span class="line">    &#125;</span><br><span class="line">    public void action()&#123;</span><br><span class="line">    this.command.execute();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p><p>Client.java<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">public class Client&#123;</span><br><span class="line">public static void main(String args[])&#123;</span><br><span class="line">    Invoker invoker=new Invoker();</span><br><span class="line">        Receiver receiver=new Receiver();</span><br><span class="line">        Command command=new ConcreteCommand(receiver);</span><br><span class="line">        invoker.setCommand(command);</span><br><span class="line">        invoker.action();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p><h2 id="应用"><a href="#应用" class="headerlink" title="应用"></a>应用</h2><ul><li>类间解耦。<br>调用者角色与接受者角色之间没有任何依赖关系，调用者实现功能只需要调用Command中的execute()方法即可，不需要了解是哪个接收者执行。</li><li>可扩展性。<br>Command 的子类可以非常容易的扩展，而调用者Invoker和高层次的模块Client不产生严重的代码耦合。</li><li>命令模式结合其他模式会更优秀。命令模式可以结合责任链模式，实现命令族解析任务，结合模版方法模式，则可以减少Command子类的膨胀问题。</li></ul><h3 id="缺点"><a href="#缺点" class="headerlink" title="缺点"></a>缺点</h3><ul><li>使用命令模式可能会导致系统中出现过多的具体命令类，因此需要再项目中慎重考虑使用。</li></ul><h3 id="场景"><a href="#场景" class="headerlink" title="场景"></a>场景</h3><ul><li>使用命令模式作为回调在面相对象系统中的替代。回调 讲的便是将一个函数登记上，然后在以后调用此函数。</li><li>需要在不同的时间制定请求、将请求排队。</li><li>系统需要支持命令的撤销。命令对象可以把状态存储起来，等到客户需要撤销时，可以调用undo()方法，将命令所产生的效果撤销。</li><li>需要将系统中所有的数据更新操作保存到日志里，以便在系统崩溃时，可以根据日志读回所有数据更新命令，重新调用execute方法一条条执行这些命令，从而恢复系统所在崩溃前所做的数据更新。</li><li>一个系统需要支持交易。一个交易结果封装了一组数据更新命令。使用命令模式实现交易结构可以使系统增加新的交易类型。</li></ul><h2 id="实例"><a href="#实例" class="headerlink" title="实例"></a>实例</h2><p><img src="/images/pasted-175.png" alt="upload successful"></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 架构设计 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 设计模式 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    <entry>
+      <title>模版方法模式</title>
+      <link href="/2019/07/23/templateMethod-pattern/"/>
+      <url>/2019/07/23/templateMethod-pattern/</url>
+      
+        <content type="html"><![CDATA[<h2 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h2><p>行为模式，定义一个操作中的算法的框架，而将一些步骤延迟到子类中。使得子类可以不改变一个算法的结构即可重定义该算法的某些特定步骤。</p><h2 id="类图"><a href="#类图" class="headerlink" title="类图"></a>类图</h2><p><img src="/images/pasted-172.png" alt="upload successful"></p><h2 id="角色"><a href="#角色" class="headerlink" title="角色"></a>角色</h2><ul><li>抽象模版（Abstract Template)角色：<br>该角色定义一个后者多个抽象操作，以便让子类实现；这些抽象操作是基本操作，是一个顶级逻辑的组成步骤。还需要定义并实现一个或几个模版方法，这些模版方法一般是具体方法，即一个框架，实现对基本方法的调度，完成固定逻辑。</li><li>具体模版（ConcreteTemplate)角色：<br>该角色实现抽象模版中定义的一个或者多个抽象方法，每一个抽象模版角色都可以有任意多个具体模版角色与之对应，而没一个具体模版角色都可以给出这些抽象方法的不同实现，从而使得顶级逻辑的实现各不相同。</li></ul><h2 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h2><p>AbstractClass.java<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">public abstract class AbstractClass&#123;</span><br><span class="line">protected abstract void operation();</span><br><span class="line">    public void templateMethod()&#123;</span><br><span class="line">    this.operation();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p><p>ConcreteClass.java<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">public class ConcreteClass extends AbstractClass&#123;</span><br><span class="line">protected void operation()&#123;</span><br><span class="line">    //do some things</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p><p>Client.java<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">public class Client&#123;</span><br><span class="line">public static void main(String args[])&#123;</span><br><span class="line">    AbstractClass ac=new ConcreteClass();</span><br><span class="line">        ac.templateMethod();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p><h2 id="应用"><a href="#应用" class="headerlink" title="应用"></a>应用</h2><h3 id="优点"><a href="#优点" class="headerlink" title="优点"></a>优点</h3><ul><li>封装不变的部分，扩展可变的部分。不变的部分封装到父类中实现，可变的部分则可以通过继承进行扩展。</li><li>提取公共代码部分，便于维护。将公共部分的代码提取出来放在父类中，维护时只需要修改父类中的代码。</li><li>行为由父类控制，子类实现。模版方法模式中的基本方法是由子类实现的，因此子类可以通过扩展增加相应的功能复合开闭原则。</li></ul><h3 id="应用场景"><a href="#应用场景" class="headerlink" title="应用场景"></a>应用场景</h3><ul><li>多个子类有公共方法，并且逻辑基本相同时。</li><li>可以把重要的、复杂的、核心算法设计为模版方法，周边的相关细节功能则由各个子类实现。</li><li>重构时，模版方法模式是一个经常使用的模式，将相同的代码抽取到父类中。</li></ul><h2 id="实例"><a href="#实例" class="headerlink" title="实例"></a>实例</h2><p><img src="/images/pasted-173.png" alt="upload successful"></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 架构设计 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 设计模式 </tag>
+            
+            <tag> 行为模式 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    <entry>
       <title>享元模式</title>
       <link href="/2019/07/22/flyweight-pattern/"/>
       <url>/2019/07/22/flyweight-pattern/</url>

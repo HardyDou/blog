@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.hardydou.com/"/>
-  <updated>2019-07-22T03:58:48.302Z</updated>
+  <updated>2019-07-24T06:57:30.454Z</updated>
   <id>http://www.hardydou.com/</id>
   
   <author>
@@ -15,6 +15,117 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>策略模式</title>
+    <link href="http://www.hardydou.com/2019/07/24/strategy-pattern/"/>
+    <id>http://www.hardydou.com/2019/07/24/strategy-pattern/</id>
+    <published>2019-07-24T06:43:00.000Z</published>
+    <updated>2019-07-24T06:57:30.454Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;概述&quot;&gt;&lt;a href=&quot;#概述&quot; class=&quot;headerlink&quot; title=&quot;概述&quot;&gt;&lt;/a&gt;概述&lt;/h2&gt;&lt;p&gt;行为模式，定义一组算法，将每个算法都封装起来，并且使他们之间可以互换。&lt;/p&gt;
+&lt;h2 id=&quot;类图&quot;&gt;&lt;a href=&quot;#类图&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="架构设计" scheme="http://www.hardydou.com/categories/%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1/"/>
+    
+    
+      <category term="设计模式" scheme="http://www.hardydou.com/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
+    
+      <category term="行为模式" scheme="http://www.hardydou.com/tags/%E8%A1%8C%E4%B8%BA%E6%A8%A1%E5%BC%8F/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>责任链模式</title>
+    <link href="http://www.hardydou.com/2019/07/24/chainofresponsibility-pattern/"/>
+    <id>http://www.hardydou.com/2019/07/24/chainofresponsibility-pattern/</id>
+    <published>2019-07-24T06:17:00.000Z</published>
+    <updated>2019-07-24T06:39:04.474Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;概述&quot;&gt;&lt;a href=&quot;#概述&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="架构设计" scheme="http://www.hardydou.com/categories/%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1/"/>
+    
+    
+      <category term="设计模式" scheme="http://www.hardydou.com/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
+    
+      <category term="行为模式" scheme="http://www.hardydou.com/tags/%E8%A1%8C%E4%B8%BA%E6%A8%A1%E5%BC%8F/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>命令模式</title>
+    <link href="http://www.hardydou.com/2019/07/23/command-pattern/"/>
+    <id>http://www.hardydou.com/2019/07/23/command-pattern/</id>
+    <published>2019-07-23T10:10:00.000Z</published>
+    <updated>2019-07-24T05:49:02.041Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;概述&quot;&gt;&lt;a href=&quot;#概述&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="架构设计" scheme="http://www.hardydou.com/categories/%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1/"/>
+    
+    
+      <category term="设计模式" scheme="http://www.hardydou.com/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>模版方法模式</title>
+    <link href="http://www.hardydou.com/2019/07/23/templateMethod-pattern/"/>
+    <id>http://www.hardydou.com/2019/07/23/templateMethod-pattern/</id>
+    <published>2019-07-23T05:25:00.000Z</published>
+    <updated>2019-07-23T09:59:12.000Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;概述&quot;&gt;&lt;a href=&quot;#概述&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="架构设计" scheme="http://www.hardydou.com/categories/%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1/"/>
+    
+    
+      <category term="设计模式" scheme="http://www.hardydou.com/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
+    
+      <category term="行为模式" scheme="http://www.hardydou.com/tags/%E8%A1%8C%E4%B8%BA%E6%A8%A1%E5%BC%8F/"/>
+    
+  </entry>
   
   <entry>
     <title>享元模式</title>
@@ -434,126 +545,6 @@
       <category term="life" scheme="http://www.hardydou.com/tags/life/"/>
     
       <category term="软考" scheme="http://www.hardydou.com/tags/%E8%BD%AF%E8%80%83/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Java语法糖</title>
-    <link href="http://www.hardydou.com/2019/05/28/JavaGrammarSugar/"/>
-    <id>http://www.hardydou.com/2019/05/28/JavaGrammarSugar/</id>
-    <published>2019-05-28T04:35:00.000Z</published>
-    <updated>2019-06-07T07:59:18.007Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h2 id=&quot;概述&quot;&gt;&lt;a href=&quot;#概述&quot; class=&quot;headerlink&quot;
-        
-      
-    
-    </summary>
-    
-      <category term="java" scheme="http://www.hardydou.com/categories/java/"/>
-    
-    
-      <category term="java" scheme="http://www.hardydou.com/tags/java/"/>
-    
-      <category term="语法糖" scheme="http://www.hardydou.com/tags/%E8%AF%AD%E6%B3%95%E7%B3%96/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Java虚拟机性能监控工具</title>
-    <link href="http://www.hardydou.com/2019/05/24/JavaTools/"/>
-    <id>http://www.hardydou.com/2019/05/24/JavaTools/</id>
-    <published>2019-05-24T11:35:00.000Z</published>
-    <updated>2019-05-27T07:09:33.360Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h2 id=&quot;依赖数据&quot;&gt;&lt;a href=&quot;#依赖数据&quot; class=&quot;headerlink&quot;
-        
-      
-    
-    </summary>
-    
-      <category term="java" scheme="http://www.hardydou.com/categories/java/"/>
-    
-    
-      <category term="java" scheme="http://www.hardydou.com/tags/java/"/>
-    
-      <category term="jvm" scheme="http://www.hardydou.com/tags/jvm/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>JavaGC日志格式</title>
-    <link href="http://www.hardydou.com/2019/05/23/JavaGCLog/"/>
-    <id>http://www.hardydou.com/2019/05/23/JavaGCLog/</id>
-    <published>2019-05-23T07:26:00.000Z</published>
-    <updated>2019-05-24T11:34:30.640Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;ul&gt;
-&lt;li&gt;不同收集器日志格式不同&lt;/li&gt;
-&lt;li&gt;不同收集器日志有一些共性&lt;/li&gt;
-&lt;li&gt;gc日志需要相对应开关控制&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&quot;GC参数汇总&quot;&gt;&lt;a href=&quot;#GC参数汇总&quot; class=&quot;headerlink&quot;
-        
-      
-    
-    </summary>
-    
-      <category term="java" scheme="http://www.hardydou.com/categories/java/"/>
-    
-    
-      <category term="java" scheme="http://www.hardydou.com/tags/java/"/>
-    
-      <category term="jvm" scheme="http://www.hardydou.com/tags/jvm/"/>
-    
-      <category term="log" scheme="http://www.hardydou.com/tags/log/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Java几种常量池</title>
-    <link href="http://www.hardydou.com/2019/05/14/Java%E5%87%A0%E7%A7%8D%E5%B8%B8%E9%87%8F%E6%B1%A0/"/>
-    <id>http://www.hardydou.com/2019/05/14/Java几种常量池/</id>
-    <published>2019-05-14T15:46:00.000Z</published>
-    <updated>2019-05-14T15:50:38.373Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;p&gt;在java的内存分配中，经常听到很多关于常量池的描述，我开始看的时候也是看的很模糊，网上五花八门的说法简直太多了，最后查阅各种资料，终于算是差不多理清了，很多网上说法都有问题，笔者尝试着来区分一下这几个概念。&lt;/p&gt;
-&lt;h2
-        
-      
-    
-    </summary>
-    
-      <category term="java" scheme="http://www.hardydou.com/categories/java/"/>
-    
-    
-      <category term="java" scheme="http://www.hardydou.com/tags/java/"/>
-    
-      <category term="jvm" scheme="http://www.hardydou.com/tags/jvm/"/>
     
   </entry>
   
