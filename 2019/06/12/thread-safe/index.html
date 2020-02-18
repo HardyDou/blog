@@ -1,131 +1,33 @@
 <!DOCTYPE html>
-
-
-
-
-
-
-
-
-
-
-
-
-  
-
-
-<html class="theme-next pisces use-motion" lang="zh-CN">
-<head><meta name="generator" content="Hexo 3.8.0">
+<html lang="zh-Hans">
+<head>
   <meta charset="UTF-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
 <meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 4.2.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
 
 
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.css">
 
-
-
-
-
-
-
-
-
-
-<meta http-equiv="Cache-Control" content="no-transform">
-<meta http-equiv="Cache-Control" content="no-siteapp">
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<link href="/lib/kityminder-core/kityminder.core.css?v=1.4.49" rel="stylesheet" type="text/css">
-<style>
-.mindmap{width:90%}
-</style>
-
-  
-  
-  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
-
-
-
-
-
-
-
-<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
-
-<link href="/css/main.css?v=6.5.0" rel="stylesheet" type="text/css">
-<style>
-.pullquote{width:auto;}
-</style>
-
-  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=6.5.0">
-
-
-  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=6.5.0">
-
-
-  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=6.5.0">
-
-
-  <link rel="mask-icon" href="/images/logo.svg?v=6.5.0" color="#222">
-
-
-
-
-
-
-
-
-
-<script type="text/javascript" id="hexo.configurations">
-  var NexT = window.NexT || {};
-  var CONFIG = {
-    root: '/',
-    scheme: 'Pisces',
-    version: '6.5.0',
-    sidebar: {"position":"left","display":"post","offset":12,"b2t":true,"scrollpercent":true,"onmobile":false,"width":240},
-    fancybox: true,
-    fastclick: false,
-    lazyload: false,
-    tabs: true,
-    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
-    algolia: {
-      applicationID: '',
-      apiKey: '',
-      indexName: '',
-      hits: {"per_page":10},
-      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
-    }
-  };
-</script>
-
-
-  
-
-
-
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"www.hardydou.com","root":"/","scheme":"Pisces","version":"7.7.1","exturl":false,"sidebar":{"position":"left","width":240,"b2t":true,"scrollpercent":true,"display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":true,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+  </script>
 
   <meta name="description" content="为什么要用锁？锁-是为了解决并发操作引起的脏读、数据不一致的问题。 锁实现的基本原理volatileJava编程语言允许线程访问共享变量， 为了确保共享变量能被准确和一致地更新，线程应该确保通过排他锁单独获得这个变量。Java语言提供了volatile，在某些情况下比锁要更加方便。volatile在多处理器开发中保证了共享变量的“ 可见性”。可见性的意思是当一个线程修改一个共享变量时，另外一个线程">
-<meta name="keywords" content="thread">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Java线程安全">
 <meta property="og:url" content="http://www.hardydou.com/2019/06/12/thread-safe/index.html">
 <meta property="og:site_name" content="小鱼先生">
 <meta property="og:description" content="为什么要用锁？锁-是为了解决并发操作引起的脏读、数据不一致的问题。 锁实现的基本原理volatileJava编程语言允许线程访问共享变量， 为了确保共享变量能被准确和一致地更新，线程应该确保通过排他锁单独获得这个变量。Java语言提供了volatile，在某些情况下比锁要更加方便。volatile在多处理器开发中保证了共享变量的“ 可见性”。可见性的意思是当一个线程修改一个共享变量时，另外一个线程">
-<meta property="og:locale" content="zh-CN">
+<meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="http://www.hardydou.com/images/pasted-124.png">
 <meta property="og:image" content="http://www.hardydou.com/images/pasted-125.png">
 <meta property="og:image" content="http://www.hardydou.com/images/pasted-126.png">
@@ -146,26 +48,22 @@
 <meta property="og:image" content="http://www.hardydou.com/images/pasted-141.png">
 <meta property="og:image" content="http://www.hardydou.com/images/pasted-142.png">
 <meta property="og:image" content="http://www.hardydou.com/images/pasted-143.png">
-<meta property="og:updated_time" content="2019-07-01T06:29:57.882Z">
+<meta property="article:published_time" content="2019-06-12T09:12:00.000Z">
+<meta property="article:modified_time" content="2019-07-01T06:29:57.882Z">
+<meta property="article:author" content="小鱼先生">
+<meta property="article:tag" content="thread">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Java线程安全">
-<meta name="twitter:description" content="为什么要用锁？锁-是为了解决并发操作引起的脏读、数据不一致的问题。 锁实现的基本原理volatileJava编程语言允许线程访问共享变量， 为了确保共享变量能被准确和一致地更新，线程应该确保通过排他锁单独获得这个变量。Java语言提供了volatile，在某些情况下比锁要更加方便。volatile在多处理器开发中保证了共享变量的“ 可见性”。可见性的意思是当一个线程修改一个共享变量时，另外一个线程">
 <meta name="twitter:image" content="http://www.hardydou.com/images/pasted-124.png">
 
+<link rel="canonical" href="http://www.hardydou.com/2019/06/12/thread-safe/">
 
 
-  <link rel="alternate" href="/atom.xml" title="小鱼先生" type="application/atom+xml">
-
-
-
-
-  <link rel="canonical" href="http://www.hardydou.com/2019/06/12/thread-safe/">
-
-
-
-<script type="text/javascript" id="page.configurations">
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
   CONFIG.page = {
     sidebar: "",
+    isHome: false,
+    isPost: true
   };
 </script>
 
@@ -177,328 +75,177 @@
 
 
 
-
-
-
-
-
   <noscript>
-  <style type="text/css">
-    .use-motion .motion-element,
-    .use-motion .brand,
-    .use-motion .menu-item,
-    .sidebar-inner,
-    .use-motion .post-block,
-    .use-motion .pagination,
-    .use-motion .comments,
-    .use-motion .post-header,
-    .use-motion .post-body,
-    .use-motion .collection-title { opacity: initial; }
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
 
-    .use-motion .logo,
-    .use-motion .site-title,
-    .use-motion .site-subtitle {
-      opacity: initial;
-      top: initial;
-    }
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
 
-    .use-motion {
-      .logo-line-before i { left: initial; }
-      .logo-line-after i { right: initial; }
-    }
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
   </style>
 </noscript>
 
 </head>
 
-<body itemscope="" itemtype="http://schema.org/WebPage" lang="zh-CN">
-
-  
-  
-    
-  
-
-  <div class="container sidebar-position-left page-post-detail">
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
     <div class="headband"></div>
 
-    <header id="header" class="header" itemscope="" itemtype="http://schema.org/WPHeader">
-      <div class="header-inner"><div class="site-brand-wrapper">
-  <div class="site-meta ">
-    
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
 
-    <div class="custom-logo-site-title">
+  <div class="site-meta">
+
+    <div>
       <a href="/" class="brand" rel="start">
         <span class="logo-line-before"><i></i></span>
         <span class="site-title">小鱼先生</span>
         <span class="logo-line-after"><i></i></span>
       </a>
     </div>
-    
-      
         <p class="site-subtitle">梦想还是要有的，万一忘记了咋办？</p>
-      
-    
   </div>
 
-  <div class="site-nav-toggle">
-    <button aria-label="切换导航栏">
-      <span class="btn-bar"></span>
-      <span class="btn-bar"></span>
-      <span class="btn-bar"></span>
-    </button>
-  </div>
+  <div class="site-nav-right"></div>
 </div>
-
 
 
 <nav class="site-nav">
   
-    <ul id="menu" class="menu">
-      
-        
-        
-        
-          
-          <li class="menu-item menu-item-home">
+  <ul id="menu" class="menu">
+        <li class="menu-item menu-item-home">
 
-    
-    
-    
-      
-    
-
-    
-
-    <a href="/" rel="section"><i class="menu-item-icon fa fa-fw fa-home"></i> <br>首页</a>
+    <a href="/" rel="section"><i class="fa fa-fw fa-首页"></i>首页</a>
 
   </li>
-        
-        
-        
-          
-          <li class="menu-item menu-item-archives">
+        <li class="menu-item menu-item-archives">
 
-    
-    
-    
-      
-    
-
-    
-
-    <a href="/archives" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档</a>
+    <a href="/archives" rel="section"><i class="fa fa-fw fa-归档"></i>归档</a>
 
   </li>
-        
-        
-        
-          
-          <li class="menu-item menu-item-tags">
+        <li class="menu-item menu-item-tags">
 
-    
-    
-    
-      
-    
-
-    
-
-    <a href="/tags" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br>标签</a>
+    <a href="/tags" rel="section"><i class="fa fa-fw fa-标签"></i>标签</a>
 
   </li>
-        
-        
-        
-          
-          <li class="menu-item menu-item-categories">
+        <li class="menu-item menu-item-categories">
 
-    
-    
-    
-      
-    
-
-    
-
-    <a href="/categories" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br>分类</a>
+    <a href="/categories" rel="section"><i class="fa fa-fw fa-分类"></i>分类</a>
 
   </li>
-        
-        
-        
-          
-          <li class="menu-item menu-item-about">
+        <li class="menu-item menu-item-about">
 
-    
-    
-    
-      
-    
-
-    
-
-    <a href="/about" rel="section"><i class="menu-item-icon fa fa-fw fa-user"></i> <br>关于</a>
+    <a href="/about" rel="section"><i class="fa fa-fw fa-关于"></i>关于</a>
 
   </li>
+  </ul>
 
-      
-      
-    </ul>
-  
-
-  
-
-  
 </nav>
-
-
-
-  
-
-
-
 </div>
     </header>
 
     
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
 
 
-    <main id="main" class="main">
+    <main class="main">
       <div class="main-inner">
         <div class="content-wrap">
           
+
+          <div class="content">
             
 
-          
-          <div id="content" class="content">
-            
-
-  <div id="posts" class="posts-expand">
-    
-
-  
-
+  <div class="posts-expand">
+      
   
   
-  
-
-  
-
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
+  <article itemscope itemtype="http://schema.org/Article" class="post-block " lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="http://www.hardydou.com/2019/06/12/thread-safe/">
 
-    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.jpg">
       <meta itemprop="name" content="小鱼先生">
       <meta itemprop="description" content="相信美好的事情即将发生">
-      <meta itemprop="image" content="/images/avatar.jpg">
     </span>
 
-    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
       <meta itemprop="name" content="小鱼先生">
     </span>
-
-    
       <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">Java线程安全
-              
-            
-          </h1>
-        
+        <h1 class="post-title" itemprop="name headline">
+          Java线程安全
+        </h1>
 
         <div class="post-meta">
-          <span class="post-time">
-
-            
-            
-            
-
-            
+            <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="fa fa-calendar-o"></i>
               </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-
-              
-                
-              
+              <span class="post-meta-item-text">发表于</span>
 
               <time title="创建时间：2019-06-12 17:12:00" itemprop="dateCreated datePublished" datetime="2019-06-12T17:12:00+08:00">2019-06-12</time>
-            
-
-            
-              
-
-              
-                
-                <span class="post-meta-divider">|</span>
-                
-
+            </span>
+              <span class="post-meta-item">
                 <span class="post-meta-item-icon">
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
-                
-                  <span class="post-meta-item-text">更新于</span>
-                
+                <span class="post-meta-item-text">更新于</span>
                 <time title="修改时间：2019-07-01 14:29:57" itemprop="dateModified" datetime="2019-07-01T14:29:57+08:00">2019-07-01</time>
-              
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
+              </span>
+            <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="fa fa-folder-o"></i>
               </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/java/" itemprop="url" rel="index"><span itemprop="name">java</span></a></span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/java/" itemprop="url" rel="index">
+                    <span itemprop="name">java</span>
+                  </a>
                 </span>
-                <a href="/2019/06/12/thread-safe/#comments" itemprop="discussionUrl">
-                  <span class="post-meta-item-text">评论数：</span> <span class="post-comments-count valine-comment-count" data-xid="/2019/06/12/thread-safe/" itemprop="commentCount"></span>
-                </a>
-              </span>
-            
-          
+            </span>
 
           
-          
-
-          
-
-          
-
-          
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="fa fa-comment-o"></i>
+      </span>
+      <span class="post-meta-item-text">Valine：</span>
+    
+    <a title="valine" href="/2019/06/12/thread-safe/#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/2019/06/12/thread-safe/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
 
         </div>
       </header>
-    
 
     
     
@@ -506,12 +253,11 @@
     <div class="post-body" itemprop="articleBody">
 
       
-      
-
-      
         <h2 id="为什么要用锁？"><a href="#为什么要用锁？" class="headerlink" title="为什么要用锁？"></a>为什么要用锁？</h2><p>锁-是为了解决并发操作引起的脏读、数据不一致的问题。</p>
 <h2 id="锁实现的基本原理"><a href="#锁实现的基本原理" class="headerlink" title="锁实现的基本原理"></a>锁实现的基本原理</h2><h3 id="volatile"><a href="#volatile" class="headerlink" title="volatile"></a>volatile</h3><p>Java编程语言允许线程访问共享变量， 为了确保共享变量能被准确和一致地更新，线程应该确保通过排他锁单独获得这个变量。Java语言提供了volatile，在某些情况下比锁要更加方便。<br>volatile在多处理器开发中保证了共享变量的“ 可见性”。可见性的意思是当一个线程修改一个共享变量时，另外一个线程能读到这个修改的值。<br><img src="/images/pasted-124.png" alt="upload successful"><br>结论：如果volatile变量修饰符使用恰当的话，它比synchronized的使用和执行成本更低，因为它不会引起线程上下文的切换和调度。</p>
-<h3 id="synchronized"><a href="#synchronized" class="headerlink" title="synchronized"></a>synchronized</h3><p>synchronized通过锁机制实现同步。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">先来看下利用synchronized实现同步的基础：Java中的每一个对象都可以作为锁。</span><br></pre></td></tr></table></figure></p>
+<h3 id="synchronized"><a href="#synchronized" class="headerlink" title="synchronized"></a>synchronized</h3><p>synchronized通过锁机制实现同步。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">先来看下利用synchronized实现同步的基础：Java中的每一个对象都可以作为锁。</span><br></pre></td></tr></table></figure>
+
 <p>具体表现为以下3种形式：</p>
 <ul>
 <li>对于普通同步方法，锁是当前实例对象。</li>
@@ -519,8 +265,7 @@
 <li>对于同步方法块，锁是Synchonized括号里配置的对象。</li>
 </ul>
 <p>当一个线程试图访问同步代码块时，它首先必须得到锁，退出或抛出异常时必须释放锁。</p>
-<h4 id="synchronized实现原理"><a href="#synchronized实现原理" class="headerlink" title="synchronized实现原理"></a>synchronized实现原理</h4><pre><code>synchronized是基于Monitor来实现同步的。
-</code></pre><p>Monitor从两个方面来支持线程之间的同步：</p>
+<h4 id="synchronized实现原理"><a href="#synchronized实现原理" class="headerlink" title="synchronized实现原理"></a>synchronized实现原理</h4><pre><code>synchronized是基于Monitor来实现同步的。</code></pre><p>Monitor从两个方面来支持线程之间的同步：</p>
 <ul>
 <li>互斥执行</li>
 <li>协作</li>
@@ -544,7 +289,8 @@
 <li>同步代码块采用monitorenter、monitorexit指令显式的实现。</li>
 <li>同步方法则使用ACC_SYNCHRONIZED标记符隐式的实现。</li>
 </ol>
-<p>通过实例来看看具体实现：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">public class SynchronizedTest &#123; </span><br><span class="line">	public synchronized void method1()&#123; </span><br><span class="line">    	System.out.println(&quot;Hello World!&quot;); </span><br><span class="line">        &#125; </span><br><span class="line">    public void method2()&#123; </span><br><span class="line">    	synchronized (this)&#123;</span><br><span class="line">        System.out.println(&quot;Hello World!&quot;); </span><br><span class="line">        &#125; </span><br><span class="line">       &#125;</span><br><span class="line">   &#125;</span><br></pre></td></tr></table></figure></p>
+<p>通过实例来看看具体实现：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">public class SynchronizedTest &#123; </span><br><span class="line">	public synchronized void method1()&#123; </span><br><span class="line">    	System.out.println(&quot;Hello World!&quot;); </span><br><span class="line">        &#125; </span><br><span class="line">    public void method2()&#123; </span><br><span class="line">    	synchronized (this)&#123;</span><br><span class="line">        System.out.println(&quot;Hello World!&quot;); </span><br><span class="line">        &#125; </span><br><span class="line">       &#125;</span><br><span class="line">   &#125;</span><br></pre></td></tr></table></figure>
 <p>javap编译后的字节码如下：<br><img src="/images/pasted-126.png" alt="upload successful"></p>
 <p>**monitorenter  </p>
 <p>每一个对象都有一个monitor，一个monitor只能被一个线程拥有。当一个线程执行到monitorenter指令时会尝试获取相应对象的monitor，获取规则如下：</p>
@@ -558,432 +304,201 @@
 <h4 id="锁存放的位置"><a href="#锁存放的位置" class="headerlink" title="锁存放的位置"></a>锁存放的位置</h4><p>锁标记存放在Java对象头的Mark Word中。<br><img src="/images/pasted-127.png" alt="upload successful"><br>Java对象头长度<br><img src="/images/pasted-128.png" alt="upload successful"></p>
 <p>32位JVM Mark Word 结构<br><img src="/images/pasted-129.png" alt="upload successful"><br>32位JVM Mark Word 状态变化<br><img src="/images/pasted-130.png" alt="upload successful"><br>64位JVM Mark Word 结构</p>
 <h4 id="synchronized的锁优化"><a href="#synchronized的锁优化" class="headerlink" title="synchronized的锁优化"></a>synchronized的锁优化</h4><p>JavaSE1.6为了减少获得锁和释放锁带来的性能消耗，引入了“偏向锁”和“轻量级锁”。<br>在JavaSE1.6中，锁一共有4种状态，级别从低到高依次是：无锁状态、偏向锁状态、轻量级锁状态和重量级锁状态，这几个状态会随着竞争情况逐渐升级。<br>锁可以升级但不能降级，意味着偏向锁升级成轻量级锁后不能降级成偏向锁。这种锁升级却不能降级的策略，目的是为了提高获得锁和释放锁的效率。</p>
-<h5 id="偏向锁："><a href="#偏向锁：" class="headerlink" title="偏向锁："></a>偏向锁：</h5><pre><code>无锁竞争的情况下为了减少锁竞争的资源开销，引入偏向锁。
-</code></pre><p><img src="/images/pasted-131.png" alt="upload successful"></p>
-<h5 id="轻量级锁："><a href="#轻量级锁：" class="headerlink" title="轻量级锁："></a>轻量级锁：</h5><pre><code>轻量级锁所适应的场景是线程交替执行同步块的情况。
-</code></pre><p><img src="/images/pasted-132.png" alt="upload successful"></p>
-<h5 id="锁粗化（Lock-Coarsening）："><a href="#锁粗化（Lock-Coarsening）：" class="headerlink" title="锁粗化（Lock Coarsening）："></a>锁粗化（Lock Coarsening）：</h5><pre><code>也就是减少不必要的紧连在一起的unlock，lock操作，将多个连续的锁扩展成一个范围更大的锁。
-</code></pre><h5 id="锁消除（Lock-Elimination）："><a href="#锁消除（Lock-Elimination）：" class="headerlink" title="锁消除（Lock Elimination）："></a>锁消除（Lock Elimination）：</h5><pre><code>锁削除是指虚拟机即时编译器在运行时，对一些代码上要求同步，但是被检测到不可能存在共享数据竞争的锁进行削除。
-</code></pre><h5 id="适应性自旋（Adaptive-Spinning）："><a href="#适应性自旋（Adaptive-Spinning）：" class="headerlink" title="适应性自旋（Adaptive Spinning）："></a>适应性自旋（Adaptive Spinning）：</h5><pre><code>自适应意味着自旋的时间不再固定了，而是由前一次在同一个锁上的自旋时间及锁的拥有者的状态来决定。如果在同一个锁对象上，自旋等待刚刚成功获得过锁，并且持有锁的线程正在运行中，那么虚拟机就会认为这次自旋也很有可能再次成功，进而它将允许自旋等待持续相对更长的时间，比如100个循环。另一方面，如果对于某个锁，自旋很少成功获得过，那在以后要获取这个锁时将可能省略掉自旋过程，以避免浪费处理器资源。
-</code></pre><h4 id="锁的优缺点对比"><a href="#锁的优缺点对比" class="headerlink" title="锁的优缺点对比"></a>锁的优缺点对比</h4><p><img src="/images/pasted-133.png" alt="upload successful"></p>
-<h3 id="CAS"><a href="#CAS" class="headerlink" title="CAS"></a>CAS</h3><pre><code>CAS，在Java并发应用中通常指CompareAndSwap或CompareAndSet，即比较并交换。
-</code></pre><ol>
+<h5 id="偏向锁："><a href="#偏向锁：" class="headerlink" title="偏向锁："></a>偏向锁：</h5><pre><code>无锁竞争的情况下为了减少锁竞争的资源开销，引入偏向锁。</code></pre><p><img src="/images/pasted-131.png" alt="upload successful"></p>
+<h5 id="轻量级锁："><a href="#轻量级锁：" class="headerlink" title="轻量级锁："></a>轻量级锁：</h5><pre><code>轻量级锁所适应的场景是线程交替执行同步块的情况。</code></pre><p><img src="/images/pasted-132.png" alt="upload successful"></p>
+<h5 id="锁粗化（Lock-Coarsening）："><a href="#锁粗化（Lock-Coarsening）：" class="headerlink" title="锁粗化（Lock Coarsening）："></a>锁粗化（Lock Coarsening）：</h5><pre><code>也就是减少不必要的紧连在一起的unlock，lock操作，将多个连续的锁扩展成一个范围更大的锁。</code></pre><h5 id="锁消除（Lock-Elimination）："><a href="#锁消除（Lock-Elimination）：" class="headerlink" title="锁消除（Lock Elimination）："></a>锁消除（Lock Elimination）：</h5><pre><code>锁削除是指虚拟机即时编译器在运行时，对一些代码上要求同步，但是被检测到不可能存在共享数据竞争的锁进行削除。</code></pre><h5 id="适应性自旋（Adaptive-Spinning）："><a href="#适应性自旋（Adaptive-Spinning）：" class="headerlink" title="适应性自旋（Adaptive Spinning）："></a>适应性自旋（Adaptive Spinning）：</h5><pre><code>自适应意味着自旋的时间不再固定了，而是由前一次在同一个锁上的自旋时间及锁的拥有者的状态来决定。如果在同一个锁对象上，自旋等待刚刚成功获得过锁，并且持有锁的线程正在运行中，那么虚拟机就会认为这次自旋也很有可能再次成功，进而它将允许自旋等待持续相对更长的时间，比如100个循环。另一方面，如果对于某个锁，自旋很少成功获得过，那在以后要获取这个锁时将可能省略掉自旋过程，以避免浪费处理器资源。</code></pre><h4 id="锁的优缺点对比"><a href="#锁的优缺点对比" class="headerlink" title="锁的优缺点对比"></a>锁的优缺点对比</h4><p><img src="/images/pasted-133.png" alt="upload successful"></p>
+<h3 id="CAS"><a href="#CAS" class="headerlink" title="CAS"></a>CAS</h3><pre><code>CAS，在Java并发应用中通常指CompareAndSwap或CompareAndSet，即比较并交换。</code></pre><ol>
 <li>CAS是一个原子操作，它比较一个内存位置的值并且只有相等时修改这个内存位置的值为新的值，保证了新的值总是基于最新的信息计算的，如果有其他线程在这期间修改了这个值则CAS失败。CAS返回是否成功或者内存位置原来的值用于判断是否CAS成功。</li>
 <li>JVM中的CAS操作是利用了处理器提供的CMPXCHG指令实现的。</li>
 </ol>
 <p><strong>优点：</strong><br>竞争不大的时候系统开销小。<br><strong>缺点：</strong><br>【１】循环时间长开销大。CAS长时间自旋不成功，给CPU带来很大的性能开销。解决方法：JVM能支持pause指令，效率会有一定的提升。<br>【２】只能保证一个共享变量的原子操作。对多个共享变量操作时，不能保证原子性。 解决方法：加锁；共享变量合并成一个共享变量<br>【３】ABA的问题。解决方法就是：增加版本号，每次使用的时候版本号+1，每次变量更新的时候版本号+1。java提供AtomicStampzedReference来解决ABA问题。 </p>
 <h2 id="Java中的锁实现"><a href="#Java中的锁实现" class="headerlink" title="Java中的锁实现"></a>Java中的锁实现</h2><h3 id="队列同步器（AQS）"><a href="#队列同步器（AQS）" class="headerlink" title="队列同步器（AQS）"></a>队列同步器（AQS）</h3><p>队列同步器AbstractQueuedSynchronizer（以下简称同步器），是用来构建锁或者其他同步组件的基础框架。</p>
 <h4 id="它使用了一个int成员变量表示同步状态。"><a href="#它使用了一个int成员变量表示同步状态。" class="headerlink" title="它使用了一个int成员变量表示同步状态。"></a>它使用了一个int成员变量表示同步状态。</h4><p><img src="/images/pasted-134.png" alt="upload successful"></p>
-<h4 id="通过内置的FIFO双向队列来完成获取锁线程的排队工作。"><a href="#通过内置的FIFO双向队列来完成获取锁线程的排队工作。" class="headerlink" title="通过内置的FIFO双向队列来完成获取锁线程的排队工作。"></a>通过内置的FIFO双向队列来完成获取锁线程的排队工作。</h4><pre><code>同步器包含两个节点类型的应用，一个指向头节点，一个指向尾节点，未获取到锁的线程会创建节点线程安全（compareAndSetTail）的加入队列尾部。同步队列遵循FIFO，首节点是获取同步状态成功的节点。
-</code></pre><p><img src="/images/pasted-135.png" alt="upload successful"></p>
-<pre><code>未获取到锁的线程将创建一个节点，设置到尾节点。如下图所示：
-</code></pre><p><img src="/images/pasted-136.png" alt="upload successful"></p>
-<pre><code>首节点的线程在释放锁时，将会唤醒后继节点。而后继节点将会在获取锁成功时将自己设置为首节点。如下图所示：
-</code></pre><p><img src="/images/pasted-137.png" alt="upload successful"></p>
+<h4 id="通过内置的FIFO双向队列来完成获取锁线程的排队工作。"><a href="#通过内置的FIFO双向队列来完成获取锁线程的排队工作。" class="headerlink" title="通过内置的FIFO双向队列来完成获取锁线程的排队工作。"></a>通过内置的FIFO双向队列来完成获取锁线程的排队工作。</h4><pre><code>同步器包含两个节点类型的应用，一个指向头节点，一个指向尾节点，未获取到锁的线程会创建节点线程安全（compareAndSetTail）的加入队列尾部。同步队列遵循FIFO，首节点是获取同步状态成功的节点。</code></pre><p><img src="/images/pasted-135.png" alt="upload successful"></p>
+<pre><code>未获取到锁的线程将创建一个节点，设置到尾节点。如下图所示：</code></pre><p><img src="/images/pasted-136.png" alt="upload successful"></p>
+<pre><code>首节点的线程在释放锁时，将会唤醒后继节点。而后继节点将会在获取锁成功时将自己设置为首节点。如下图所示：</code></pre><p><img src="/images/pasted-137.png" alt="upload successful"></p>
 <h3 id="独占式-共享式锁获取"><a href="#独占式-共享式锁获取" class="headerlink" title="独占式/共享式锁获取"></a>独占式/共享式锁获取</h3><pre><code>独占式：有且只有一个线程能获取到锁，如：ReentrantLock。&lt;/pre&gt;
-共享式：可以多个线程同时获取到锁，如：CountDownLatch
-</code></pre><h4 id="独占式"><a href="#独占式" class="headerlink" title="独占式"></a>独占式</h4><pre><code>每个节点自旋观察自己的前一节点是不是Header节点，如果是，就去尝试获取锁。
-</code></pre><p><img src="/images/pasted-138.png" alt="upload successful"></p>
-<pre><code>独占式锁获取流程：
-</code></pre><p><img src="/images/pasted-139.png" alt="upload successful"></p>
+共享式：可以多个线程同时获取到锁，如：CountDownLatch</code></pre><h4 id="独占式"><a href="#独占式" class="headerlink" title="独占式"></a>独占式</h4><pre><code>每个节点自旋观察自己的前一节点是不是Header节点，如果是，就去尝试获取锁。</code></pre><p><img src="/images/pasted-138.png" alt="upload successful"></p>
+<pre><code>独占式锁获取流程：</code></pre><p><img src="/images/pasted-139.png" alt="upload successful"></p>
 <h4 id="共享式："><a href="#共享式：" class="headerlink" title="共享式："></a>共享式：</h4><p>共享式与独占式的区别：<br><img src="/images/pasted-140.png" alt="upload successful"></p>
 <p>共享锁获取流程：<br><img src="/images/pasted-141.png" alt="upload successful"></p>
 <h2 id="锁的使用用例"><a href="#锁的使用用例" class="headerlink" title="锁的使用用例"></a>锁的使用用例</h2><h3 id="ConcurrentHashMap的实现原理及使用"><a href="#ConcurrentHashMap的实现原理及使用" class="headerlink" title="ConcurrentHashMap的实现原理及使用"></a>ConcurrentHashMap的实现原理及使用</h3><p><img src="/images/pasted-142.png" alt="upload successful"></p>
-<pre><code>ConcurrentHashMap类图
-</code></pre><p><img src="/images/pasted-143.png" alt="upload successful"></p>
-<pre><code>ConcurrentHashMap数据结构
-</code></pre><p>结论：ConcurrentHashMap使用的锁分段技术。首先将数据分成一段一段地存储，然后给每一段数据配一把锁，当一个线程占用锁访问其中一个段数据的时候，其他段的数据也能被其他线程访问。</p>
-<pre><code>转自：https://www.cnblogs.com/barrywxx/p/8678698.html
-</code></pre>
-      
+<pre><code>ConcurrentHashMap类图</code></pre><p><img src="/images/pasted-143.png" alt="upload successful"></p>
+<pre><code>ConcurrentHashMap数据结构</code></pre><p>结论：ConcurrentHashMap使用的锁分段技术。首先将数据分成一段一段地存储，然后给每一段数据配一把锁，当一个线程占用锁访问其中一个段数据的时候，其他段的数据也能被其他线程访问。</p>
+<pre><code>转自：https://www.cnblogs.com/barrywxx/p/8678698.html</code></pre>
     </div>
 
     
-
     
     
-    
-
-    
-
-    
-       
-    
-    
-
-    
-      <div>
         
 
-
-
-  
-
-
-
+<div>
 <ul class="post-copyright">
   <li class="post-copyright-author">
-    <strong>本文作者： </strong>Hardy Dou</li>
+    <strong>本文作者： </strong>Hardy Dou
+  </li>
   <li class="post-copyright-link">
     <strong>本文链接：</strong>
-    
     <a href="http://www.hardydou.com/2019/06/12/thread-safe/" title="Java线程安全">http://www.hardydou.com/2019/06/12/thread-safe/</a>
   </li>
   <li class="post-copyright-license">
-    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fa fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！</li>
+    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fa fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
+  </li>
 </ul>
-
-      </div>
-    
-
-    <footer class="post-footer">
-      
-        <div class="post-tags">
-          
-            <a href="/tags/thread/" rel="tag"># thread</a>
-          
-        </div>
-      
-
-      
-      
-      
-
-      
-        <div class="post-nav">
-          <div class="post-nav-next post-nav-item">
-            
-              <a href="/2019/06/12/scrum/" rel="next" title="scrum介绍">
-                <i class="fa fa-chevron-left"></i> scrum介绍
-              </a>
-            
-          </div>
-
-          <span class="post-nav-divider"></span>
-
-          <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2019/06/24/Knowledge/" rel="prev" title="知识经济">
-                知识经济 <i class="fa fa-chevron-right"></i>
-              </a>
-            
-          </div>
-        </div>
-      
-
-      
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-  </div>
-
-
-          </div>
-          
-
-  
-    <div class="comments" id="comments">
-    </div>
-  
-
-
-
-        </div>
-        
-          
-  
-  <div class="sidebar-toggle">
-    <div class="sidebar-toggle-line-wrap">
-      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
-      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
-      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
-    </div>
-  </div>
-
-  <aside id="sidebar" class="sidebar">
-    
-    <div class="sidebar-inner">
-
-      
-
-      
-        <ul class="sidebar-nav motion-element">
-          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
-            文章目录
-          </li>
-          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
-            站点概览
-          </li>
-        </ul>
-      
-
-      <section class="site-overview-wrap sidebar-panel">
-        <div class="site-overview">
-          <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
-            
-              <img class="site-author-image" itemprop="image" src="/images/avatar.jpg" alt="小鱼先生">
-            
-              <p class="site-author-name" itemprop="name">小鱼先生</p>
-              <p class="site-description motion-element" itemprop="description">相信美好的事情即将发生</p>
-          </div>
-
-          
-            <nav class="site-state motion-element">
-              
-                <div class="site-state-item site-state-posts">
-                
-                  <a href="/archives">
-                
-                    <span class="site-state-item-count">44</span>
-                    <span class="site-state-item-name">日志</span>
-                  </a>
-                </div>
-              
-
-              
-                
-                
-                <div class="site-state-item site-state-categories">
-                  <a href="/categories/index.html">
-                    
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                    <span class="site-state-item-count">7</span>
-                    <span class="site-state-item-name">分类</span>
-                  </a>
-                </div>
-              
-
-              
-                
-                
-                <div class="site-state-item site-state-tags">
-                  <a href="/tags/index.html">
-                    
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                    <span class="site-state-item-count">25</span>
-                    <span class="site-state-item-name">标签</span>
-                  </a>
-                </div>
-              
-            </nav>
-          
-
-          
-            <div class="feed-link motion-element">
-              <a href="/atom.xml" rel="alternate">
-                <i class="fa fa-rss"></i>
-                RSS
-              </a>
-            </div>
-          
-
-          
-            <div class="links-of-author motion-element">
-              
-                <span class="links-of-author-item">
-                  
-                  
-                    
-                  
-                  
-                    
-                  
-                  <a href="https://github.com/HardyDou" title="GitHub &rarr; https://github.com/HardyDou" rel="noopener" target="_blank"><i class="fa fa-fw fa-github"></i>GitHub</a>
-                </span>
-              
-                <span class="links-of-author-item">
-                  
-                  
-                    
-                  
-                  
-                    
-                  
-                  <a href="mailto:doouxiaoyu@163.com" title="E-Mail &rarr; mailto:doouxiaoyu@163.com" rel="noopener" target="_blank"><i class="fa fa-fw fa-envelope"></i>E-Mail</a>
-                </span>
-              
-            </div>
-          
-
-          
-
-          
-          
-
-          
-            
-          
-          
-
-        </div>
-      </section>
-
-      
-      <!--noindex-->
-        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
-          <div class="post-toc">
-
-            
-              
-            
-
-            
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#为什么要用锁？"><span class="nav-number">1.</span> <span class="nav-text">为什么要用锁？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#锁实现的基本原理"><span class="nav-number">2.</span> <span class="nav-text">锁实现的基本原理</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#volatile"><span class="nav-number">2.1.</span> <span class="nav-text">volatile</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#synchronized"><span class="nav-number">2.2.</span> <span class="nav-text">synchronized</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#synchronized实现原理"><span class="nav-number">2.2.1.</span> <span class="nav-text">synchronized实现原理</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#synchronized具体实现"><span class="nav-number">2.2.2.</span> <span class="nav-text">synchronized具体实现</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#锁存放的位置"><span class="nav-number">2.2.3.</span> <span class="nav-text">锁存放的位置</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#synchronized的锁优化"><span class="nav-number">2.2.4.</span> <span class="nav-text">synchronized的锁优化</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#偏向锁："><span class="nav-number">2.2.4.1.</span> <span class="nav-text">偏向锁：</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#轻量级锁："><span class="nav-number">2.2.4.2.</span> <span class="nav-text">轻量级锁：</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#锁粗化（Lock-Coarsening）："><span class="nav-number">2.2.4.3.</span> <span class="nav-text">锁粗化（Lock Coarsening）：</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#锁消除（Lock-Elimination）："><span class="nav-number">2.2.4.4.</span> <span class="nav-text">锁消除（Lock Elimination）：</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#适应性自旋（Adaptive-Spinning）："><span class="nav-number">2.2.4.5.</span> <span class="nav-text">适应性自旋（Adaptive Spinning）：</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#锁的优缺点对比"><span class="nav-number">2.2.5.</span> <span class="nav-text">锁的优缺点对比</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#CAS"><span class="nav-number">2.3.</span> <span class="nav-text">CAS</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Java中的锁实现"><span class="nav-number">3.</span> <span class="nav-text">Java中的锁实现</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#队列同步器（AQS）"><span class="nav-number">3.1.</span> <span class="nav-text">队列同步器（AQS）</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#它使用了一个int成员变量表示同步状态。"><span class="nav-number">3.1.1.</span> <span class="nav-text">它使用了一个int成员变量表示同步状态。</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#通过内置的FIFO双向队列来完成获取锁线程的排队工作。"><span class="nav-number">3.1.2.</span> <span class="nav-text">通过内置的FIFO双向队列来完成获取锁线程的排队工作。</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#独占式-共享式锁获取"><span class="nav-number">3.2.</span> <span class="nav-text">独占式/共享式锁获取</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#独占式"><span class="nav-number">3.2.1.</span> <span class="nav-text">独占式</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#共享式："><span class="nav-number">3.2.2.</span> <span class="nav-text">共享式：</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#锁的使用用例"><span class="nav-number">4.</span> <span class="nav-text">锁的使用用例</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#ConcurrentHashMap的实现原理及使用"><span class="nav-number">4.1.</span> <span class="nav-text">ConcurrentHashMap的实现原理及使用</span></a></li></ol></li></ol></div>
-            
-
-          </div>
-        </section>
-      <!--/noindex-->
-      
-
-      
-        <div class="back-to-top">
-          <i class="fa fa-arrow-up"></i>
-          
-            <span id="scrollpercent"><span>0</span>%</span>
-          
-        </div>
-      
-
-    </div>
-  </aside>
-
-
-        
-      </div>
-    </main>
-
-    <footer id="footer" class="footer">
-      <div class="footer-inner">
-        <div class="copyright">  <a href="http://www.miitbeian.gov.cn" rel="noopener" target="_blank">京ICP备18050184号 </a>&copy; <span itemprop="copyrightYear">2019</span>
-  <span class="with-love" id="animate">
-    <i class="fa fa-heart"></i>
-  </span>
-  <span class="author" itemprop="copyrightHolder">小鱼先生</span>
-
-  
-
-  
 </div>
 
 
-
-
-
-
-
-
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/thread/" rel="tag"># thread</a>
+          </div>
 
         
 
 
-
-
-
-
-
-
         
-      </div>
-    </footer>
-
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2019/06/12/scrum/" rel="prev" title="scrum介绍">
+      <i class="fa fa-chevron-left"></i> scrum介绍
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/2019/06/24/Knowledge/" rel="next" title="知识经济">
+      知识经济 <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
     
-
-    
-	
-    
-
-    
-  </div>
-
+  </article>
+  
+  
   
 
-<script type="text/javascript">
-  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
-    window.Promise = null;
+  </div>
+
+
+          </div>
+          
+    <div class="comments" id="valine-comments"></div>
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let activeClass = CONFIG.comments.activeClass;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
   }
 </script>
 
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#为什么要用锁？"><span class="nav-number">1.</span> <span class="nav-text">为什么要用锁？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#锁实现的基本原理"><span class="nav-number">2.</span> <span class="nav-text">锁实现的基本原理</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#volatile"><span class="nav-number">2.1.</span> <span class="nav-text">volatile</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#synchronized"><span class="nav-number">2.2.</span> <span class="nav-text">synchronized</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#synchronized实现原理"><span class="nav-number">2.2.1.</span> <span class="nav-text">synchronized实现原理</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#synchronized具体实现"><span class="nav-number">2.2.2.</span> <span class="nav-text">synchronized具体实现</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#锁存放的位置"><span class="nav-number">2.2.3.</span> <span class="nav-text">锁存放的位置</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#synchronized的锁优化"><span class="nav-number">2.2.4.</span> <span class="nav-text">synchronized的锁优化</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#偏向锁："><span class="nav-number">2.2.4.1.</span> <span class="nav-text">偏向锁：</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#轻量级锁："><span class="nav-number">2.2.4.2.</span> <span class="nav-text">轻量级锁：</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#锁粗化（Lock-Coarsening）："><span class="nav-number">2.2.4.3.</span> <span class="nav-text">锁粗化（Lock Coarsening）：</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#锁消除（Lock-Elimination）："><span class="nav-number">2.2.4.4.</span> <span class="nav-text">锁消除（Lock Elimination）：</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#适应性自旋（Adaptive-Spinning）："><span class="nav-number">2.2.4.5.</span> <span class="nav-text">适应性自旋（Adaptive Spinning）：</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#锁的优缺点对比"><span class="nav-number">2.2.5.</span> <span class="nav-text">锁的优缺点对比</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#CAS"><span class="nav-number">2.3.</span> <span class="nav-text">CAS</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Java中的锁实现"><span class="nav-number">3.</span> <span class="nav-text">Java中的锁实现</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#队列同步器（AQS）"><span class="nav-number">3.1.</span> <span class="nav-text">队列同步器（AQS）</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#它使用了一个int成员变量表示同步状态。"><span class="nav-number">3.1.1.</span> <span class="nav-text">它使用了一个int成员变量表示同步状态。</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#通过内置的FIFO双向队列来完成获取锁线程的排队工作。"><span class="nav-number">3.1.2.</span> <span class="nav-text">通过内置的FIFO双向队列来完成获取锁线程的排队工作。</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#独占式-共享式锁获取"><span class="nav-number">3.2.</span> <span class="nav-text">独占式&#x2F;共享式锁获取</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#独占式"><span class="nav-number">3.2.1.</span> <span class="nav-text">独占式</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#共享式："><span class="nav-number">3.2.2.</span> <span class="nav-text">共享式：</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#锁的使用用例"><span class="nav-number">4.</span> <span class="nav-text">锁的使用用例</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#ConcurrentHashMap的实现原理及使用"><span class="nav-number">4.1.</span> <span class="nav-text">ConcurrentHashMap的实现原理及使用</span></a></li></ol></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="小鱼先生"
+      src="/images/avatar.jpg">
+  <p class="site-author-name" itemprop="name">小鱼先生</p>
+  <div class="site-description" itemprop="description">相信美好的事情即将发生</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives">
+        
+          <span class="site-state-item-count">44</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories">
+          
+        <span class="site-state-item-count">7</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags">
+          
+        <span class="site-state-item-count">25</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+        <a href="https://github.com/HardyDou" title="GitHub → https://github.com/HardyDou" rel="noopener" target="_blank"><i class="fa fa-fw fa-github"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:doouxiaoyu@163.com" title="E-Mail → mailto:doouxiaoyu@163.com" rel="noopener" target="_blank"><i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+      </span>
+  </div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+  <div class="beian"><a href="http://www.beian.miit.gov.cn" rel="noopener" target="_blank">京ICP备18050184号 </a>
+  </div>
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2020</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">小鱼先生</span>
+</div>
+
+        
 
 
 
@@ -992,9 +507,26 @@
 
 
 
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js"></script>
+  <script src="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
 
 
+<script src="/js/schemes/pisces.js"></script>
 
+
+<script src="/js/next-boot.js"></script>
 
 
 
@@ -1016,139 +548,37 @@
 
 
   
-  
-    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
-  
-
-  
-  
-    <script type="text/javascript" src="/lib/kityminder-core/kity.min.js"></script>
-  
-
-  
-  
-    <script type="text/javascript" src="/lib/kityminder-core/kityminder.core.js"></script>
-  
-
-  
-  
-    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
-  
-
-  
-  
-    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
-  
-
-  
-  
-    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
-  
-
 
   
 
 
-  <script type="text/javascript" src="/js/src/utils.js?v=6.5.0"></script>
-
-  <script type="text/javascript" src="/js/src/motion.js?v=6.5.0"></script>
-
-
-
-  
-  
-
-
-  <script type="text/javascript" src="/js/src/affix.js?v=6.5.0"></script>
-
-  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=6.5.0"></script>
-
-
-
-  
-  <script type="text/javascript" src="/js/src/scrollspy.js?v=6.5.0"></script>
-<script type="text/javascript" src="/js/src/post-details.js?v=6.5.0"></script>
-<script type="text/javascript" src="/js/src/kityminder.js?v=6.5.0"></script>
-
-
-
-  
-
-
-  <script type="text/javascript" src="/js/src/bootstrap.js?v=6.5.0"></script>
-
-
-
-  
-
-
-
-  
-
-
-
-
-
-
-
-
-  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
-  
-  
-  <script src="//unpkg.com/valine/dist/Valine.min.js"></script>
-  
-  <script type="text/javascript">
-    var GUEST = ['nick','mail','link'];
+<script>
+NexT.utils.loadComments(document.querySelector('#valine-comments'), () => {
+  NexT.utils.getScript('//unpkg.com/valine/dist/Valine.min.js', () => {
+    var GUEST = ['nick', 'mail', 'link'];
     var guest = 'nick,mail,link';
-    guest = guest.split(',').filter(function (item) {
-      return GUEST.indexOf(item)>-1;
+    guest = guest.split(',').filter(item => {
+      return GUEST.includes(item);
     });
     new Valine({
-        el: '#comments' ,
-        verify: true,
-        notify: true,
-        appId: 'fF3IzJ6TkcmNPCPo4nYayNln-gzGzoHsz',
-        appKey: 'CaEuIN0359VyWiygnoDPQxx1',
-        placeholder: '有话就直说!!',
-        avatar:'mp',
-        meta:guest,
-        pageSize:'10' || 10,
-        visitor: false
+      el         : '#valine-comments',
+      verify     : true,
+      notify     : true,
+      appId      : 'fF3IzJ6TkcmNPCPo4nYayNln-gzGzoHsz',
+      appKey     : 'CaEuIN0359VyWiygnoDPQxx1',
+      placeholder: "请讲!!",
+      avatar     : 'mp',
+      meta       : guest,
+      pageSize   : '10' || 10,
+      visitor    : false,
+      lang       : '' || 'zh-cn',
+      path       : location.pathname,
+      recordIP   : false,
+      serverURLs : ''
     });
-  </script>
-
-
-
-  
-
-
-
-
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
+  }, window.Valine);
+});
+</script>
 
 </body>
 </html>

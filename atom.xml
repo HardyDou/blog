@@ -426,7 +426,11 @@
       
         
         
-          &lt;font size=&quot;6&quot;&gt;&lt;br&gt;知识如果不能改变行为，就没有用处；&lt;br&gt;但是知识一旦改变了行为，知识本身就立刻失去意义&lt;br&gt;&lt;/font&gt;&lt;br&gt;&lt;font style=&quot;display:block;text-align:right;&quot;
+          &lt;font size=6&gt;
+知识如果不能改变行为，就没有用处；
+但是知识一旦改变了行为，知识本身就立刻失去意义  
+&lt;/font &gt;
+&lt;font style=&quot;display:block;text-align:right;&quot; size=6
         
       
     
@@ -475,7 +479,9 @@
       
         
         
-          &lt;center&gt;&lt;br&gt;  &lt;img src=&quot;/images/pasted-123.png&quot; alt=&quot;scrum&quot;&gt;&lt;br&gt;&lt;/center&gt;
+          &lt;center&gt;  
+  ![scrum](/images/pasted-123.png)
+&lt;/center&gt;
 
 &lt;h2 id=&quot;Scrum的历史&quot;&gt;&lt;a href=&quot;#Scrum的历史&quot; class=&quot;headerlink&quot;
         

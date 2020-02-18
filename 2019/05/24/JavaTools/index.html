@@ -1,131 +1,33 @@
 <!DOCTYPE html>
-
-
-
-
-
-
-
-
-
-
-
-
-  
-
-
-<html class="theme-next pisces use-motion" lang="zh-CN">
-<head><meta name="generator" content="Hexo 3.8.0">
+<html lang="zh-Hans">
+<head>
   <meta charset="UTF-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
 <meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 4.2.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
 
 
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.css">
 
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"www.hardydou.com","root":"/","scheme":"Pisces","version":"7.7.1","exturl":false,"sidebar":{"position":"left","width":240,"b2t":true,"scrollpercent":true,"display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":true,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+  </script>
 
-
-
-
-
-
-
-
-
-<meta http-equiv="Cache-Control" content="no-transform">
-<meta http-equiv="Cache-Control" content="no-siteapp">
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<link href="/lib/kityminder-core/kityminder.core.css?v=1.4.49" rel="stylesheet" type="text/css">
-<style>
-.mindmap{width:90%}
-</style>
-
-  
-  
-  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
-
-
-
-
-
-
-
-<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
-
-<link href="/css/main.css?v=6.5.0" rel="stylesheet" type="text/css">
-<style>
-.pullquote{width:auto;}
-</style>
-
-  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=6.5.0">
-
-
-  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=6.5.0">
-
-
-  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=6.5.0">
-
-
-  <link rel="mask-icon" href="/images/logo.svg?v=6.5.0" color="#222">
-
-
-
-
-
-
-
-
-
-<script type="text/javascript" id="hexo.configurations">
-  var NexT = window.NexT || {};
-  var CONFIG = {
-    root: '/',
-    scheme: 'Pisces',
-    version: '6.5.0',
-    sidebar: {"position":"left","display":"post","offset":12,"b2t":true,"scrollpercent":true,"onmobile":false,"width":240},
-    fancybox: true,
-    fastclick: false,
-    lazyload: false,
-    tabs: true,
-    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
-    algolia: {
-      applicationID: '',
-      apiKey: '',
-      indexName: '',
-      hits: {"per_page":10},
-      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
-    }
-  };
-</script>
-
-
-  
-
-
-
-
-  <meta name="description" content="依赖数据 运行日志 异常堆栈 GC日志 线程快照 堆转储快照  获取数据工具概述工具存放位置 ${JavaHome}/bin/ 工具代码逻辑在 jdk/lib/tools.jar Jdk1.5虚拟机时 启动时增加 -Dcom.sun.management.jmxremote 启动jmx功能，否则部分工具无法使用 工具介绍 jps虚拟机进程状况恐惧，类似linux ps指令。用于获取当前运行的 ja">
-<meta name="keywords" content="java,jvm">
+  <meta name="description" content="依赖数据 运行日志 异常堆栈 GC日志 线程快照 堆转储快照  获取数据工具概述工具存放位置 ${JavaHome}&#x2F;bin&#x2F;工具代码逻辑在 jdk&#x2F;lib&#x2F;tools.jarJdk1.5虚拟机时 启动时增加 -Dcom.sun.management.jmxremote 启动jmx功能，否则部分工具无法使用工具介绍 jps虚拟机进程状况恐惧，类似linux ps指令。用于获取当前运行的 java进">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Java虚拟机性能监控工具">
 <meta property="og:url" content="http://www.hardydou.com/2019/05/24/JavaTools/index.html">
 <meta property="og:site_name" content="小鱼先生">
-<meta property="og:description" content="依赖数据 运行日志 异常堆栈 GC日志 线程快照 堆转储快照  获取数据工具概述工具存放位置 ${JavaHome}/bin/ 工具代码逻辑在 jdk/lib/tools.jar Jdk1.5虚拟机时 启动时增加 -Dcom.sun.management.jmxremote 启动jmx功能，否则部分工具无法使用 工具介绍 jps虚拟机进程状况恐惧，类似linux ps指令。用于获取当前运行的 ja">
-<meta property="og:locale" content="zh-CN">
+<meta property="og:description" content="依赖数据 运行日志 异常堆栈 GC日志 线程快照 堆转储快照  获取数据工具概述工具存放位置 ${JavaHome}&#x2F;bin&#x2F;工具代码逻辑在 jdk&#x2F;lib&#x2F;tools.jarJdk1.5虚拟机时 启动时增加 -Dcom.sun.management.jmxremote 启动jmx功能，否则部分工具无法使用工具介绍 jps虚拟机进程状况恐惧，类似linux ps指令。用于获取当前运行的 java进">
+<meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="http://www.hardydou.com/images/pasted-105.png">
 <meta property="og:image" content="http://www.hardydou.com/images/pasted-106.png">
 <meta property="og:image" content="http://www.hardydou.com/images/pasted-107.png">
@@ -135,26 +37,23 @@
 <meta property="og:image" content="http://www.hardydou.com/images/pasted-111.png">
 <meta property="og:image" content="http://www.hardydou.com/images/pasted-112.png">
 <meta property="og:image" content="http://www.hardydou.com/images/pasted-113.png">
-<meta property="og:updated_time" content="2019-05-27T07:09:33.360Z">
+<meta property="article:published_time" content="2019-05-24T11:35:00.000Z">
+<meta property="article:modified_time" content="2019-05-27T07:09:33.360Z">
+<meta property="article:author" content="小鱼先生">
+<meta property="article:tag" content="java">
+<meta property="article:tag" content="jvm">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Java虚拟机性能监控工具">
-<meta name="twitter:description" content="依赖数据 运行日志 异常堆栈 GC日志 线程快照 堆转储快照  获取数据工具概述工具存放位置 ${JavaHome}/bin/ 工具代码逻辑在 jdk/lib/tools.jar Jdk1.5虚拟机时 启动时增加 -Dcom.sun.management.jmxremote 启动jmx功能，否则部分工具无法使用 工具介绍 jps虚拟机进程状况恐惧，类似linux ps指令。用于获取当前运行的 ja">
 <meta name="twitter:image" content="http://www.hardydou.com/images/pasted-105.png">
 
+<link rel="canonical" href="http://www.hardydou.com/2019/05/24/JavaTools/">
 
 
-  <link rel="alternate" href="/atom.xml" title="小鱼先生" type="application/atom+xml">
-
-
-
-
-  <link rel="canonical" href="http://www.hardydou.com/2019/05/24/JavaTools/">
-
-
-
-<script type="text/javascript" id="page.configurations">
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
   CONFIG.page = {
     sidebar: "",
+    isHome: false,
+    isPost: true
   };
 </script>
 
@@ -166,336 +65,182 @@
 
 
 
-
-
-
-
-
   <noscript>
-  <style type="text/css">
-    .use-motion .motion-element,
-    .use-motion .brand,
-    .use-motion .menu-item,
-    .sidebar-inner,
-    .use-motion .post-block,
-    .use-motion .pagination,
-    .use-motion .comments,
-    .use-motion .post-header,
-    .use-motion .post-body,
-    .use-motion .collection-title { opacity: initial; }
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
 
-    .use-motion .logo,
-    .use-motion .site-title,
-    .use-motion .site-subtitle {
-      opacity: initial;
-      top: initial;
-    }
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
 
-    .use-motion {
-      .logo-line-before i { left: initial; }
-      .logo-line-after i { right: initial; }
-    }
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
   </style>
 </noscript>
 
 </head>
 
-<body itemscope="" itemtype="http://schema.org/WebPage" lang="zh-CN">
-
-  
-  
-    
-  
-
-  <div class="container sidebar-position-left page-post-detail">
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
     <div class="headband"></div>
 
-    <header id="header" class="header" itemscope="" itemtype="http://schema.org/WPHeader">
-      <div class="header-inner"><div class="site-brand-wrapper">
-  <div class="site-meta ">
-    
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
 
-    <div class="custom-logo-site-title">
+  <div class="site-meta">
+
+    <div>
       <a href="/" class="brand" rel="start">
         <span class="logo-line-before"><i></i></span>
         <span class="site-title">小鱼先生</span>
         <span class="logo-line-after"><i></i></span>
       </a>
     </div>
-    
-      
         <p class="site-subtitle">梦想还是要有的，万一忘记了咋办？</p>
-      
-    
   </div>
 
-  <div class="site-nav-toggle">
-    <button aria-label="切换导航栏">
-      <span class="btn-bar"></span>
-      <span class="btn-bar"></span>
-      <span class="btn-bar"></span>
-    </button>
-  </div>
+  <div class="site-nav-right"></div>
 </div>
-
 
 
 <nav class="site-nav">
   
-    <ul id="menu" class="menu">
-      
-        
-        
-        
-          
-          <li class="menu-item menu-item-home">
+  <ul id="menu" class="menu">
+        <li class="menu-item menu-item-home">
 
-    
-    
-    
-      
-    
-
-    
-
-    <a href="/" rel="section"><i class="menu-item-icon fa fa-fw fa-home"></i> <br>首页</a>
+    <a href="/" rel="section"><i class="fa fa-fw fa-首页"></i>首页</a>
 
   </li>
-        
-        
-        
-          
-          <li class="menu-item menu-item-archives">
+        <li class="menu-item menu-item-archives">
 
-    
-    
-    
-      
-    
-
-    
-
-    <a href="/archives" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档</a>
+    <a href="/archives" rel="section"><i class="fa fa-fw fa-归档"></i>归档</a>
 
   </li>
-        
-        
-        
-          
-          <li class="menu-item menu-item-tags">
+        <li class="menu-item menu-item-tags">
 
-    
-    
-    
-      
-    
-
-    
-
-    <a href="/tags" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br>标签</a>
+    <a href="/tags" rel="section"><i class="fa fa-fw fa-标签"></i>标签</a>
 
   </li>
-        
-        
-        
-          
-          <li class="menu-item menu-item-categories">
+        <li class="menu-item menu-item-categories">
 
-    
-    
-    
-      
-    
-
-    
-
-    <a href="/categories" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br>分类</a>
+    <a href="/categories" rel="section"><i class="fa fa-fw fa-分类"></i>分类</a>
 
   </li>
-        
-        
-        
-          
-          <li class="menu-item menu-item-about">
+        <li class="menu-item menu-item-about">
 
-    
-    
-    
-      
-    
-
-    
-
-    <a href="/about" rel="section"><i class="menu-item-icon fa fa-fw fa-user"></i> <br>关于</a>
+    <a href="/about" rel="section"><i class="fa fa-fw fa-关于"></i>关于</a>
 
   </li>
+  </ul>
 
-      
-      
-    </ul>
-  
-
-  
-
-  
 </nav>
-
-
-
-  
-
-
-
 </div>
     </header>
 
     
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
 
 
-    <main id="main" class="main">
+    <main class="main">
       <div class="main-inner">
         <div class="content-wrap">
           
+
+          <div class="content">
             
 
-          
-          <div id="content" class="content">
-            
-
-  <div id="posts" class="posts-expand">
-    
-
-  
-
+  <div class="posts-expand">
+      
   
   
-  
-
-  
-
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
+  <article itemscope itemtype="http://schema.org/Article" class="post-block " lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="http://www.hardydou.com/2019/05/24/JavaTools/">
 
-    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.jpg">
       <meta itemprop="name" content="小鱼先生">
       <meta itemprop="description" content="相信美好的事情即将发生">
-      <meta itemprop="image" content="/images/avatar.jpg">
     </span>
 
-    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
       <meta itemprop="name" content="小鱼先生">
     </span>
-
-    
       <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">Java虚拟机性能监控工具
-              
-            
-          </h1>
-        
+        <h1 class="post-title" itemprop="name headline">
+          Java虚拟机性能监控工具
+        </h1>
 
         <div class="post-meta">
-          <span class="post-time">
-
-            
-            
-            
-
-            
+            <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="fa fa-calendar-o"></i>
               </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-
-              
-                
-              
+              <span class="post-meta-item-text">发表于</span>
 
               <time title="创建时间：2019-05-24 19:35:00" itemprop="dateCreated datePublished" datetime="2019-05-24T19:35:00+08:00">2019-05-24</time>
-            
-
-            
-              
-
-              
-                
-                <span class="post-meta-divider">|</span>
-                
-
+            </span>
+              <span class="post-meta-item">
                 <span class="post-meta-item-icon">
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
-                
-                  <span class="post-meta-item-text">更新于</span>
-                
+                <span class="post-meta-item-text">更新于</span>
                 <time title="修改时间：2019-05-27 15:09:33" itemprop="dateModified" datetime="2019-05-27T15:09:33+08:00">2019-05-27</time>
-              
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
+              </span>
+            <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="fa fa-folder-o"></i>
               </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/java/" itemprop="url" rel="index"><span itemprop="name">java</span></a></span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/java/" itemprop="url" rel="index">
+                    <span itemprop="name">java</span>
+                  </a>
                 </span>
-                <a href="/2019/05/24/JavaTools/#comments" itemprop="discussionUrl">
-                  <span class="post-meta-item-text">评论数：</span> <span class="post-comments-count valine-comment-count" data-xid="/2019/05/24/JavaTools/" itemprop="commentCount"></span>
-                </a>
-              </span>
-            
-          
+            </span>
 
           
-          
-
-          
-
-          
-
-          
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="fa fa-comment-o"></i>
+      </span>
+      <span class="post-meta-item-text">Valine：</span>
+    
+    <a title="valine" href="/2019/05/24/JavaTools/#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/2019/05/24/JavaTools/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
 
         </div>
       </header>
-    
 
     
     
     
     <div class="post-body" itemprop="articleBody">
-
-      
-      
 
       
         <h2 id="依赖数据"><a href="#依赖数据" class="headerlink" title="依赖数据"></a>依赖数据</h2><ul>
@@ -506,20 +251,15 @@
 <li>堆转储快照</li>
 </ul>
 <h2 id="获取数据"><a href="#获取数据" class="headerlink" title="获取数据"></a>获取数据</h2><h3 id="工具概述"><a href="#工具概述" class="headerlink" title="工具概述"></a>工具概述</h3><p>工具存放位置</p>
-<pre><code>${JavaHome}/bin/
-</code></pre><p>工具代码逻辑在</p>
-<pre><code>jdk/lib/tools.jar
-</code></pre><p>Jdk1.5虚拟机时</p>
-<pre><code>启动时增加 -Dcom.sun.management.jmxremote 启动jmx功能，否则部分工具无法使用
-</code></pre><h3 id="工具介绍"><a href="#工具介绍" class="headerlink" title="工具介绍"></a>工具介绍</h3><p><img src="/images/pasted-105.png" alt="upload successful"></p>
+<pre><code>${JavaHome}/bin/</code></pre><p>工具代码逻辑在</p>
+<pre><code>jdk/lib/tools.jar</code></pre><p>Jdk1.5虚拟机时</p>
+<pre><code>启动时增加 -Dcom.sun.management.jmxremote 启动jmx功能，否则部分工具无法使用</code></pre><h3 id="工具介绍"><a href="#工具介绍" class="headerlink" title="工具介绍"></a>工具介绍</h3><p><img src="/images/pasted-105.png" alt="upload successful"></p>
 <h4 id="jps"><a href="#jps" class="headerlink" title="jps"></a>jps</h4><p>虚拟机进程状况恐惧，类似linux ps指令。用于获取当前运行的 java进程情况</p>
 <p>jps命令格式：</p>
-<pre><code>jps [options] [hostid]
-</code></pre><p>jps执行样例：</p>
+<pre><code>jps [options] [hostid]</code></pre><p>jps执行样例：</p>
 <pre><code>$ ~ jps -l
 43629 sun.tools.jps.Jps
-431
-</code></pre><p>jps主要选项<br><img src="/images/pasted-106.png" alt="upload successful"></p>
+431</code></pre><p>jps主要选项<br><img src="/images/pasted-106.png" alt="upload successful"></p>
 <h4 id="jstat"><a href="#jstat" class="headerlink" title="jstat"></a>jstat</h4><p>虚拟机统计信息监控工具jstat(Jvm Statistics Monitoring Tool)，可以获取虚拟机进程中：</p>
 <ul>
 <li>类装载</li>
@@ -528,29 +268,24 @@
 <li>JIT编译</li>
 </ul>
 <p>jstat命令格式：</p>
-<pre><code>jstat [option vmid [interval[s|ms] [count] ]
-</code></pre><p>远程vmid格式</p>
-<pre><code>[protocol:][//]lvmid[@hostname[:port]/servername]
-</code></pre><p>其中</p>
+<pre><code>jstat [option vmid [interval[s|ms] [count] ]</code></pre><p>远程vmid格式</p>
+<pre><code>[protocol:][//]lvmid[@hostname[:port]/servername]</code></pre><p>其中</p>
 <ul>
 <li>interval 间隔时间，默认 无</li>
 <li>count 执行次数，默认1次</li>
 </ul>
 <p>示例：</p>
-<pre><code>jstat -gc 2764 100 10
-</code></pre><p>查询进程为2764的虚拟机 垃圾收集信息，每个100ms查询一次，一共查询10次。</p>
+<pre><code>jstat -gc 2764 100 10</code></pre><p>查询进程为2764的虚拟机 垃圾收集信息，每个100ms查询一次，一共查询10次。</p>
 <p>执行结果：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">~ jstat -gc 431  100 10</span><br><span class="line"> S0C    S1C    S0U    S1U      EC       EU        OC         OU       MC     MU    CCSC   CCSU   YGC     YGCT    FGC    FGCT     GCT</span><br><span class="line">14144.0 14144.0  0.0    0.0   113536.0  2372.7   283440.0   156408.7  378640.0 349994.2 48716.0 42774.9    411    5.382  28     80.143   85.525</span><br><span class="line">14144.0 14144.0  0.0    0.0   113536.0  2372.7   283440.0   156408.7  378640.0 349994.2 48716.0 42774.9    411    5.382  28     80.143   85.525</span><br><span class="line">14144.0 14144.0  0.0    0.0   113536.0  2372.7   283440.0   156408.7  378640.0 349994.2 48716.0 42774.9    411    5.382  28     80.143   85.525</span><br><span class="line">14144.0 14144.0  0.0    0.0   113536.0  2372.7   283440.0   156408.7  378640.0 349994.2 48716.0 42774.9    411    5.382  28     80.143   85.525</span><br><span class="line">14144.0 14144.0  0.0    0.0   113536.0  2372.7   283440.0   156408.7  378640.0 349994.2 48716.0 42774.9    411    5.382  28     80.143   85.525</span><br><span class="line">14144.0 14144.0  0.0    0.0   113536.0  2372.7   283440.0   156408.7  378640.0 349994.2 48716.0 42774.9    411    5.382  28     80.143   85.525</span><br><span class="line">14144.0 14144.0  0.0    0.0   113536.0  2372.7   283440.0   156408.7  378640.0 349994.2 48716.0 42774.9    411    5.382  28     80.143   85.525</span><br><span class="line">14144.0 14144.0  0.0    0.0   113536.0  2372.7   283440.0   156408.7  378640.0 349994.2 48716.0 42774.9    411    5.382  28     80.143   85.525</span><br><span class="line">14144.0 14144.0  0.0    0.0   113536.0  2372.7   283440.0   156408.7  378640.0 349994.2 48716.0 42774.9    411    5.382  28     80.143   85.525</span><br><span class="line">14144.0 14144.0  0.0    0.0   113536.0  2372.7   283440.0   156408.7  378640.0 349994.2 48716.0 42774.9    411    5.382  28     80.143   85.525</span><br></pre></td></tr></table></figure>
 <p>其中</p>
 <pre><code>YGC      YGCT          FGC    FGCT     GCT
-YGC次数   YGC总消耗时间  FGc次数 Fgc总时间 所有GC总时间
-</code></pre><h4 id="jinfo"><a href="#jinfo" class="headerlink" title="jinfo"></a>jinfo</h4><p>Java配置信息工具jinfo(Configuration Info for java)作用：</p>
+YGC次数   YGC总消耗时间  FGc次数 Fgc总时间 所有GC总时间</code></pre><h4 id="jinfo"><a href="#jinfo" class="headerlink" title="jinfo"></a>jinfo</h4><p>Java配置信息工具jinfo(Configuration Info for java)作用：</p>
 <ul>
 <li>实时查看、调整 虚拟机各项参数</li>
 </ul>
 <p>jinfo命令格式：</p>
-<pre><code>jinfo [option] pid
-</code></pre><p>jinfo命令选项：<br><img src="/images/pasted-107.png" alt="upload successful"></p>
+<pre><code>jinfo [option] pid</code></pre><p>jinfo命令选项：<br><img src="/images/pasted-107.png" alt="upload successful"></p>
 <p>Mac + Jdk1.8 无法使用测试jinfo命令。</p>
 <h4 id="jmap"><a href="#jmap" class="headerlink" title="jmap"></a>jmap</h4><p>jmap(Memory Map for Java)用于生成堆转储快照（一般为heapdump或dump文件)。不用jmap还可以通过以下方式获取dump文件：</p>
 <ul>
@@ -561,412 +296,196 @@ YGC次数   YGC总消耗时间  FGc次数 Fgc总时间 所有GC总时间
 <p>jmap工具主要选项</p>
 <p><img src="/images/pasted-108.png" alt="upload successful"></p>
 <p>dump文件内容</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br></pre></td><td class="code"><pre><span class="line">Full thread dump Java HotSpot(TM) 64-Bit Server VM (25.161-b12 mixed mode):</span><br><span class="line"></span><br><span class="line">&quot;Attach Listener&quot; #13 daemon prio=9 os_prio=31 tid=0x00007f837d042800 nid=0x3f03 runnable [0x0000000000000000]</span><br><span class="line">   java.lang.Thread.State: RUNNABLE</span><br><span class="line"></span><br><span class="line">&quot;DestroyJavaVM&quot; #12 prio=5 os_prio=31 tid=0x00007f837c005800 nid=0x2603 waiting on condition [0x0000000000000000]</span><br><span class="line">   java.lang.Thread.State: RUNNABLE</span><br><span class="line"></span><br><span class="line">&quot;T2&quot; #11 prio=5 os_prio=31 tid=0x00007f837c8ed000 nid=0x3e03 waiting for monitor entry [0x0000700003f70000]</span><br><span class="line">   java.lang.Thread.State: BLOCKED (on object monitor)</span><br><span class="line">	at com.hardydou.jmm.DeadLock.doSomeThing(DeadLock.java:29)</span><br><span class="line">	- waiting to lock &lt;0x000000079570f7d0&gt; (a java.lang.String)</span><br><span class="line">	- locked &lt;0x000000079570f800&gt; (a java.lang.String)</span><br><span class="line">	at com.hardydou.jmm.DeadLock.run(DeadLock.java:37)</span><br><span class="line"></span><br><span class="line">&quot;T1&quot; #10 prio=5 os_prio=31 tid=0x00007f837c858000 nid=0x3c03 waiting for monitor entry [0x0000700003e6d000]</span><br><span class="line">   java.lang.Thread.State: BLOCKED (on object monitor)</span><br><span class="line">	at com.hardydou.jmm.DeadLock.doSomeThing(DeadLock.java:29)</span><br><span class="line">	- waiting to lock &lt;0x000000079570f800&gt; (a java.lang.String)</span><br><span class="line">	- locked &lt;0x000000079570f7d0&gt; (a java.lang.String)</span><br><span class="line">	at com.hardydou.jmm.DeadLock.run(DeadLock.java:37)</span><br><span class="line"></span><br><span class="line">&quot;Service Thread&quot; #9 daemon prio=9 os_prio=31 tid=0x00007f837c828000 nid=0x3903 runnable [0x0000000000000000]</span><br><span class="line">   java.lang.Thread.State: RUNNABLE</span><br><span class="line"></span><br><span class="line">&quot;C1 CompilerThread2&quot; #8 daemon prio=9 os_prio=31 tid=0x00007f837c076800 nid=0x3803 waiting on condition [0x0000000000000000]</span><br><span class="line">   java.lang.Thread.State: RUNNABLE</span><br><span class="line"></span><br><span class="line">&quot;C2 CompilerThread1&quot; #7 daemon prio=9 os_prio=31 tid=0x00007f837b815000 nid=0x4603 waiting on condition [0x0000000000000000]</span><br><span class="line">   java.lang.Thread.State: RUNNABLE</span><br><span class="line"></span><br><span class="line">&quot;C2 CompilerThread0&quot; #6 daemon prio=9 os_prio=31 tid=0x00007f837d03e800 nid=0x4703 waiting on condition [0x0000000000000000]</span><br><span class="line">   java.lang.Thread.State: RUNNABLE</span><br><span class="line"></span><br><span class="line">&quot;Monitor Ctrl-Break&quot; #5 daemon prio=5 os_prio=31 tid=0x00007f837d01e800 nid=0x4903 runnable [0x000070000385b000]</span><br><span class="line">   java.lang.Thread.State: RUNNABLE</span><br><span class="line">	at java.net.SocketInputStream.socketRead0(Native Method)</span><br><span class="line">	at java.net.SocketInputStream.socketRead(SocketInputStream.java:116)</span><br><span class="line">	at java.net.SocketInputStream.read(SocketInputStream.java:171)</span><br><span class="line">	at java.net.SocketInputStream.read(SocketInputStream.java:141)</span><br><span class="line">	at sun.nio.cs.StreamDecoder.readBytes(StreamDecoder.java:284)</span><br><span class="line">	at sun.nio.cs.StreamDecoder.implRead(StreamDecoder.java:326)</span><br><span class="line">	at sun.nio.cs.StreamDecoder.read(StreamDecoder.java:178)</span><br><span class="line">	- locked &lt;0x00000007957af218&gt; (a java.io.InputStreamReader)</span><br><span class="line">	at java.io.InputStreamReader.read(InputStreamReader.java:184)</span><br><span class="line">	at java.io.BufferedReader.fill(BufferedReader.java:161)</span><br><span class="line">	at java.io.BufferedReader.readLine(BufferedReader.java:324)</span><br><span class="line">	- locked &lt;0x00000007957af218&gt; (a java.io.InputStreamReader)</span><br><span class="line">	at java.io.BufferedReader.readLine(BufferedReader.java:389)</span><br><span class="line">	at com.intellij.rt.execution.application.AppMainV2$1.run(AppMainV2.java:64)</span><br><span class="line"></span><br><span class="line">&quot;Signal Dispatcher&quot; #4 daemon prio=9 os_prio=31 tid=0x00007f837c827000 nid=0x360b waiting on condition [0x0000000000000000]</span><br><span class="line">   java.lang.Thread.State: RUNNABLE</span><br><span class="line"></span><br><span class="line">&quot;Finalizer&quot; #3 daemon prio=8 os_prio=31 tid=0x00007f837c842800 nid=0x2f03 in Object.wait() [0x0000700003655000]</span><br><span class="line">   java.lang.Thread.State: WAITING (on object monitor)</span><br><span class="line">	at java.lang.Object.wait(Native Method)</span><br><span class="line">	- waiting on &lt;0x0000000795588ec0&gt; (a java.lang.ref.ReferenceQueue$Lock)</span><br><span class="line">	at java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:143)</span><br><span class="line">	- locked &lt;0x0000000795588ec0&gt; (a java.lang.ref.ReferenceQueue$Lock)</span><br><span class="line">	at java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:164)</span><br><span class="line">	at java.lang.ref.Finalizer$FinalizerThread.run(Finalizer.java:209)</span><br><span class="line"></span><br><span class="line">&quot;Reference Handler&quot; #2 daemon prio=10 os_prio=31 tid=0x00007f837c016000 nid=0x5203 in Object.wait() [0x0000700003552000]</span><br><span class="line">   java.lang.Thread.State: WAITING (on object monitor)</span><br><span class="line">	at java.lang.Object.wait(Native Method)</span><br><span class="line">	- waiting on &lt;0x0000000795586b68&gt; (a java.lang.ref.Reference$Lock)</span><br><span class="line">	at java.lang.Object.wait(Object.java:502)</span><br><span class="line">	at java.lang.ref.Reference.tryHandlePending(Reference.java:191)</span><br><span class="line">	- locked &lt;0x0000000795586b68&gt; (a java.lang.ref.Reference$Lock)</span><br><span class="line">	at java.lang.ref.Reference$ReferenceHandler.run(Reference.java:153)</span><br><span class="line"></span><br><span class="line">&quot;VM Thread&quot; os_prio=31 tid=0x00007f837d00a000 nid=0x2e03 runnable </span><br><span class="line"></span><br><span class="line">&quot;GC task thread#0 (ParallelGC)&quot; os_prio=31 tid=0x00007f837d004800 nid=0x1f07 runnable </span><br><span class="line"></span><br><span class="line">&quot;GC task thread#1 (ParallelGC)&quot; os_prio=31 tid=0x00007f837d005800 nid=0x1e03 runnable </span><br><span class="line"></span><br><span class="line">&quot;GC task thread#2 (ParallelGC)&quot; os_prio=31 tid=0x00007f837d006000 nid=0x2b03 runnable </span><br><span class="line"></span><br><span class="line">&quot;GC task thread#3 (ParallelGC)&quot; os_prio=31 tid=0x00007f837d006800 nid=0x2d03 runnable </span><br><span class="line"></span><br><span class="line">&quot;VM Periodic Task Thread&quot; os_prio=31 tid=0x00007f837d042000 nid=0x4303 waiting on condition </span><br><span class="line"></span><br><span class="line">JNI global references: 33</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">Found one Java-level deadlock:</span><br><span class="line">=============================</span><br><span class="line">&quot;T2&quot;:</span><br><span class="line">  waiting to lock monitor 0x00007f837c01c0a8 (object 0x000000079570f7d0, a java.lang.String),</span><br><span class="line">  which is held by &quot;T1&quot;</span><br><span class="line">&quot;T1&quot;:</span><br><span class="line">  waiting to lock monitor 0x00007f837c0196b8 (object 0x000000079570f800, a java.lang.String),</span><br><span class="line">  which is held by &quot;T2&quot;</span><br><span class="line"></span><br><span class="line">Java stack information for the threads listed above:</span><br><span class="line">===================================================</span><br><span class="line">&quot;T2&quot;:</span><br><span class="line">	at com.hardydou.jmm.DeadLock.doSomeThing(DeadLock.java:29)</span><br><span class="line">	- waiting to lock &lt;0x000000079570f7d0&gt; (a java.lang.String)</span><br><span class="line">	- locked &lt;0x000000079570f800&gt; (a java.lang.String)</span><br><span class="line">	at com.hardydou.jmm.DeadLock.run(DeadLock.java:37)</span><br><span class="line">&quot;T1&quot;:</span><br><span class="line">	at com.hardydou.jmm.DeadLock.doSomeThing(DeadLock.java:29)</span><br><span class="line">	- waiting to lock &lt;0x000000079570f800&gt; (a java.lang.String)</span><br><span class="line">	- locked &lt;0x000000079570f7d0&gt; (a java.lang.String)</span><br><span class="line">	at com.hardydou.jmm.DeadLock.run(DeadLock.java:37)</span><br><span class="line"></span><br><span class="line">Found 1 deadlock.</span><br><span class="line"></span><br><span class="line">Heap</span><br><span class="line"> PSYoungGen      total 38400K, used 7323K [0x0000000795580000, 0x0000000798000000, 0x00000007c0000000)</span><br><span class="line">  eden space 33280K, 22% used [0x0000000795580000,0x0000000795ca6e80,0x0000000797600000)</span><br><span class="line">  from space 5120K, 0% used [0x0000000797b00000,0x0000000797b00000,0x0000000798000000)</span><br><span class="line">  to   space 5120K, 0% used [0x0000000797600000,0x0000000797600000,0x0000000797b00000)</span><br><span class="line"> ParOldGen       total 87552K, used 0K [0x0000000740000000, 0x0000000745580000, 0x0000000795580000)</span><br><span class="line">  object space 87552K, 0% used [0x0000000740000000,0x0000000740000000,0x0000000745580000)</span><br><span class="line"> Metaspace       used 3818K, capacity 4540K, committed 4864K, reserved 1056768K</span><br><span class="line">  class space    used 423K, capacity 428K, committed 512K, reserved 1048576K</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">Process finished with exit code 137 (interrupted by signal 9: SIGKILL)</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br></pre></td><td class="code"><pre><span class="line">Full thread dump Java HotSpot(TM) 64-Bit Server VM (25.161-b12 mixed mode):</span><br><span class="line"></span><br><span class="line">&quot;Attach Listener&quot; #13 daemon prio&#x3D;9 os_prio&#x3D;31 tid&#x3D;0x00007f837d042800 nid&#x3D;0x3f03 runnable [0x0000000000000000]</span><br><span class="line">   java.lang.Thread.State: RUNNABLE</span><br><span class="line"></span><br><span class="line">&quot;DestroyJavaVM&quot; #12 prio&#x3D;5 os_prio&#x3D;31 tid&#x3D;0x00007f837c005800 nid&#x3D;0x2603 waiting on condition [0x0000000000000000]</span><br><span class="line">   java.lang.Thread.State: RUNNABLE</span><br><span class="line"></span><br><span class="line">&quot;T2&quot; #11 prio&#x3D;5 os_prio&#x3D;31 tid&#x3D;0x00007f837c8ed000 nid&#x3D;0x3e03 waiting for monitor entry [0x0000700003f70000]</span><br><span class="line">   java.lang.Thread.State: BLOCKED (on object monitor)</span><br><span class="line">	at com.hardydou.jmm.DeadLock.doSomeThing(DeadLock.java:29)</span><br><span class="line">	- waiting to lock &lt;0x000000079570f7d0&gt; (a java.lang.String)</span><br><span class="line">	- locked &lt;0x000000079570f800&gt; (a java.lang.String)</span><br><span class="line">	at com.hardydou.jmm.DeadLock.run(DeadLock.java:37)</span><br><span class="line"></span><br><span class="line">&quot;T1&quot; #10 prio&#x3D;5 os_prio&#x3D;31 tid&#x3D;0x00007f837c858000 nid&#x3D;0x3c03 waiting for monitor entry [0x0000700003e6d000]</span><br><span class="line">   java.lang.Thread.State: BLOCKED (on object monitor)</span><br><span class="line">	at com.hardydou.jmm.DeadLock.doSomeThing(DeadLock.java:29)</span><br><span class="line">	- waiting to lock &lt;0x000000079570f800&gt; (a java.lang.String)</span><br><span class="line">	- locked &lt;0x000000079570f7d0&gt; (a java.lang.String)</span><br><span class="line">	at com.hardydou.jmm.DeadLock.run(DeadLock.java:37)</span><br><span class="line"></span><br><span class="line">&quot;Service Thread&quot; #9 daemon prio&#x3D;9 os_prio&#x3D;31 tid&#x3D;0x00007f837c828000 nid&#x3D;0x3903 runnable [0x0000000000000000]</span><br><span class="line">   java.lang.Thread.State: RUNNABLE</span><br><span class="line"></span><br><span class="line">&quot;C1 CompilerThread2&quot; #8 daemon prio&#x3D;9 os_prio&#x3D;31 tid&#x3D;0x00007f837c076800 nid&#x3D;0x3803 waiting on condition [0x0000000000000000]</span><br><span class="line">   java.lang.Thread.State: RUNNABLE</span><br><span class="line"></span><br><span class="line">&quot;C2 CompilerThread1&quot; #7 daemon prio&#x3D;9 os_prio&#x3D;31 tid&#x3D;0x00007f837b815000 nid&#x3D;0x4603 waiting on condition [0x0000000000000000]</span><br><span class="line">   java.lang.Thread.State: RUNNABLE</span><br><span class="line"></span><br><span class="line">&quot;C2 CompilerThread0&quot; #6 daemon prio&#x3D;9 os_prio&#x3D;31 tid&#x3D;0x00007f837d03e800 nid&#x3D;0x4703 waiting on condition [0x0000000000000000]</span><br><span class="line">   java.lang.Thread.State: RUNNABLE</span><br><span class="line"></span><br><span class="line">&quot;Monitor Ctrl-Break&quot; #5 daemon prio&#x3D;5 os_prio&#x3D;31 tid&#x3D;0x00007f837d01e800 nid&#x3D;0x4903 runnable [0x000070000385b000]</span><br><span class="line">   java.lang.Thread.State: RUNNABLE</span><br><span class="line">	at java.net.SocketInputStream.socketRead0(Native Method)</span><br><span class="line">	at java.net.SocketInputStream.socketRead(SocketInputStream.java:116)</span><br><span class="line">	at java.net.SocketInputStream.read(SocketInputStream.java:171)</span><br><span class="line">	at java.net.SocketInputStream.read(SocketInputStream.java:141)</span><br><span class="line">	at sun.nio.cs.StreamDecoder.readBytes(StreamDecoder.java:284)</span><br><span class="line">	at sun.nio.cs.StreamDecoder.implRead(StreamDecoder.java:326)</span><br><span class="line">	at sun.nio.cs.StreamDecoder.read(StreamDecoder.java:178)</span><br><span class="line">	- locked &lt;0x00000007957af218&gt; (a java.io.InputStreamReader)</span><br><span class="line">	at java.io.InputStreamReader.read(InputStreamReader.java:184)</span><br><span class="line">	at java.io.BufferedReader.fill(BufferedReader.java:161)</span><br><span class="line">	at java.io.BufferedReader.readLine(BufferedReader.java:324)</span><br><span class="line">	- locked &lt;0x00000007957af218&gt; (a java.io.InputStreamReader)</span><br><span class="line">	at java.io.BufferedReader.readLine(BufferedReader.java:389)</span><br><span class="line">	at com.intellij.rt.execution.application.AppMainV2$1.run(AppMainV2.java:64)</span><br><span class="line"></span><br><span class="line">&quot;Signal Dispatcher&quot; #4 daemon prio&#x3D;9 os_prio&#x3D;31 tid&#x3D;0x00007f837c827000 nid&#x3D;0x360b waiting on condition [0x0000000000000000]</span><br><span class="line">   java.lang.Thread.State: RUNNABLE</span><br><span class="line"></span><br><span class="line">&quot;Finalizer&quot; #3 daemon prio&#x3D;8 os_prio&#x3D;31 tid&#x3D;0x00007f837c842800 nid&#x3D;0x2f03 in Object.wait() [0x0000700003655000]</span><br><span class="line">   java.lang.Thread.State: WAITING (on object monitor)</span><br><span class="line">	at java.lang.Object.wait(Native Method)</span><br><span class="line">	- waiting on &lt;0x0000000795588ec0&gt; (a java.lang.ref.ReferenceQueue$Lock)</span><br><span class="line">	at java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:143)</span><br><span class="line">	- locked &lt;0x0000000795588ec0&gt; (a java.lang.ref.ReferenceQueue$Lock)</span><br><span class="line">	at java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:164)</span><br><span class="line">	at java.lang.ref.Finalizer$FinalizerThread.run(Finalizer.java:209)</span><br><span class="line"></span><br><span class="line">&quot;Reference Handler&quot; #2 daemon prio&#x3D;10 os_prio&#x3D;31 tid&#x3D;0x00007f837c016000 nid&#x3D;0x5203 in Object.wait() [0x0000700003552000]</span><br><span class="line">   java.lang.Thread.State: WAITING (on object monitor)</span><br><span class="line">	at java.lang.Object.wait(Native Method)</span><br><span class="line">	- waiting on &lt;0x0000000795586b68&gt; (a java.lang.ref.Reference$Lock)</span><br><span class="line">	at java.lang.Object.wait(Object.java:502)</span><br><span class="line">	at java.lang.ref.Reference.tryHandlePending(Reference.java:191)</span><br><span class="line">	- locked &lt;0x0000000795586b68&gt; (a java.lang.ref.Reference$Lock)</span><br><span class="line">	at java.lang.ref.Reference$ReferenceHandler.run(Reference.java:153)</span><br><span class="line"></span><br><span class="line">&quot;VM Thread&quot; os_prio&#x3D;31 tid&#x3D;0x00007f837d00a000 nid&#x3D;0x2e03 runnable </span><br><span class="line"></span><br><span class="line">&quot;GC task thread#0 (ParallelGC)&quot; os_prio&#x3D;31 tid&#x3D;0x00007f837d004800 nid&#x3D;0x1f07 runnable </span><br><span class="line"></span><br><span class="line">&quot;GC task thread#1 (ParallelGC)&quot; os_prio&#x3D;31 tid&#x3D;0x00007f837d005800 nid&#x3D;0x1e03 runnable </span><br><span class="line"></span><br><span class="line">&quot;GC task thread#2 (ParallelGC)&quot; os_prio&#x3D;31 tid&#x3D;0x00007f837d006000 nid&#x3D;0x2b03 runnable </span><br><span class="line"></span><br><span class="line">&quot;GC task thread#3 (ParallelGC)&quot; os_prio&#x3D;31 tid&#x3D;0x00007f837d006800 nid&#x3D;0x2d03 runnable </span><br><span class="line"></span><br><span class="line">&quot;VM Periodic Task Thread&quot; os_prio&#x3D;31 tid&#x3D;0x00007f837d042000 nid&#x3D;0x4303 waiting on condition </span><br><span class="line"></span><br><span class="line">JNI global references: 33</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">Found one Java-level deadlock:</span><br><span class="line">&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;</span><br><span class="line">&quot;T2&quot;:</span><br><span class="line">  waiting to lock monitor 0x00007f837c01c0a8 (object 0x000000079570f7d0, a java.lang.String),</span><br><span class="line">  which is held by &quot;T1&quot;</span><br><span class="line">&quot;T1&quot;:</span><br><span class="line">  waiting to lock monitor 0x00007f837c0196b8 (object 0x000000079570f800, a java.lang.String),</span><br><span class="line">  which is held by &quot;T2&quot;</span><br><span class="line"></span><br><span class="line">Java stack information for the threads listed above:</span><br><span class="line">&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;</span><br><span class="line">&quot;T2&quot;:</span><br><span class="line">	at com.hardydou.jmm.DeadLock.doSomeThing(DeadLock.java:29)</span><br><span class="line">	- waiting to lock &lt;0x000000079570f7d0&gt; (a java.lang.String)</span><br><span class="line">	- locked &lt;0x000000079570f800&gt; (a java.lang.String)</span><br><span class="line">	at com.hardydou.jmm.DeadLock.run(DeadLock.java:37)</span><br><span class="line">&quot;T1&quot;:</span><br><span class="line">	at com.hardydou.jmm.DeadLock.doSomeThing(DeadLock.java:29)</span><br><span class="line">	- waiting to lock &lt;0x000000079570f800&gt; (a java.lang.String)</span><br><span class="line">	- locked &lt;0x000000079570f7d0&gt; (a java.lang.String)</span><br><span class="line">	at com.hardydou.jmm.DeadLock.run(DeadLock.java:37)</span><br><span class="line"></span><br><span class="line">Found 1 deadlock.</span><br><span class="line"></span><br><span class="line">Heap</span><br><span class="line"> PSYoungGen      total 38400K, used 7323K [0x0000000795580000, 0x0000000798000000, 0x00000007c0000000)</span><br><span class="line">  eden space 33280K, 22% used [0x0000000795580000,0x0000000795ca6e80,0x0000000797600000)</span><br><span class="line">  from space 5120K, 0% used [0x0000000797b00000,0x0000000797b00000,0x0000000798000000)</span><br><span class="line">  to   space 5120K, 0% used [0x0000000797600000,0x0000000797600000,0x0000000797b00000)</span><br><span class="line"> ParOldGen       total 87552K, used 0K [0x0000000740000000, 0x0000000745580000, 0x0000000795580000)</span><br><span class="line">  object space 87552K, 0% used [0x0000000740000000,0x0000000740000000,0x0000000745580000)</span><br><span class="line"> Metaspace       used 3818K, capacity 4540K, committed 4864K, reserved 1056768K</span><br><span class="line">  class space    used 423K, capacity 428K, committed 512K, reserved 1048576K</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">Process finished with exit code 137 (interrupted by signal 9: SIGKILL)</span><br></pre></td></tr></table></figure>
+
 <h4 id="jhat"><a href="#jhat" class="headerlink" title="jhat"></a>jhat</h4><p>jhat(JVM Heap Analysis Tool)虚拟机堆转储快照分析工具(分析dump文件)，内嵌html服务器，可以通过浏览器查看分析结果。不建议使用。<br>结果以包为集合分组显示。主要看里面的 Heap Histogram 项目（与jmap -histo 功能一样）与OQL页签功能。</p>
 <h4 id="jstack"><a href="#jstack" class="headerlink" title="jstack"></a>jstack</h4><p>Java堆栈跟踪工具jstack(Stack Trace for Java)，用于获取虚拟机当前时刻的线程快照（每一条线程正在执行的方法栈的集合）。目的是定位线程出现长时间停顿的原因，如线程间死锁、死循环、请求外部资源导致长时间等待。</p>
 <p>JDK1.5中，java.lang.Thread 新增一个getAllStackTraces()方法用于获取虚拟机中所有线程的StackTraceElement对象，有同样的效果。</p>
 <p>jstack命令格式：</p>
-<pre><code>jstack [option] vmid
-</code></pre><p>jstack命令主要选项：<br><img src="/images/pasted-109.png" alt="upload successful"></p>
+<pre><code>jstack [option] vmid</code></pre><p>jstack命令主要选项：<br><img src="/images/pasted-109.png" alt="upload successful"></p>
 <p>demo样例：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br></pre></td><td class="code"><pre><span class="line">2019-05-27 13:46:49</span><br><span class="line">Full thread dump Java HotSpot(TM) 64-Bit Server VM (25.161-b12 mixed mode):</span><br><span class="line"></span><br><span class="line">&quot;Attach Listener&quot; #13 daemon prio=9 os_prio=31 tid=0x00007fed89037800 nid=0x3f03 waiting on condition [0x0000000000000000]</span><br><span class="line">   java.lang.Thread.State: RUNNABLE</span><br><span class="line"></span><br><span class="line">   Locked ownable synchronizers:</span><br><span class="line">        - None</span><br><span class="line"></span><br><span class="line">&quot;DestroyJavaVM&quot; #12 prio=5 os_prio=31 tid=0x00007fed8985f000 nid=0x2703 waiting on condition [0x0000000000000000]</span><br><span class="line">   java.lang.Thread.State: RUNNABLE</span><br><span class="line"></span><br><span class="line">   Locked ownable synchronizers:</span><br><span class="line">        - None</span><br><span class="line"></span><br><span class="line">&quot;T2&quot; #11 prio=5 os_prio=31 tid=0x00007fed8a0ed800 nid=0x3d03 waiting for monitor entry [0x000070000acde000]</span><br><span class="line">   java.lang.Thread.State: BLOCKED (on object monitor)</span><br><span class="line">        at com.hardydou.jmm.DeadLock.doSomeThing(DeadLock.java:29)</span><br><span class="line">        - waiting to lock &lt;0x000000079570f8d8&gt; (a java.lang.String)</span><br><span class="line">        - locked &lt;0x000000079570f908&gt; (a java.lang.String)</span><br><span class="line">        at com.hardydou.jmm.DeadLock.run(DeadLock.java:37)</span><br><span class="line"></span><br><span class="line">   Locked ownable synchronizers:</span><br><span class="line">        - None</span><br><span class="line"></span><br><span class="line">&quot;T1&quot; #10 prio=5 os_prio=31 tid=0x00007fed8a0ed000 nid=0x4303 waiting for monitor entry [0x000070000abdb000]</span><br><span class="line">   java.lang.Thread.State: BLOCKED (on object monitor)</span><br><span class="line">        at com.hardydou.jmm.DeadLock.doSomeThing(DeadLock.java:29)</span><br><span class="line">        - waiting to lock &lt;0x000000079570f908&gt; (a java.lang.String)</span><br><span class="line">        - locked &lt;0x000000079570f8d8&gt; (a java.lang.String)</span><br><span class="line">        at com.hardydou.jmm.DeadLock.run(DeadLock.java:37)</span><br><span class="line"></span><br><span class="line">   Locked ownable synchronizers:</span><br><span class="line">        - None</span><br><span class="line"></span><br><span class="line">&quot;Service Thread&quot; #9 daemon prio=9 os_prio=31 tid=0x00007fed8a0e1800 nid=0x3a03 runnable [0x0000000000000000]</span><br><span class="line">   java.lang.Thread.State: RUNNABLE</span><br><span class="line"></span><br><span class="line">   Locked ownable synchronizers:</span><br><span class="line">        - None</span><br><span class="line"></span><br><span class="line">&quot;C1 CompilerThread2&quot; #8 daemon prio=9 os_prio=31 tid=0x00007fed8a0a7000 nid=0x4603 waiting on condition [0x0000000000000000]</span><br><span class="line">   java.lang.Thread.State: RUNNABLE</span><br><span class="line"></span><br><span class="line">   Locked ownable synchronizers:</span><br><span class="line">        - None</span><br><span class="line"></span><br><span class="line">&quot;C2 CompilerThread1&quot; #7 daemon prio=9 os_prio=31 tid=0x00007fed8a0a6000 nid=0x3803 waiting on condition [0x0000000000000000]</span><br><span class="line">   java.lang.Thread.State: RUNNABLE</span><br><span class="line"></span><br><span class="line">   Locked ownable synchronizers:</span><br><span class="line">        - None</span><br><span class="line"></span><br><span class="line">&quot;C2 CompilerThread0&quot; #6 daemon prio=9 os_prio=31 tid=0x00007fed8985e800 nid=0x3603 waiting on condition [0x0000000000000000]</span><br><span class="line">   java.lang.Thread.State: RUNNABLE</span><br><span class="line"></span><br><span class="line">   Locked ownable synchronizers:</span><br><span class="line">        - None</span><br><span class="line"></span><br><span class="line">&quot;Monitor Ctrl-Break&quot; #5 daemon prio=5 os_prio=31 tid=0x00007fed8981c800 nid=0x4903 runnable [0x000070000a5c9000]</span><br><span class="line">   java.lang.Thread.State: RUNNABLE</span><br><span class="line">        at java.net.SocketInputStream.socketRead0(Native Method)</span><br><span class="line">        at java.net.SocketInputStream.socketRead(SocketInputStream.java:116)</span><br><span class="line">        at java.net.SocketInputStream.read(SocketInputStream.java:171)</span><br><span class="line">        at java.net.SocketInputStream.read(SocketInputStream.java:141)</span><br><span class="line">        at sun.nio.cs.StreamDecoder.readBytes(StreamDecoder.java:284)</span><br><span class="line">        at sun.nio.cs.StreamDecoder.implRead(StreamDecoder.java:326)</span><br><span class="line">        at sun.nio.cs.StreamDecoder.read(StreamDecoder.java:178)</span><br><span class="line">        - locked &lt;0x00000007957af110&gt; (a java.io.InputStreamReader)</span><br><span class="line">        at java.io.InputStreamReader.read(InputStreamReader.java:184)</span><br><span class="line">        at java.io.BufferedReader.fill(BufferedReader.java:161)</span><br><span class="line">        at java.io.BufferedReader.readLine(BufferedReader.java:324)</span><br><span class="line">        - locked &lt;0x00000007957af110&gt; (a java.io.InputStreamReader)</span><br><span class="line">        at java.io.BufferedReader.readLine(BufferedReader.java:389)</span><br><span class="line">        at com.intellij.rt.execution.application.AppMainV2$1.run(AppMainV2.java:64)</span><br><span class="line"></span><br><span class="line">   Locked ownable synchronizers:</span><br><span class="line">        - None</span><br><span class="line"></span><br><span class="line">&quot;Signal Dispatcher&quot; #4 daemon prio=9 os_prio=31 tid=0x00007fed8a053800 nid=0x4a0b runnable [0x0000000000000000]</span><br><span class="line">   java.lang.Thread.State: RUNNABLE</span><br><span class="line"></span><br><span class="line">   Locked ownable synchronizers:</span><br><span class="line">        - None</span><br><span class="line"></span><br><span class="line">&quot;Finalizer&quot; #3 daemon prio=8 os_prio=31 tid=0x00007fed89807800 nid=0x5003 in Object.wait() [0x000070000a3c3000]</span><br><span class="line">   java.lang.Thread.State: WAITING (on object monitor)</span><br><span class="line">        at java.lang.Object.wait(Native Method)</span><br><span class="line">        - waiting on &lt;0x0000000795588ec0&gt; (a java.lang.ref.ReferenceQueue$Lock)</span><br><span class="line">        at java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:143)</span><br><span class="line">        - locked &lt;0x0000000795588ec0&gt; (a java.lang.ref.ReferenceQueue$Lock)</span><br><span class="line">        at java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:164)</span><br><span class="line">        at java.lang.ref.Finalizer$FinalizerThread.run(Finalizer.java:209)</span><br><span class="line"></span><br><span class="line">   Locked ownable synchronizers:</span><br><span class="line">        - None</span><br><span class="line"></span><br><span class="line">&quot;Reference Handler&quot; #2 daemon prio=10 os_prio=31 tid=0x00007fed8900c800 nid=0x2d03 in Object.wait() [0x000070000a2c0000]</span><br><span class="line">   java.lang.Thread.State: WAITING (on object monitor)</span><br><span class="line">        at java.lang.Object.wait(Native Method)</span><br><span class="line">        - waiting on &lt;0x0000000795586b68&gt; (a java.lang.ref.Reference$Lock)</span><br><span class="line">        at java.lang.Object.wait(Object.java:502)</span><br><span class="line">        at java.lang.ref.Reference.tryHandlePending(Reference.java:191)</span><br><span class="line">        - locked &lt;0x0000000795586b68&gt; (a java.lang.ref.Reference$Lock)</span><br><span class="line">        at java.lang.ref.Reference$ReferenceHandler.run(Reference.java:153)</span><br><span class="line"></span><br><span class="line">   Locked ownable synchronizers:</span><br><span class="line">        - None</span><br><span class="line"></span><br><span class="line">&quot;VM Thread&quot; os_prio=31 tid=0x00007fed89807000 nid=0x2c03 runnable </span><br><span class="line"></span><br><span class="line">&quot;GC task thread#0 (ParallelGC)&quot; os_prio=31 tid=0x00007fed8a80d800 nid=0x2007 runnable </span><br><span class="line"></span><br><span class="line">&quot;GC task thread#1 (ParallelGC)&quot; os_prio=31 tid=0x00007fed8a80e000 nid=0x2303 runnable </span><br><span class="line"></span><br><span class="line">&quot;GC task thread#2 (ParallelGC)&quot; os_prio=31 tid=0x00007fed8a80e800 nid=0x2a03 runnable </span><br><span class="line"></span><br><span class="line">&quot;GC task thread#3 (ParallelGC)&quot; os_prio=31 tid=0x00007fed8a80f800 nid=0x5303 runnable </span><br><span class="line"></span><br><span class="line">&quot;VM Periodic Task Thread&quot; os_prio=31 tid=0x00007fed8a026800 nid=0x4403 waiting on condition </span><br><span class="line"></span><br><span class="line">JNI global references: 33</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">Found one Java-level deadlock:</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br></pre></td><td class="code"><pre><span class="line">2019-05-27 13:46:49</span><br><span class="line">Full thread dump Java HotSpot(TM) 64-Bit Server VM (25.161-b12 mixed mode):</span><br><span class="line"></span><br><span class="line">&quot;Attach Listener&quot; #13 daemon prio&#x3D;9 os_prio&#x3D;31 tid&#x3D;0x00007fed89037800 nid&#x3D;0x3f03 waiting on condition [0x0000000000000000]</span><br><span class="line">   java.lang.Thread.State: RUNNABLE</span><br><span class="line"></span><br><span class="line">   Locked ownable synchronizers:</span><br><span class="line">        - None</span><br><span class="line"></span><br><span class="line">&quot;DestroyJavaVM&quot; #12 prio&#x3D;5 os_prio&#x3D;31 tid&#x3D;0x00007fed8985f000 nid&#x3D;0x2703 waiting on condition [0x0000000000000000]</span><br><span class="line">   java.lang.Thread.State: RUNNABLE</span><br><span class="line"></span><br><span class="line">   Locked ownable synchronizers:</span><br><span class="line">        - None</span><br><span class="line"></span><br><span class="line">&quot;T2&quot; #11 prio&#x3D;5 os_prio&#x3D;31 tid&#x3D;0x00007fed8a0ed800 nid&#x3D;0x3d03 waiting for monitor entry [0x000070000acde000]</span><br><span class="line">   java.lang.Thread.State: BLOCKED (on object monitor)</span><br><span class="line">        at com.hardydou.jmm.DeadLock.doSomeThing(DeadLock.java:29)</span><br><span class="line">        - waiting to lock &lt;0x000000079570f8d8&gt; (a java.lang.String)</span><br><span class="line">        - locked &lt;0x000000079570f908&gt; (a java.lang.String)</span><br><span class="line">        at com.hardydou.jmm.DeadLock.run(DeadLock.java:37)</span><br><span class="line"></span><br><span class="line">   Locked ownable synchronizers:</span><br><span class="line">        - None</span><br><span class="line"></span><br><span class="line">&quot;T1&quot; #10 prio&#x3D;5 os_prio&#x3D;31 tid&#x3D;0x00007fed8a0ed000 nid&#x3D;0x4303 waiting for monitor entry [0x000070000abdb000]</span><br><span class="line">   java.lang.Thread.State: BLOCKED (on object monitor)</span><br><span class="line">        at com.hardydou.jmm.DeadLock.doSomeThing(DeadLock.java:29)</span><br><span class="line">        - waiting to lock &lt;0x000000079570f908&gt; (a java.lang.String)</span><br><span class="line">        - locked &lt;0x000000079570f8d8&gt; (a java.lang.String)</span><br><span class="line">        at com.hardydou.jmm.DeadLock.run(DeadLock.java:37)</span><br><span class="line"></span><br><span class="line">   Locked ownable synchronizers:</span><br><span class="line">        - None</span><br><span class="line"></span><br><span class="line">&quot;Service Thread&quot; #9 daemon prio&#x3D;9 os_prio&#x3D;31 tid&#x3D;0x00007fed8a0e1800 nid&#x3D;0x3a03 runnable [0x0000000000000000]</span><br><span class="line">   java.lang.Thread.State: RUNNABLE</span><br><span class="line"></span><br><span class="line">   Locked ownable synchronizers:</span><br><span class="line">        - None</span><br><span class="line"></span><br><span class="line">&quot;C1 CompilerThread2&quot; #8 daemon prio&#x3D;9 os_prio&#x3D;31 tid&#x3D;0x00007fed8a0a7000 nid&#x3D;0x4603 waiting on condition [0x0000000000000000]</span><br><span class="line">   java.lang.Thread.State: RUNNABLE</span><br><span class="line"></span><br><span class="line">   Locked ownable synchronizers:</span><br><span class="line">        - None</span><br><span class="line"></span><br><span class="line">&quot;C2 CompilerThread1&quot; #7 daemon prio&#x3D;9 os_prio&#x3D;31 tid&#x3D;0x00007fed8a0a6000 nid&#x3D;0x3803 waiting on condition [0x0000000000000000]</span><br><span class="line">   java.lang.Thread.State: RUNNABLE</span><br><span class="line"></span><br><span class="line">   Locked ownable synchronizers:</span><br><span class="line">        - None</span><br><span class="line"></span><br><span class="line">&quot;C2 CompilerThread0&quot; #6 daemon prio&#x3D;9 os_prio&#x3D;31 tid&#x3D;0x00007fed8985e800 nid&#x3D;0x3603 waiting on condition [0x0000000000000000]</span><br><span class="line">   java.lang.Thread.State: RUNNABLE</span><br><span class="line"></span><br><span class="line">   Locked ownable synchronizers:</span><br><span class="line">        - None</span><br><span class="line"></span><br><span class="line">&quot;Monitor Ctrl-Break&quot; #5 daemon prio&#x3D;5 os_prio&#x3D;31 tid&#x3D;0x00007fed8981c800 nid&#x3D;0x4903 runnable [0x000070000a5c9000]</span><br><span class="line">   java.lang.Thread.State: RUNNABLE</span><br><span class="line">        at java.net.SocketInputStream.socketRead0(Native Method)</span><br><span class="line">        at java.net.SocketInputStream.socketRead(SocketInputStream.java:116)</span><br><span class="line">        at java.net.SocketInputStream.read(SocketInputStream.java:171)</span><br><span class="line">        at java.net.SocketInputStream.read(SocketInputStream.java:141)</span><br><span class="line">        at sun.nio.cs.StreamDecoder.readBytes(StreamDecoder.java:284)</span><br><span class="line">        at sun.nio.cs.StreamDecoder.implRead(StreamDecoder.java:326)</span><br><span class="line">        at sun.nio.cs.StreamDecoder.read(StreamDecoder.java:178)</span><br><span class="line">        - locked &lt;0x00000007957af110&gt; (a java.io.InputStreamReader)</span><br><span class="line">        at java.io.InputStreamReader.read(InputStreamReader.java:184)</span><br><span class="line">        at java.io.BufferedReader.fill(BufferedReader.java:161)</span><br><span class="line">        at java.io.BufferedReader.readLine(BufferedReader.java:324)</span><br><span class="line">        - locked &lt;0x00000007957af110&gt; (a java.io.InputStreamReader)</span><br><span class="line">        at java.io.BufferedReader.readLine(BufferedReader.java:389)</span><br><span class="line">        at com.intellij.rt.execution.application.AppMainV2$1.run(AppMainV2.java:64)</span><br><span class="line"></span><br><span class="line">   Locked ownable synchronizers:</span><br><span class="line">        - None</span><br><span class="line"></span><br><span class="line">&quot;Signal Dispatcher&quot; #4 daemon prio&#x3D;9 os_prio&#x3D;31 tid&#x3D;0x00007fed8a053800 nid&#x3D;0x4a0b runnable [0x0000000000000000]</span><br><span class="line">   java.lang.Thread.State: RUNNABLE</span><br><span class="line"></span><br><span class="line">   Locked ownable synchronizers:</span><br><span class="line">        - None</span><br><span class="line"></span><br><span class="line">&quot;Finalizer&quot; #3 daemon prio&#x3D;8 os_prio&#x3D;31 tid&#x3D;0x00007fed89807800 nid&#x3D;0x5003 in Object.wait() [0x000070000a3c3000]</span><br><span class="line">   java.lang.Thread.State: WAITING (on object monitor)</span><br><span class="line">        at java.lang.Object.wait(Native Method)</span><br><span class="line">        - waiting on &lt;0x0000000795588ec0&gt; (a java.lang.ref.ReferenceQueue$Lock)</span><br><span class="line">        at java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:143)</span><br><span class="line">        - locked &lt;0x0000000795588ec0&gt; (a java.lang.ref.ReferenceQueue$Lock)</span><br><span class="line">        at java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:164)</span><br><span class="line">        at java.lang.ref.Finalizer$FinalizerThread.run(Finalizer.java:209)</span><br><span class="line"></span><br><span class="line">   Locked ownable synchronizers:</span><br><span class="line">        - None</span><br><span class="line"></span><br><span class="line">&quot;Reference Handler&quot; #2 daemon prio&#x3D;10 os_prio&#x3D;31 tid&#x3D;0x00007fed8900c800 nid&#x3D;0x2d03 in Object.wait() [0x000070000a2c0000]</span><br><span class="line">   java.lang.Thread.State: WAITING (on object monitor)</span><br><span class="line">        at java.lang.Object.wait(Native Method)</span><br><span class="line">        - waiting on &lt;0x0000000795586b68&gt; (a java.lang.ref.Reference$Lock)</span><br><span class="line">        at java.lang.Object.wait(Object.java:502)</span><br><span class="line">        at java.lang.ref.Reference.tryHandlePending(Reference.java:191)</span><br><span class="line">        - locked &lt;0x0000000795586b68&gt; (a java.lang.ref.Reference$Lock)</span><br><span class="line">        at java.lang.ref.Reference$ReferenceHandler.run(Reference.java:153)</span><br><span class="line"></span><br><span class="line">   Locked ownable synchronizers:</span><br><span class="line">        - None</span><br><span class="line"></span><br><span class="line">&quot;VM Thread&quot; os_prio&#x3D;31 tid&#x3D;0x00007fed89807000 nid&#x3D;0x2c03 runnable </span><br><span class="line"></span><br><span class="line">&quot;GC task thread#0 (ParallelGC)&quot; os_prio&#x3D;31 tid&#x3D;0x00007fed8a80d800 nid&#x3D;0x2007 runnable </span><br><span class="line"></span><br><span class="line">&quot;GC task thread#1 (ParallelGC)&quot; os_prio&#x3D;31 tid&#x3D;0x00007fed8a80e000 nid&#x3D;0x2303 runnable </span><br><span class="line"></span><br><span class="line">&quot;GC task thread#2 (ParallelGC)&quot; os_prio&#x3D;31 tid&#x3D;0x00007fed8a80e800 nid&#x3D;0x2a03 runnable </span><br><span class="line"></span><br><span class="line">&quot;GC task thread#3 (ParallelGC)&quot; os_prio&#x3D;31 tid&#x3D;0x00007fed8a80f800 nid&#x3D;0x5303 runnable </span><br><span class="line"></span><br><span class="line">&quot;VM Periodic Task Thread&quot; os_prio&#x3D;31 tid&#x3D;0x00007fed8a026800 nid&#x3D;0x4403 waiting on condition </span><br><span class="line"></span><br><span class="line">JNI global references: 33</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">Found one Java-level deadlock:</span><br></pre></td></tr></table></figure>
+
 <h4 id="JConsole"><a href="#JConsole" class="headerlink" title="JConsole"></a>JConsole</h4><p>可视化工具，包含：概述、内存、线程、类、vm摘要、MBean 等6个标签。</p>
 <p><img src="/images/pasted-110.png" alt="upload successful"></p>
 <p><img src="/images/pasted-111.png" alt="upload successful"></p>
 <p><img src="/images/pasted-112.png" alt="upload successful"></p>
 <p><img src="/images/pasted-113.png" alt="upload successful"></p>
 
-      
     </div>
 
     
-
     
     
-    
-
-    
-
-    
-       
-    
-    
-
-    
-      <div>
         
 
-
-
-  
-
-
-
+<div>
 <ul class="post-copyright">
   <li class="post-copyright-author">
-    <strong>本文作者： </strong>Hardy Dou</li>
+    <strong>本文作者： </strong>Hardy Dou
+  </li>
   <li class="post-copyright-link">
     <strong>本文链接：</strong>
-    
     <a href="http://www.hardydou.com/2019/05/24/JavaTools/" title="Java虚拟机性能监控工具">http://www.hardydou.com/2019/05/24/JavaTools/</a>
   </li>
   <li class="post-copyright-license">
-    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fa fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！</li>
+    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fa fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
+  </li>
 </ul>
-
-      </div>
-    
-
-    <footer class="post-footer">
-      
-        <div class="post-tags">
-          
-            <a href="/tags/java/" rel="tag"># java</a>
-          
-            <a href="/tags/jvm/" rel="tag"># jvm</a>
-          
-        </div>
-      
-
-      
-      
-      
-
-      
-        <div class="post-nav">
-          <div class="post-nav-next post-nav-item">
-            
-              <a href="/2019/05/23/JavaGCLog/" rel="next" title="JavaGC日志格式">
-                <i class="fa fa-chevron-left"></i> JavaGC日志格式
-              </a>
-            
-          </div>
-
-          <span class="post-nav-divider"></span>
-
-          <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2019/05/28/JavaGrammarSugar/" rel="prev" title="Java语法糖">
-                Java语法糖 <i class="fa fa-chevron-right"></i>
-              </a>
-            
-          </div>
-        </div>
-      
-
-      
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-  </div>
-
-
-          </div>
-          
-
-  
-    <div class="comments" id="comments">
-    </div>
-  
-
-
-
-        </div>
-        
-          
-  
-  <div class="sidebar-toggle">
-    <div class="sidebar-toggle-line-wrap">
-      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
-      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
-      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
-    </div>
-  </div>
-
-  <aside id="sidebar" class="sidebar">
-    
-    <div class="sidebar-inner">
-
-      
-
-      
-        <ul class="sidebar-nav motion-element">
-          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
-            文章目录
-          </li>
-          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
-            站点概览
-          </li>
-        </ul>
-      
-
-      <section class="site-overview-wrap sidebar-panel">
-        <div class="site-overview">
-          <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
-            
-              <img class="site-author-image" itemprop="image" src="/images/avatar.jpg" alt="小鱼先生">
-            
-              <p class="site-author-name" itemprop="name">小鱼先生</p>
-              <p class="site-description motion-element" itemprop="description">相信美好的事情即将发生</p>
-          </div>
-
-          
-            <nav class="site-state motion-element">
-              
-                <div class="site-state-item site-state-posts">
-                
-                  <a href="/archives">
-                
-                    <span class="site-state-item-count">44</span>
-                    <span class="site-state-item-name">日志</span>
-                  </a>
-                </div>
-              
-
-              
-                
-                
-                <div class="site-state-item site-state-categories">
-                  <a href="/categories/index.html">
-                    
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                    <span class="site-state-item-count">7</span>
-                    <span class="site-state-item-name">分类</span>
-                  </a>
-                </div>
-              
-
-              
-                
-                
-                <div class="site-state-item site-state-tags">
-                  <a href="/tags/index.html">
-                    
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                    <span class="site-state-item-count">25</span>
-                    <span class="site-state-item-name">标签</span>
-                  </a>
-                </div>
-              
-            </nav>
-          
-
-          
-            <div class="feed-link motion-element">
-              <a href="/atom.xml" rel="alternate">
-                <i class="fa fa-rss"></i>
-                RSS
-              </a>
-            </div>
-          
-
-          
-            <div class="links-of-author motion-element">
-              
-                <span class="links-of-author-item">
-                  
-                  
-                    
-                  
-                  
-                    
-                  
-                  <a href="https://github.com/HardyDou" title="GitHub &rarr; https://github.com/HardyDou" rel="noopener" target="_blank"><i class="fa fa-fw fa-github"></i>GitHub</a>
-                </span>
-              
-                <span class="links-of-author-item">
-                  
-                  
-                    
-                  
-                  
-                    
-                  
-                  <a href="mailto:doouxiaoyu@163.com" title="E-Mail &rarr; mailto:doouxiaoyu@163.com" rel="noopener" target="_blank"><i class="fa fa-fw fa-envelope"></i>E-Mail</a>
-                </span>
-              
-            </div>
-          
-
-          
-
-          
-          
-
-          
-            
-          
-          
-
-        </div>
-      </section>
-
-      
-      <!--noindex-->
-        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
-          <div class="post-toc">
-
-            
-              
-            
-
-            
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#依赖数据"><span class="nav-number">1.</span> <span class="nav-text">依赖数据</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#获取数据"><span class="nav-number">2.</span> <span class="nav-text">获取数据</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#工具概述"><span class="nav-number">2.1.</span> <span class="nav-text">工具概述</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#工具介绍"><span class="nav-number">2.2.</span> <span class="nav-text">工具介绍</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#jps"><span class="nav-number">2.2.1.</span> <span class="nav-text">jps</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#jstat"><span class="nav-number">2.2.2.</span> <span class="nav-text">jstat</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#jinfo"><span class="nav-number">2.2.3.</span> <span class="nav-text">jinfo</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#jmap"><span class="nav-number">2.2.4.</span> <span class="nav-text">jmap</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#jhat"><span class="nav-number">2.2.5.</span> <span class="nav-text">jhat</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#jstack"><span class="nav-number">2.2.6.</span> <span class="nav-text">jstack</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#JConsole"><span class="nav-number">2.2.7.</span> <span class="nav-text">JConsole</span></a></li></ol></li></ol></li></ol></div>
-            
-
-          </div>
-        </section>
-      <!--/noindex-->
-      
-
-      
-        <div class="back-to-top">
-          <i class="fa fa-arrow-up"></i>
-          
-            <span id="scrollpercent"><span>0</span>%</span>
-          
-        </div>
-      
-
-    </div>
-  </aside>
-
-
-        
-      </div>
-    </main>
-
-    <footer id="footer" class="footer">
-      <div class="footer-inner">
-        <div class="copyright">  <a href="http://www.miitbeian.gov.cn" rel="noopener" target="_blank">京ICP备18050184号 </a>&copy; <span itemprop="copyrightYear">2019</span>
-  <span class="with-love" id="animate">
-    <i class="fa fa-heart"></i>
-  </span>
-  <span class="author" itemprop="copyrightHolder">小鱼先生</span>
-
-  
-
-  
 </div>
 
 
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/java/" rel="tag"># java</a>
+              <a href="/tags/jvm/" rel="tag"># jvm</a>
+          </div>
 
-
-
-
-
+        
 
 
         
-
-
-
-
-
-
-
-
-        
-      </div>
-    </footer>
-
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2019/05/23/JavaGCLog/" rel="prev" title="JavaGC日志格式">
+      <i class="fa fa-chevron-left"></i> JavaGC日志格式
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/2019/05/28/JavaGrammarSugar/" rel="next" title="Java语法糖">
+      Java语法糖 <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
     
-
-    
-	
-    
-
-    
-  </div>
-
+  </article>
+  
+  
   
 
-<script type="text/javascript">
-  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
-    window.Promise = null;
+  </div>
+
+
+          </div>
+          
+    <div class="comments" id="valine-comments"></div>
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let activeClass = CONFIG.comments.activeClass;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
   }
 </script>
 
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#依赖数据"><span class="nav-number">1.</span> <span class="nav-text">依赖数据</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#获取数据"><span class="nav-number">2.</span> <span class="nav-text">获取数据</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#工具概述"><span class="nav-number">2.1.</span> <span class="nav-text">工具概述</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#工具介绍"><span class="nav-number">2.2.</span> <span class="nav-text">工具介绍</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#jps"><span class="nav-number">2.2.1.</span> <span class="nav-text">jps</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#jstat"><span class="nav-number">2.2.2.</span> <span class="nav-text">jstat</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#jinfo"><span class="nav-number">2.2.3.</span> <span class="nav-text">jinfo</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#jmap"><span class="nav-number">2.2.4.</span> <span class="nav-text">jmap</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#jhat"><span class="nav-number">2.2.5.</span> <span class="nav-text">jhat</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#jstack"><span class="nav-number">2.2.6.</span> <span class="nav-text">jstack</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#JConsole"><span class="nav-number">2.2.7.</span> <span class="nav-text">JConsole</span></a></li></ol></li></ol></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="小鱼先生"
+      src="/images/avatar.jpg">
+  <p class="site-author-name" itemprop="name">小鱼先生</p>
+  <div class="site-description" itemprop="description">相信美好的事情即将发生</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives">
+        
+          <span class="site-state-item-count">44</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories">
+          
+        <span class="site-state-item-count">7</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags">
+          
+        <span class="site-state-item-count">25</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+        <a href="https://github.com/HardyDou" title="GitHub → https://github.com/HardyDou" rel="noopener" target="_blank"><i class="fa fa-fw fa-github"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:doouxiaoyu@163.com" title="E-Mail → mailto:doouxiaoyu@163.com" rel="noopener" target="_blank"><i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+      </span>
+  </div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+  <div class="beian"><a href="http://www.beian.miit.gov.cn" rel="noopener" target="_blank">京ICP备18050184号 </a>
+  </div>
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2020</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">小鱼先生</span>
+</div>
+
+        
 
 
 
@@ -975,9 +494,26 @@ YGC次数   YGC总消耗时间  FGc次数 Fgc总时间 所有GC总时间
 
 
 
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js"></script>
+  <script src="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
 
 
+<script src="/js/schemes/pisces.js"></script>
 
+
+<script src="/js/next-boot.js"></script>
 
 
 
@@ -999,139 +535,37 @@ YGC次数   YGC总消耗时间  FGc次数 Fgc总时间 所有GC总时间
 
 
   
-  
-    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
-  
-
-  
-  
-    <script type="text/javascript" src="/lib/kityminder-core/kity.min.js"></script>
-  
-
-  
-  
-    <script type="text/javascript" src="/lib/kityminder-core/kityminder.core.js"></script>
-  
-
-  
-  
-    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
-  
-
-  
-  
-    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
-  
-
-  
-  
-    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
-  
-
 
   
 
 
-  <script type="text/javascript" src="/js/src/utils.js?v=6.5.0"></script>
-
-  <script type="text/javascript" src="/js/src/motion.js?v=6.5.0"></script>
-
-
-
-  
-  
-
-
-  <script type="text/javascript" src="/js/src/affix.js?v=6.5.0"></script>
-
-  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=6.5.0"></script>
-
-
-
-  
-  <script type="text/javascript" src="/js/src/scrollspy.js?v=6.5.0"></script>
-<script type="text/javascript" src="/js/src/post-details.js?v=6.5.0"></script>
-<script type="text/javascript" src="/js/src/kityminder.js?v=6.5.0"></script>
-
-
-
-  
-
-
-  <script type="text/javascript" src="/js/src/bootstrap.js?v=6.5.0"></script>
-
-
-
-  
-
-
-
-  
-
-
-
-
-
-
-
-
-  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
-  
-  
-  <script src="//unpkg.com/valine/dist/Valine.min.js"></script>
-  
-  <script type="text/javascript">
-    var GUEST = ['nick','mail','link'];
+<script>
+NexT.utils.loadComments(document.querySelector('#valine-comments'), () => {
+  NexT.utils.getScript('//unpkg.com/valine/dist/Valine.min.js', () => {
+    var GUEST = ['nick', 'mail', 'link'];
     var guest = 'nick,mail,link';
-    guest = guest.split(',').filter(function (item) {
-      return GUEST.indexOf(item)>-1;
+    guest = guest.split(',').filter(item => {
+      return GUEST.includes(item);
     });
     new Valine({
-        el: '#comments' ,
-        verify: true,
-        notify: true,
-        appId: 'fF3IzJ6TkcmNPCPo4nYayNln-gzGzoHsz',
-        appKey: 'CaEuIN0359VyWiygnoDPQxx1',
-        placeholder: '有话就直说!!',
-        avatar:'mp',
-        meta:guest,
-        pageSize:'10' || 10,
-        visitor: false
+      el         : '#valine-comments',
+      verify     : true,
+      notify     : true,
+      appId      : 'fF3IzJ6TkcmNPCPo4nYayNln-gzGzoHsz',
+      appKey     : 'CaEuIN0359VyWiygnoDPQxx1',
+      placeholder: "请讲!!",
+      avatar     : 'mp',
+      meta       : guest,
+      pageSize   : '10' || 10,
+      visitor    : false,
+      lang       : '' || 'zh-cn',
+      path       : location.pathname,
+      recordIP   : false,
+      serverURLs : ''
     });
-  </script>
-
-
-
-  
-
-
-
-
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
+  }, window.Valine);
+});
+</script>
 
 </body>
 </html>

@@ -1,156 +1,55 @@
 <!DOCTYPE html>
-
-
-
-
-
-
-
-
-
-
-
-
-  
-
-
-<html class="theme-next pisces use-motion" lang="zh-CN">
-<head><meta name="generator" content="Hexo 3.8.0">
+<html lang="zh-Hans">
+<head>
   <meta charset="UTF-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
 <meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 4.2.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
 
 
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.css">
 
-
-
-
-
-
-
-
-
-
-<meta http-equiv="Cache-Control" content="no-transform">
-<meta http-equiv="Cache-Control" content="no-siteapp">
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<link href="/lib/kityminder-core/kityminder.core.css?v=1.4.49" rel="stylesheet" type="text/css">
-<style>
-.mindmap{width:90%}
-</style>
-
-  
-  
-  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
-
-
-
-
-
-
-
-<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
-
-<link href="/css/main.css?v=6.5.0" rel="stylesheet" type="text/css">
-<style>
-.pullquote{width:auto;}
-</style>
-
-  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=6.5.0">
-
-
-  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=6.5.0">
-
-
-  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=6.5.0">
-
-
-  <link rel="mask-icon" href="/images/logo.svg?v=6.5.0" color="#222">
-
-
-
-
-
-
-
-
-
-<script type="text/javascript" id="hexo.configurations">
-  var NexT = window.NexT || {};
-  var CONFIG = {
-    root: '/',
-    scheme: 'Pisces',
-    version: '6.5.0',
-    sidebar: {"position":"left","display":"post","offset":12,"b2t":true,"scrollpercent":true,"onmobile":false,"width":240},
-    fancybox: true,
-    fastclick: false,
-    lazyload: false,
-    tabs: true,
-    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
-    algolia: {
-      applicationID: '',
-      apiKey: '',
-      indexName: '',
-      hits: {"per_page":10},
-      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
-    }
-  };
-</script>
-
-
-  
-
-
-
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"www.hardydou.com","root":"/","scheme":"Pisces","version":"7.7.1","exturl":false,"sidebar":{"position":"left","width":240,"b2t":true,"scrollpercent":true,"display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":true,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+  </script>
 
   <meta name="description" content="Java内存结构图 程序计数器介绍程序计数器（Program Counter Register）是一块很小的内存空间，它可以看做是当前线程所执行的字节码的行号指示器（仅是在概念模型，各种虚拟机有可能会通过一些更高效的方式去实现），字节码解释器工作时就是通过改变这个计数器的值来选取下一条需要执行的字节码指令，分支、循环、跳转、异常处理、线程恢复等基础功能都需要依赖这个计数器。 特征 线程隔离，线程间">
-<meta name="keywords" content="java,jvm">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Java内存结构">
-<meta property="og:url" content="http://www.hardydou.com/2019/05/09/Java内存结构/index.html">
+<meta property="og:url" content="http://www.hardydou.com/2019/05/09/Java%E5%86%85%E5%AD%98%E7%BB%93%E6%9E%84/index.html">
 <meta property="og:site_name" content="小鱼先生">
 <meta property="og:description" content="Java内存结构图 程序计数器介绍程序计数器（Program Counter Register）是一块很小的内存空间，它可以看做是当前线程所执行的字节码的行号指示器（仅是在概念模型，各种虚拟机有可能会通过一些更高效的方式去实现），字节码解释器工作时就是通过改变这个计数器的值来选取下一条需要执行的字节码指令，分支、循环、跳转、异常处理、线程恢复等基础功能都需要依赖这个计数器。 特征 线程隔离，线程间">
-<meta property="og:locale" content="zh-CN">
+<meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="http://www.hardydou.com/images/pasted-80.png">
 <meta property="og:image" content="http://www.hardydou.com/images/pasted-83.png">
 <meta property="og:image" content="http://www.hardydou.com/images/pasted-84.png">
 <meta property="og:image" content="http://www.hardydou.com/images/pasted-85.png">
 <meta property="og:image" content="http://www.hardydou.com/images/pasted-87.png">
-<meta property="og:updated_time" content="2019-05-11T11:43:45.417Z">
+<meta property="article:published_time" content="2019-05-09T06:58:00.000Z">
+<meta property="article:modified_time" content="2019-05-11T11:43:45.417Z">
+<meta property="article:author" content="小鱼先生">
+<meta property="article:tag" content="java">
+<meta property="article:tag" content="jvm">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Java内存结构">
-<meta name="twitter:description" content="Java内存结构图 程序计数器介绍程序计数器（Program Counter Register）是一块很小的内存空间，它可以看做是当前线程所执行的字节码的行号指示器（仅是在概念模型，各种虚拟机有可能会通过一些更高效的方式去实现），字节码解释器工作时就是通过改变这个计数器的值来选取下一条需要执行的字节码指令，分支、循环、跳转、异常处理、线程恢复等基础功能都需要依赖这个计数器。 特征 线程隔离，线程间">
 <meta name="twitter:image" content="http://www.hardydou.com/images/pasted-80.png">
 
+<link rel="canonical" href="http://www.hardydou.com/2019/05/09/Java%E5%86%85%E5%AD%98%E7%BB%93%E6%9E%84/">
 
 
-  <link rel="alternate" href="/atom.xml" title="小鱼先生" type="application/atom+xml">
-
-
-
-
-  <link rel="canonical" href="http://www.hardydou.com/2019/05/09/Java内存结构/">
-
-
-
-<script type="text/javascript" id="page.configurations">
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
   CONFIG.page = {
     sidebar: "",
+    isHome: false,
+    isPost: true
   };
 </script>
 
@@ -162,336 +61,182 @@
 
 
 
-
-
-
-
-
   <noscript>
-  <style type="text/css">
-    .use-motion .motion-element,
-    .use-motion .brand,
-    .use-motion .menu-item,
-    .sidebar-inner,
-    .use-motion .post-block,
-    .use-motion .pagination,
-    .use-motion .comments,
-    .use-motion .post-header,
-    .use-motion .post-body,
-    .use-motion .collection-title { opacity: initial; }
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
 
-    .use-motion .logo,
-    .use-motion .site-title,
-    .use-motion .site-subtitle {
-      opacity: initial;
-      top: initial;
-    }
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
 
-    .use-motion {
-      .logo-line-before i { left: initial; }
-      .logo-line-after i { right: initial; }
-    }
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
   </style>
 </noscript>
 
 </head>
 
-<body itemscope="" itemtype="http://schema.org/WebPage" lang="zh-CN">
-
-  
-  
-    
-  
-
-  <div class="container sidebar-position-left page-post-detail">
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
     <div class="headband"></div>
 
-    <header id="header" class="header" itemscope="" itemtype="http://schema.org/WPHeader">
-      <div class="header-inner"><div class="site-brand-wrapper">
-  <div class="site-meta ">
-    
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
 
-    <div class="custom-logo-site-title">
+  <div class="site-meta">
+
+    <div>
       <a href="/" class="brand" rel="start">
         <span class="logo-line-before"><i></i></span>
         <span class="site-title">小鱼先生</span>
         <span class="logo-line-after"><i></i></span>
       </a>
     </div>
-    
-      
         <p class="site-subtitle">梦想还是要有的，万一忘记了咋办？</p>
-      
-    
   </div>
 
-  <div class="site-nav-toggle">
-    <button aria-label="切换导航栏">
-      <span class="btn-bar"></span>
-      <span class="btn-bar"></span>
-      <span class="btn-bar"></span>
-    </button>
-  </div>
+  <div class="site-nav-right"></div>
 </div>
-
 
 
 <nav class="site-nav">
   
-    <ul id="menu" class="menu">
-      
-        
-        
-        
-          
-          <li class="menu-item menu-item-home">
+  <ul id="menu" class="menu">
+        <li class="menu-item menu-item-home">
 
-    
-    
-    
-      
-    
-
-    
-
-    <a href="/" rel="section"><i class="menu-item-icon fa fa-fw fa-home"></i> <br>首页</a>
+    <a href="/" rel="section"><i class="fa fa-fw fa-首页"></i>首页</a>
 
   </li>
-        
-        
-        
-          
-          <li class="menu-item menu-item-archives">
+        <li class="menu-item menu-item-archives">
 
-    
-    
-    
-      
-    
-
-    
-
-    <a href="/archives" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档</a>
+    <a href="/archives" rel="section"><i class="fa fa-fw fa-归档"></i>归档</a>
 
   </li>
-        
-        
-        
-          
-          <li class="menu-item menu-item-tags">
+        <li class="menu-item menu-item-tags">
 
-    
-    
-    
-      
-    
-
-    
-
-    <a href="/tags" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br>标签</a>
+    <a href="/tags" rel="section"><i class="fa fa-fw fa-标签"></i>标签</a>
 
   </li>
-        
-        
-        
-          
-          <li class="menu-item menu-item-categories">
+        <li class="menu-item menu-item-categories">
 
-    
-    
-    
-      
-    
-
-    
-
-    <a href="/categories" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br>分类</a>
+    <a href="/categories" rel="section"><i class="fa fa-fw fa-分类"></i>分类</a>
 
   </li>
-        
-        
-        
-          
-          <li class="menu-item menu-item-about">
+        <li class="menu-item menu-item-about">
 
-    
-    
-    
-      
-    
-
-    
-
-    <a href="/about" rel="section"><i class="menu-item-icon fa fa-fw fa-user"></i> <br>关于</a>
+    <a href="/about" rel="section"><i class="fa fa-fw fa-关于"></i>关于</a>
 
   </li>
+  </ul>
 
-      
-      
-    </ul>
-  
-
-  
-
-  
 </nav>
-
-
-
-  
-
-
-
 </div>
     </header>
 
     
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
 
 
-    <main id="main" class="main">
+    <main class="main">
       <div class="main-inner">
         <div class="content-wrap">
           
+
+          <div class="content">
             
 
-          
-          <div id="content" class="content">
-            
+  <div class="posts-expand">
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block " lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://www.hardydou.com/2019/05/09/Java%E5%86%85%E5%AD%98%E7%BB%93%E6%9E%84/">
 
-  <div id="posts" class="posts-expand">
-    
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://www.hardydou.com/2019/05/09/Java内存结构/">
-
-    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.jpg">
       <meta itemprop="name" content="小鱼先生">
       <meta itemprop="description" content="相信美好的事情即将发生">
-      <meta itemprop="image" content="/images/avatar.jpg">
     </span>
 
-    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
       <meta itemprop="name" content="小鱼先生">
     </span>
-
-    
       <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">Java内存结构
-              
-            
-          </h1>
-        
+        <h1 class="post-title" itemprop="name headline">
+          Java内存结构
+        </h1>
 
         <div class="post-meta">
-          <span class="post-time">
-
-            
-            
-            
-
-            
+            <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="fa fa-calendar-o"></i>
               </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-
-              
-                
-              
+              <span class="post-meta-item-text">发表于</span>
 
               <time title="创建时间：2019-05-09 14:58:00" itemprop="dateCreated datePublished" datetime="2019-05-09T14:58:00+08:00">2019-05-09</time>
-            
-
-            
-              
-
-              
-                
-                <span class="post-meta-divider">|</span>
-                
-
+            </span>
+              <span class="post-meta-item">
                 <span class="post-meta-item-icon">
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
-                
-                  <span class="post-meta-item-text">更新于</span>
-                
+                <span class="post-meta-item-text">更新于</span>
                 <time title="修改时间：2019-05-11 19:43:45" itemprop="dateModified" datetime="2019-05-11T19:43:45+08:00">2019-05-11</time>
-              
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
+              </span>
+            <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="fa fa-folder-o"></i>
               </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/java/" itemprop="url" rel="index"><span itemprop="name">java</span></a></span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/java/" itemprop="url" rel="index">
+                    <span itemprop="name">java</span>
+                  </a>
                 </span>
-                <a href="/2019/05/09/Java内存结构/#comments" itemprop="discussionUrl">
-                  <span class="post-meta-item-text">评论数：</span> <span class="post-comments-count valine-comment-count" data-xid="/2019/05/09/Java内存结构/" itemprop="commentCount"></span>
-                </a>
-              </span>
-            
-          
+            </span>
 
           
-          
-
-          
-
-          
-
-          
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="fa fa-comment-o"></i>
+      </span>
+      <span class="post-meta-item-text">Valine：</span>
+    
+    <a title="valine" href="/2019/05/09/Java%E5%86%85%E5%AD%98%E7%BB%93%E6%9E%84/#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/2019/05/09/Java%E5%86%85%E5%AD%98%E7%BB%93%E6%9E%84/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
 
         </div>
       </header>
-    
 
     
     
     
     <div class="post-body" itemprop="articleBody">
-
-      
-      
 
       
         <h2 id="Java内存结构图"><a href="#Java内存结构图" class="headerlink" title="Java内存结构图"></a>Java内存结构图</h2><p><img src="/images/pasted-80.png" alt="upload successful"></p>
@@ -505,11 +250,12 @@
 <p><img src="/images/pasted-83.png" alt="upload successful"></p>
 <h3 id="局部变量表"><a href="#局部变量表" class="headerlink" title="局部变量表"></a>局部变量表</h3><p>是一片逻辑连续的内存空间，最小单位是Slot，用来存放方法参数和方法内部定义的局部变量。    </p>
 <h4 id="Slot"><a href="#Slot" class="headerlink" title="Slot"></a>Slot</h4><p>虚拟机没有明确指明一个Slot的内存空间大小。但是boolean、byte、char、short、int、float、reference、returnAddress类型的数据都可以用32位空间或更小的内存来存放。这些类型占用一个Slot。Java中的long和double类型是64位，占用两个Slot。（只有double和long是jvms里明确规定的64位数据类型）</p>
-<h4 id="虚拟机如何调用"><a href="#虚拟机如何调用" class="headerlink" title="虚拟机如何调用"></a>虚拟机如何调用</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">table = Solat[];</span><br><span class="line">table[0] = this;</span><br><span class="line">table[1……n-1];//对应参数1，参数2…… 参数n</span><br></pre></td></tr></table></figure>
-<h4 id="Solt复用对GC的影响"><a href="#Solt复用对GC的影响" class="headerlink" title="Solt复用对GC的影响"></a>Solt复用对GC的影响</h4><p>idea 启动gc调试<br><img src="/images/pasted-84.png" alt="upload successful"><br>测试代码：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br></pre></td><td class="code"><pre><span class="line">package com.hardydou.jmm;</span><br><span class="line"></span><br><span class="line">import org.junit.Test;</span><br><span class="line"></span><br><span class="line">public class SoltGcTest &#123;</span><br><span class="line">    /**</span><br><span class="line">     * 内存不会回收</span><br><span class="line">     * [Full GC (System.gc())  66856K-&gt;66732K(98304K), 0.0117163 secs]</span><br><span class="line">     */</span><br><span class="line">    @Test</span><br><span class="line">    public void scenes1() &#123;</span><br><span class="line">        byte[] bs = placeHolder(64);</span><br><span class="line">        System.gc();</span><br><span class="line">    &#125;</span><br><span class="line">    /**</span><br><span class="line">     * bs 作用域结束，内存还不回收</span><br><span class="line">     * [Full GC (System.gc())  66373K-&gt;66371K(98304K), 0.0135849 secs]</span><br><span class="line">     */</span><br><span class="line">    @Test</span><br><span class="line">    public void scenes2() &#123;</span><br><span class="line">        &#123;</span><br><span class="line">            byte[] bs = placeHolder(64);</span><br><span class="line">        &#125;</span><br><span class="line">        System.gc();</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">    /**</span><br><span class="line">     * Solt 重用，内存回收</span><br><span class="line">     * [Full GC (System.gc())  66560K-&gt;835K(98304K), 0.0067793 secs]</span><br><span class="line">     */</span><br><span class="line">    @Test</span><br><span class="line">    public void scenes3() &#123;</span><br><span class="line">        &#123;</span><br><span class="line">            byte[] bs = placeHolder(64);</span><br><span class="line">        &#125;</span><br><span class="line">        int a = 0;</span><br><span class="line">        System.gc();</span><br><span class="line">    &#125;</span><br><span class="line">    /**</span><br><span class="line">     * 及时回收</span><br><span class="line">     * &lt;p&gt;</span><br><span class="line">     * [Full GC (System.gc())  66435K-&gt;835K(98304K), 0.0108251 secs]</span><br><span class="line">     */</span><br><span class="line">    @Test</span><br><span class="line">    public void scenes4() &#123;</span><br><span class="line">        &#123;</span><br><span class="line">            byte[] bs = placeHolder(64);</span><br><span class="line">            bs = null;</span><br><span class="line">        &#125;</span><br><span class="line">        System.gc();</span><br><span class="line">    &#125;</span><br><span class="line">    public static byte[] placeHolder(int n) &#123;</span><br><span class="line">        System.out.println(&quot;SoltGcTest.placeHolder allocation mem : &quot; + n + &quot;m&quot;);</span><br><span class="line">        byte[] placeholder = new byte[n * 1024 * 1024];</span><br><span class="line">        System.out.println(&quot;SoltGcTest.placeHolder allocation Success &quot;);</span><br><span class="line">        return placeholder;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<h4 id="虚拟机如何调用"><a href="#虚拟机如何调用" class="headerlink" title="虚拟机如何调用"></a>虚拟机如何调用</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">table &#x3D; Solat[];</span><br><span class="line">table[0] &#x3D; this;</span><br><span class="line">table[1……n-1];&#x2F;&#x2F;对应参数1，参数2…… 参数n</span><br></pre></td></tr></table></figure>
+<h4 id="Solt复用对GC的影响"><a href="#Solt复用对GC的影响" class="headerlink" title="Solt复用对GC的影响"></a>Solt复用对GC的影响</h4><p>idea 启动gc调试<br><img src="/images/pasted-84.png" alt="upload successful"><br>测试代码：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br></pre></td><td class="code"><pre><span class="line">package com.hardydou.jmm;</span><br><span class="line"></span><br><span class="line">import org.junit.Test;</span><br><span class="line"></span><br><span class="line">public class SoltGcTest &#123;</span><br><span class="line">    &#x2F;**</span><br><span class="line">     * 内存不会回收</span><br><span class="line">     * [Full GC (System.gc())  66856K-&gt;66732K(98304K), 0.0117163 secs]</span><br><span class="line">     *&#x2F;</span><br><span class="line">    @Test</span><br><span class="line">    public void scenes1() &#123;</span><br><span class="line">        byte[] bs &#x3D; placeHolder(64);</span><br><span class="line">        System.gc();</span><br><span class="line">    &#125;</span><br><span class="line">    &#x2F;**</span><br><span class="line">     * bs 作用域结束，内存还不回收</span><br><span class="line">     * [Full GC (System.gc())  66373K-&gt;66371K(98304K), 0.0135849 secs]</span><br><span class="line">     *&#x2F;</span><br><span class="line">    @Test</span><br><span class="line">    public void scenes2() &#123;</span><br><span class="line">        &#123;</span><br><span class="line">            byte[] bs &#x3D; placeHolder(64);</span><br><span class="line">        &#125;</span><br><span class="line">        System.gc();</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">    &#x2F;**</span><br><span class="line">     * Solt 重用，内存回收</span><br><span class="line">     * [Full GC (System.gc())  66560K-&gt;835K(98304K), 0.0067793 secs]</span><br><span class="line">     *&#x2F;</span><br><span class="line">    @Test</span><br><span class="line">    public void scenes3() &#123;</span><br><span class="line">        &#123;</span><br><span class="line">            byte[] bs &#x3D; placeHolder(64);</span><br><span class="line">        &#125;</span><br><span class="line">        int a &#x3D; 0;</span><br><span class="line">        System.gc();</span><br><span class="line">    &#125;</span><br><span class="line">    &#x2F;**</span><br><span class="line">     * 及时回收</span><br><span class="line">     * &lt;p&gt;</span><br><span class="line">     * [Full GC (System.gc())  66435K-&gt;835K(98304K), 0.0108251 secs]</span><br><span class="line">     *&#x2F;</span><br><span class="line">    @Test</span><br><span class="line">    public void scenes4() &#123;</span><br><span class="line">        &#123;</span><br><span class="line">            byte[] bs &#x3D; placeHolder(64);</span><br><span class="line">            bs &#x3D; null;</span><br><span class="line">        &#125;</span><br><span class="line">        System.gc();</span><br><span class="line">    &#125;</span><br><span class="line">    public static byte[] placeHolder(int n) &#123;</span><br><span class="line">        System.out.println(&quot;SoltGcTest.placeHolder allocation mem : &quot; + n + &quot;m&quot;);</span><br><span class="line">        byte[] placeholder &#x3D; new byte[n * 1024 * 1024];</span><br><span class="line">        System.out.println(&quot;SoltGcTest.placeHolder allocation Success &quot;);</span><br><span class="line">        return placeholder;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
 <h3 id="操作栈"><a href="#操作栈" class="headerlink" title="操作栈"></a>操作栈</h3><p>操作栈又称为操作数栈，是后进先出栈。编译时确定</p>
-<pre><code>MAXSTACK = 2
-</code></pre><h4 id="字节码指令"><a href="#字节码指令" class="headerlink" title="字节码指令"></a>字节码指令</h4><h4 id="局部变量必须赋值"><a href="#局部变量必须赋值" class="headerlink" title="局部变量必须赋值"></a>局部变量必须赋值</h4><p>不同于类变量存在准备阶段。类变量有两次赋初始值的过程：</p>
+<pre><code>MAXSTACK = 2</code></pre><h4 id="字节码指令"><a href="#字节码指令" class="headerlink" title="字节码指令"></a>字节码指令</h4><h4 id="局部变量必须赋值"><a href="#局部变量必须赋值" class="headerlink" title="局部变量必须赋值"></a>局部变量必须赋值</h4><p>不同于类变量存在准备阶段。类变量有两次赋初始值的过程：</p>
 <ol>
 <li>准备阶段，赋予系统初始值；</li>
 <li>初始化阶段，赋予程序员定义的初始值；   </li>
@@ -524,19 +270,21 @@
 <li>invokespecial 调用的方法</li>
 <li>invokevirtual 调用 被 final 修饰的 方法</li>
 </ul>
-<h6 id="静态解析示例"><a href="#静态解析示例" class="headerlink" title="静态解析示例"></a>静态解析示例</h6><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">public static void say() &#123;</span><br><span class="line">    System.out.println(&quot; Hello word !&quot;);</span><br><span class="line">&#125;</span><br><span class="line">/**</span><br><span class="line"> * 方法调用-解析-静态解析</span><br><span class="line"> * &lt;p&gt;</span><br><span class="line"> * INVOKESTATIC com/hardydou/jmm/DynamicLink.say ()V</span><br><span class="line"> */</span><br><span class="line">@Test</span><br><span class="line">public void scene3() &#123;</span><br><span class="line">    DynamicLink.say();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h6 id="静态解析示例"><a href="#静态解析示例" class="headerlink" title="静态解析示例"></a>静态解析示例</h6><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">public static void say() &#123;</span><br><span class="line">    System.out.println(&quot; Hello word !&quot;);</span><br><span class="line">&#125;</span><br><span class="line">&#x2F;**</span><br><span class="line"> * 方法调用-解析-静态解析</span><br><span class="line"> * &lt;p&gt;</span><br><span class="line"> * INVOKESTATIC com&#x2F;hardydou&#x2F;jmm&#x2F;DynamicLink.say ()V</span><br><span class="line"> *&#x2F;</span><br><span class="line">@Test</span><br><span class="line">public void scene3() &#123;</span><br><span class="line">    DynamicLink.say();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <h5 id="分派"><a href="#分派" class="headerlink" title="分派"></a>分派</h5><p>面向对象基本特征：继承、封装、多态。分派会解释多态特征，如”重载“、”重写“在虚拟机中是如何实现的。<br>虚拟机是如何找到正确的目标方法的。</p>
 <h6 id="字节码指令-2"><a href="#字节码指令-2" class="headerlink" title="字节码指令"></a>字节码指令</h6><ul>
 <li>invokevirtual </li>
 </ul>
 <h6 id="静态分派示例-重载"><a href="#静态分派示例-重载" class="headerlink" title="静态分派示例-重载"></a>静态分派示例-重载</h6><p>编译期间就完全确定，在类装载解析阶段就会把涉及到的符号引用转换为可以确定的直接引用。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br></pre></td><td class="code"><pre><span class="line">static abstract class Human &#123;&#125;</span><br><span class="line">   static class Man extends Human &#123;&#125;</span><br><span class="line">   static class Woman extends Human &#123;&#125;</span><br><span class="line"></span><br><span class="line">   public void say(Human human) &#123;</span><br><span class="line">       System.out.println(&quot;Hello guy !&quot;);</span><br><span class="line">   &#125;</span><br><span class="line"></span><br><span class="line">   public void say(Man man) &#123;</span><br><span class="line">       System.out.println(&quot;Hello man !&quot;);</span><br><span class="line"></span><br><span class="line">   &#125;</span><br><span class="line"></span><br><span class="line">   public void say(Woman woman) &#123;</span><br><span class="line">       System.out.println(&quot;Hello woman !&quot;);</span><br><span class="line">   &#125;</span><br><span class="line"></span><br><span class="line">/**</span><br><span class="line">    * 方法调用-分派-静态分派示例1</span><br><span class="line">    * 代码编译期间就完全确定，</span><br><span class="line">    * 在类装载的解析阶段就会把设计的符号引用全部转变为可确定的直接引用</span><br><span class="line">    * 父类型引用子类型</span><br><span class="line">    * INVOKEVIRTUAL com/hardydou/jmm/DynamicLink.say (Lcom/hardydou/jmm/DynamicLink$Human;)V</span><br><span class="line">    * INVOKEVIRTUAL com/hardydou/jmm/DynamicLink.say (Lcom/hardydou/jmm/DynamicLink$Human;)V</span><br><span class="line">    */</span><br><span class="line">   @Test</span><br><span class="line">   public void scene1() &#123;</span><br><span class="line">       DynamicLink dc = new DynamicLink();</span><br><span class="line">       DynamicLink.Human man = new DynamicLink.Man();</span><br><span class="line">       dc.say(man);</span><br><span class="line">       man = new DynamicLink.Woman();</span><br><span class="line">       dc.say(man);</span><br><span class="line"></span><br><span class="line">   &#125;</span><br><span class="line">   /**</span><br><span class="line">    * 方法调用-分派-静态分派示例2</span><br><span class="line">    * 子类型引用</span><br><span class="line">    * INVOKEVIRTUAL com/hardydou/jmm/DynamicLink.say (Lcom/hardydou/jmm/DynamicLink$Man;)V</span><br><span class="line">    * INVOKEVIRTUAL com/hardydou/jmm/DynamicLink.say (Lcom/hardydou/jmm/DynamicLink$Woman;)V</span><br><span class="line">    */</span><br><span class="line">   @Test</span><br><span class="line">   public void scene2() &#123;</span><br><span class="line">       DynamicLink dc = new DynamicLink();</span><br><span class="line">       DynamicLink.Man man = new DynamicLink.Man();</span><br><span class="line">       dc.say(man);</span><br><span class="line">       DynamicLink.Woman woman = new DynamicLink.Woman();</span><br><span class="line">       dc.say(woman);</span><br><span class="line">   &#125;</span><br></pre></td></tr></table></figure>
-<h6 id="动态分派示例-重写"><a href="#动态分派示例-重写" class="headerlink" title="动态分派示例-重写"></a>动态分派示例-重写</h6><p>运行结果与字节码不一定相同。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line">static abstract class Human &#123;</span><br><span class="line">       abstract void say();</span><br><span class="line">   &#125;</span><br><span class="line"></span><br><span class="line">   static class Man extends Human &#123;</span><br><span class="line"></span><br><span class="line">       @Override</span><br><span class="line">       void say() &#123;</span><br><span class="line">           System.out.println(&quot;Hello man&quot;);</span><br><span class="line">       &#125;</span><br><span class="line">   &#125;</span><br><span class="line"></span><br><span class="line">   static class Woman extends Human &#123;</span><br><span class="line">       @Override</span><br><span class="line">       void say() &#123;</span><br><span class="line">           System.out.println(&quot;Hello woman&quot;);</span><br><span class="line">       &#125;</span><br><span class="line">   &#125;</span><br><span class="line">    /**</span><br><span class="line">    * 方法调用-分派-动态分派</span><br><span class="line">    * &lt;p&gt;</span><br><span class="line">    * 实际执行结果与 字节码 不相同</span><br><span class="line">    * &lt;p&gt;</span><br><span class="line">    * INVOKEVIRTUAL com/hardydou/jmm/DynamicLink$Human.say ()V</span><br><span class="line">    * INVOKEVIRTUAL com/hardydou/jmm/DynamicLink$Human.say ()V</span><br><span class="line">    */</span><br><span class="line">   @Test</span><br><span class="line">   public void scene5() &#123;</span><br><span class="line">       DynamicLink.Human human = new DynamicLink.Man();</span><br><span class="line">       DynamicLink.Human woman = new DynamicLink.Woman();</span><br><span class="line">       Object obj = new Object();</span><br><span class="line">       human.say();</span><br><span class="line">       human = new DynamicLink.Woman();</span><br><span class="line">       human.say();</span><br><span class="line">   &#125;</span><br></pre></td></tr></table></figure></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br></pre></td><td class="code"><pre><span class="line">static abstract class Human &#123;&#125;</span><br><span class="line">   static class Man extends Human &#123;&#125;</span><br><span class="line">   static class Woman extends Human &#123;&#125;</span><br><span class="line"></span><br><span class="line">   public void say(Human human) &#123;</span><br><span class="line">       System.out.println(&quot;Hello guy !&quot;);</span><br><span class="line">   &#125;</span><br><span class="line"></span><br><span class="line">   public void say(Man man) &#123;</span><br><span class="line">       System.out.println(&quot;Hello man !&quot;);</span><br><span class="line"></span><br><span class="line">   &#125;</span><br><span class="line"></span><br><span class="line">   public void say(Woman woman) &#123;</span><br><span class="line">       System.out.println(&quot;Hello woman !&quot;);</span><br><span class="line">   &#125;</span><br><span class="line"></span><br><span class="line">&#x2F;**</span><br><span class="line">    * 方法调用-分派-静态分派示例1</span><br><span class="line">    * 代码编译期间就完全确定，</span><br><span class="line">    * 在类装载的解析阶段就会把设计的符号引用全部转变为可确定的直接引用</span><br><span class="line">    * 父类型引用子类型</span><br><span class="line">    * INVOKEVIRTUAL com&#x2F;hardydou&#x2F;jmm&#x2F;DynamicLink.say (Lcom&#x2F;hardydou&#x2F;jmm&#x2F;DynamicLink$Human;)V</span><br><span class="line">    * INVOKEVIRTUAL com&#x2F;hardydou&#x2F;jmm&#x2F;DynamicLink.say (Lcom&#x2F;hardydou&#x2F;jmm&#x2F;DynamicLink$Human;)V</span><br><span class="line">    *&#x2F;</span><br><span class="line">   @Test</span><br><span class="line">   public void scene1() &#123;</span><br><span class="line">       DynamicLink dc &#x3D; new DynamicLink();</span><br><span class="line">       DynamicLink.Human man &#x3D; new DynamicLink.Man();</span><br><span class="line">       dc.say(man);</span><br><span class="line">       man &#x3D; new DynamicLink.Woman();</span><br><span class="line">       dc.say(man);</span><br><span class="line"></span><br><span class="line">   &#125;</span><br><span class="line">   &#x2F;**</span><br><span class="line">    * 方法调用-分派-静态分派示例2</span><br><span class="line">    * 子类型引用</span><br><span class="line">    * INVOKEVIRTUAL com&#x2F;hardydou&#x2F;jmm&#x2F;DynamicLink.say (Lcom&#x2F;hardydou&#x2F;jmm&#x2F;DynamicLink$Man;)V</span><br><span class="line">    * INVOKEVIRTUAL com&#x2F;hardydou&#x2F;jmm&#x2F;DynamicLink.say (Lcom&#x2F;hardydou&#x2F;jmm&#x2F;DynamicLink$Woman;)V</span><br><span class="line">    *&#x2F;</span><br><span class="line">   @Test</span><br><span class="line">   public void scene2() &#123;</span><br><span class="line">       DynamicLink dc &#x3D; new DynamicLink();</span><br><span class="line">       DynamicLink.Man man &#x3D; new DynamicLink.Man();</span><br><span class="line">       dc.say(man);</span><br><span class="line">       DynamicLink.Woman woman &#x3D; new DynamicLink.Woman();</span><br><span class="line">       dc.say(woman);</span><br><span class="line">   &#125;</span><br></pre></td></tr></table></figure>
+
+<h6 id="动态分派示例-重写"><a href="#动态分派示例-重写" class="headerlink" title="动态分派示例-重写"></a>动态分派示例-重写</h6><p>运行结果与字节码不一定相同。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line">static abstract class Human &#123;</span><br><span class="line">       abstract void say();</span><br><span class="line">   &#125;</span><br><span class="line"></span><br><span class="line">   static class Man extends Human &#123;</span><br><span class="line"></span><br><span class="line">       @Override</span><br><span class="line">       void say() &#123;</span><br><span class="line">           System.out.println(&quot;Hello man&quot;);</span><br><span class="line">       &#125;</span><br><span class="line">   &#125;</span><br><span class="line"></span><br><span class="line">   static class Woman extends Human &#123;</span><br><span class="line">       @Override</span><br><span class="line">       void say() &#123;</span><br><span class="line">           System.out.println(&quot;Hello woman&quot;);</span><br><span class="line">       &#125;</span><br><span class="line">   &#125;</span><br><span class="line">    &#x2F;**</span><br><span class="line">    * 方法调用-分派-动态分派</span><br><span class="line">    * &lt;p&gt;</span><br><span class="line">    * 实际执行结果与 字节码 不相同</span><br><span class="line">    * &lt;p&gt;</span><br><span class="line">    * INVOKEVIRTUAL com&#x2F;hardydou&#x2F;jmm&#x2F;DynamicLink$Human.say ()V</span><br><span class="line">    * INVOKEVIRTUAL com&#x2F;hardydou&#x2F;jmm&#x2F;DynamicLink$Human.say ()V</span><br><span class="line">    *&#x2F;</span><br><span class="line">   @Test</span><br><span class="line">   public void scene5() &#123;</span><br><span class="line">       DynamicLink.Human human &#x3D; new DynamicLink.Man();</span><br><span class="line">       DynamicLink.Human woman &#x3D; new DynamicLink.Woman();</span><br><span class="line">       Object obj &#x3D; new Object();</span><br><span class="line">       human.say();</span><br><span class="line">       human &#x3D; new DynamicLink.Woman();</span><br><span class="line">       human.say();</span><br><span class="line">   &#125;</span><br></pre></td></tr></table></figure>
+
 <h6 id="小结"><a href="#小结" class="headerlink" title="小结"></a>小结</h6><p>截止java1.8，java是静态多分派，动态单分派语言。</p>
 <h3 id="方法返回地址"><a href="#方法返回地址" class="headerlink" title="方法返回地址"></a>方法返回地址</h3><p>当一个方法开始执行后，有两中方式退出：正常完成出口、异常完成出口。无论哪种方法退出，退出后都要返回到方法被调用到的位置，程序才能继续执行，方法返回时需要栈帧中保持一些信息，用来帮助恢复它的上层方法执行状态。</p>
 <h4 id="正常完成出口（Normal-Method-Invocation-Completion）"><a href="#正常完成出口（Normal-Method-Invocation-Completion）" class="headerlink" title="正常完成出口（Normal Method Invocation Completion）"></a>正常完成出口（Normal Method Invocation Completion）</h4><p>执行引擎遇到任意一个方法返回指令码</p>
-<pre><code>return 
-</code></pre><h4 id="异常完成出口（Abrupt-Method-Invocation-Completion）"><a href="#异常完成出口（Abrupt-Method-Invocation-Completion）" class="headerlink" title="异常完成出口（Abrupt Method Invocation Completion）"></a>异常完成出口（Abrupt Method Invocation Completion）</h4><p>方法执行过程中遇到异常，并且这个异常没有在方法体内得到处理。<br>无返回值</p>
+<pre><code>return </code></pre><h4 id="异常完成出口（Abrupt-Method-Invocation-Completion）"><a href="#异常完成出口（Abrupt-Method-Invocation-Completion）" class="headerlink" title="异常完成出口（Abrupt Method Invocation Completion）"></a>异常完成出口（Abrupt Method Invocation Completion）</h4><p>方法执行过程中遇到异常，并且这个异常没有在方法体内得到处理。<br>无返回值</p>
 <h2 id="Java堆"><a href="#Java堆" class="headerlink" title="Java堆"></a>Java堆</h2><h3 id="介绍-2"><a href="#介绍-2" class="headerlink" title="介绍"></a>介绍</h3><p>所有线程共享最大内存空间，虚拟机启动时创建。虚拟机规范描述：所有对象实例、数组都要在堆上分配，但随着JIT编译器的发展与逃逸分析技术的逐渐成熟，栈上分配、标量替换优化技术将会导致一些微妙的变化。是垃圾收集器管理的主要区域。不同的垃圾回收算法也决定了堆内存细分方式。</p>
 <ul>
 <li>逻辑连续即可，不需要物理连续；</li>
@@ -562,397 +310,180 @@
 <li>不受 -Xmx 影响</li>
 </ul>
 
-      
     </div>
 
     
-
     
     
-    
-
-    
-
-    
-       
-    
-    
-
-    
-      <div>
         
 
-
-
-  
-
-
-
+<div>
 <ul class="post-copyright">
   <li class="post-copyright-author">
-    <strong>本文作者： </strong>Hardy Dou</li>
+    <strong>本文作者： </strong>Hardy Dou
+  </li>
   <li class="post-copyright-link">
     <strong>本文链接：</strong>
-    
-    <a href="http://www.hardydou.com/2019/05/09/Java内存结构/" title="Java内存结构">http://www.hardydou.com/2019/05/09/Java内存结构/</a>
+    <a href="http://www.hardydou.com/2019/05/09/Java%E5%86%85%E5%AD%98%E7%BB%93%E6%9E%84/" title="Java内存结构">http://www.hardydou.com/2019/05/09/Java内存结构/</a>
   </li>
   <li class="post-copyright-license">
-    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fa fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！</li>
+    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fa fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
+  </li>
 </ul>
-
-      </div>
-    
-
-    <footer class="post-footer">
-      
-        <div class="post-tags">
-          
-            <a href="/tags/java/" rel="tag"># java</a>
-          
-            <a href="/tags/jvm/" rel="tag"># jvm</a>
-          
-        </div>
-      
-
-      
-      
-      
-
-      
-        <div class="post-nav">
-          <div class="post-nav-next post-nav-item">
-            
-              <a href="/2019/05/05/Gradle构建/" rel="next" title="Gradle构建项目">
-                <i class="fa fa-chevron-left"></i> Gradle构建项目
-              </a>
-            
-          </div>
-
-          <span class="post-nav-divider"></span>
-
-          <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2019/05/11/java泛型/" rel="prev" title="java泛型">
-                java泛型 <i class="fa fa-chevron-right"></i>
-              </a>
-            
-          </div>
-        </div>
-      
-
-      
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-  </div>
-
-
-          </div>
-          
-
-  
-    <div class="comments" id="comments">
-    </div>
-  
-
-
-
-        </div>
-        
-          
-  
-  <div class="sidebar-toggle">
-    <div class="sidebar-toggle-line-wrap">
-      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
-      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
-      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
-    </div>
-  </div>
-
-  <aside id="sidebar" class="sidebar">
-    
-    <div class="sidebar-inner">
-
-      
-
-      
-        <ul class="sidebar-nav motion-element">
-          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
-            文章目录
-          </li>
-          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
-            站点概览
-          </li>
-        </ul>
-      
-
-      <section class="site-overview-wrap sidebar-panel">
-        <div class="site-overview">
-          <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
-            
-              <img class="site-author-image" itemprop="image" src="/images/avatar.jpg" alt="小鱼先生">
-            
-              <p class="site-author-name" itemprop="name">小鱼先生</p>
-              <p class="site-description motion-element" itemprop="description">相信美好的事情即将发生</p>
-          </div>
-
-          
-            <nav class="site-state motion-element">
-              
-                <div class="site-state-item site-state-posts">
-                
-                  <a href="/archives">
-                
-                    <span class="site-state-item-count">44</span>
-                    <span class="site-state-item-name">日志</span>
-                  </a>
-                </div>
-              
-
-              
-                
-                
-                <div class="site-state-item site-state-categories">
-                  <a href="/categories/index.html">
-                    
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                    <span class="site-state-item-count">7</span>
-                    <span class="site-state-item-name">分类</span>
-                  </a>
-                </div>
-              
-
-              
-                
-                
-                <div class="site-state-item site-state-tags">
-                  <a href="/tags/index.html">
-                    
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                    <span class="site-state-item-count">25</span>
-                    <span class="site-state-item-name">标签</span>
-                  </a>
-                </div>
-              
-            </nav>
-          
-
-          
-            <div class="feed-link motion-element">
-              <a href="/atom.xml" rel="alternate">
-                <i class="fa fa-rss"></i>
-                RSS
-              </a>
-            </div>
-          
-
-          
-            <div class="links-of-author motion-element">
-              
-                <span class="links-of-author-item">
-                  
-                  
-                    
-                  
-                  
-                    
-                  
-                  <a href="https://github.com/HardyDou" title="GitHub &rarr; https://github.com/HardyDou" rel="noopener" target="_blank"><i class="fa fa-fw fa-github"></i>GitHub</a>
-                </span>
-              
-                <span class="links-of-author-item">
-                  
-                  
-                    
-                  
-                  
-                    
-                  
-                  <a href="mailto:doouxiaoyu@163.com" title="E-Mail &rarr; mailto:doouxiaoyu@163.com" rel="noopener" target="_blank"><i class="fa fa-fw fa-envelope"></i>E-Mail</a>
-                </span>
-              
-            </div>
-          
-
-          
-
-          
-          
-
-          
-            
-          
-          
-
-        </div>
-      </section>
-
-      
-      <!--noindex-->
-        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
-          <div class="post-toc">
-
-            
-              
-            
-
-            
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Java内存结构图"><span class="nav-number">1.</span> <span class="nav-text">Java内存结构图</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#程序计数器"><span class="nav-number">2.</span> <span class="nav-text">程序计数器</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#介绍"><span class="nav-number">2.1.</span> <span class="nav-text">介绍</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#特征"><span class="nav-number">2.2.</span> <span class="nav-text">特征</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Java虚拟机栈"><span class="nav-number">3.</span> <span class="nav-text">Java虚拟机栈</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#介绍-1"><span class="nav-number">3.1.</span> <span class="nav-text">介绍</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#局部变量表"><span class="nav-number">3.2.</span> <span class="nav-text">局部变量表</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Slot"><span class="nav-number">3.2.1.</span> <span class="nav-text">Slot</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#虚拟机如何调用"><span class="nav-number">3.2.2.</span> <span class="nav-text">虚拟机如何调用</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Solt复用对GC的影响"><span class="nav-number">3.2.3.</span> <span class="nav-text">Solt复用对GC的影响</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#操作栈"><span class="nav-number">3.3.</span> <span class="nav-text">操作栈</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#字节码指令"><span class="nav-number">3.3.1.</span> <span class="nav-text">字节码指令</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#局部变量必须赋值"><span class="nav-number">3.3.2.</span> <span class="nav-text">局部变量必须赋值</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#栈帧重叠"><span class="nav-number">3.3.3.</span> <span class="nav-text">栈帧重叠</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#动态链接"><span class="nav-number">3.4.</span> <span class="nav-text">动态链接</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#方法调用"><span class="nav-number">3.4.1.</span> <span class="nav-text">方法调用</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#解析"><span class="nav-number">3.4.1.1.</span> <span class="nav-text">解析</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#字节码指令-1"><span class="nav-number">3.4.1.1.1.</span> <span class="nav-text">字节码指令</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#静态解析示例"><span class="nav-number">3.4.1.1.2.</span> <span class="nav-text">静态解析示例</span></a></li></ol></li><li class="nav-item nav-level-5"><a class="nav-link" href="#分派"><span class="nav-number">3.4.1.2.</span> <span class="nav-text">分派</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#字节码指令-2"><span class="nav-number">3.4.1.2.1.</span> <span class="nav-text">字节码指令</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#静态分派示例-重载"><span class="nav-number">3.4.1.2.2.</span> <span class="nav-text">静态分派示例-重载</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#动态分派示例-重写"><span class="nav-number">3.4.1.2.3.</span> <span class="nav-text">动态分派示例-重写</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#小结"><span class="nav-number">3.4.1.2.4.</span> <span class="nav-text">小结</span></a></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#方法返回地址"><span class="nav-number">3.5.</span> <span class="nav-text">方法返回地址</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#正常完成出口（Normal-Method-Invocation-Completion）"><span class="nav-number">3.5.1.</span> <span class="nav-text">正常完成出口（Normal Method Invocation Completion）</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#异常完成出口（Abrupt-Method-Invocation-Completion）"><span class="nav-number">3.5.2.</span> <span class="nav-text">异常完成出口（Abrupt Method Invocation Completion）</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Java堆"><span class="nav-number">4.</span> <span class="nav-text">Java堆</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#介绍-2"><span class="nav-number">4.1.</span> <span class="nav-text">介绍</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#特征-1"><span class="nav-number">4.2.</span> <span class="nav-text">特征</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#方法区"><span class="nav-number">5.</span> <span class="nav-text">方法区</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#介绍-3"><span class="nav-number">5.1.</span> <span class="nav-text">介绍</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#特征-2"><span class="nav-number">5.2.</span> <span class="nav-text">特征</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#运行时常量池"><span class="nav-number">5.3.</span> <span class="nav-text">运行时常量池</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#直接内存"><span class="nav-number">6.</span> <span class="nav-text">直接内存</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#介绍-4"><span class="nav-number">6.1.</span> <span class="nav-text">介绍</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#存在方式"><span class="nav-number">6.2.</span> <span class="nav-text">存在方式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#特征-3"><span class="nav-number">6.3.</span> <span class="nav-text">特征</span></a></li></ol></li></ol></div>
-            
-
-          </div>
-        </section>
-      <!--/noindex-->
-      
-
-      
-        <div class="back-to-top">
-          <i class="fa fa-arrow-up"></i>
-          
-            <span id="scrollpercent"><span>0</span>%</span>
-          
-        </div>
-      
-
-    </div>
-  </aside>
-
-
-        
-      </div>
-    </main>
-
-    <footer id="footer" class="footer">
-      <div class="footer-inner">
-        <div class="copyright">  <a href="http://www.miitbeian.gov.cn" rel="noopener" target="_blank">京ICP备18050184号 </a>&copy; <span itemprop="copyrightYear">2019</span>
-  <span class="with-love" id="animate">
-    <i class="fa fa-heart"></i>
-  </span>
-  <span class="author" itemprop="copyrightHolder">小鱼先生</span>
-
-  
-
-  
 </div>
 
 
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/java/" rel="tag"># java</a>
+              <a href="/tags/jvm/" rel="tag"># jvm</a>
+          </div>
 
-
-
-
-
+        
 
 
         
-
-
-
-
-
-
-
-
-        
-      </div>
-    </footer>
-
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2019/05/05/Gradle%E6%9E%84%E5%BB%BA/" rel="prev" title="Gradle构建项目">
+      <i class="fa fa-chevron-left"></i> Gradle构建项目
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/2019/05/11/java%E6%B3%9B%E5%9E%8B/" rel="next" title="java泛型">
+      java泛型 <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
     
-
-    
-	
-    
-
-    
-  </div>
-
+  </article>
+  
+  
   
 
-<script type="text/javascript">
-  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
-    window.Promise = null;
+  </div>
+
+
+          </div>
+          
+    <div class="comments" id="valine-comments"></div>
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let activeClass = CONFIG.comments.activeClass;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
   }
 </script>
 
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Java内存结构图"><span class="nav-number">1.</span> <span class="nav-text">Java内存结构图</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#程序计数器"><span class="nav-number">2.</span> <span class="nav-text">程序计数器</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#介绍"><span class="nav-number">2.1.</span> <span class="nav-text">介绍</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#特征"><span class="nav-number">2.2.</span> <span class="nav-text">特征</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Java虚拟机栈"><span class="nav-number">3.</span> <span class="nav-text">Java虚拟机栈</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#介绍-1"><span class="nav-number">3.1.</span> <span class="nav-text">介绍</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#局部变量表"><span class="nav-number">3.2.</span> <span class="nav-text">局部变量表</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Slot"><span class="nav-number">3.2.1.</span> <span class="nav-text">Slot</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#虚拟机如何调用"><span class="nav-number">3.2.2.</span> <span class="nav-text">虚拟机如何调用</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Solt复用对GC的影响"><span class="nav-number">3.2.3.</span> <span class="nav-text">Solt复用对GC的影响</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#操作栈"><span class="nav-number">3.3.</span> <span class="nav-text">操作栈</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#字节码指令"><span class="nav-number">3.3.1.</span> <span class="nav-text">字节码指令</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#局部变量必须赋值"><span class="nav-number">3.3.2.</span> <span class="nav-text">局部变量必须赋值</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#栈帧重叠"><span class="nav-number">3.3.3.</span> <span class="nav-text">栈帧重叠</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#动态链接"><span class="nav-number">3.4.</span> <span class="nav-text">动态链接</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#方法调用"><span class="nav-number">3.4.1.</span> <span class="nav-text">方法调用</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#解析"><span class="nav-number">3.4.1.1.</span> <span class="nav-text">解析</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#字节码指令-1"><span class="nav-number">3.4.1.1.1.</span> <span class="nav-text">字节码指令</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#静态解析示例"><span class="nav-number">3.4.1.1.2.</span> <span class="nav-text">静态解析示例</span></a></li></ol></li><li class="nav-item nav-level-5"><a class="nav-link" href="#分派"><span class="nav-number">3.4.1.2.</span> <span class="nav-text">分派</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#字节码指令-2"><span class="nav-number">3.4.1.2.1.</span> <span class="nav-text">字节码指令</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#静态分派示例-重载"><span class="nav-number">3.4.1.2.2.</span> <span class="nav-text">静态分派示例-重载</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#动态分派示例-重写"><span class="nav-number">3.4.1.2.3.</span> <span class="nav-text">动态分派示例-重写</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#小结"><span class="nav-number">3.4.1.2.4.</span> <span class="nav-text">小结</span></a></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#方法返回地址"><span class="nav-number">3.5.</span> <span class="nav-text">方法返回地址</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#正常完成出口（Normal-Method-Invocation-Completion）"><span class="nav-number">3.5.1.</span> <span class="nav-text">正常完成出口（Normal Method Invocation Completion）</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#异常完成出口（Abrupt-Method-Invocation-Completion）"><span class="nav-number">3.5.2.</span> <span class="nav-text">异常完成出口（Abrupt Method Invocation Completion）</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Java堆"><span class="nav-number">4.</span> <span class="nav-text">Java堆</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#介绍-2"><span class="nav-number">4.1.</span> <span class="nav-text">介绍</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#特征-1"><span class="nav-number">4.2.</span> <span class="nav-text">特征</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#方法区"><span class="nav-number">5.</span> <span class="nav-text">方法区</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#介绍-3"><span class="nav-number">5.1.</span> <span class="nav-text">介绍</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#特征-2"><span class="nav-number">5.2.</span> <span class="nav-text">特征</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#运行时常量池"><span class="nav-number">5.3.</span> <span class="nav-text">运行时常量池</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#直接内存"><span class="nav-number">6.</span> <span class="nav-text">直接内存</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#介绍-4"><span class="nav-number">6.1.</span> <span class="nav-text">介绍</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#存在方式"><span class="nav-number">6.2.</span> <span class="nav-text">存在方式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#特征-3"><span class="nav-number">6.3.</span> <span class="nav-text">特征</span></a></li></ol></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="小鱼先生"
+      src="/images/avatar.jpg">
+  <p class="site-author-name" itemprop="name">小鱼先生</p>
+  <div class="site-description" itemprop="description">相信美好的事情即将发生</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives">
+        
+          <span class="site-state-item-count">44</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories">
+          
+        <span class="site-state-item-count">7</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags">
+          
+        <span class="site-state-item-count">25</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+        <a href="https://github.com/HardyDou" title="GitHub → https://github.com/HardyDou" rel="noopener" target="_blank"><i class="fa fa-fw fa-github"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:doouxiaoyu@163.com" title="E-Mail → mailto:doouxiaoyu@163.com" rel="noopener" target="_blank"><i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+      </span>
+  </div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+  <div class="beian"><a href="http://www.beian.miit.gov.cn" rel="noopener" target="_blank">京ICP备18050184号 </a>
+  </div>
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2020</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">小鱼先生</span>
+</div>
+
+        
 
 
 
@@ -961,9 +492,26 @@
 
 
 
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js"></script>
+  <script src="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
 
 
+<script src="/js/schemes/pisces.js"></script>
 
+
+<script src="/js/next-boot.js"></script>
 
 
 
@@ -985,139 +533,37 @@
 
 
   
-  
-    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
-  
-
-  
-  
-    <script type="text/javascript" src="/lib/kityminder-core/kity.min.js"></script>
-  
-
-  
-  
-    <script type="text/javascript" src="/lib/kityminder-core/kityminder.core.js"></script>
-  
-
-  
-  
-    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
-  
-
-  
-  
-    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
-  
-
-  
-  
-    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
-  
-
 
   
 
 
-  <script type="text/javascript" src="/js/src/utils.js?v=6.5.0"></script>
-
-  <script type="text/javascript" src="/js/src/motion.js?v=6.5.0"></script>
-
-
-
-  
-  
-
-
-  <script type="text/javascript" src="/js/src/affix.js?v=6.5.0"></script>
-
-  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=6.5.0"></script>
-
-
-
-  
-  <script type="text/javascript" src="/js/src/scrollspy.js?v=6.5.0"></script>
-<script type="text/javascript" src="/js/src/post-details.js?v=6.5.0"></script>
-<script type="text/javascript" src="/js/src/kityminder.js?v=6.5.0"></script>
-
-
-
-  
-
-
-  <script type="text/javascript" src="/js/src/bootstrap.js?v=6.5.0"></script>
-
-
-
-  
-
-
-
-  
-
-
-
-
-
-
-
-
-  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
-  
-  
-  <script src="//unpkg.com/valine/dist/Valine.min.js"></script>
-  
-  <script type="text/javascript">
-    var GUEST = ['nick','mail','link'];
+<script>
+NexT.utils.loadComments(document.querySelector('#valine-comments'), () => {
+  NexT.utils.getScript('//unpkg.com/valine/dist/Valine.min.js', () => {
+    var GUEST = ['nick', 'mail', 'link'];
     var guest = 'nick,mail,link';
-    guest = guest.split(',').filter(function (item) {
-      return GUEST.indexOf(item)>-1;
+    guest = guest.split(',').filter(item => {
+      return GUEST.includes(item);
     });
     new Valine({
-        el: '#comments' ,
-        verify: true,
-        notify: true,
-        appId: 'fF3IzJ6TkcmNPCPo4nYayNln-gzGzoHsz',
-        appKey: 'CaEuIN0359VyWiygnoDPQxx1',
-        placeholder: '有话就直说!!',
-        avatar:'mp',
-        meta:guest,
-        pageSize:'10' || 10,
-        visitor: false
+      el         : '#valine-comments',
+      verify     : true,
+      notify     : true,
+      appId      : 'fF3IzJ6TkcmNPCPo4nYayNln-gzGzoHsz',
+      appKey     : 'CaEuIN0359VyWiygnoDPQxx1',
+      placeholder: "请讲!!",
+      avatar     : 'mp',
+      meta       : guest,
+      pageSize   : '10' || 10,
+      visitor    : false,
+      lang       : '' || 'zh-cn',
+      path       : location.pathname,
+      recordIP   : false,
+      serverURLs : ''
     });
-  </script>
-
-
-
-  
-
-
-
-
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
+  }, window.Valine);
+});
+</script>
 
 </body>
 </html>

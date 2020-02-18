@@ -1,152 +1,51 @@
 <!DOCTYPE html>
-
-
-
-
-
-
-
-
-
-
-
-
-  
-
-
-<html class="theme-next pisces use-motion" lang="zh-CN">
-<head><meta name="generator" content="Hexo 3.8.0">
+<html lang="zh-Hans">
+<head>
   <meta charset="UTF-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
 <meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 4.2.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
 
 
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.css">
 
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"www.hardydou.com","root":"/","scheme":"Pisces","version":"7.7.1","exturl":false,"sidebar":{"position":"left","width":240,"b2t":true,"scrollpercent":true,"display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":true,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+  </script>
 
-
-
-
-
-
-
-
-
-<meta http-equiv="Cache-Control" content="no-transform">
-<meta http-equiv="Cache-Control" content="no-siteapp">
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<link href="/lib/kityminder-core/kityminder.core.css?v=1.4.49" rel="stylesheet" type="text/css">
-<style>
-.mindmap{width:90%}
-</style>
-
-  
-  
-  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
-
-
-
-
-
-
-
-<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
-
-<link href="/css/main.css?v=6.5.0" rel="stylesheet" type="text/css">
-<style>
-.pullquote{width:auto;}
-</style>
-
-  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=6.5.0">
-
-
-  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=6.5.0">
-
-
-  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=6.5.0">
-
-
-  <link rel="mask-icon" href="/images/logo.svg?v=6.5.0" color="#222">
-
-
-
-
-
-
-
-
-
-<script type="text/javascript" id="hexo.configurations">
-  var NexT = window.NexT || {};
-  var CONFIG = {
-    root: '/',
-    scheme: 'Pisces',
-    version: '6.5.0',
-    sidebar: {"position":"left","display":"post","offset":12,"b2t":true,"scrollpercent":true,"onmobile":false,"width":240},
-    fancybox: true,
-    fastclick: false,
-    lazyload: false,
-    tabs: true,
-    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
-    algolia: {
-      applicationID: '',
-      apiKey: '',
-      indexName: '',
-      hits: {"per_page":10},
-      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
-    }
-  };
-</script>
-
-
-  
-
-
-
-
-  <meta name="description" content="基础知识 原码、反码和补码是计算机存储数字的编码方式（表示方法）。  ASCII码、utf-8和utf-16是计算机存储字符的编码方式。  你需要了解的存储单位   符号 中文 解释     b (bit) 比特，位 存放一位二进制数，即 0 或 1，最小的存储单位   B (Byte) 字节 1B = 8b   KB KB 1KB = 2^10B = 1024B   MB 兆 1MB = 2^2">
-<meta name="keywords" content="java,java数据类型">
+  <meta name="description" content="基础知识 原码、反码和补码是计算机存储数字的编码方式（表示方法）。  ASCII码、utf-8和utf-16是计算机存储字符的编码方式。  你需要了解的存储单位|符号|中文|解释||–|–|–|–||b (bit)|比特，位|存放一位二进制数，即 0 或 1，最小的存储单位||B (Byte)|字节|1B &#x3D; 8b||KB |KB|1KB &#x3D; 2^10B &#x3D; 1024B||MB |兆|1MB &#x3D;">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Java基本数据类型">
-<meta property="og:url" content="http://www.hardydou.com/2018/12/02/java的基础数据类型/index.html">
+<meta property="og:url" content="http://www.hardydou.com/2018/12/02/java%E7%9A%84%E5%9F%BA%E7%A1%80%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/index.html">
 <meta property="og:site_name" content="小鱼先生">
-<meta property="og:description" content="基础知识 原码、反码和补码是计算机存储数字的编码方式（表示方法）。  ASCII码、utf-8和utf-16是计算机存储字符的编码方式。  你需要了解的存储单位   符号 中文 解释     b (bit) 比特，位 存放一位二进制数，即 0 或 1，最小的存储单位   B (Byte) 字节 1B = 8b   KB KB 1KB = 2^10B = 1024B   MB 兆 1MB = 2^2">
-<meta property="og:locale" content="zh-CN">
+<meta property="og:description" content="基础知识 原码、反码和补码是计算机存储数字的编码方式（表示方法）。  ASCII码、utf-8和utf-16是计算机存储字符的编码方式。  你需要了解的存储单位|符号|中文|解释||–|–|–|–||b (bit)|比特，位|存放一位二进制数，即 0 或 1，最小的存储单位||B (Byte)|字节|1B &#x3D; 8b||KB |KB|1KB &#x3D; 2^10B &#x3D; 1024B||MB |兆|1MB &#x3D;">
+<meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="http://www.hardydou.com/images/pasted-2.png">
-<meta property="og:updated_time" content="2019-05-05T06:38:15.682Z">
+<meta property="article:published_time" content="2018-12-02T04:13:00.000Z">
+<meta property="article:modified_time" content="2019-05-05T06:38:15.682Z">
+<meta property="article:author" content="小鱼先生">
+<meta property="article:tag" content="java">
+<meta property="article:tag" content="java数据类型">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Java基本数据类型">
-<meta name="twitter:description" content="基础知识 原码、反码和补码是计算机存储数字的编码方式（表示方法）。  ASCII码、utf-8和utf-16是计算机存储字符的编码方式。  你需要了解的存储单位   符号 中文 解释     b (bit) 比特，位 存放一位二进制数，即 0 或 1，最小的存储单位   B (Byte) 字节 1B = 8b   KB KB 1KB = 2^10B = 1024B   MB 兆 1MB = 2^2">
 <meta name="twitter:image" content="http://www.hardydou.com/images/pasted-2.png">
 
+<link rel="canonical" href="http://www.hardydou.com/2018/12/02/java%E7%9A%84%E5%9F%BA%E7%A1%80%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/">
 
 
-  <link rel="alternate" href="/atom.xml" title="小鱼先生" type="application/atom+xml">
-
-
-
-
-  <link rel="canonical" href="http://www.hardydou.com/2018/12/02/java的基础数据类型/">
-
-
-
-<script type="text/javascript" id="page.configurations">
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
   CONFIG.page = {
     sidebar: "",
+    isHome: false,
+    isPost: true
   };
 </script>
 
@@ -158,328 +57,177 @@
 
 
 
-
-
-
-
-
   <noscript>
-  <style type="text/css">
-    .use-motion .motion-element,
-    .use-motion .brand,
-    .use-motion .menu-item,
-    .sidebar-inner,
-    .use-motion .post-block,
-    .use-motion .pagination,
-    .use-motion .comments,
-    .use-motion .post-header,
-    .use-motion .post-body,
-    .use-motion .collection-title { opacity: initial; }
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
 
-    .use-motion .logo,
-    .use-motion .site-title,
-    .use-motion .site-subtitle {
-      opacity: initial;
-      top: initial;
-    }
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
 
-    .use-motion {
-      .logo-line-before i { left: initial; }
-      .logo-line-after i { right: initial; }
-    }
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
   </style>
 </noscript>
 
 </head>
 
-<body itemscope="" itemtype="http://schema.org/WebPage" lang="zh-CN">
-
-  
-  
-    
-  
-
-  <div class="container sidebar-position-left page-post-detail">
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
     <div class="headband"></div>
 
-    <header id="header" class="header" itemscope="" itemtype="http://schema.org/WPHeader">
-      <div class="header-inner"><div class="site-brand-wrapper">
-  <div class="site-meta ">
-    
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
 
-    <div class="custom-logo-site-title">
+  <div class="site-meta">
+
+    <div>
       <a href="/" class="brand" rel="start">
         <span class="logo-line-before"><i></i></span>
         <span class="site-title">小鱼先生</span>
         <span class="logo-line-after"><i></i></span>
       </a>
     </div>
-    
-      
         <p class="site-subtitle">梦想还是要有的，万一忘记了咋办？</p>
-      
-    
   </div>
 
-  <div class="site-nav-toggle">
-    <button aria-label="切换导航栏">
-      <span class="btn-bar"></span>
-      <span class="btn-bar"></span>
-      <span class="btn-bar"></span>
-    </button>
-  </div>
+  <div class="site-nav-right"></div>
 </div>
-
 
 
 <nav class="site-nav">
   
-    <ul id="menu" class="menu">
-      
-        
-        
-        
-          
-          <li class="menu-item menu-item-home">
+  <ul id="menu" class="menu">
+        <li class="menu-item menu-item-home">
 
-    
-    
-    
-      
-    
-
-    
-
-    <a href="/" rel="section"><i class="menu-item-icon fa fa-fw fa-home"></i> <br>首页</a>
+    <a href="/" rel="section"><i class="fa fa-fw fa-首页"></i>首页</a>
 
   </li>
-        
-        
-        
-          
-          <li class="menu-item menu-item-archives">
+        <li class="menu-item menu-item-archives">
 
-    
-    
-    
-      
-    
-
-    
-
-    <a href="/archives" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档</a>
+    <a href="/archives" rel="section"><i class="fa fa-fw fa-归档"></i>归档</a>
 
   </li>
-        
-        
-        
-          
-          <li class="menu-item menu-item-tags">
+        <li class="menu-item menu-item-tags">
 
-    
-    
-    
-      
-    
-
-    
-
-    <a href="/tags" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br>标签</a>
+    <a href="/tags" rel="section"><i class="fa fa-fw fa-标签"></i>标签</a>
 
   </li>
-        
-        
-        
-          
-          <li class="menu-item menu-item-categories">
+        <li class="menu-item menu-item-categories">
 
-    
-    
-    
-      
-    
-
-    
-
-    <a href="/categories" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br>分类</a>
+    <a href="/categories" rel="section"><i class="fa fa-fw fa-分类"></i>分类</a>
 
   </li>
-        
-        
-        
-          
-          <li class="menu-item menu-item-about">
+        <li class="menu-item menu-item-about">
 
-    
-    
-    
-      
-    
-
-    
-
-    <a href="/about" rel="section"><i class="menu-item-icon fa fa-fw fa-user"></i> <br>关于</a>
+    <a href="/about" rel="section"><i class="fa fa-fw fa-关于"></i>关于</a>
 
   </li>
+  </ul>
 
-      
-      
-    </ul>
-  
-
-  
-
-  
 </nav>
-
-
-
-  
-
-
-
 </div>
     </header>
 
     
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
 
 
-    <main id="main" class="main">
+    <main class="main">
       <div class="main-inner">
         <div class="content-wrap">
           
+
+          <div class="content">
             
 
-          
-          <div id="content" class="content">
-            
+  <div class="posts-expand">
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block " lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://www.hardydou.com/2018/12/02/java%E7%9A%84%E5%9F%BA%E7%A1%80%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/">
 
-  <div id="posts" class="posts-expand">
-    
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://www.hardydou.com/2018/12/02/java的基础数据类型/">
-
-    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.jpg">
       <meta itemprop="name" content="小鱼先生">
       <meta itemprop="description" content="相信美好的事情即将发生">
-      <meta itemprop="image" content="/images/avatar.jpg">
     </span>
 
-    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
       <meta itemprop="name" content="小鱼先生">
     </span>
-
-    
       <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">Java基本数据类型
-              
-            
-          </h1>
-        
+        <h1 class="post-title" itemprop="name headline">
+          Java基本数据类型
+        </h1>
 
         <div class="post-meta">
-          <span class="post-time">
-
-            
-            
-            
-
-            
+            <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="fa fa-calendar-o"></i>
               </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-
-              
-                
-              
+              <span class="post-meta-item-text">发表于</span>
 
               <time title="创建时间：2018-12-02 12:13:00" itemprop="dateCreated datePublished" datetime="2018-12-02T12:13:00+08:00">2018-12-02</time>
-            
-
-            
-              
-
-              
-                
-                <span class="post-meta-divider">|</span>
-                
-
+            </span>
+              <span class="post-meta-item">
                 <span class="post-meta-item-icon">
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
-                
-                  <span class="post-meta-item-text">更新于</span>
-                
+                <span class="post-meta-item-text">更新于</span>
                 <time title="修改时间：2019-05-05 14:38:15" itemprop="dateModified" datetime="2019-05-05T14:38:15+08:00">2019-05-05</time>
-              
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
+              </span>
+            <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="fa fa-folder-o"></i>
               </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/java/" itemprop="url" rel="index"><span itemprop="name">java</span></a></span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/java/" itemprop="url" rel="index">
+                    <span itemprop="name">java</span>
+                  </a>
                 </span>
-                <a href="/2018/12/02/java的基础数据类型/#comments" itemprop="discussionUrl">
-                  <span class="post-meta-item-text">评论数：</span> <span class="post-comments-count valine-comment-count" data-xid="/2018/12/02/java的基础数据类型/" itemprop="commentCount"></span>
-                </a>
-              </span>
-            
-          
+            </span>
 
           
-          
-
-          
-
-          
-
-          
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="fa fa-comment-o"></i>
+      </span>
+      <span class="post-meta-item-text">Valine：</span>
+    
+    <a title="valine" href="/2018/12/02/java%E7%9A%84%E5%9F%BA%E7%A1%80%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/2018/12/02/java%E7%9A%84%E5%9F%BA%E7%A1%80%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
 
         </div>
       </header>
-    
 
     
     
@@ -487,548 +235,223 @@
     <div class="post-body" itemprop="articleBody">
 
       
-      
-
-      
         <h2 id="基础知识"><a href="#基础知识" class="headerlink" title="基础知识"></a>基础知识</h2><ol>
 <li>原码、反码和补码是计算机存储数字的编码方式（表示方法）。 </li>
 <li>ASCII码、utf-8和utf-16是计算机存储字符的编码方式。</li>
 </ol>
-<h2 id="你需要了解的存储单位"><a href="#你需要了解的存储单位" class="headerlink" title="你需要了解的存储单位"></a>你需要了解的存储单位</h2><table>
-<thead>
-<tr>
-<th>符号</th>
-<th>中文</th>
-<th>解释</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>b (bit)</td>
-<td>比特，位</td>
-<td>存放一位二进制数，即 0 或 1，最小的存储单位</td>
-</tr>
-<tr>
-<td>B (Byte)</td>
-<td>字节</td>
-<td>1B = 8b</td>
-</tr>
-<tr>
-<td>KB</td>
-<td>KB</td>
-<td>1KB = 2^10B = 1024B</td>
-</tr>
-<tr>
-<td>MB</td>
-<td>兆</td>
-<td>1MB = 2^20B = 1024 * 1KB</td>
-</tr>
-<tr>
-<td>GB</td>
-<td>G</td>
-<td>1GB = 2^30B = 1024 * 1MB</td>
-</tr>
-<tr>
-<td>TB</td>
-<td>T</td>
-<td>1TB = 2^40B = 1024 * 1GB</td>
-</tr>
-</tbody>
-</table>
+<h2 id="你需要了解的存储单位"><a href="#你需要了解的存储单位" class="headerlink" title="你需要了解的存储单位"></a>你需要了解的存储单位</h2><p>|符号|中文|解释|<br>|–|–|–|–|<br>|b (bit)|比特，位|存放一位二进制数，即 0 或 1，最小的存储单位|<br>|B (Byte)|字节|1B = 8b|<br>|KB |KB|1KB = 2^10B = 1024B|<br>|MB |兆|1MB = 2^20B = 1024 * 1KB|<br>|GB |G|1GB = 2^30B = 1024 * 1MB|<br>|TB |T|1TB = 2^40B = 1024 * 1GB|</p>
 <ul>
 <li>存储设备一般以B为常用单位；</li>
 <li>宽带传输速度是以Kb为单位，与实际存储单位KB有所不同。（我办理了一个100M带宽，实际速度不会超过100/8=12.5M）</li>
 </ul>
-<h2 id="基本数据类型"><a href="#基本数据类型" class="headerlink" title="基本数据类型"></a>基本数据类型</h2><table>
-<thead>
-<tr>
-<th>类型</th>
-<th>字节数</th>
-<th>位数</th>
-<th>最小</th>
-<th>最大</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>byte</td>
-<td>1Byte</td>
-<td>8Bit</td>
-<td>-2^7(-128)</td>
-<td>2^8-1(127)</td>
-</tr>
-<tr>
-<td>short</td>
-<td>2Byte</td>
-<td>2 * 8Bit</td>
-<td>-2^15(-32768)</td>
-<td>2^15-1(32768)</td>
-</tr>
-<tr>
-<td>int</td>
-<td>4Byte</td>
-<td>4* 8Bit</td>
-<td>-2^31</td>
-<td>2^31-1</td>
-</tr>
-<tr>
-<td>long</td>
-<td>8Byte</td>
-<td>8 * 8Bit</td>
-<td>-2^63</td>
-<td>2^63-1</td>
-</tr>
-<tr>
-<td>float</td>
-<td>4Byte</td>
-<td>4 * 8Bit</td>
-<td>-2^</td>
-<td></td>
-</tr>
-<tr>
-<td>double</td>
-<td>8Byte</td>
-<td>8* 8Bit</td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td>char</td>
-<td>2Byte</td>
-<td>2* 8Bit</td>
-<td>\u0000</td>
-<td>\uffff</td>
-</tr>
-<tr>
-<td>boolean</td>
-<td>0</td>
-<td>1bit</td>
-<td>0</td>
-<td>1</td>
-</tr>
-</tbody>
-</table>
+<h2 id="基本数据类型"><a href="#基本数据类型" class="headerlink" title="基本数据类型"></a>基本数据类型</h2><p>|类型|字节数|位数|最小|最大|<br>|–|–|–|–|–|–|<br>|byte|1Byte|8Bit|-2^7(-128) | 2^8-1(127) |<br>|short|2Byte|2 * 8Bit|-2^15(-32768)|2^15-1(32768)|<br>|int |4Byte|4* 8Bit|-2^31|2^31-1|<br>|long |8Byte|8 * 8Bit|-2^63|2^63-1|<br>|float |4Byte|4 * 8Bit|-2^||<br>|double |8Byte|8* 8Bit|||<br>|char|2Byte|2* 8Bit|\u0000|\uffff|<br>|boolean|0|1bit|0|1|</p>
 <h3 id="浮点型"><a href="#浮点型" class="headerlink" title="浮点型"></a>浮点型</h3><ol>
 <li>float</li>
 <li>double</li>
 </ol>
 <blockquote>
-<p>在数学中，特别是在计算机相关的数字（浮点数）问题的表述中，有一个基本表达法：<br>value of floating-point = significand x base ^ exponent , with sign<br>译为中文表达即为：<br>（浮点）数值 =      尾数    ×    底数 ^ 指数，（附加正负号）<br>于是，float的指数范围为-127~128，而double的指数范围  为-1023~1024，并且指数位是按补码的形式来划分的。其中负指数决定了浮点数所能表达的绝对值最小的数；而正指数决定了浮点数所能表达的绝对值最大的数，也即决定了浮点数的取值范围。</p>
+<p>在数学中，特别是在计算机相关的数字（浮点数）问题的表述中，有一个基本表达法：<br>value of floating-point = significand x base ^ exponent , with sign<br>译为中文表达即为：<br>（浮点）数值 =      尾数    ×    底数 ^ 指数，（附加正负号）<br>于是，float的指数范围为-127<del>128，而double的指数范围  为-1023</del>1024，并且指数位是按补码的形式来划分的。其中负指数决定了浮点数所能表达的绝对值最小的数；而正指数决定了浮点数所能表达的绝对值最大的数，也即决定了浮点数的取值范围。</p>
 </blockquote>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">[高位] ------------------------&gt; [低位]                      </span><br><span class="line">[*][********][***********************]                   </span><br><span class="line"> ↑                                                       </span><br><span class="line">1符号位  ↑                                                  </span><br><span class="line">       8位指数              ↑                                 </span><br><span class="line">                 23位尾数(基数是【1.&lt;尾数&gt;】)                        </span><br><span class="line"> 比如：                                                       </span><br><span class="line"> Float Value:0.75                                          </span><br><span class="line"> IEEE Memory:0-01111110-10000000000000000000000            </span><br><span class="line"> 符号位是：正数，                                                  </span><br><span class="line"> 指数部分是：01111110，即126，根据指数的规则-127~128，0在中间.与char不同。         </span><br><span class="line">          也就是01111111代表数字0。 01111110就是-1(126-127=-1)       </span><br><span class="line"> 基数就是1.100000000                                           </span><br><span class="line"> 二进制值就是：1.1 * 2^-1 = 0.11                                  </span><br><span class="line"> 十进制表示就是:2^-1 + 2^-2 = 0.5 + 0.25 = 0.75</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">[高位] ------------------------&gt; [低位]                      </span><br><span class="line">[*][********][***********************]                   </span><br><span class="line"> ↑                                                       </span><br><span class="line">1符号位  ↑                                                  </span><br><span class="line">       8位指数              ↑                                 </span><br><span class="line">                 23位尾数(基数是【1.&lt;尾数&gt;】)                        </span><br><span class="line"> 比如：                                                       </span><br><span class="line"> Float Value:0.75                                          </span><br><span class="line"> IEEE Memory:0-01111110-10000000000000000000000            </span><br><span class="line"> 符号位是：正数，                                                  </span><br><span class="line"> 指数部分是：01111110，即126，根据指数的规则-127~128，0在中间.与char不同。         </span><br><span class="line">          也就是01111111代表数字0。 01111110就是-1(126-127&#x3D;-1)       </span><br><span class="line"> 基数就是1.100000000                                           </span><br><span class="line"> 二进制值就是：1.1 * 2^-1 &#x3D; 0.11                                  </span><br><span class="line"> 十进制表示就是:2^-1 + 2^-2 &#x3D; 0.5 + 0.25 &#x3D; 0.75</span><br></pre></td></tr></table></figure>
 <hr>
 <ol>
 <li>原码：符号位+数值的绝对值。<br>（1）以8位为例，1的原码为 0000 0001，-1的原码为 1000 0001。<br>（2）取值范围：11111111 ~ 01111111，即：-127 ~ 127。</li>
 <li>反码：正数的反码是原码，负数的反码是在原码的基础上符号位不变，其他位取反的结果。<br>以8位为例：1的反码为 0000 0001，-1的反码为 1111 1110。</li>
 <li>补码：正数的补码是原码，负数的补码是在原码的基础上符号位不变，其他位取反再加一，即：反码+1。<br>以8位为例：1的补码为 0000 0001，-1的补码为 1111 1111。</li>
-<li>补码存在的意义<br>（1）1 - 1 = 1 + (-1) = (0000 0001)(原) + (1000 0001)(原) = (1000 0010)(原) = -2。错误<br>（2）3 + 5 = (0000 0011)(原) + (0000 0101)(原) = (0000 1000)(原) = 8。正确<br>（3）反码相减：3 - 4 = (0000 0011)(原) + (1000 0100)(原) = (0000 0011)(反) + (1111 1011)(反) = (1111 1110)(反) = (1000 0001)(原) = -1。正确<br>（4）反码相减：5 - 3 = (0000 0101)(原) + (1000 0011)(原) = (0000 0101)(反) + (1111 1100)(反) + 1（循环进位）= (0000 0010)(反) = (0000 0010)(原) = 2。正确<br>（5）1 - 1 = 1 + (-1) = (0000 0001)(反) + (1111 1110)(反) = (1111 1111)(反) = (1000 0000) = -0。<br>（6）1 - 1 = (0000 0001)(原) + (1000 0001)(原) = (0000 0001)(补) + (1111 1111)(补)= (0000 0000) (补) = (0000 0000) (原) = 0。<br>（7）-1-127 = (1000 0001)(原) + (1111 1111)(原) = (1111 1111)(补) + (1000 0001)(补) = (1000 0000)(补) = -128。<br>A、由（1）和（2）可知，原码相加是正确的，但是相减是错误的。<br>B、由（3）和（4）可知，反码相加减都是正确的。<br>C、但是由（5）可知，1-1的反码结果为-0，这个结果在数学上是没有意义的，为了解决这个问题，引入了补码。因为补码是在反码的基础上加1，故补码的加减是没有问题的，关键是1-1了。由（6）可知，补码完美的解决了1-1等于-0的尴尬局面，直接得到0。<br>D、由（7）可知，计算机底层算法规定了补码1000 0000 = -128。这也就导致了补码的取值范围由-127~127变为-128~127。</li>
+<li>补码存在的意义<br>（1）1 - 1 = 1 + (-1) = (0000 0001)(原) + (1000 0001)(原) = (1000 0010)(原) = -2。错误<br>（2）3 + 5 = (0000 0011)(原) + (0000 0101)(原) = (0000 1000)(原) = 8。正确<br>（3）反码相减：3 - 4 = (0000 0011)(原) + (1000 0100)(原) = (0000 0011)(反) + (1111 1011)(反) = (1111 1110)(反) = (1000 0001)(原) = -1。正确<br>（4）反码相减：5 - 3 = (0000 0101)(原) + (1000 0011)(原) = (0000 0101)(反) + (1111 1100)(反) + 1（循环进位）= (0000 0010)(反) = (0000 0010)(原) = 2。正确<br>（5）1 - 1 = 1 + (-1) = (0000 0001)(反) + (1111 1110)(反) = (1111 1111)(反) = (1000 0000) = -0。<br>（6）1 - 1 = (0000 0001)(原) + (1000 0001)(原) = (0000 0001)(补) + (1111 1111)(补)= (0000 0000) (补) = (0000 0000) (原) = 0。<br>（7）-1-127 = (1000 0001)(原) + (1111 1111)(原) = (1111 1111)(补) + (1000 0001)(补) = (1000 0000)(补) = -128。<br>A、由（1）和（2）可知，原码相加是正确的，但是相减是错误的。<br>B、由（3）和（4）可知，反码相加减都是正确的。<br>C、但是由（5）可知，1-1的反码结果为-0，这个结果在数学上是没有意义的，为了解决这个问题，引入了补码。因为补码是在反码的基础上加1，故补码的加减是没有问题的，关键是1-1了。由（6）可知，补码完美的解决了1-1等于-0的尴尬局面，直接得到0。<br>D、由（7）可知，计算机底层算法规定了补码1000 0000 = -128。这也就导致了补码的取值范围由-127<del>127变为-128</del>127。</li>
 </ol>
 <p>总结：<br>（1）由于原码相减结果不对，故使用了反码。但是反码1-1得到的结果是-0，这个在数学上是无意义的，为了导出1-1=0的正确结果，故使用了补码，同时规定补码1000 0000 = -128，从而可以将-0表示为-128，拓展了一个表示位，故8位二进制取值范围为-128~127。<br>（2）这里再次强调，在计算机中，数据都是以正数的补码的形式存在的。正数的补码是其本身，负数则是以其本身的正数的补码的形式存在的。<br>栗子：-123在计算机中的存储的值是1111 1011 -&gt; 1000 0100 -&gt; 1000 0101。</p>
-<h3 id="int"><a href="#int" class="headerlink" title="int"></a>int</h3><p>占用4个字节，即：32b，有符号位：从左数第一位。<br>取值范围：-2^31 ~ 2^31-1。<br>原因：0 代表 +0，-0 代表 -2^31，故负数比整数多一个。<br>数据以补码的形式存放在内存中。<br>对于+0和-0在内存中的存储方式。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">#include &quot;stdafx.h&quot;</span><br><span class="line">#include &lt;iostream&gt;</span><br><span class="line">using namespace std;</span><br><span class="line">int _tmain(int argc, _TCHAR* argv[])</span><br><span class="line">&#123;</span><br><span class="line">    int i = +0;</span><br><span class="line">    int k = -0;</span><br><span class="line">    int *pi = &amp;i;</span><br><span class="line">    int *pk = &amp;k;</span><br><span class="line">    char c = &apos;1&apos;;</span><br><span class="line">    char *pc = &amp;c;</span><br><span class="line">    cout&lt;&lt;&quot;int: &quot;&lt;&lt;sizeof(int)&lt;&lt;&quot; byte&quot;&lt;&lt;endl;</span><br><span class="line">    cout&lt;&lt;&quot;unsigned int: &quot;&lt;&lt;sizeof(unsigned int)&lt;&lt;&quot; byte&quot;&lt;&lt;endl;</span><br><span class="line">    cout&lt;&lt;&quot;float: &quot;&lt;&lt;sizeof(float)&lt;&lt;&quot; byte&quot;&lt;&lt;endl;</span><br><span class="line">    cout&lt;&lt;&quot;double: &quot;&lt;&lt;sizeof(double)&lt;&lt;&quot; byte&quot;&lt;&lt;endl;</span><br><span class="line">    cout&lt;&lt;&quot;char: &quot;&lt;&lt;sizeof(char)&lt;&lt;&quot; byte&quot;&lt;&lt;endl;</span><br><span class="line">    cin.get();</span><br><span class="line"></span><br><span class="line">    return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<h3 id="int"><a href="#int" class="headerlink" title="int"></a>int</h3><p>占用4个字节，即：32b，有符号位：从左数第一位。<br>取值范围：-2^31 ~ 2^31-1。<br>原因：0 代表 +0，-0 代表 -2^31，故负数比整数多一个。<br>数据以补码的形式存放在内存中。<br>对于+0和-0在内存中的存储方式。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">#include &quot;stdafx.h&quot;</span><br><span class="line">#include &lt;iostream&gt;</span><br><span class="line">using namespace std;</span><br><span class="line">int _tmain(int argc, _TCHAR* argv[])</span><br><span class="line">&#123;</span><br><span class="line">    int i &#x3D; +0;</span><br><span class="line">    int k &#x3D; -0;</span><br><span class="line">    int *pi &#x3D; &amp;i;</span><br><span class="line">    int *pk &#x3D; &amp;k;</span><br><span class="line">    char c &#x3D; &#39;1&#39;;</span><br><span class="line">    char *pc &#x3D; &amp;c;</span><br><span class="line">    cout&lt;&lt;&quot;int: &quot;&lt;&lt;sizeof(int)&lt;&lt;&quot; byte&quot;&lt;&lt;endl;</span><br><span class="line">    cout&lt;&lt;&quot;unsigned int: &quot;&lt;&lt;sizeof(unsigned int)&lt;&lt;&quot; byte&quot;&lt;&lt;endl;</span><br><span class="line">    cout&lt;&lt;&quot;float: &quot;&lt;&lt;sizeof(float)&lt;&lt;&quot; byte&quot;&lt;&lt;endl;</span><br><span class="line">    cout&lt;&lt;&quot;double: &quot;&lt;&lt;sizeof(double)&lt;&lt;&quot; byte&quot;&lt;&lt;endl;</span><br><span class="line">    cout&lt;&lt;&quot;char: &quot;&lt;&lt;sizeof(char)&lt;&lt;&quot; byte&quot;&lt;&lt;endl;</span><br><span class="line">    cin.get();</span><br><span class="line"></span><br><span class="line">    return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
 <h3 id="unsigned-int"><a href="#unsigned-int" class="headerlink" title="unsigned int"></a>unsigned int</h3><p>占用4个字节，即：32b，无符号位。<br>取值范围：0 ~ 2^32。<br>数据以补码的形式存放在内存中。</p>
 <h3 id="float"><a href="#float" class="headerlink" title="float"></a>float</h3><ol>
 <li>浮点数在计算机中用科学计数法表示，栗：1.0100011*2^7。 </li>
 <li>符号位：“+”或者“-”。 </li>
 <li>指数部分：2的幂指数，栗子中的“7”。 </li>
 <li>尾数部分：最高位为“1”的底数，栗子中的“10100011”。 </li>
-<li>栗子：15.987在计算机中存储方式。<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">（1）15.987的整数部分原码：1111。</span><br><span class="line">（2）15.987的小数部分原码：11111100……此处省略11位。</span><br><span class="line">（3）经过上述计算，15.987的二进制为1111.11111100……，用科学计数法表示为1.11111111100……*2^3。 </span><br><span class="line">（4）指数部分采用移位存储的方式，即3+（2^7-1） = 130。其二进制：10000010。 </span><br><span class="line">（5）尾数部分省略科学计数法的整数部分！！（因为肯定是1）（隐藏位） </span><br><span class="line">（6）15.987在内存中的存放的内容为： </span><br><span class="line">符号位：0（共1位）。 </span><br><span class="line">指数部分：10000010（共8位）。 </span><br><span class="line">尾数部分：111111111000……（共23位）。 </span><br><span class="line">（7）写成完整的二进制：0100 0001 0111 1111 1100 0…… </span><br><span class="line">（8）写成16进制：41 7F C……。 </span><br><span class="line">（9）因为Intel的架构的字节序是小端序，则真正的存放内容为……C 7F 41。</span><br></pre></td></tr></table></figure>
+<li>栗子：15.987在计算机中存储方式。<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">（1）15.987的整数部分原码：1111。</span><br><span class="line">（2）15.987的小数部分原码：11111100……此处省略11位。</span><br><span class="line">（3）经过上述计算，15.987的二进制为1111.11111100……，用科学计数法表示为1.11111111100……*2^3。 </span><br><span class="line">（4）指数部分采用移位存储的方式，即3+（2^7-1） &#x3D; 130。其二进制：10000010。 </span><br><span class="line">（5）尾数部分省略科学计数法的整数部分！！（因为肯定是1）（隐藏位） </span><br><span class="line">（6）15.987在内存中的存放的内容为： </span><br><span class="line">符号位：0（共1位）。 </span><br><span class="line">指数部分：10000010（共8位）。 </span><br><span class="line">尾数部分：111111111000……（共23位）。 </span><br><span class="line">（7）写成完整的二进制：0100 0001 0111 1111 1100 0…… </span><br><span class="line">（8）写成16进制：41 7F C……。 </span><br><span class="line">（9）因为Intel的架构的字节序是小端序，则真正的存放内容为……C 7F 41。</span><br></pre></td></tr></table></figure>
+
 </li>
 </ol>
 <h3 id="double"><a href="#double" class="headerlink" title="double"></a>double</h3><p>原理同上！</p>
 <h3 id="char"><a href="#char" class="headerlink" title="char"></a>char</h3><p>在内存中以ASCII码的形式存储。<br>栗子：<br><img src="/images/pasted-2.png" alt="img"><br>代码中字符是“1”，ASCII码为49，转换为16进制为31。</p>
-<h3 id="拓展"><a href="#拓展" class="headerlink" title="拓展"></a>拓展</h3><p>移位存储：<br>在存储浮点数时，若指数部分若不使用移位存储技术，则会导致0有两种表示方式：1000 000 0和0000 000 0。所以，为了最大化利用价值，同时保留正负性，在原数据的基础上加127，其结果如下：<br>0000 000 0~0111 111 1代表着-127~0。<br>1000 000 0~1111 111 1代表着1~127。<br>这样正负指数均可表示的数量保持一致。</p>
+<h3 id="拓展"><a href="#拓展" class="headerlink" title="拓展"></a>拓展</h3><p>移位存储：<br>在存储浮点数时，若指数部分若不使用移位存储技术，则会导致0有两种表示方式：1000 000 0和0000 000 0。所以，为了最大化利用价值，同时保留正负性，在原数据的基础上加127，其结果如下：<br>0000 000 0<del>0111 111 1代表着-127</del>0。<br>1000 000 0<del>1111 111 1代表着1</del>127。<br>这样正负指数均可表示的数量保持一致。</p>
 
-      
     </div>
 
     
-
     
     
-    
-
-    
-
-    
-       
-    
-    
-
-    
-      <div>
         
 
-
-
-  
-
-
-
+<div>
 <ul class="post-copyright">
   <li class="post-copyright-author">
-    <strong>本文作者： </strong>Hardy Dou</li>
+    <strong>本文作者： </strong>Hardy Dou
+  </li>
   <li class="post-copyright-link">
     <strong>本文链接：</strong>
-    
-    <a href="http://www.hardydou.com/2018/12/02/java的基础数据类型/" title="Java基本数据类型">http://www.hardydou.com/2018/12/02/java的基础数据类型/</a>
+    <a href="http://www.hardydou.com/2018/12/02/java%E7%9A%84%E5%9F%BA%E7%A1%80%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/" title="Java基本数据类型">http://www.hardydou.com/2018/12/02/java的基础数据类型/</a>
   </li>
   <li class="post-copyright-license">
-    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fa fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！</li>
+    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fa fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
+  </li>
 </ul>
-
-      </div>
-    
-
-    <footer class="post-footer">
-      
-        <div class="post-tags">
-          
-            <a href="/tags/java/" rel="tag"># java</a>
-          
-            <a href="/tags/java数据类型/" rel="tag"># java数据类型</a>
-          
-        </div>
-      
-
-      
-      
-      
-
-      
-        <div class="post-nav">
-          <div class="post-nav-next post-nav-item">
-            
-              <a href="/2018/11/30/人生处世/" rel="next" title="人生处世">
-                <i class="fa fa-chevron-left"></i> 人生处世
-              </a>
-            
-          </div>
-
-          <span class="post-nav-divider"></span>
-
-          <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2019/02/13/渐进步骤/" rel="prev" title="熟悉 IntelliJ IDEA">
-                熟悉 IntelliJ IDEA <i class="fa fa-chevron-right"></i>
-              </a>
-            
-          </div>
-        </div>
-      
-
-      
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-  </div>
-
-
-          </div>
-          
-
-  
-    <div class="comments" id="comments">
-    </div>
-  
-
-
-
-        </div>
-        
-          
-  
-  <div class="sidebar-toggle">
-    <div class="sidebar-toggle-line-wrap">
-      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
-      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
-      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
-    </div>
-  </div>
-
-  <aside id="sidebar" class="sidebar">
-    
-    <div class="sidebar-inner">
-
-      
-
-      
-        <ul class="sidebar-nav motion-element">
-          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
-            文章目录
-          </li>
-          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
-            站点概览
-          </li>
-        </ul>
-      
-
-      <section class="site-overview-wrap sidebar-panel">
-        <div class="site-overview">
-          <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
-            
-              <img class="site-author-image" itemprop="image" src="/images/avatar.jpg" alt="小鱼先生">
-            
-              <p class="site-author-name" itemprop="name">小鱼先生</p>
-              <p class="site-description motion-element" itemprop="description">相信美好的事情即将发生</p>
-          </div>
-
-          
-            <nav class="site-state motion-element">
-              
-                <div class="site-state-item site-state-posts">
-                
-                  <a href="/archives">
-                
-                    <span class="site-state-item-count">44</span>
-                    <span class="site-state-item-name">日志</span>
-                  </a>
-                </div>
-              
-
-              
-                
-                
-                <div class="site-state-item site-state-categories">
-                  <a href="/categories/index.html">
-                    
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                    <span class="site-state-item-count">7</span>
-                    <span class="site-state-item-name">分类</span>
-                  </a>
-                </div>
-              
-
-              
-                
-                
-                <div class="site-state-item site-state-tags">
-                  <a href="/tags/index.html">
-                    
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                    <span class="site-state-item-count">25</span>
-                    <span class="site-state-item-name">标签</span>
-                  </a>
-                </div>
-              
-            </nav>
-          
-
-          
-            <div class="feed-link motion-element">
-              <a href="/atom.xml" rel="alternate">
-                <i class="fa fa-rss"></i>
-                RSS
-              </a>
-            </div>
-          
-
-          
-            <div class="links-of-author motion-element">
-              
-                <span class="links-of-author-item">
-                  
-                  
-                    
-                  
-                  
-                    
-                  
-                  <a href="https://github.com/HardyDou" title="GitHub &rarr; https://github.com/HardyDou" rel="noopener" target="_blank"><i class="fa fa-fw fa-github"></i>GitHub</a>
-                </span>
-              
-                <span class="links-of-author-item">
-                  
-                  
-                    
-                  
-                  
-                    
-                  
-                  <a href="mailto:doouxiaoyu@163.com" title="E-Mail &rarr; mailto:doouxiaoyu@163.com" rel="noopener" target="_blank"><i class="fa fa-fw fa-envelope"></i>E-Mail</a>
-                </span>
-              
-            </div>
-          
-
-          
-
-          
-          
-
-          
-            
-          
-          
-
-        </div>
-      </section>
-
-      
-      <!--noindex-->
-        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
-          <div class="post-toc">
-
-            
-              
-            
-
-            
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#基础知识"><span class="nav-number">1.</span> <span class="nav-text">基础知识</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#你需要了解的存储单位"><span class="nav-number">2.</span> <span class="nav-text">你需要了解的存储单位</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#基本数据类型"><span class="nav-number">3.</span> <span class="nav-text">基本数据类型</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#浮点型"><span class="nav-number">3.1.</span> <span class="nav-text">浮点型</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#int"><span class="nav-number">3.2.</span> <span class="nav-text">int</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#unsigned-int"><span class="nav-number">3.3.</span> <span class="nav-text">unsigned int</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#float"><span class="nav-number">3.4.</span> <span class="nav-text">float</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#double"><span class="nav-number">3.5.</span> <span class="nav-text">double</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#char"><span class="nav-number">3.6.</span> <span class="nav-text">char</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#拓展"><span class="nav-number">3.7.</span> <span class="nav-text">拓展</span></a></li></ol></li></ol></div>
-            
-
-          </div>
-        </section>
-      <!--/noindex-->
-      
-
-      
-        <div class="back-to-top">
-          <i class="fa fa-arrow-up"></i>
-          
-            <span id="scrollpercent"><span>0</span>%</span>
-          
-        </div>
-      
-
-    </div>
-  </aside>
-
-
-        
-      </div>
-    </main>
-
-    <footer id="footer" class="footer">
-      <div class="footer-inner">
-        <div class="copyright">  <a href="http://www.miitbeian.gov.cn" rel="noopener" target="_blank">京ICP备18050184号 </a>&copy; <span itemprop="copyrightYear">2019</span>
-  <span class="with-love" id="animate">
-    <i class="fa fa-heart"></i>
-  </span>
-  <span class="author" itemprop="copyrightHolder">小鱼先生</span>
-
-  
-
-  
 </div>
 
 
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/java/" rel="tag"># java</a>
+              <a href="/tags/java%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/" rel="tag"># java数据类型</a>
+          </div>
 
-
-
-
-
+        
 
 
         
-
-
-
-
-
-
-
-
-        
-      </div>
-    </footer>
-
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2018/11/30/%E4%BA%BA%E7%94%9F%E5%A4%84%E4%B8%96/" rel="prev" title="人生处世">
+      <i class="fa fa-chevron-left"></i> 人生处世
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/2019/02/13/%E6%B8%90%E8%BF%9B%E6%AD%A5%E9%AA%A4/" rel="next" title="熟悉 IntelliJ IDEA">
+      熟悉 IntelliJ IDEA <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
     
-
-    
-	
-    
-
-    
-  </div>
-
+  </article>
+  
+  
   
 
-<script type="text/javascript">
-  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
-    window.Promise = null;
+  </div>
+
+
+          </div>
+          
+    <div class="comments" id="valine-comments"></div>
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let activeClass = CONFIG.comments.activeClass;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
   }
 </script>
 
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#基础知识"><span class="nav-number">1.</span> <span class="nav-text">基础知识</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#你需要了解的存储单位"><span class="nav-number">2.</span> <span class="nav-text">你需要了解的存储单位</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#基本数据类型"><span class="nav-number">3.</span> <span class="nav-text">基本数据类型</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#浮点型"><span class="nav-number">3.1.</span> <span class="nav-text">浮点型</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#int"><span class="nav-number">3.2.</span> <span class="nav-text">int</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#unsigned-int"><span class="nav-number">3.3.</span> <span class="nav-text">unsigned int</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#float"><span class="nav-number">3.4.</span> <span class="nav-text">float</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#double"><span class="nav-number">3.5.</span> <span class="nav-text">double</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#char"><span class="nav-number">3.6.</span> <span class="nav-text">char</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#拓展"><span class="nav-number">3.7.</span> <span class="nav-text">拓展</span></a></li></ol></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="小鱼先生"
+      src="/images/avatar.jpg">
+  <p class="site-author-name" itemprop="name">小鱼先生</p>
+  <div class="site-description" itemprop="description">相信美好的事情即将发生</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives">
+        
+          <span class="site-state-item-count">44</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories">
+          
+        <span class="site-state-item-count">7</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags">
+          
+        <span class="site-state-item-count">25</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+        <a href="https://github.com/HardyDou" title="GitHub → https://github.com/HardyDou" rel="noopener" target="_blank"><i class="fa fa-fw fa-github"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:doouxiaoyu@163.com" title="E-Mail → mailto:doouxiaoyu@163.com" rel="noopener" target="_blank"><i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+      </span>
+  </div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+  <div class="beian"><a href="http://www.beian.miit.gov.cn" rel="noopener" target="_blank">京ICP备18050184号 </a>
+  </div>
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2020</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">小鱼先生</span>
+</div>
+
+        
 
 
 
@@ -1037,9 +460,26 @@
 
 
 
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js"></script>
+  <script src="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
 
 
+<script src="/js/schemes/pisces.js"></script>
 
+
+<script src="/js/next-boot.js"></script>
 
 
 
@@ -1061,139 +501,37 @@
 
 
   
-  
-    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
-  
-
-  
-  
-    <script type="text/javascript" src="/lib/kityminder-core/kity.min.js"></script>
-  
-
-  
-  
-    <script type="text/javascript" src="/lib/kityminder-core/kityminder.core.js"></script>
-  
-
-  
-  
-    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
-  
-
-  
-  
-    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
-  
-
-  
-  
-    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
-  
-
 
   
 
 
-  <script type="text/javascript" src="/js/src/utils.js?v=6.5.0"></script>
-
-  <script type="text/javascript" src="/js/src/motion.js?v=6.5.0"></script>
-
-
-
-  
-  
-
-
-  <script type="text/javascript" src="/js/src/affix.js?v=6.5.0"></script>
-
-  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=6.5.0"></script>
-
-
-
-  
-  <script type="text/javascript" src="/js/src/scrollspy.js?v=6.5.0"></script>
-<script type="text/javascript" src="/js/src/post-details.js?v=6.5.0"></script>
-<script type="text/javascript" src="/js/src/kityminder.js?v=6.5.0"></script>
-
-
-
-  
-
-
-  <script type="text/javascript" src="/js/src/bootstrap.js?v=6.5.0"></script>
-
-
-
-  
-
-
-
-  
-
-
-
-
-
-
-
-
-  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
-  
-  
-  <script src="//unpkg.com/valine/dist/Valine.min.js"></script>
-  
-  <script type="text/javascript">
-    var GUEST = ['nick','mail','link'];
+<script>
+NexT.utils.loadComments(document.querySelector('#valine-comments'), () => {
+  NexT.utils.getScript('//unpkg.com/valine/dist/Valine.min.js', () => {
+    var GUEST = ['nick', 'mail', 'link'];
     var guest = 'nick,mail,link';
-    guest = guest.split(',').filter(function (item) {
-      return GUEST.indexOf(item)>-1;
+    guest = guest.split(',').filter(item => {
+      return GUEST.includes(item);
     });
     new Valine({
-        el: '#comments' ,
-        verify: true,
-        notify: true,
-        appId: 'fF3IzJ6TkcmNPCPo4nYayNln-gzGzoHsz',
-        appKey: 'CaEuIN0359VyWiygnoDPQxx1',
-        placeholder: '有话就直说!!',
-        avatar:'mp',
-        meta:guest,
-        pageSize:'10' || 10,
-        visitor: false
+      el         : '#valine-comments',
+      verify     : true,
+      notify     : true,
+      appId      : 'fF3IzJ6TkcmNPCPo4nYayNln-gzGzoHsz',
+      appKey     : 'CaEuIN0359VyWiygnoDPQxx1',
+      placeholder: "请讲!!",
+      avatar     : 'mp',
+      meta       : guest,
+      pageSize   : '10' || 10,
+      visitor    : false,
+      lang       : '' || 'zh-cn',
+      path       : location.pathname,
+      recordIP   : false,
+      serverURLs : ''
     });
-  </script>
-
-
-
-  
-
-
-
-
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
+  }, window.Valine);
+});
+</script>
 
 </body>
 </html>

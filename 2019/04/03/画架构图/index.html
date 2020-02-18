@@ -1,156 +1,54 @@
 <!DOCTYPE html>
-
-
-
-
-
-
-
-
-
-
-
-
-  
-
-
-<html class="theme-next pisces use-motion" lang="zh-CN">
-<head><meta name="generator" content="Hexo 3.8.0">
+<html lang="zh-Hans">
+<head>
   <meta charset="UTF-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
 <meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 4.2.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
 
 
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.css">
 
-
-
-
-
-
-
-
-
-
-<meta http-equiv="Cache-Control" content="no-transform">
-<meta http-equiv="Cache-Control" content="no-siteapp">
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<link href="/lib/kityminder-core/kityminder.core.css?v=1.4.49" rel="stylesheet" type="text/css">
-<style>
-.mindmap{width:90%}
-</style>
-
-  
-  
-  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
-
-
-
-
-
-
-
-<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
-
-<link href="/css/main.css?v=6.5.0" rel="stylesheet" type="text/css">
-<style>
-.pullquote{width:auto;}
-</style>
-
-  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=6.5.0">
-
-
-  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=6.5.0">
-
-
-  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=6.5.0">
-
-
-  <link rel="mask-icon" href="/images/logo.svg?v=6.5.0" color="#222">
-
-
-
-
-
-
-
-
-
-<script type="text/javascript" id="hexo.configurations">
-  var NexT = window.NexT || {};
-  var CONFIG = {
-    root: '/',
-    scheme: 'Pisces',
-    version: '6.5.0',
-    sidebar: {"position":"left","display":"post","offset":12,"b2t":true,"scrollpercent":true,"onmobile":false,"width":240},
-    fancybox: true,
-    fastclick: false,
-    lazyload: false,
-    tabs: true,
-    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
-    algolia: {
-      applicationID: '',
-      apiKey: '',
-      indexName: '',
-      hits: {"per_page":10},
-      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
-    }
-  };
-</script>
-
-
-  
-
-
-
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"www.hardydou.com","root":"/","scheme":"Pisces","version":"7.7.1","exturl":false,"sidebar":{"position":"left","width":240,"b2t":true,"scrollpercent":true,"display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":true,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+  </script>
 
   <meta name="description" content="介绍架构图是展示软件系统的 整体全貌、组件关系、部署情况、演进方向  视图语言。 作用传递架构师要表达的信息，快速评估架构的可行性、安全性、以及问题所在。 分类分类较多，目前以 4+1视图（场景视图、逻辑视图、物理视图、处理流程图、开发视图）、4C（上下文、容器图、组件图、代码图）为主流。 4+1视图场景视图描述 参与者与功能用力的关系，通常以用例图表示。 逻辑视图描述软件功能拆解后的组件关系，组">
-<meta name="keywords" content="UML">
 <meta property="og:type" content="article">
 <meta property="og:title" content="架构图">
-<meta property="og:url" content="http://www.hardydou.com/2019/04/03/画架构图/index.html">
+<meta property="og:url" content="http://www.hardydou.com/2019/04/03/%E7%94%BB%E6%9E%B6%E6%9E%84%E5%9B%BE/index.html">
 <meta property="og:site_name" content="小鱼先生">
 <meta property="og:description" content="介绍架构图是展示软件系统的 整体全貌、组件关系、部署情况、演进方向  视图语言。 作用传递架构师要表达的信息，快速评估架构的可行性、安全性、以及问题所在。 分类分类较多，目前以 4+1视图（场景视图、逻辑视图、物理视图、处理流程图、开发视图）、4C（上下文、容器图、组件图、代码图）为主流。 4+1视图场景视图描述 参与者与功能用力的关系，通常以用例图表示。 逻辑视图描述软件功能拆解后的组件关系，组">
-<meta property="og:locale" content="zh-CN">
+<meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="http://www.hardydou.com/images/pasted-50.png">
 <meta property="og:image" content="http://www.hardydou.com/images/pasted-52.png">
 <meta property="og:image" content="http://www.hardydou.com/images/pasted-54.png">
 <meta property="og:image" content="http://www.hardydou.com/images/pasted-55.png">
 <meta property="og:image" content="http://www.hardydou.com/images/pasted-56.png">
-<meta property="og:updated_time" content="2019-07-01T17:26:46.974Z">
+<meta property="article:published_time" content="2019-04-03T08:42:00.000Z">
+<meta property="article:modified_time" content="2019-07-01T17:26:46.974Z">
+<meta property="article:author" content="小鱼先生">
+<meta property="article:tag" content="UML">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="架构图">
-<meta name="twitter:description" content="介绍架构图是展示软件系统的 整体全貌、组件关系、部署情况、演进方向  视图语言。 作用传递架构师要表达的信息，快速评估架构的可行性、安全性、以及问题所在。 分类分类较多，目前以 4+1视图（场景视图、逻辑视图、物理视图、处理流程图、开发视图）、4C（上下文、容器图、组件图、代码图）为主流。 4+1视图场景视图描述 参与者与功能用力的关系，通常以用例图表示。 逻辑视图描述软件功能拆解后的组件关系，组">
 <meta name="twitter:image" content="http://www.hardydou.com/images/pasted-50.png">
 
+<link rel="canonical" href="http://www.hardydou.com/2019/04/03/%E7%94%BB%E6%9E%B6%E6%9E%84%E5%9B%BE/">
 
 
-  <link rel="alternate" href="/atom.xml" title="小鱼先生" type="application/atom+xml">
-
-
-
-
-  <link rel="canonical" href="http://www.hardydou.com/2019/04/03/画架构图/">
-
-
-
-<script type="text/javascript" id="page.configurations">
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
   CONFIG.page = {
     sidebar: "",
+    isHome: false,
+    isPost: true
   };
 </script>
 
@@ -162,328 +60,177 @@
 
 
 
-
-
-
-
-
   <noscript>
-  <style type="text/css">
-    .use-motion .motion-element,
-    .use-motion .brand,
-    .use-motion .menu-item,
-    .sidebar-inner,
-    .use-motion .post-block,
-    .use-motion .pagination,
-    .use-motion .comments,
-    .use-motion .post-header,
-    .use-motion .post-body,
-    .use-motion .collection-title { opacity: initial; }
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
 
-    .use-motion .logo,
-    .use-motion .site-title,
-    .use-motion .site-subtitle {
-      opacity: initial;
-      top: initial;
-    }
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
 
-    .use-motion {
-      .logo-line-before i { left: initial; }
-      .logo-line-after i { right: initial; }
-    }
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
   </style>
 </noscript>
 
 </head>
 
-<body itemscope="" itemtype="http://schema.org/WebPage" lang="zh-CN">
-
-  
-  
-    
-  
-
-  <div class="container sidebar-position-left page-post-detail">
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
     <div class="headband"></div>
 
-    <header id="header" class="header" itemscope="" itemtype="http://schema.org/WPHeader">
-      <div class="header-inner"><div class="site-brand-wrapper">
-  <div class="site-meta ">
-    
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
 
-    <div class="custom-logo-site-title">
+  <div class="site-meta">
+
+    <div>
       <a href="/" class="brand" rel="start">
         <span class="logo-line-before"><i></i></span>
         <span class="site-title">小鱼先生</span>
         <span class="logo-line-after"><i></i></span>
       </a>
     </div>
-    
-      
         <p class="site-subtitle">梦想还是要有的，万一忘记了咋办？</p>
-      
-    
   </div>
 
-  <div class="site-nav-toggle">
-    <button aria-label="切换导航栏">
-      <span class="btn-bar"></span>
-      <span class="btn-bar"></span>
-      <span class="btn-bar"></span>
-    </button>
-  </div>
+  <div class="site-nav-right"></div>
 </div>
-
 
 
 <nav class="site-nav">
   
-    <ul id="menu" class="menu">
-      
-        
-        
-        
-          
-          <li class="menu-item menu-item-home">
+  <ul id="menu" class="menu">
+        <li class="menu-item menu-item-home">
 
-    
-    
-    
-      
-    
-
-    
-
-    <a href="/" rel="section"><i class="menu-item-icon fa fa-fw fa-home"></i> <br>首页</a>
+    <a href="/" rel="section"><i class="fa fa-fw fa-首页"></i>首页</a>
 
   </li>
-        
-        
-        
-          
-          <li class="menu-item menu-item-archives">
+        <li class="menu-item menu-item-archives">
 
-    
-    
-    
-      
-    
-
-    
-
-    <a href="/archives" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档</a>
+    <a href="/archives" rel="section"><i class="fa fa-fw fa-归档"></i>归档</a>
 
   </li>
-        
-        
-        
-          
-          <li class="menu-item menu-item-tags">
+        <li class="menu-item menu-item-tags">
 
-    
-    
-    
-      
-    
-
-    
-
-    <a href="/tags" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br>标签</a>
+    <a href="/tags" rel="section"><i class="fa fa-fw fa-标签"></i>标签</a>
 
   </li>
-        
-        
-        
-          
-          <li class="menu-item menu-item-categories">
+        <li class="menu-item menu-item-categories">
 
-    
-    
-    
-      
-    
-
-    
-
-    <a href="/categories" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br>分类</a>
+    <a href="/categories" rel="section"><i class="fa fa-fw fa-分类"></i>分类</a>
 
   </li>
-        
-        
-        
-          
-          <li class="menu-item menu-item-about">
+        <li class="menu-item menu-item-about">
 
-    
-    
-    
-      
-    
-
-    
-
-    <a href="/about" rel="section"><i class="menu-item-icon fa fa-fw fa-user"></i> <br>关于</a>
+    <a href="/about" rel="section"><i class="fa fa-fw fa-关于"></i>关于</a>
 
   </li>
+  </ul>
 
-      
-      
-    </ul>
-  
-
-  
-
-  
 </nav>
-
-
-
-  
-
-
-
 </div>
     </header>
 
     
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
 
 
-    <main id="main" class="main">
+    <main class="main">
       <div class="main-inner">
         <div class="content-wrap">
           
+
+          <div class="content">
             
 
-          
-          <div id="content" class="content">
-            
+  <div class="posts-expand">
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block " lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://www.hardydou.com/2019/04/03/%E7%94%BB%E6%9E%B6%E6%9E%84%E5%9B%BE/">
 
-  <div id="posts" class="posts-expand">
-    
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://www.hardydou.com/2019/04/03/画架构图/">
-
-    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.jpg">
       <meta itemprop="name" content="小鱼先生">
       <meta itemprop="description" content="相信美好的事情即将发生">
-      <meta itemprop="image" content="/images/avatar.jpg">
     </span>
 
-    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
       <meta itemprop="name" content="小鱼先生">
     </span>
-
-    
       <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">架构图
-              
-            
-          </h1>
-        
+        <h1 class="post-title" itemprop="name headline">
+          架构图
+        </h1>
 
         <div class="post-meta">
-          <span class="post-time">
-
-            
-            
-            
-
-            
+            <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="fa fa-calendar-o"></i>
               </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-
-              
-                
-              
+              <span class="post-meta-item-text">发表于</span>
 
               <time title="创建时间：2019-04-03 16:42:00" itemprop="dateCreated datePublished" datetime="2019-04-03T16:42:00+08:00">2019-04-03</time>
-            
-
-            
-              
-
-              
-                
-                <span class="post-meta-divider">|</span>
-                
-
+            </span>
+              <span class="post-meta-item">
                 <span class="post-meta-item-icon">
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
-                
-                  <span class="post-meta-item-text">更新于</span>
-                
+                <span class="post-meta-item-text">更新于</span>
                 <time title="修改时间：2019-07-02 01:26:46" itemprop="dateModified" datetime="2019-07-02T01:26:46+08:00">2019-07-02</time>
-              
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
+              </span>
+            <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="fa fa-folder-o"></i>
               </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/架构设计/" itemprop="url" rel="index"><span itemprop="name">架构设计</span></a></span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1/" itemprop="url" rel="index">
+                    <span itemprop="name">架构设计</span>
+                  </a>
                 </span>
-                <a href="/2019/04/03/画架构图/#comments" itemprop="discussionUrl">
-                  <span class="post-meta-item-text">评论数：</span> <span class="post-comments-count valine-comment-count" data-xid="/2019/04/03/画架构图/" itemprop="commentCount"></span>
-                </a>
-              </span>
-            
-          
+            </span>
 
           
-          
-
-          
-
-          
-
-          
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="fa fa-comment-o"></i>
+      </span>
+      <span class="post-meta-item-text">Valine：</span>
+    
+    <a title="valine" href="/2019/04/03/%E7%94%BB%E6%9E%B6%E6%9E%84%E5%9B%BE/#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/2019/04/03/%E7%94%BB%E6%9E%B6%E6%9E%84%E5%9B%BE/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
 
         </div>
       </header>
-    
 
     
     
@@ -491,10 +238,7 @@
     <div class="post-body" itemprop="articleBody">
 
       
-      
-
-      
-        <h2 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h2><p>架构图是展示软件系统的<font size="6"> 整体全貌、组件关系、部署情况、演进方向</font>  视图语言。</p>
+        <h2 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h2><p>架构图是展示软件系统的<font size=6> 整体全貌、组件关系、部署情况、演进方向</font>  视图语言。</p>
 <h2 id="作用"><a href="#作用" class="headerlink" title="作用"></a>作用</h2><p>传递架构师要表达的信息，快速评估架构的可行性、安全性、以及问题所在。</p>
 <h2 id="分类"><a href="#分类" class="headerlink" title="分类"></a>分类</h2><p>分类较多，目前以 4+1视图（场景视图、逻辑视图、物理视图、处理流程图、开发视图）、4C（上下文、容器图、组件图、代码图）为主流。</p>
 <h2 id="4-1视图"><a href="#4-1视图" class="headerlink" title="4+1视图"></a>4+1视图</h2><h3 id="场景视图"><a href="#场景视图" class="headerlink" title="场景视图"></a>场景视图</h3><p>描述 参与者与功能用力的关系，通常以用例图表示。<br><img src="/images/pasted-50.png" alt="upload successful"></p>
@@ -503,413 +247,199 @@
 <h3 id="处理流程图"><a href="#处理流程图" class="headerlink" title="处理流程图"></a>处理流程图</h3><p>描述系统之间、组件之间通信时序，数据的输入输出，反应系统的功能流程与数据流程，通常由时序图和流程图表示。</p>
 <h3 id="开发视图"><a href="#开发视图" class="headerlink" title="开发视图"></a>开发视图</h3><p>描述系统的模块划分和组成，以及细化到内部包的组成设计，服务于开发人员，反映系统开发实施过程。</p>
 <h2 id="4C图"><a href="#4C图" class="headerlink" title="4C图"></a>4C图</h2><h3 id="上下文（语境图Context）"><a href="#上下文（语境图Context）" class="headerlink" title="上下文（语境图Context）"></a>上下文（语境图Context）</h3><p><img src="/images/pasted-52.png" alt="语境图"></p>
-<p>参与者、系统之间的关系，系统状态进度。</p>
-<font color="red">抽象说：<br>  人、ofo 是2个独立存在的事物，可以称作context。<br></font>
-
+<p>参与者、系统之间的关系，系统状态进度。<br><font color=red>抽象说：<br>  人、ofo 是2个独立存在的事物，可以称作context。<br></font></p>
 <h3 id="容器图"><a href="#容器图" class="headerlink" title="容器图"></a>容器图</h3><p><img src="/images/pasted-54.png" alt="容器图"><br>互相独立存在的应用（占用独立的pid 就可以看做一个容器）例如：</p>
 <ul>
 <li>终端应用：<br>APP、API接口、WEB</li>
 <li>Web服务器：<br>apache、 nginx </li>
 <li>Web应用:<br>部署在 Tomcat、jetty、resion、jboss、Weblogic、Websphere 一个应用</li>
 <li>数据库应用：<br>Mysql、Oracle、Mongodb</li>
-<li>其它<br>ELK、文件系统、dns服务  <font color="red"><br>抽象说：<br>ofo 可以分解为 车子、APP、其它 这些可以被称为容器。<br></font>  
+<li>其它<br>ELK、文件系统、dns服务  <font color=red>
+抽象说：  
+ofo 可以分解为 车子、APP、其它 这些可以被称为容器。  
+</font>  
 
 </li>
 </ul>
-<h3 id="组件图"><a href="#组件图" class="headerlink" title="组件图"></a>组件图</h3><p>这张组件图不是很严格，没有表示清楚组件提供的能力名称。<br><img src="/images/pasted-55.png" alt="组件图"><br>容器是由多个组件构成，所有组件应当运行在同一个进程中。   </p>
-<font color="red"><br>  抽象说：<br>  车子 可以分解为 车胎、车把、车蹬子、车座子、链条、车架、其它 这些可以被称为组件。<br></font>
-
+<h3 id="组件图"><a href="#组件图" class="headerlink" title="组件图"></a>组件图</h3><p>这张组件图不是很严格，没有表示清楚组件提供的能力名称。<br><img src="/images/pasted-55.png" alt="组件图"><br>容器是由多个组件构成，所有组件应当运行在同一个进程中。<br><font color=red><br>  抽象说：<br>  车子 可以分解为 车胎、车把、车蹬子、车座子、链条、车架、其它 这些可以被称为组件。<br></font></p>
 <h3 id="代码图"><a href="#代码图" class="headerlink" title="代码图"></a>代码图</h3><p><img src="/images/pasted-56.png" alt="类图"></p>
-<font color="red"><br>  抽象说：<br>  外胎、内胎、辐条、轮圈、轴承 生产方式，轮胎 组装方式 。<br></font>
-      
+<font color=red>
+  抽象说：  
+  外胎、内胎、辐条、轮圈、轴承 生产方式，轮胎 组装方式 。
+</font>
     </div>
 
     
-
     
     
-    
-
-    
-
-    
-       
-    
-    
-
-    
-      <div>
         
 
-
-
-  
-
-
-
+<div>
 <ul class="post-copyright">
   <li class="post-copyright-author">
-    <strong>本文作者： </strong>Hardy Dou</li>
+    <strong>本文作者： </strong>Hardy Dou
+  </li>
   <li class="post-copyright-link">
     <strong>本文链接：</strong>
-    
-    <a href="http://www.hardydou.com/2019/04/03/画架构图/" title="架构图">http://www.hardydou.com/2019/04/03/画架构图/</a>
+    <a href="http://www.hardydou.com/2019/04/03/%E7%94%BB%E6%9E%B6%E6%9E%84%E5%9B%BE/" title="架构图">http://www.hardydou.com/2019/04/03/画架构图/</a>
   </li>
   <li class="post-copyright-license">
-    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fa fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！</li>
+    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fa fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
+  </li>
 </ul>
-
-      </div>
-    
-
-    <footer class="post-footer">
-      
-        <div class="post-tags">
-          
-            <a href="/tags/UML/" rel="tag"># UML</a>
-          
-        </div>
-      
-
-      
-      
-      
-
-      
-        <div class="post-nav">
-          <div class="post-nav-next post-nav-item">
-            
-              <a href="/2019/03/20/JVM-类加载机制/" rel="next" title="Java类加载机制">
-                <i class="fa fa-chevron-left"></i> Java类加载机制
-              </a>
-            
-          </div>
-
-          <span class="post-nav-divider"></span>
-
-          <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2019/05/04/Java注解/" rel="prev" title="Java注解">
-                Java注解 <i class="fa fa-chevron-right"></i>
-              </a>
-            
-          </div>
-        </div>
-      
-
-      
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-  </div>
-
-
-          </div>
-          
-
-  
-    <div class="comments" id="comments">
-    </div>
-  
-
-
-
-        </div>
-        
-          
-  
-  <div class="sidebar-toggle">
-    <div class="sidebar-toggle-line-wrap">
-      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
-      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
-      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
-    </div>
-  </div>
-
-  <aside id="sidebar" class="sidebar">
-    
-    <div class="sidebar-inner">
-
-      
-
-      
-        <ul class="sidebar-nav motion-element">
-          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
-            文章目录
-          </li>
-          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
-            站点概览
-          </li>
-        </ul>
-      
-
-      <section class="site-overview-wrap sidebar-panel">
-        <div class="site-overview">
-          <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
-            
-              <img class="site-author-image" itemprop="image" src="/images/avatar.jpg" alt="小鱼先生">
-            
-              <p class="site-author-name" itemprop="name">小鱼先生</p>
-              <p class="site-description motion-element" itemprop="description">相信美好的事情即将发生</p>
-          </div>
-
-          
-            <nav class="site-state motion-element">
-              
-                <div class="site-state-item site-state-posts">
-                
-                  <a href="/archives">
-                
-                    <span class="site-state-item-count">44</span>
-                    <span class="site-state-item-name">日志</span>
-                  </a>
-                </div>
-              
-
-              
-                
-                
-                <div class="site-state-item site-state-categories">
-                  <a href="/categories/index.html">
-                    
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                    <span class="site-state-item-count">7</span>
-                    <span class="site-state-item-name">分类</span>
-                  </a>
-                </div>
-              
-
-              
-                
-                
-                <div class="site-state-item site-state-tags">
-                  <a href="/tags/index.html">
-                    
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                    <span class="site-state-item-count">25</span>
-                    <span class="site-state-item-name">标签</span>
-                  </a>
-                </div>
-              
-            </nav>
-          
-
-          
-            <div class="feed-link motion-element">
-              <a href="/atom.xml" rel="alternate">
-                <i class="fa fa-rss"></i>
-                RSS
-              </a>
-            </div>
-          
-
-          
-            <div class="links-of-author motion-element">
-              
-                <span class="links-of-author-item">
-                  
-                  
-                    
-                  
-                  
-                    
-                  
-                  <a href="https://github.com/HardyDou" title="GitHub &rarr; https://github.com/HardyDou" rel="noopener" target="_blank"><i class="fa fa-fw fa-github"></i>GitHub</a>
-                </span>
-              
-                <span class="links-of-author-item">
-                  
-                  
-                    
-                  
-                  
-                    
-                  
-                  <a href="mailto:doouxiaoyu@163.com" title="E-Mail &rarr; mailto:doouxiaoyu@163.com" rel="noopener" target="_blank"><i class="fa fa-fw fa-envelope"></i>E-Mail</a>
-                </span>
-              
-            </div>
-          
-
-          
-
-          
-          
-
-          
-            
-          
-          
-
-        </div>
-      </section>
-
-      
-      <!--noindex-->
-        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
-          <div class="post-toc">
-
-            
-              
-            
-
-            
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#介绍"><span class="nav-number">1.</span> <span class="nav-text">介绍</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#作用"><span class="nav-number">2.</span> <span class="nav-text">作用</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#分类"><span class="nav-number">3.</span> <span class="nav-text">分类</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-1视图"><span class="nav-number">4.</span> <span class="nav-text">4+1视图</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#场景视图"><span class="nav-number">4.1.</span> <span class="nav-text">场景视图</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#逻辑视图"><span class="nav-number">4.2.</span> <span class="nav-text">逻辑视图</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#物理视图"><span class="nav-number">4.3.</span> <span class="nav-text">物理视图</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#处理流程图"><span class="nav-number">4.4.</span> <span class="nav-text">处理流程图</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#开发视图"><span class="nav-number">4.5.</span> <span class="nav-text">开发视图</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4C图"><span class="nav-number">5.</span> <span class="nav-text">4C图</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#上下文（语境图Context）"><span class="nav-number">5.1.</span> <span class="nav-text">上下文（语境图Context）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#容器图"><span class="nav-number">5.2.</span> <span class="nav-text">容器图</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#组件图"><span class="nav-number">5.3.</span> <span class="nav-text">组件图</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#代码图"><span class="nav-number">5.4.</span> <span class="nav-text">代码图</span></a></li></ol></li></ol></div>
-            
-
-          </div>
-        </section>
-      <!--/noindex-->
-      
-
-      
-        <div class="back-to-top">
-          <i class="fa fa-arrow-up"></i>
-          
-            <span id="scrollpercent"><span>0</span>%</span>
-          
-        </div>
-      
-
-    </div>
-  </aside>
-
-
-        
-      </div>
-    </main>
-
-    <footer id="footer" class="footer">
-      <div class="footer-inner">
-        <div class="copyright">  <a href="http://www.miitbeian.gov.cn" rel="noopener" target="_blank">京ICP备18050184号 </a>&copy; <span itemprop="copyrightYear">2019</span>
-  <span class="with-love" id="animate">
-    <i class="fa fa-heart"></i>
-  </span>
-  <span class="author" itemprop="copyrightHolder">小鱼先生</span>
-
-  
-
-  
 </div>
 
 
-
-
-
-
-
-
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/UML/" rel="tag"># UML</a>
+          </div>
 
         
 
 
-
-
-
-
-
-
         
-      </div>
-    </footer>
-
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2019/03/20/JVM-%E7%B1%BB%E5%8A%A0%E8%BD%BD%E6%9C%BA%E5%88%B6/" rel="prev" title="Java类加载机制">
+      <i class="fa fa-chevron-left"></i> Java类加载机制
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/2019/05/04/Java%E6%B3%A8%E8%A7%A3/" rel="next" title="Java注解">
+      Java注解 <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
     
-
-    
-	
-    
-
-    
-  </div>
-
+  </article>
+  
+  
   
 
-<script type="text/javascript">
-  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
-    window.Promise = null;
+  </div>
+
+
+          </div>
+          
+    <div class="comments" id="valine-comments"></div>
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let activeClass = CONFIG.comments.activeClass;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
   }
 </script>
 
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#介绍"><span class="nav-number">1.</span> <span class="nav-text">介绍</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#作用"><span class="nav-number">2.</span> <span class="nav-text">作用</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#分类"><span class="nav-number">3.</span> <span class="nav-text">分类</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-1视图"><span class="nav-number">4.</span> <span class="nav-text">4+1视图</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#场景视图"><span class="nav-number">4.1.</span> <span class="nav-text">场景视图</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#逻辑视图"><span class="nav-number">4.2.</span> <span class="nav-text">逻辑视图</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#物理视图"><span class="nav-number">4.3.</span> <span class="nav-text">物理视图</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#处理流程图"><span class="nav-number">4.4.</span> <span class="nav-text">处理流程图</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#开发视图"><span class="nav-number">4.5.</span> <span class="nav-text">开发视图</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4C图"><span class="nav-number">5.</span> <span class="nav-text">4C图</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#上下文（语境图Context）"><span class="nav-number">5.1.</span> <span class="nav-text">上下文（语境图Context）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#容器图"><span class="nav-number">5.2.</span> <span class="nav-text">容器图</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#组件图"><span class="nav-number">5.3.</span> <span class="nav-text">组件图</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#代码图"><span class="nav-number">5.4.</span> <span class="nav-text">代码图</span></a></li></ol></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="小鱼先生"
+      src="/images/avatar.jpg">
+  <p class="site-author-name" itemprop="name">小鱼先生</p>
+  <div class="site-description" itemprop="description">相信美好的事情即将发生</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives">
+        
+          <span class="site-state-item-count">44</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories">
+          
+        <span class="site-state-item-count">7</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags">
+          
+        <span class="site-state-item-count">25</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+        <a href="https://github.com/HardyDou" title="GitHub → https://github.com/HardyDou" rel="noopener" target="_blank"><i class="fa fa-fw fa-github"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:doouxiaoyu@163.com" title="E-Mail → mailto:doouxiaoyu@163.com" rel="noopener" target="_blank"><i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+      </span>
+  </div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+  <div class="beian"><a href="http://www.beian.miit.gov.cn" rel="noopener" target="_blank">京ICP备18050184号 </a>
+  </div>
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2020</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">小鱼先生</span>
+</div>
+
+        
 
 
 
@@ -918,9 +448,26 @@
 
 
 
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js"></script>
+  <script src="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
 
 
+<script src="/js/schemes/pisces.js"></script>
 
+
+<script src="/js/next-boot.js"></script>
 
 
 
@@ -942,139 +489,37 @@
 
 
   
-  
-    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
-  
-
-  
-  
-    <script type="text/javascript" src="/lib/kityminder-core/kity.min.js"></script>
-  
-
-  
-  
-    <script type="text/javascript" src="/lib/kityminder-core/kityminder.core.js"></script>
-  
-
-  
-  
-    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
-  
-
-  
-  
-    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
-  
-
-  
-  
-    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
-  
-
 
   
 
 
-  <script type="text/javascript" src="/js/src/utils.js?v=6.5.0"></script>
-
-  <script type="text/javascript" src="/js/src/motion.js?v=6.5.0"></script>
-
-
-
-  
-  
-
-
-  <script type="text/javascript" src="/js/src/affix.js?v=6.5.0"></script>
-
-  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=6.5.0"></script>
-
-
-
-  
-  <script type="text/javascript" src="/js/src/scrollspy.js?v=6.5.0"></script>
-<script type="text/javascript" src="/js/src/post-details.js?v=6.5.0"></script>
-<script type="text/javascript" src="/js/src/kityminder.js?v=6.5.0"></script>
-
-
-
-  
-
-
-  <script type="text/javascript" src="/js/src/bootstrap.js?v=6.5.0"></script>
-
-
-
-  
-
-
-
-  
-
-
-
-
-
-
-
-
-  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
-  
-  
-  <script src="//unpkg.com/valine/dist/Valine.min.js"></script>
-  
-  <script type="text/javascript">
-    var GUEST = ['nick','mail','link'];
+<script>
+NexT.utils.loadComments(document.querySelector('#valine-comments'), () => {
+  NexT.utils.getScript('//unpkg.com/valine/dist/Valine.min.js', () => {
+    var GUEST = ['nick', 'mail', 'link'];
     var guest = 'nick,mail,link';
-    guest = guest.split(',').filter(function (item) {
-      return GUEST.indexOf(item)>-1;
+    guest = guest.split(',').filter(item => {
+      return GUEST.includes(item);
     });
     new Valine({
-        el: '#comments' ,
-        verify: true,
-        notify: true,
-        appId: 'fF3IzJ6TkcmNPCPo4nYayNln-gzGzoHsz',
-        appKey: 'CaEuIN0359VyWiygnoDPQxx1',
-        placeholder: '有话就直说!!',
-        avatar:'mp',
-        meta:guest,
-        pageSize:'10' || 10,
-        visitor: false
+      el         : '#valine-comments',
+      verify     : true,
+      notify     : true,
+      appId      : 'fF3IzJ6TkcmNPCPo4nYayNln-gzGzoHsz',
+      appKey     : 'CaEuIN0359VyWiygnoDPQxx1',
+      placeholder: "请讲!!",
+      avatar     : 'mp',
+      meta       : guest,
+      pageSize   : '10' || 10,
+      visitor    : false,
+      lang       : '' || 'zh-cn',
+      path       : location.pathname,
+      recordIP   : false,
+      serverURLs : ''
     });
-  </script>
-
-
-
-  
-
-
-
-
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
+  }, window.Valine);
+});
+</script>
 
 </body>
 </html>

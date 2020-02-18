@@ -1,150 +1,49 @@
 <!DOCTYPE html>
-
-
-
-
-
-
-
-
-
-
-
-
-  
-
-
-<html class="theme-next pisces use-motion" lang="zh-CN">
-<head><meta name="generator" content="Hexo 3.8.0">
+<html lang="zh-Hans">
+<head>
   <meta charset="UTF-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
 <meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 4.2.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
 
 
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.css">
 
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"www.hardydou.com","root":"/","scheme":"Pisces","version":"7.7.1","exturl":false,"sidebar":{"position":"left","width":240,"b2t":true,"scrollpercent":true,"display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":true,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+  </script>
 
-
-
-
-
-
-
-
-
-<meta http-equiv="Cache-Control" content="no-transform">
-<meta http-equiv="Cache-Control" content="no-siteapp">
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<link href="/lib/kityminder-core/kityminder.core.css?v=1.4.49" rel="stylesheet" type="text/css">
-<style>
-.mindmap{width:90%}
-</style>
-
-  
-  
-  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
-
-
-
-
-
-
-
-<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
-
-<link href="/css/main.css?v=6.5.0" rel="stylesheet" type="text/css">
-<style>
-.pullquote{width:auto;}
-</style>
-
-  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=6.5.0">
-
-
-  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=6.5.0">
-
-
-  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=6.5.0">
-
-
-  <link rel="mask-icon" href="/images/logo.svg?v=6.5.0" color="#222">
-
-
-
-
-
-
-
-
-
-<script type="text/javascript" id="hexo.configurations">
-  var NexT = window.NexT || {};
-  var CONFIG = {
-    root: '/',
-    scheme: 'Pisces',
-    version: '6.5.0',
-    sidebar: {"position":"left","display":"post","offset":12,"b2t":true,"scrollpercent":true,"onmobile":false,"width":240},
-    fancybox: true,
-    fastclick: false,
-    lazyload: false,
-    tabs: true,
-    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
-    algolia: {
-      applicationID: '',
-      apiKey: '',
-      indexName: '',
-      hits: {"per_page":10},
-      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
-    }
-  };
-</script>
-
-
-  
-
-
-
-
-  <meta name="description" content="关键词 伪泛型 针对引用的检查 类型擦除 协变 多态的冲突  介绍java泛型是伪泛型，java文件编译时会进行类型擦除这样生成的class文件不再包含任何泛型信息。泛型价值：增加约束，让代码优雅（无需显式的类型转化）。 原始类型1234567891011abstract class Math&amp;lt;T&amp;gt; &amp;#123;    abstract T max(T t1, T t2);&amp;#125;">
-<meta name="keywords" content="java,泛型">
+  <meta name="description" content="关键词 伪泛型 针对引用的检查 类型擦除 协变 多态的冲突  介绍java泛型是伪泛型，java文件编译时会进行类型擦除这样生成的class文件不再包含任何泛型信息。泛型价值：增加约束，让代码优雅（无需显式的类型转化）。 原始类型1234567891011abstract class Math&lt;T&gt; &amp;#123;    abstract T max(T t1, T t2);&amp;#125;">
 <meta property="og:type" content="article">
 <meta property="og:title" content="java泛型">
-<meta property="og:url" content="http://www.hardydou.com/2019/05/11/java泛型/index.html">
+<meta property="og:url" content="http://www.hardydou.com/2019/05/11/java%E6%B3%9B%E5%9E%8B/index.html">
 <meta property="og:site_name" content="小鱼先生">
-<meta property="og:description" content="关键词 伪泛型 针对引用的检查 类型擦除 协变 多态的冲突  介绍java泛型是伪泛型，java文件编译时会进行类型擦除这样生成的class文件不再包含任何泛型信息。泛型价值：增加约束，让代码优雅（无需显式的类型转化）。 原始类型1234567891011abstract class Math&amp;lt;T&amp;gt; &amp;#123;    abstract T max(T t1, T t2);&amp;#125;">
-<meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-05-13T08:40:57.789Z">
+<meta property="og:description" content="关键词 伪泛型 针对引用的检查 类型擦除 协变 多态的冲突  介绍java泛型是伪泛型，java文件编译时会进行类型擦除这样生成的class文件不再包含任何泛型信息。泛型价值：增加约束，让代码优雅（无需显式的类型转化）。 原始类型1234567891011abstract class Math&lt;T&gt; &amp;#123;    abstract T max(T t1, T t2);&amp;#125;">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2019-05-11T13:21:00.000Z">
+<meta property="article:modified_time" content="2019-05-13T08:40:57.789Z">
+<meta property="article:author" content="小鱼先生">
+<meta property="article:tag" content="java">
+<meta property="article:tag" content="泛型">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="java泛型">
-<meta name="twitter:description" content="关键词 伪泛型 针对引用的检查 类型擦除 协变 多态的冲突  介绍java泛型是伪泛型，java文件编译时会进行类型擦除这样生成的class文件不再包含任何泛型信息。泛型价值：增加约束，让代码优雅（无需显式的类型转化）。 原始类型1234567891011abstract class Math&amp;lt;T&amp;gt; &amp;#123;    abstract T max(T t1, T t2);&amp;#125;">
+
+<link rel="canonical" href="http://www.hardydou.com/2019/05/11/java%E6%B3%9B%E5%9E%8B/">
 
 
-
-  <link rel="alternate" href="/atom.xml" title="小鱼先生" type="application/atom+xml">
-
-
-
-
-  <link rel="canonical" href="http://www.hardydou.com/2019/05/11/java泛型/">
-
-
-
-<script type="text/javascript" id="page.configurations">
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
   CONFIG.page = {
     sidebar: "",
+    isHome: false,
+    isPost: true
   };
 </script>
 
@@ -156,336 +55,182 @@
 
 
 
-
-
-
-
-
   <noscript>
-  <style type="text/css">
-    .use-motion .motion-element,
-    .use-motion .brand,
-    .use-motion .menu-item,
-    .sidebar-inner,
-    .use-motion .post-block,
-    .use-motion .pagination,
-    .use-motion .comments,
-    .use-motion .post-header,
-    .use-motion .post-body,
-    .use-motion .collection-title { opacity: initial; }
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
 
-    .use-motion .logo,
-    .use-motion .site-title,
-    .use-motion .site-subtitle {
-      opacity: initial;
-      top: initial;
-    }
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
 
-    .use-motion {
-      .logo-line-before i { left: initial; }
-      .logo-line-after i { right: initial; }
-    }
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
   </style>
 </noscript>
 
 </head>
 
-<body itemscope="" itemtype="http://schema.org/WebPage" lang="zh-CN">
-
-  
-  
-    
-  
-
-  <div class="container sidebar-position-left page-post-detail">
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
     <div class="headband"></div>
 
-    <header id="header" class="header" itemscope="" itemtype="http://schema.org/WPHeader">
-      <div class="header-inner"><div class="site-brand-wrapper">
-  <div class="site-meta ">
-    
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
 
-    <div class="custom-logo-site-title">
+  <div class="site-meta">
+
+    <div>
       <a href="/" class="brand" rel="start">
         <span class="logo-line-before"><i></i></span>
         <span class="site-title">小鱼先生</span>
         <span class="logo-line-after"><i></i></span>
       </a>
     </div>
-    
-      
         <p class="site-subtitle">梦想还是要有的，万一忘记了咋办？</p>
-      
-    
   </div>
 
-  <div class="site-nav-toggle">
-    <button aria-label="切换导航栏">
-      <span class="btn-bar"></span>
-      <span class="btn-bar"></span>
-      <span class="btn-bar"></span>
-    </button>
-  </div>
+  <div class="site-nav-right"></div>
 </div>
-
 
 
 <nav class="site-nav">
   
-    <ul id="menu" class="menu">
-      
-        
-        
-        
-          
-          <li class="menu-item menu-item-home">
+  <ul id="menu" class="menu">
+        <li class="menu-item menu-item-home">
 
-    
-    
-    
-      
-    
-
-    
-
-    <a href="/" rel="section"><i class="menu-item-icon fa fa-fw fa-home"></i> <br>首页</a>
+    <a href="/" rel="section"><i class="fa fa-fw fa-首页"></i>首页</a>
 
   </li>
-        
-        
-        
-          
-          <li class="menu-item menu-item-archives">
+        <li class="menu-item menu-item-archives">
 
-    
-    
-    
-      
-    
-
-    
-
-    <a href="/archives" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档</a>
+    <a href="/archives" rel="section"><i class="fa fa-fw fa-归档"></i>归档</a>
 
   </li>
-        
-        
-        
-          
-          <li class="menu-item menu-item-tags">
+        <li class="menu-item menu-item-tags">
 
-    
-    
-    
-      
-    
-
-    
-
-    <a href="/tags" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br>标签</a>
+    <a href="/tags" rel="section"><i class="fa fa-fw fa-标签"></i>标签</a>
 
   </li>
-        
-        
-        
-          
-          <li class="menu-item menu-item-categories">
+        <li class="menu-item menu-item-categories">
 
-    
-    
-    
-      
-    
-
-    
-
-    <a href="/categories" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br>分类</a>
+    <a href="/categories" rel="section"><i class="fa fa-fw fa-分类"></i>分类</a>
 
   </li>
-        
-        
-        
-          
-          <li class="menu-item menu-item-about">
+        <li class="menu-item menu-item-about">
 
-    
-    
-    
-      
-    
-
-    
-
-    <a href="/about" rel="section"><i class="menu-item-icon fa fa-fw fa-user"></i> <br>关于</a>
+    <a href="/about" rel="section"><i class="fa fa-fw fa-关于"></i>关于</a>
 
   </li>
+  </ul>
 
-      
-      
-    </ul>
-  
-
-  
-
-  
 </nav>
-
-
-
-  
-
-
-
 </div>
     </header>
 
     
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
 
 
-    <main id="main" class="main">
+    <main class="main">
       <div class="main-inner">
         <div class="content-wrap">
           
+
+          <div class="content">
             
 
-          
-          <div id="content" class="content">
-            
+  <div class="posts-expand">
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block " lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://www.hardydou.com/2019/05/11/java%E6%B3%9B%E5%9E%8B/">
 
-  <div id="posts" class="posts-expand">
-    
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://www.hardydou.com/2019/05/11/java泛型/">
-
-    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.jpg">
       <meta itemprop="name" content="小鱼先生">
       <meta itemprop="description" content="相信美好的事情即将发生">
-      <meta itemprop="image" content="/images/avatar.jpg">
     </span>
 
-    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
       <meta itemprop="name" content="小鱼先生">
     </span>
-
-    
       <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">java泛型
-              
-            
-          </h1>
-        
+        <h1 class="post-title" itemprop="name headline">
+          java泛型
+        </h1>
 
         <div class="post-meta">
-          <span class="post-time">
-
-            
-            
-            
-
-            
+            <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="fa fa-calendar-o"></i>
               </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-
-              
-                
-              
+              <span class="post-meta-item-text">发表于</span>
 
               <time title="创建时间：2019-05-11 21:21:00" itemprop="dateCreated datePublished" datetime="2019-05-11T21:21:00+08:00">2019-05-11</time>
-            
-
-            
-              
-
-              
-                
-                <span class="post-meta-divider">|</span>
-                
-
+            </span>
+              <span class="post-meta-item">
                 <span class="post-meta-item-icon">
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
-                
-                  <span class="post-meta-item-text">更新于</span>
-                
+                <span class="post-meta-item-text">更新于</span>
                 <time title="修改时间：2019-05-13 16:40:57" itemprop="dateModified" datetime="2019-05-13T16:40:57+08:00">2019-05-13</time>
-              
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
+              </span>
+            <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="fa fa-folder-o"></i>
               </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/java/" itemprop="url" rel="index"><span itemprop="name">java</span></a></span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/java/" itemprop="url" rel="index">
+                    <span itemprop="name">java</span>
+                  </a>
                 </span>
-                <a href="/2019/05/11/java泛型/#comments" itemprop="discussionUrl">
-                  <span class="post-meta-item-text">评论数：</span> <span class="post-comments-count valine-comment-count" data-xid="/2019/05/11/java泛型/" itemprop="commentCount"></span>
-                </a>
-              </span>
-            
-          
+            </span>
 
           
-          
-
-          
-
-          
-
-          
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="fa fa-comment-o"></i>
+      </span>
+      <span class="post-meta-item-text">Valine：</span>
+    
+    <a title="valine" href="/2019/05/11/java%E6%B3%9B%E5%9E%8B/#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/2019/05/11/java%E6%B3%9B%E5%9E%8B/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
 
         </div>
       </header>
-    
 
     
     
     
     <div class="post-body" itemprop="articleBody">
-
-      
-      
 
       
         <h2 id="关键词"><a href="#关键词" class="headerlink" title="关键词"></a>关键词</h2><ul>
@@ -496,410 +241,195 @@
 <li>多态的冲突</li>
 </ul>
 <h2 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h2><p>java泛型是伪泛型，java文件编译时会进行类型擦除这样生成的class文件不再包含任何泛型信息。<br>泛型价值：增加约束，让代码优雅（无需显式的类型转化）。</p>
-<h2 id="原始类型"><a href="#原始类型" class="headerlink" title="原始类型"></a>原始类型</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">abstract class Math&lt;T&gt; &#123;</span><br><span class="line">    abstract T max(T t1, T t2);</span><br><span class="line">&#125;</span><br><span class="line">-----字节码------</span><br><span class="line">abstract max(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;</span><br><span class="line"></span><br><span class="line">abstract class Math2&lt;T extends Number&gt; &#123;</span><br><span class="line">    abstract T max(T t1, T t2);</span><br><span class="line">&#125;</span><br><span class="line">------字节码-----</span><br><span class="line">abstract max(Ljava/lang/Number;Ljava/lang/Number;)Ljava/lang/Number;</span><br></pre></td></tr></table></figure>
+<h2 id="原始类型"><a href="#原始类型" class="headerlink" title="原始类型"></a>原始类型</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">abstract class Math&lt;T&gt; &#123;</span><br><span class="line">    abstract T max(T t1, T t2);</span><br><span class="line">&#125;</span><br><span class="line">-----字节码------</span><br><span class="line">abstract max(Ljava&#x2F;lang&#x2F;Object;Ljava&#x2F;lang&#x2F;Object;)Ljava&#x2F;lang&#x2F;Object;</span><br><span class="line"></span><br><span class="line">abstract class Math2&lt;T extends Number&gt; &#123;</span><br><span class="line">    abstract T max(T t1, T t2);</span><br><span class="line">&#125;</span><br><span class="line">------字节码-----</span><br><span class="line">abstract max(Ljava&#x2F;lang&#x2F;Number;Ljava&#x2F;lang&#x2F;Number;)Ljava&#x2F;lang&#x2F;Number;</span><br></pre></td></tr></table></figure>
 <p> Object 或者 Number 就是T 的原始类型。这是类型擦除的基础思路，也由此产生了多态冲突问题。</p>
 <h2 id="类型擦除"><a href="#类型擦除" class="headerlink" title="类型擦除"></a>类型擦除</h2><p>文字描述比较枯燥难懂，以下通过3个示例来介绍，类型擦除、针对引用有效、为什么叫做 伪泛型。</p>
-<p>示例1<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">// 携带泛型的对象对应字节码完全一致。</span><br><span class="line">   List&lt;String&gt; strList = new ArrayList&lt;String&gt;();</span><br><span class="line">   List intList = new ArrayList();</span><br><span class="line">---------字节码------------</span><br><span class="line">   NEW java/util/ArrayList</span><br><span class="line">   DUP</span><br><span class="line">   INVOKESPECIAL java/util/ArrayList.&lt;init&gt; ()V</span><br><span class="line">   ASTORE 1</span><br><span class="line">   NEW java/util/ArrayList</span><br><span class="line">   DUP</span><br><span class="line">   INVOKESPECIAL java/util/ArrayList.&lt;init&gt; ()V</span><br><span class="line">   ASTORE 2</span><br></pre></td></tr></table></figure></p>
+<p>示例1</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F; 携带泛型的对象对应字节码完全一致。</span><br><span class="line">   List&lt;String&gt; strList &#x3D; new ArrayList&lt;String&gt;();</span><br><span class="line">   List intList &#x3D; new ArrayList();</span><br><span class="line">---------字节码------------</span><br><span class="line">   NEW java&#x2F;util&#x2F;ArrayList</span><br><span class="line">   DUP</span><br><span class="line">   INVOKESPECIAL java&#x2F;util&#x2F;ArrayList.&lt;init&gt; ()V</span><br><span class="line">   ASTORE 1</span><br><span class="line">   NEW java&#x2F;util&#x2F;ArrayList</span><br><span class="line">   DUP</span><br><span class="line">   INVOKESPECIAL java&#x2F;util&#x2F;ArrayList.&lt;init&gt; ()V</span><br><span class="line">   ASTORE 2</span><br></pre></td></tr></table></figure>
 <p>示例2</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"> /**</span><br><span class="line"> * 约定泛型的list，可以通过反射成功添加 int类型数据进去，通过反射可以正常读取，直接读取时会提示类型转化异常。</span><br><span class="line"> */</span><br><span class="line">@Test</span><br><span class="line">public void typeErasure() &#123;</span><br><span class="line">    try &#123;</span><br><span class="line">        List&lt;String&gt; strList = new ArrayList();</span><br><span class="line">        strList.getClass().getMethod(&quot;add&quot;, Object.class).invoke(strList, 123);</span><br><span class="line">        System.out.println(&quot;strList&apos;size :&quot; + strList.size());</span><br><span class="line">        System.out.println(strList.getClass().getMethod(&quot;get&quot;, int.class).invoke(strList, 0));</span><br><span class="line">        System.out.println(strList.get(Integer.valueOf(0)));</span><br><span class="line">    &#125; catch (Exception e) &#123;</span><br><span class="line">        e.printStackTrace();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>示例3<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">泛型针对引用有效。</span><br><span class="line">List&lt;String&gt; strList1 = new ArrayList();//有效果（阿里巴巴规范也提倡这么写）</span><br><span class="line">List&lt;String&gt; strList2 = new ArrayList&lt;String&gt;();//效果同上面</span><br><span class="line">List strList3 = new ArrayList&lt;String&gt;();//无效果</span><br></pre></td></tr></table></figure></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"> &#x2F;**</span><br><span class="line"> * 约定泛型的list，可以通过反射成功添加 int类型数据进去，通过反射可以正常读取，直接读取时会提示类型转化异常。</span><br><span class="line"> *&#x2F;</span><br><span class="line">@Test</span><br><span class="line">public void typeErasure() &#123;</span><br><span class="line">    try &#123;</span><br><span class="line">        List&lt;String&gt; strList &#x3D; new ArrayList();</span><br><span class="line">        strList.getClass().getMethod(&quot;add&quot;, Object.class).invoke(strList, 123);</span><br><span class="line">        System.out.println(&quot;strList&#39;size :&quot; + strList.size());</span><br><span class="line">        System.out.println(strList.getClass().getMethod(&quot;get&quot;, int.class).invoke(strList, 0));</span><br><span class="line">        System.out.println(strList.get(Integer.valueOf(0)));</span><br><span class="line">    &#125; catch (Exception e) &#123;</span><br><span class="line">        e.printStackTrace();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>示例3</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">泛型针对引用有效。</span><br><span class="line">List&lt;String&gt; strList1 &#x3D; new ArrayList();&#x2F;&#x2F;有效果（阿里巴巴规范也提倡这么写）</span><br><span class="line">List&lt;String&gt; strList2 &#x3D; new ArrayList&lt;String&gt;();&#x2F;&#x2F;效果同上面</span><br><span class="line">List strList3 &#x3D; new ArrayList&lt;String&gt;();&#x2F;&#x2F;无效果</span><br></pre></td></tr></table></figure>
 <p>由于 泛型仅仅生存到编译时期，所以称之为 伪泛型。</p>
-<h2 id="多态的冲突"><a href="#多态的冲突" class="headerlink" title="多态的冲突"></a>多态的冲突</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">abstract class Math&lt;T&gt; &#123;</span><br><span class="line">    abstract T max(T t1, T t2);</span><br><span class="line">&#125;</span><br><span class="line">-------二进制码---------</span><br><span class="line">abstract max(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;</span><br><span class="line"></span><br><span class="line">class IntMath extends Math&lt;Integer&gt; &#123;</span><br><span class="line"></span><br><span class="line">    @Override</span><br><span class="line">    Integer max(Integer t1, Integer t2) &#123;</span><br><span class="line">        return java.lang.Math.max(t1, t2);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">--------二进制码--------</span><br><span class="line">max(Ljava/lang/Integer;Ljava/lang/Integer;)Ljava/lang/Integer;</span><br><span class="line">synthetic bridge max(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;</span><br><span class="line">   L0</span><br><span class="line">    LINENUMBER 28 L0</span><br><span class="line">    ALOAD 0</span><br><span class="line">    ALOAD 1</span><br><span class="line">    CHECKCAST java/lang/Integer</span><br><span class="line">    ALOAD 2</span><br><span class="line">    CHECKCAST java/lang/Integer</span><br><span class="line">    INVOKEVIRTUAL com/hardydou/jmm/IntMath.max (Ljava/lang/Integer;Ljava/lang/Integer;)Ljava/lang/Integer;</span><br><span class="line">    ARETURN</span><br></pre></td></tr></table></figure>
+<h2 id="多态的冲突"><a href="#多态的冲突" class="headerlink" title="多态的冲突"></a>多态的冲突</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">abstract class Math&lt;T&gt; &#123;</span><br><span class="line">    abstract T max(T t1, T t2);</span><br><span class="line">&#125;</span><br><span class="line">-------二进制码---------</span><br><span class="line">abstract max(Ljava&#x2F;lang&#x2F;Object;Ljava&#x2F;lang&#x2F;Object;)Ljava&#x2F;lang&#x2F;Object;</span><br><span class="line"></span><br><span class="line">class IntMath extends Math&lt;Integer&gt; &#123;</span><br><span class="line"></span><br><span class="line">    @Override</span><br><span class="line">    Integer max(Integer t1, Integer t2) &#123;</span><br><span class="line">        return java.lang.Math.max(t1, t2);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">--------二进制码--------</span><br><span class="line">max(Ljava&#x2F;lang&#x2F;Integer;Ljava&#x2F;lang&#x2F;Integer;)Ljava&#x2F;lang&#x2F;Integer;</span><br><span class="line">synthetic bridge max(Ljava&#x2F;lang&#x2F;Object;Ljava&#x2F;lang&#x2F;Object;)Ljava&#x2F;lang&#x2F;Object;</span><br><span class="line">   L0</span><br><span class="line">    LINENUMBER 28 L0</span><br><span class="line">    ALOAD 0</span><br><span class="line">    ALOAD 1</span><br><span class="line">    CHECKCAST java&#x2F;lang&#x2F;Integer</span><br><span class="line">    ALOAD 2</span><br><span class="line">    CHECKCAST java&#x2F;lang&#x2F;Integer</span><br><span class="line">    INVOKEVIRTUAL com&#x2F;hardydou&#x2F;jmm&#x2F;IntMath.max (Ljava&#x2F;lang&#x2F;Integer;Ljava&#x2F;lang&#x2F;Integer;)Ljava&#x2F;lang&#x2F;Integer;</span><br><span class="line">    ARETURN</span><br></pre></td></tr></table></figure>
 <p>泛型子类重写不是简单的重写，而是重载+重写</p>
-<h2 id="实战"><a href="#实战" class="headerlink" title="实战"></a>实战</h2><h3 id="基本类型不可以作为泛型"><a href="#基本类型不可以作为泛型" class="headerlink" title="基本类型不可以作为泛型"></a>基本类型不可以作为泛型</h3><pre><code>List&lt;int&gt; list;//编译不通过
-</code></pre><h3 id="泛型不可以被实例化"><a href="#泛型不可以被实例化" class="headerlink" title="泛型不可以被实例化"></a>泛型不可以被实例化</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">class A&lt;T&gt; &#123;</span><br><span class="line">    T t=new T();//不可以被直接实例化</span><br><span class="line">    .......</span><br><span class="line"> &#125;</span><br></pre></td></tr></table></figure>
-<h3 id="泛型使用instanceOf"><a href="#泛型使用instanceOf" class="headerlink" title="泛型使用instanceOf"></a>泛型使用instanceOf</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">List&lt;String&gt; list1 = new ArrayList&lt;&gt;();</span><br><span class="line">//可以</span><br><span class="line">boolean s1 = (list1 instanceof ArrayList&lt;?&gt;);</span><br><span class="line">boolean s3 = (list1 instanceof ArrayList);</span><br><span class="line">//编译报错</span><br><span class="line">boolean s2 = (list1 instanceof ArrayList&lt;String&gt;);</span><br></pre></td></tr></table></figure>
-      
+<h2 id="实战"><a href="#实战" class="headerlink" title="实战"></a>实战</h2><h3 id="基本类型不可以作为泛型"><a href="#基本类型不可以作为泛型" class="headerlink" title="基本类型不可以作为泛型"></a>基本类型不可以作为泛型</h3><pre><code>List&lt;int&gt; list;//编译不通过</code></pre><h3 id="泛型不可以被实例化"><a href="#泛型不可以被实例化" class="headerlink" title="泛型不可以被实例化"></a>泛型不可以被实例化</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">class A&lt;T&gt; &#123;</span><br><span class="line">    T t&#x3D;new T();&#x2F;&#x2F;不可以被直接实例化</span><br><span class="line">    .......</span><br><span class="line"> &#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="泛型使用instanceOf"><a href="#泛型使用instanceOf" class="headerlink" title="泛型使用instanceOf"></a>泛型使用instanceOf</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">List&lt;String&gt; list1 &#x3D; new ArrayList&lt;&gt;();</span><br><span class="line">&#x2F;&#x2F;可以</span><br><span class="line">boolean s1 &#x3D; (list1 instanceof ArrayList&lt;?&gt;);</span><br><span class="line">boolean s3 &#x3D; (list1 instanceof ArrayList);</span><br><span class="line">&#x2F;&#x2F;编译报错</span><br><span class="line">boolean s2 &#x3D; (list1 instanceof ArrayList&lt;String&gt;);</span><br></pre></td></tr></table></figure>
     </div>
 
     
-
     
     
-    
-
-    
-
-    
-       
-    
-    
-
-    
-      <div>
         
 
-
-
-  
-
-
-
+<div>
 <ul class="post-copyright">
   <li class="post-copyright-author">
-    <strong>本文作者： </strong>Hardy Dou</li>
+    <strong>本文作者： </strong>Hardy Dou
+  </li>
   <li class="post-copyright-link">
     <strong>本文链接：</strong>
-    
-    <a href="http://www.hardydou.com/2019/05/11/java泛型/" title="java泛型">http://www.hardydou.com/2019/05/11/java泛型/</a>
+    <a href="http://www.hardydou.com/2019/05/11/java%E6%B3%9B%E5%9E%8B/" title="java泛型">http://www.hardydou.com/2019/05/11/java泛型/</a>
   </li>
   <li class="post-copyright-license">
-    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fa fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！</li>
+    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fa fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
+  </li>
 </ul>
-
-      </div>
-    
-
-    <footer class="post-footer">
-      
-        <div class="post-tags">
-          
-            <a href="/tags/java/" rel="tag"># java</a>
-          
-            <a href="/tags/泛型/" rel="tag"># 泛型</a>
-          
-        </div>
-      
-
-      
-      
-      
-
-      
-        <div class="post-nav">
-          <div class="post-nav-next post-nav-item">
-            
-              <a href="/2019/05/09/Java内存结构/" rel="next" title="Java内存结构">
-                <i class="fa fa-chevron-left"></i> Java内存结构
-              </a>
-            
-          </div>
-
-          <span class="post-nav-divider"></span>
-
-          <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2019/05/13/Java垃圾收集与内存分配/" rel="prev" title="Java垃圾收集与内存分配">
-                Java垃圾收集与内存分配 <i class="fa fa-chevron-right"></i>
-              </a>
-            
-          </div>
-        </div>
-      
-
-      
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-  </div>
-
-
-          </div>
-          
-
-  
-    <div class="comments" id="comments">
-    </div>
-  
-
-
-
-        </div>
-        
-          
-  
-  <div class="sidebar-toggle">
-    <div class="sidebar-toggle-line-wrap">
-      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
-      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
-      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
-    </div>
-  </div>
-
-  <aside id="sidebar" class="sidebar">
-    
-    <div class="sidebar-inner">
-
-      
-
-      
-        <ul class="sidebar-nav motion-element">
-          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
-            文章目录
-          </li>
-          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
-            站点概览
-          </li>
-        </ul>
-      
-
-      <section class="site-overview-wrap sidebar-panel">
-        <div class="site-overview">
-          <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
-            
-              <img class="site-author-image" itemprop="image" src="/images/avatar.jpg" alt="小鱼先生">
-            
-              <p class="site-author-name" itemprop="name">小鱼先生</p>
-              <p class="site-description motion-element" itemprop="description">相信美好的事情即将发生</p>
-          </div>
-
-          
-            <nav class="site-state motion-element">
-              
-                <div class="site-state-item site-state-posts">
-                
-                  <a href="/archives">
-                
-                    <span class="site-state-item-count">44</span>
-                    <span class="site-state-item-name">日志</span>
-                  </a>
-                </div>
-              
-
-              
-                
-                
-                <div class="site-state-item site-state-categories">
-                  <a href="/categories/index.html">
-                    
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                    <span class="site-state-item-count">7</span>
-                    <span class="site-state-item-name">分类</span>
-                  </a>
-                </div>
-              
-
-              
-                
-                
-                <div class="site-state-item site-state-tags">
-                  <a href="/tags/index.html">
-                    
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                    <span class="site-state-item-count">25</span>
-                    <span class="site-state-item-name">标签</span>
-                  </a>
-                </div>
-              
-            </nav>
-          
-
-          
-            <div class="feed-link motion-element">
-              <a href="/atom.xml" rel="alternate">
-                <i class="fa fa-rss"></i>
-                RSS
-              </a>
-            </div>
-          
-
-          
-            <div class="links-of-author motion-element">
-              
-                <span class="links-of-author-item">
-                  
-                  
-                    
-                  
-                  
-                    
-                  
-                  <a href="https://github.com/HardyDou" title="GitHub &rarr; https://github.com/HardyDou" rel="noopener" target="_blank"><i class="fa fa-fw fa-github"></i>GitHub</a>
-                </span>
-              
-                <span class="links-of-author-item">
-                  
-                  
-                    
-                  
-                  
-                    
-                  
-                  <a href="mailto:doouxiaoyu@163.com" title="E-Mail &rarr; mailto:doouxiaoyu@163.com" rel="noopener" target="_blank"><i class="fa fa-fw fa-envelope"></i>E-Mail</a>
-                </span>
-              
-            </div>
-          
-
-          
-
-          
-          
-
-          
-            
-          
-          
-
-        </div>
-      </section>
-
-      
-      <!--noindex-->
-        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
-          <div class="post-toc">
-
-            
-              
-            
-
-            
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#关键词"><span class="nav-number">1.</span> <span class="nav-text">关键词</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#介绍"><span class="nav-number">2.</span> <span class="nav-text">介绍</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#原始类型"><span class="nav-number">3.</span> <span class="nav-text">原始类型</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#类型擦除"><span class="nav-number">4.</span> <span class="nav-text">类型擦除</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#多态的冲突"><span class="nav-number">5.</span> <span class="nav-text">多态的冲突</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#实战"><span class="nav-number">6.</span> <span class="nav-text">实战</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#基本类型不可以作为泛型"><span class="nav-number">6.1.</span> <span class="nav-text">基本类型不可以作为泛型</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#泛型不可以被实例化"><span class="nav-number">6.2.</span> <span class="nav-text">泛型不可以被实例化</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#泛型使用instanceOf"><span class="nav-number">6.3.</span> <span class="nav-text">泛型使用instanceOf</span></a></li></ol></li></ol></div>
-            
-
-          </div>
-        </section>
-      <!--/noindex-->
-      
-
-      
-        <div class="back-to-top">
-          <i class="fa fa-arrow-up"></i>
-          
-            <span id="scrollpercent"><span>0</span>%</span>
-          
-        </div>
-      
-
-    </div>
-  </aside>
-
-
-        
-      </div>
-    </main>
-
-    <footer id="footer" class="footer">
-      <div class="footer-inner">
-        <div class="copyright">  <a href="http://www.miitbeian.gov.cn" rel="noopener" target="_blank">京ICP备18050184号 </a>&copy; <span itemprop="copyrightYear">2019</span>
-  <span class="with-love" id="animate">
-    <i class="fa fa-heart"></i>
-  </span>
-  <span class="author" itemprop="copyrightHolder">小鱼先生</span>
-
-  
-
-  
 </div>
 
 
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/java/" rel="tag"># java</a>
+              <a href="/tags/%E6%B3%9B%E5%9E%8B/" rel="tag"># 泛型</a>
+          </div>
 
-
-
-
-
+        
 
 
         
-
-
-
-
-
-
-
-
-        
-      </div>
-    </footer>
-
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2019/05/09/Java%E5%86%85%E5%AD%98%E7%BB%93%E6%9E%84/" rel="prev" title="Java内存结构">
+      <i class="fa fa-chevron-left"></i> Java内存结构
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/2019/05/13/Java%E5%9E%83%E5%9C%BE%E6%94%B6%E9%9B%86%E4%B8%8E%E5%86%85%E5%AD%98%E5%88%86%E9%85%8D/" rel="next" title="Java垃圾收集与内存分配">
+      Java垃圾收集与内存分配 <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
     
-
-    
-	
-    
-
-    
-  </div>
-
+  </article>
+  
+  
   
 
-<script type="text/javascript">
-  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
-    window.Promise = null;
+  </div>
+
+
+          </div>
+          
+    <div class="comments" id="valine-comments"></div>
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let activeClass = CONFIG.comments.activeClass;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
   }
 </script>
 
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#关键词"><span class="nav-number">1.</span> <span class="nav-text">关键词</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#介绍"><span class="nav-number">2.</span> <span class="nav-text">介绍</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#原始类型"><span class="nav-number">3.</span> <span class="nav-text">原始类型</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#类型擦除"><span class="nav-number">4.</span> <span class="nav-text">类型擦除</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#多态的冲突"><span class="nav-number">5.</span> <span class="nav-text">多态的冲突</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#实战"><span class="nav-number">6.</span> <span class="nav-text">实战</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#基本类型不可以作为泛型"><span class="nav-number">6.1.</span> <span class="nav-text">基本类型不可以作为泛型</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#泛型不可以被实例化"><span class="nav-number">6.2.</span> <span class="nav-text">泛型不可以被实例化</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#泛型使用instanceOf"><span class="nav-number">6.3.</span> <span class="nav-text">泛型使用instanceOf</span></a></li></ol></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="小鱼先生"
+      src="/images/avatar.jpg">
+  <p class="site-author-name" itemprop="name">小鱼先生</p>
+  <div class="site-description" itemprop="description">相信美好的事情即将发生</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives">
+        
+          <span class="site-state-item-count">44</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories">
+          
+        <span class="site-state-item-count">7</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags">
+          
+        <span class="site-state-item-count">25</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+        <a href="https://github.com/HardyDou" title="GitHub → https://github.com/HardyDou" rel="noopener" target="_blank"><i class="fa fa-fw fa-github"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:doouxiaoyu@163.com" title="E-Mail → mailto:doouxiaoyu@163.com" rel="noopener" target="_blank"><i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+      </span>
+  </div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+  <div class="beian"><a href="http://www.beian.miit.gov.cn" rel="noopener" target="_blank">京ICP备18050184号 </a>
+  </div>
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2020</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">小鱼先生</span>
+</div>
+
+        
 
 
 
@@ -908,9 +438,26 @@
 
 
 
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js"></script>
+  <script src="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
 
 
+<script src="/js/schemes/pisces.js"></script>
 
+
+<script src="/js/next-boot.js"></script>
 
 
 
@@ -932,139 +479,37 @@
 
 
   
-  
-    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
-  
-
-  
-  
-    <script type="text/javascript" src="/lib/kityminder-core/kity.min.js"></script>
-  
-
-  
-  
-    <script type="text/javascript" src="/lib/kityminder-core/kityminder.core.js"></script>
-  
-
-  
-  
-    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
-  
-
-  
-  
-    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
-  
-
-  
-  
-    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
-  
-
 
   
 
 
-  <script type="text/javascript" src="/js/src/utils.js?v=6.5.0"></script>
-
-  <script type="text/javascript" src="/js/src/motion.js?v=6.5.0"></script>
-
-
-
-  
-  
-
-
-  <script type="text/javascript" src="/js/src/affix.js?v=6.5.0"></script>
-
-  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=6.5.0"></script>
-
-
-
-  
-  <script type="text/javascript" src="/js/src/scrollspy.js?v=6.5.0"></script>
-<script type="text/javascript" src="/js/src/post-details.js?v=6.5.0"></script>
-<script type="text/javascript" src="/js/src/kityminder.js?v=6.5.0"></script>
-
-
-
-  
-
-
-  <script type="text/javascript" src="/js/src/bootstrap.js?v=6.5.0"></script>
-
-
-
-  
-
-
-
-  
-
-
-
-
-
-
-
-
-  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
-  
-  
-  <script src="//unpkg.com/valine/dist/Valine.min.js"></script>
-  
-  <script type="text/javascript">
-    var GUEST = ['nick','mail','link'];
+<script>
+NexT.utils.loadComments(document.querySelector('#valine-comments'), () => {
+  NexT.utils.getScript('//unpkg.com/valine/dist/Valine.min.js', () => {
+    var GUEST = ['nick', 'mail', 'link'];
     var guest = 'nick,mail,link';
-    guest = guest.split(',').filter(function (item) {
-      return GUEST.indexOf(item)>-1;
+    guest = guest.split(',').filter(item => {
+      return GUEST.includes(item);
     });
     new Valine({
-        el: '#comments' ,
-        verify: true,
-        notify: true,
-        appId: 'fF3IzJ6TkcmNPCPo4nYayNln-gzGzoHsz',
-        appKey: 'CaEuIN0359VyWiygnoDPQxx1',
-        placeholder: '有话就直说!!',
-        avatar:'mp',
-        meta:guest,
-        pageSize:'10' || 10,
-        visitor: false
+      el         : '#valine-comments',
+      verify     : true,
+      notify     : true,
+      appId      : 'fF3IzJ6TkcmNPCPo4nYayNln-gzGzoHsz',
+      appKey     : 'CaEuIN0359VyWiygnoDPQxx1',
+      placeholder: "请讲!!",
+      avatar     : 'mp',
+      meta       : guest,
+      pageSize   : '10' || 10,
+      visitor    : false,
+      lang       : '' || 'zh-cn',
+      path       : location.pathname,
+      recordIP   : false,
+      serverURLs : ''
     });
-  </script>
-
-
-
-  
-
-
-
-
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
+  }, window.Valine);
+});
+</script>
 
 </body>
 </html>
