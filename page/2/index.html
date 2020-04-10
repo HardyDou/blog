@@ -161,6 +161,104 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://www.hardydou.com/2019/07/04/adapter-pattern/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.jpg">
+      <meta itemprop="name" content="小鱼先生">
+      <meta itemprop="description" content="相信美好的事情即将发生">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="小鱼先生">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          
+            <a href="/2019/07/04/adapter-pattern/" class="post-title-link" itemprop="url">适配器模式</a>
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2019-07-04 12:25:00" itemprop="dateCreated datePublished" datetime="2019-07-04T12:25:00+08:00">2019-07-04</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2020-02-19 13:37:54" itemprop="dateModified" datetime="2020-02-19T13:37:54+08:00">2020-02-19</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1/" itemprop="url" rel="index">
+                    <span itemprop="name">架构设计</span>
+                  </a>
+                </span>
+            </span>
+
+          
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="fa fa-comment-o"></i>
+      </span>
+      <span class="post-meta-item-text">Valine：</span>
+    
+    <a title="valine" href="/2019/07/04/adapter-pattern/#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/2019/07/04/adapter-pattern/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h2 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h2><p>将一个类的接口变换成客户端所期待的另一种接口，从而使原本因接口不匹配而无从在一起工作的两个类能够在一起工作</p>
+<h2 id="类图"><a href="#类图" class="headerlink" title="类图"></a>类图</h2><p><img src="/images/pasted-155.png" alt="upload successful"></p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2019/07/04/adapter-pattern/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+        
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="http://www.hardydou.com/2019/07/04/decorator-pattern/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -184,10 +282,16 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
-              
 
-              <time title="创建时间：2019-07-04 10:43:34 / 修改时间：12:20:09" itemprop="dateCreated datePublished" datetime="2019-07-04T10:43:34+08:00">2019-07-04</time>
+              <time title="创建时间：2019-07-04 10:43:34" itemprop="dateCreated datePublished" datetime="2019-07-04T10:43:34+08:00">2019-07-04</time>
             </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2020-02-19 13:38:03" itemprop="dateModified" datetime="2020-02-19T13:38:03+08:00">2020-02-19</time>
+              </span>
 
           
   
@@ -216,37 +320,14 @@
       
           <h2 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h2><p>动态的给一个对象添加一些额外的职责。就增加功能来说，装饰模式比生成子类更为灵活。</p>
 <h2 id="类图"><a href="#类图" class="headerlink" title="类图"></a>类图</h2><p><img src="/images/pasted-153.png" alt="upload successful"></p>
-<h2 id="角色"><a href="#角色" class="headerlink" title="角色"></a>角色</h2><ul>
-<li>抽象构建（Component）<br>用于规范需要装饰的对象（原始对象）</li>
-<li>具体构件（ConcreteComponent）<br>实现抽象构件接口，定义一个需要装饰的原始类。</li>
-<li>装饰角色（Decorator）<br>持有一个构件对象实例，并定义一个与抽象构件接口一致的接口。</li>
-<li>具体装饰（Concrete Decorator）<br>负责对构件对象进行装饰。</li>
-</ul>
-<h2 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h2><p>Component.java</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">public interface Component &#123;</span><br><span class="line">	public void operation();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>ConcreteComponent.java</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">public class ConceteComponent implements Component&#123;</span><br><span class="line">	public void operation()&#123;</span><br><span class="line">    	&#x2F;&#x2F;业务代码</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>Decorator.java</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">public abstract class Decorator implements Component&#123;</span><br><span class="line">	private Component component&#x3D;null;</span><br><span class="line">    public Decorator(Component component)&#123;</span><br><span class="line">    	this.component&#x3D;component;</span><br><span class="line">    &#125;</span><br><span class="line">    public void operation()&#123;</span><br><span class="line">    	this.component.operation();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>ConcreteDecorator.java</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">public class ConcreteDecorator extends Decorator&#123;</span><br><span class="line">	public ConcreteDecorator(Component component)&#123;</span><br><span class="line">    	super(component);</span><br><span class="line">    &#125;</span><br><span class="line">    private void method()&#123;</span><br><span class="line">    	System.out.println(&quot;method&quot;);</span><br><span class="line">    &#125;</span><br><span class="line">    public void operation()&#123;</span><br><span class="line">    	this.method();</span><br><span class="line">    	super.operation();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>Client.java</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">public class Client&#123;</span><br><span class="line">	public static void main(String args[])&#123;</span><br><span class="line">    	Component component &#x3D;new ConcreateComponent();</span><br><span class="line">        component&#x3D;new ConcreteDecorator(component);</span><br><span class="line">        component.operation();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h2 id="应用"><a href="#应用" class="headerlink" title="应用"></a>应用</h2><h3 id="优点"><a href="#优点" class="headerlink" title="优点"></a>优点</h3><ul>
-<li>装饰类和被装饰类可以独立发展，而不会互相耦合。即Component 类无须知道Decorator类是从外部来扩展Component类的功能，而Decorator也不用知道具体的构件。</li>
-<li>装饰模式是继承关系的一个替代方案。装饰类Decorator，不管装饰多少层，返回的对象还是Component。</li>
-<li>装饰模式可以动态的扩展一个实现类的功能。</li>
-</ul>
-<h3 id="缺点"><a href="#缺点" class="headerlink" title="缺点"></a>缺点</h3><p>多层的装饰是比较复杂的。</p>
-<h2 id="使用场景"><a href="#使用场景" class="headerlink" title="使用场景"></a>使用场景</h2><ul>
-<li>需要扩展一个类的功能，或者给一个类增加附加功能。</li>
-<li>需要动态地给一个对象增加功能，这些工鞥呢可以再动态的撤销。</li>
-<li>需要为一批类进行改装或者加装功能。</li>
-</ul>
-<p>装饰者是对继承的有力补充。单纯使用继承时，在一些情况下就会增加很多子类，而且灵活性差，维护也不容易。装饰模式可以替代继承者，解决类膨胀的问题，如Java基础类库中的输入输出流相关的类大量使用了装饰者模式。</p>
-<h2 id="实例"><a href="#实例" class="headerlink" title="实例"></a>实例</h2><p><img src="/images/pasted-154.png" alt="upload successful"></p>
-
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2019/07/04/decorator-pattern/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
@@ -296,7 +377,7 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2019-07-03 18:47:21" itemprop="dateModified" datetime="2019-07-03T18:47:21+08:00">2019-07-03</time>
+                <time title="修改时间：2020-02-19 13:38:11" itemprop="dateModified" datetime="2020-02-19T13:38:11+08:00">2020-02-19</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -337,35 +418,14 @@
       
           <h2 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h2><p>为其它对象提供一种代理以控制这个对象的访问。</p>
 <h2 id="类图"><a href="#类图" class="headerlink" title="类图"></a>类图</h2><p><img src="/images/pasted-151.png" alt="upload successful"></p>
-<h2 id="角色"><a href="#角色" class="headerlink" title="角色"></a>角色</h2><ul>
-<li>抽象主题Subject</li>
-<li>代理主题ProxySubject</li>
-<li>真实主题 Real Subject </li>
-</ul>
-<h2 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h2><p>Subject.java</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">public interface Subject&#123;</span><br><span class="line">	public void request();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>RealSubject.java</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">public class RealSubject implements Subject&#123;</span><br><span class="line">	public void request()&#123;</span><br><span class="line">    </span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>ProxySubject.java</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">public class ProxySubject implements Subject &#123;</span><br><span class="line">	</span><br><span class="line">    private Subject subject;</span><br><span class="line">    public ProxySubject(Subject subject)&#123;</span><br><span class="line">    	this.subject&#x3D;subject;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    public void request()&#123;</span><br><span class="line">    	this.beforeReqeust();</span><br><span class="line">        subject.request();</span><br><span class="line">        this.afterRequest();</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    private void beforeRequest()&#123;&#125;</span><br><span class="line">    private void afterRequest()&#123;&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>一个代理主题类可以代理多个真实主题、具体代理哪个真实主题是由高层的应用模块决定的，可以通过代理类的构造函数传递被代理者。</p>
-<h2 id="应用"><a href="#应用" class="headerlink" title="应用"></a>应用</h2><h3 id="种类"><a href="#种类" class="headerlink" title="种类"></a>种类</h3><ul>
-<li>远程代理</li>
-<li>虚拟代理</li>
-<li>保护代理</li>
-<li>缓存代理</li>
-<li>同步代理</li>
-<li>智能引用</li>
-</ul>
-<h3 id="优点"><a href="#优点" class="headerlink" title="优点"></a>优点</h3><ul>
-<li>职责清晰</li>
-<li>高扩展性</li>
-<li>智能化</li>
-</ul>
-<h3 id="使用场景"><a href="#使用场景" class="headerlink" title="使用场景"></a>使用场景</h3><p>代理模式应用非常广泛，达到一个系统框架、企业平台，小到事务处理、代码片段，随处可见代理模式的应用。例如，Java Rmi 的远程调用就是一种代理模式的应用，现在流行的AOP也是通过代理模式实现的。</p>
-<h2 id="实例"><a href="#实例" class="headerlink" title="实例"></a>实例</h2><p><img src="/images/pasted-152.png" alt="upload successful"></p>
-
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2019/07/02/proxy-pattern/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
@@ -407,10 +467,16 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
-              
 
-              <time title="创建时间：2019-07-02 14:49:00 / 修改时间：15:18:04" itemprop="dateCreated datePublished" datetime="2019-07-02T14:49:00+08:00">2019-07-02</time>
+              <time title="创建时间：2019-07-02 14:49:00" itemprop="dateCreated datePublished" datetime="2019-07-02T14:49:00+08:00">2019-07-02</time>
             </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2020-02-19 13:38:26" itemprop="dateModified" datetime="2020-02-19T13:38:26+08:00">2020-02-19</time>
+              </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="fa fa-folder-o"></i>
@@ -450,41 +516,14 @@
       
           <h2 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h2><p>用原型实例指定创建对象的种类，并且通过复制这些原型创建新的对象。</p>
 <h2 id="类图"><a href="#类图" class="headerlink" title="类图"></a>类图</h2><p><img src="/images/pasted-150.png" alt="upload successful"></p>
-<h2 id="角色"><a href="#角色" class="headerlink" title="角色"></a>角色</h2><ul>
-<li>客户（Client）角色</li>
-<li>抽象原型（Prototype）角色</li>
-<li>具体原型 （Concrete Prototype）角色</li>
-</ul>
-<p>Java中内置了克隆机制，Object类具有一个clone()方法，能够实现对象的克隆，使一个类支持克隆需要以下两步：</p>
-<ul>
-<li>实现Cloneable 接口</li>
-<li>覆盖 Object的clone方法，完成对象的克隆操作，通常只需要调用Object的clone方法即可。为了使外部能够调用此类的clone方法，可以将可访问属性修改为public</li>
-</ul>
-<h2 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h2><p>Prototype.java</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">public interface Prototype extends Cloneable&#123;</span><br><span class="line">   Prototype clone();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>ConcretePrototypel.java</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">public class ConcretePrototype implements Prototype&#123;</span><br><span class="line">	</span><br><span class="line">    public Prototype clone()&#123;</span><br><span class="line">    	try&#123;</span><br><span class="line">        	return (Prototype)super.clone();</span><br><span class="line">        &#125;catch(CloneNotSuppoertedException e)&#123;</span><br><span class="line">			return null;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>Client.java</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">public class Client&#123;</span><br><span class="line">	public void operation(Prototype example)&#123;</span><br><span class="line">    	Prototype p&#x3D;example.clone();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h2 id="应用"><a href="#应用" class="headerlink" title="应用"></a>应用</h2><h3 id="优点"><a href="#优点" class="headerlink" title="优点"></a>优点</h3><ul>
-<li>性能优良</li>
-<li>逃避构造函数的约束</li>
-</ul>
-<h3 id="使用场景"><a href="#使用场景" class="headerlink" title="使用场景"></a>使用场景</h3><ul>
-<li>资源优化场景，类初始化需要消化非常多的资源，这个资源包括数据、硬件资源等。</li>
-<li>性能和安全要求的场景，通过new产生一个对象需要非常繁琐的数据准备或者访问权限，可以通过原型模式。</li>
-<li>一个对象多个修改者的场景，一个对象需要提供给其它对象访问，而且各个调用者可能都需要修改其值时，可以考虑使用原型模式复制多个对象供调用者使用。</li>
-</ul>
-<p>在实际项目中，原型模式很少独立出现，一般和工厂方法模式一起出现，通过clone方法创建一个对象，然后由工厂方法提供给调用者。</p>
-<h2 id="实例"><a href="#实例" class="headerlink" title="实例"></a>实例</h2><p>Mail.java</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line">public class Mail implements Cloneable&#123;</span><br><span class="line">	&#x2F;&#x2F;收件人</span><br><span class="line">	private String receiver;</span><br><span class="line">    &#x2F;&#x2F;邮件标题</span><br><span class="line">    private String subject;</span><br><span class="line">    &#x2F;&#x2F;称谓</span><br><span class="line">    private String appellation;</span><br><span class="line">    &#x2F;&#x2F;邮件内容</span><br><span class="line">    private String context;</span><br><span class="line">    &#x2F;&#x2F;邮件尾巴</span><br><span class="line">    private String tail;</span><br><span class="line">    </span><br><span class="line">    public Mail(String subject,String context)&#123;</span><br><span class="line">    	this.subject&#x3D;subject;</span><br><span class="line">        this.context&#x3D;context;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    public Mail clone()&#123;</span><br><span class="line">    	Mail mail&#x3D;null;</span><br><span class="line">        try&#123;</span><br><span class="line">        	mail&#x3D;(Mail)super.clone();</span><br><span class="line">        &#125;catch(CloneNotSupportedException e)&#123;</span><br><span class="line">        	return null;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>ClientDemo.java</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">public class ClientDemo&#123;</span><br><span class="line">	private static int MAX_CONT&#x3D;6;</span><br><span class="line">    public static void main(String[] args)&#123;</span><br><span class="line">    	int i&#x3D;0;</span><br><span class="line">        Mail mail&#x3D;new Mail(&quot;主题&quot;,&quot;内容&quot;);</span><br><span class="line">        mail.setTail(&quot;版权所有&quot;);</span><br><span class="line">        while(i&lt;MAX_CONT)&#123;</span><br><span class="line">        	Mail cloneMail&#x3D;mail.clone();</span><br><span class="line">            cloneMail.setAppellation(i+&quot;先生&#x2F;女士&quot;);</span><br><span class="line">            cloneMail.setReceiver(i+&quot;_email@111.com&quot;);</span><br><span class="line">            sendMail(cloneMail)</span><br><span class="line">         &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    public static void sendMail(Mail mail)&#123;</span><br><span class="line">    	System.out.println(&quot;send mail to &quot;+mail.getAppellation()+&quot; ,&quot;+mail.getSubject())</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-
-
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2019/07/02/prototype-pattern/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
@@ -526,10 +565,16 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
-              
 
-              <time title="创建时间：2019-07-02 14:10:00 / 修改时间：14:34:45" itemprop="dateCreated datePublished" datetime="2019-07-02T14:10:00+08:00">2019-07-02</time>
+              <time title="创建时间：2019-07-02 14:10:00" itemprop="dateCreated datePublished" datetime="2019-07-02T14:10:00+08:00">2019-07-02</time>
             </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2020-02-19 13:38:34" itemprop="dateModified" datetime="2020-02-19T13:38:34+08:00">2020-02-19</time>
+              </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="fa fa-folder-o"></i>
@@ -569,35 +614,14 @@
       
           <h2 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h2><p>创建者模式关注的是零件类型和装配工艺顺序，这是与工厂方法模式最大的不同之处，虽然同为创建型模式，但是重点不同。</p>
 <h2 id="类图"><a href="#类图" class="headerlink" title="类图"></a>类图</h2><p><img src="/images/pasted-149.png" alt="upload successful"></p>
-<h2 id="角色"><a href="#角色" class="headerlink" title="角色"></a>角色</h2><ul>
-<li>抽象建造者 Builder</li>
-<li>具体建造者 Concrete Builder</li>
-<li>产品 Product</li>
-<li>导演者 Director </li>
-</ul>
-<h2 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h2><p>Product.java</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">public class Product&#123;</span><br><span class="line">	</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>Builder.java</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">public abstract class Builder &#123;</span><br><span class="line">	public abstract void setPart1();</span><br><span class="line">    public abstract void setPart2();</span><br><span class="line">    public abstract void setPart3();</span><br><span class="line">    </span><br><span class="line">    public abstract Product builderProduct();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>ConcreteBuilder.java</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">public class ConcreteBuilder extends Builder&#123;</span><br><span class="line">	</span><br><span class="line">    public  void setPart1()&#123;</span><br><span class="line">    &#125;</span><br><span class="line">    public  void setPart2()&#123;</span><br><span class="line">    &#125;</span><br><span class="line">    public  void setPart3()&#123;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    public  Product builderProduct()&#123;</span><br><span class="line">    	return product;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>Diector.java</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">public class Director&#123;</span><br><span class="line">	private Builder builder&#x3D;new ConcreteBuilder();</span><br><span class="line">    </span><br><span class="line">    public Product build()&#123;</span><br><span class="line">    	builder.setPart1();</span><br><span class="line">        builder.setPart2();</span><br><span class="line">        builder.setPart3();</span><br><span class="line">        </span><br><span class="line">        return builder.builderProduct();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-
-<h2 id="应用"><a href="#应用" class="headerlink" title="应用"></a>应用</h2><h3 id="优点"><a href="#优点" class="headerlink" title="优点"></a>优点</h3><ul>
-<li>封装性</li>
-<li>建造者独立，容易扩展</li>
-<li>便于控制细节风险，由于具体的建造者是独立的，因此可以对建造过程逐步细化，而不对其他模块产生任何影响。</li>
-</ul>
-<h3 id="场景"><a href="#场景" class="headerlink" title="场景"></a>场景</h3><ul>
-<li>相同的方法，不同的执行顺序，产生不同的结果时，可以采用创建者模式。</li>
-<li>多个部件或者零件，都可以装配到一个对象中，但是产生的运行结果又不相同时，则可以使用该模式。</li>
-<li>产品非常复杂，或者产品类中的方法调用顺序不同产生了不同的效能，这个时候使用建造者模式。</li>
-<li>在对象创建过程中会使用到系统的一些其他对象，这些对象在产品对象创建过程中不易得到时，也可采用创建者模式。</li>
-</ul>
-<h2 id="Director"><a href="#Director" class="headerlink" title="Director"></a>Director</h2><p>Director 类起到封装作用，避免高层模块深入到建造者内部的实现类。导演类可以有多个，根据项目的实际情况来决定使用哪个。 </p>
-
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2019/07/02/builder-pattern/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
@@ -647,7 +671,7 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2019-07-02 01:17:16" itemprop="dateModified" datetime="2019-07-02T01:17:16+08:00">2019-07-02</time>
+                <time title="修改时间：2020-02-19 13:38:47" itemprop="dateModified" datetime="2020-02-19T13:38:47+08:00">2020-02-19</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -687,35 +711,14 @@
 
       
           <h2 id="概览"><a href="#概览" class="headerlink" title="概览"></a>概览</h2><p>工厂模式是 创建型模式，可以分2大类：工厂方法模式、抽象工厂模式。工厂方法模式又可以分为：简单工厂模式、工厂方法模式。</p>
-<h2 id="分类"><a href="#分类" class="headerlink" title="分类"></a>分类</h2><ul>
-<li>工厂方法模式<ul>
-<li>简单工厂模式</li>
-<li>工厂方法模式</li>
-</ul>
-</li>
-<li>抽象工厂模式</li>
-</ul>
-<h2 id="演进"><a href="#演进" class="headerlink" title="演进"></a>演进</h2><p><img src="/images/pasted-144.png" alt="upload successful"></p>
-<h2 id="简单工厂模式"><a href="#简单工厂模式" class="headerlink" title="简单工厂模式"></a>简单工厂模式</h2><h3 id="类图"><a href="#类图" class="headerlink" title="类图"></a>类图</h3><p><img src="/images/pasted-145.png" alt="upload successful"></p>
-<h3 id="实例"><a href="#实例" class="headerlink" title="实例"></a>实例</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">public class ShapeFactory &#123;</span><br><span class="line">    public static enum ShapeType &#123;</span><br><span class="line">        CIRCLE_T, RECTANGLE_T, SQUARE_T;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">    public static Shape getShape(ShapeType shapeType) &#123;</span><br><span class="line">        if (shapeType &#x3D;&#x3D; null) &#123;</span><br><span class="line">            return null;</span><br><span class="line">        &#125;</span><br><span class="line">        if (shapeType &#x3D;&#x3D; ShapeType.CIRCLE_T) &#123;</span><br><span class="line">            return new Circle();</span><br><span class="line">        &#125; else if (shapeType &#x3D;&#x3D; ShapeType.RECTANGLE_T) &#123;</span><br><span class="line">            return new Rectangle();</span><br><span class="line">        &#125; else if (shapeType &#x3D;&#x3D; ShapeType.SQUARE_T) &#123;</span><br><span class="line">            return new Square();</span><br><span class="line">        &#125;</span><br><span class="line">        return null;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h2 id="工厂方法模式"><a href="#工厂方法模式" class="headerlink" title="工厂方法模式"></a>工厂方法模式</h2><p>定义一个创建对象的接口，让子类决定实例化那个类。</p>
-<h3 id="角色"><a href="#角色" class="headerlink" title="角色"></a>角色</h3><ul>
-<li>抽象工厂（Creator）角色</li>
-<li>具体工厂（Concrete Creator） 角色</li>
-<li>抽象产品 （Product） 角色</li>
-<li>具体产品（Concrete Product）角色</li>
-</ul>
-<h3 id="类图-1"><a href="#类图-1" class="headerlink" title="类图"></a>类图</h3><p><img src="/images/pasted-147.png" alt="upload successful"></p>
-<h2 id="抽象工厂模式"><a href="#抽象工厂模式" class="headerlink" title="抽象工厂模式"></a>抽象工厂模式</h2><p>为创建一组相关或者互相依赖的对象提供一个接口，而且无须指定它们的具体类。</p>
-<h3 id="角色-1"><a href="#角色-1" class="headerlink" title="角色"></a>角色</h3><ul>
-<li>抽象工厂（Creator）角色</li>
-<li>具体工厂（Concrete Creator） 角色</li>
-<li>抽象产品 （Product） 角色</li>
-<li>具体产品（Concrete Product）角色</li>
-</ul>
-<h3 id="类图-2"><a href="#类图-2" class="headerlink" title="类图"></a>类图</h3><p><img src="/images/pasted-148.png" alt="upload successful"></p>
-
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2019/07/01/factory-parttern/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
@@ -757,10 +760,16 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
-              
 
-              <time title="创建时间：2019-06-24 11:40:22 / 修改时间：11:48:31" itemprop="dateCreated datePublished" datetime="2019-06-24T11:40:22+08:00">2019-06-24</time>
+              <time title="创建时间：2019-06-24 11:40:22" itemprop="dateCreated datePublished" datetime="2019-06-24T11:40:22+08:00">2019-06-24</time>
             </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2020-02-19 13:39:04" itemprop="dateModified" datetime="2020-02-19T13:39:04+08:00">2020-02-19</time>
+              </span>
 
           
   
@@ -792,25 +801,14 @@
 但是知识一旦改变了行为，知识本身就立刻失去意义  
 </font >
 <font style="display:block;text-align:right;" size=6 >--《未来简史》</font>
-
-<hr>
-<h2 id="什么是知识？"><a href="#什么是知识？" class="headerlink" title="什么是知识？"></a>什么是知识？</h2><p>我们可以做出如下结论，知识就是一切人类总结归纳，并认为正确真实，可以指导解决实践问题的观点、经验、程序等信息。</p>
-<h2 id="知识具有哪些特征？"><a href="#知识具有哪些特征？" class="headerlink" title="知识具有哪些特征？"></a>知识具有哪些特征？</h2><h3 id="隐性特征"><a href="#隐性特征" class="headerlink" title="隐性特征"></a>隐性特征</h3><p>说明：知识具备较强的隐蔽性，需要进行归纳、总结、提炼。</p>
-<h3 id="行动导向特征"><a href="#行动导向特征" class="headerlink" title="行动导向特征"></a>行动导向特征</h3><p>说明：知识能够直接推动人的决策和行为，加速行动过程。</p>
-<h3 id="动态特征"><a href="#动态特征" class="headerlink" title="动态特征"></a>动态特征</h3><p>说明：知识不断更新和修正。</p>
-<h3 id="主观特征"><a href="#主观特征" class="headerlink" title="主观特征"></a>主观特征</h3><p>说明：每个人对知识的理解，都会加入自己的主观意愿。</p>
-<h3 id="可复制-转移"><a href="#可复制-转移" class="headerlink" title="可复制/转移"></a>可复制/转移</h3><p>说明：知识可以被复制和转移，可重复利用。</p>
-<h3 id="延展生长特征"><a href="#延展生长特征" class="headerlink" title="延展生长特征"></a>延展生长特征</h3><p>说明：知识在应用、交流的过程中，被不断丰富和拓展。</p>
-<h3 id="资本特征"><a href="#资本特征" class="headerlink" title="资本特征"></a>资本特征</h3><p>说明：知识就是金钱。</p>
-<h3 id="倍增特征"><a href="#倍增特征" class="headerlink" title="倍增特征"></a>倍增特征</h3><p>说明：知识经过传播不会减少，而会产生倍增效应。一个知识两人分享，就至少有两条。</p>
-<h3 id="熟练特征"><a href="#熟练特征" class="headerlink" title="熟练特征"></a>熟练特征</h3><p>说明：知识运用越熟练，有效性越高。</p>
-<h3 id="情境特征"><a href="#情境特征" class="headerlink" title="情境特征"></a>情境特征</h3><p>说明：知识必须在规定的情景下起作用，人类选择知识一般都会进行情境对比。</p>
-<h3 id="心智接受特征"><a href="#心智接受特征" class="headerlink" title="心智接受特征"></a>心智接受特征</h3><p>说明：知识必须经过人的心智内化，真正理解，才能被准确运用。</p>
-<h3 id="结果导向特征"><a href="#结果导向特征" class="headerlink" title="结果导向特征"></a>结果导向特征</h3><p>说明：知识不但加速过程，也导向一个可预期的结果。</p>
-<h3 id="权力特征"><a href="#权力特征" class="headerlink" title="权力特征"></a>权力特征</h3><p>说明：掌握知识的人，即便不在职务高位，也拥有一定的隐性权力。</p>
-<h3 id="生命特征"><a href="#生命特征" class="headerlink" title="生命特征"></a>生命特征</h3><p>说明：知识是有产生和实效的过程，有生命长短，不是永久有效的。</p>
-<h2 id="知识经济"><a href="#知识经济" class="headerlink" title="知识经济"></a>知识经济</h2><p>人类进入知识经济的时代意义：知识经济是经济增长直接依赖于知识和信息的生产、传播和使用，以高技术产业为第一产业支柱，以智力资源为首要依托，它是可持续发展的经济。按照世界经济合作及发展组织的说法，知识经济就是以现代科学技术为核心的，建立在知识和信息的生产、存储、使用和消费之上的经济。</p>
-
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2019/06/24/Knowledge/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
@@ -860,7 +858,7 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2019-07-01 14:29:57" itemprop="dateModified" datetime="2019-07-01T14:29:57+08:00">2019-07-01</time>
+                <time title="修改时间：2020-02-19 13:39:26" itemprop="dateModified" datetime="2020-02-19T13:39:26+08:00">2020-02-19</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -900,78 +898,14 @@
 
       
           <h2 id="为什么要用锁？"><a href="#为什么要用锁？" class="headerlink" title="为什么要用锁？"></a>为什么要用锁？</h2><p>锁-是为了解决并发操作引起的脏读、数据不一致的问题。</p>
-<h2 id="锁实现的基本原理"><a href="#锁实现的基本原理" class="headerlink" title="锁实现的基本原理"></a>锁实现的基本原理</h2><h3 id="volatile"><a href="#volatile" class="headerlink" title="volatile"></a>volatile</h3><p>Java编程语言允许线程访问共享变量， 为了确保共享变量能被准确和一致地更新，线程应该确保通过排他锁单独获得这个变量。Java语言提供了volatile，在某些情况下比锁要更加方便。<br>volatile在多处理器开发中保证了共享变量的“ 可见性”。可见性的意思是当一个线程修改一个共享变量时，另外一个线程能读到这个修改的值。<br><img src="/images/pasted-124.png" alt="upload successful"><br>结论：如果volatile变量修饰符使用恰当的话，它比synchronized的使用和执行成本更低，因为它不会引起线程上下文的切换和调度。</p>
-<h3 id="synchronized"><a href="#synchronized" class="headerlink" title="synchronized"></a>synchronized</h3><p>synchronized通过锁机制实现同步。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">先来看下利用synchronized实现同步的基础：Java中的每一个对象都可以作为锁。</span><br></pre></td></tr></table></figure>
-
-<p>具体表现为以下3种形式：</p>
-<ul>
-<li>对于普通同步方法，锁是当前实例对象。</li>
-<li>对于静态同步方法，锁是当前类的Class对象。</li>
-<li>对于同步方法块，锁是Synchonized括号里配置的对象。</li>
-</ul>
-<p>当一个线程试图访问同步代码块时，它首先必须得到锁，退出或抛出异常时必须释放锁。</p>
-<h4 id="synchronized实现原理"><a href="#synchronized实现原理" class="headerlink" title="synchronized实现原理"></a>synchronized实现原理</h4><pre><code>synchronized是基于Monitor来实现同步的。</code></pre><p>Monitor从两个方面来支持线程之间的同步：</p>
-<ul>
-<li>互斥执行</li>
-<li>协作</li>
-</ul>
-<ol>
-<li>Java 使用对象锁 ( 使用 synchronized 获得对象锁 ) 保证工作在共享的数据集上的线程互斥执行。  </li>
-<li>使用 notify/notifyAll/wait 方法来协同不同线程之间的工作。  </li>
-<li>Class和Object都关联了一个Monitor。  </li>
-</ol>
-<p><img src="/images/pasted-125.png" alt="upload successful"></p>
-<p>Monitor 的工作机理</p>
-<ul>
-<li>线程进入同步方法中。</li>
-<li>为了继续执行临界区代码，线程必须获取 Monitor 锁。如果获取锁成功，将成为该监视者对象的拥有者。任一时刻内，监视者对象只属于一个活动线程（The Owner）</li>
-<li>拥有监视者对象的线程可以调用 wait() 进入等待集合（Wait Set），同时释放监视锁，进入等待状态。</li>
-<li>其他线程调用 notify() / notifyAll() 接口唤醒等待集合中的线程，这些等待的线程需要重新获取监视锁后才能执行 wait() 之后的代码。</li>
-<li>同步方法执行完毕了，线程退出临界区，并释放监视锁。</li>
-</ul>
-<p>参考文档：<a href="https://www.ibm.com/developerworks/cn/java/j-lo-synchronized" target="_blank" rel="noopener">https://www.ibm.com/developerworks/cn/java/j-lo-synchronized</a></p>
-<h4 id="synchronized具体实现"><a href="#synchronized具体实现" class="headerlink" title="synchronized具体实现"></a>synchronized具体实现</h4><ol>
-<li>同步代码块采用monitorenter、monitorexit指令显式的实现。</li>
-<li>同步方法则使用ACC_SYNCHRONIZED标记符隐式的实现。</li>
-</ol>
-<p>通过实例来看看具体实现：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">public class SynchronizedTest &#123; </span><br><span class="line">	public synchronized void method1()&#123; </span><br><span class="line">    	System.out.println(&quot;Hello World!&quot;); </span><br><span class="line">        &#125; </span><br><span class="line">    public void method2()&#123; </span><br><span class="line">    	synchronized (this)&#123;</span><br><span class="line">        System.out.println(&quot;Hello World!&quot;); </span><br><span class="line">        &#125; </span><br><span class="line">       &#125;</span><br><span class="line">   &#125;</span><br></pre></td></tr></table></figure>
-<p>javap编译后的字节码如下：<br><img src="/images/pasted-126.png" alt="upload successful"></p>
-<p>**monitorenter  </p>
-<p>每一个对象都有一个monitor，一个monitor只能被一个线程拥有。当一个线程执行到monitorenter指令时会尝试获取相应对象的monitor，获取规则如下：</p>
-<ul>
-<li>如果monitor的进入数为0，则该线程可以进入monitor，并将monitor进入数设置为1，该线程即为monitor的拥有者。</li>
-<li>如果当前线程已经拥有该monitor，只是重新进入，则进入monitor的进入数加1，所以synchronized关键字实现的锁是可重入的锁。</li>
-<li>如果monitor已被其他线程拥有，则当前线程进入阻塞状态，直到monitor的进入数为0，再重新尝试获取monitor。</li>
-</ul>
-<p>**monitorexit</p>
-<p>只有拥有相应对象的monitor的线程才能执行monitorexit指令。每执行一次该指令monitor进入数减1，当进入数为0时当前线程释放monitor，此时其他阻塞的线程将可以尝试获取该monitor。</p>
-<h4 id="锁存放的位置"><a href="#锁存放的位置" class="headerlink" title="锁存放的位置"></a>锁存放的位置</h4><p>锁标记存放在Java对象头的Mark Word中。<br><img src="/images/pasted-127.png" alt="upload successful"><br>Java对象头长度<br><img src="/images/pasted-128.png" alt="upload successful"></p>
-<p>32位JVM Mark Word 结构<br><img src="/images/pasted-129.png" alt="upload successful"><br>32位JVM Mark Word 状态变化<br><img src="/images/pasted-130.png" alt="upload successful"><br>64位JVM Mark Word 结构</p>
-<h4 id="synchronized的锁优化"><a href="#synchronized的锁优化" class="headerlink" title="synchronized的锁优化"></a>synchronized的锁优化</h4><p>JavaSE1.6为了减少获得锁和释放锁带来的性能消耗，引入了“偏向锁”和“轻量级锁”。<br>在JavaSE1.6中，锁一共有4种状态，级别从低到高依次是：无锁状态、偏向锁状态、轻量级锁状态和重量级锁状态，这几个状态会随着竞争情况逐渐升级。<br>锁可以升级但不能降级，意味着偏向锁升级成轻量级锁后不能降级成偏向锁。这种锁升级却不能降级的策略，目的是为了提高获得锁和释放锁的效率。</p>
-<h5 id="偏向锁："><a href="#偏向锁：" class="headerlink" title="偏向锁："></a>偏向锁：</h5><pre><code>无锁竞争的情况下为了减少锁竞争的资源开销，引入偏向锁。</code></pre><p><img src="/images/pasted-131.png" alt="upload successful"></p>
-<h5 id="轻量级锁："><a href="#轻量级锁：" class="headerlink" title="轻量级锁："></a>轻量级锁：</h5><pre><code>轻量级锁所适应的场景是线程交替执行同步块的情况。</code></pre><p><img src="/images/pasted-132.png" alt="upload successful"></p>
-<h5 id="锁粗化（Lock-Coarsening）："><a href="#锁粗化（Lock-Coarsening）：" class="headerlink" title="锁粗化（Lock Coarsening）："></a>锁粗化（Lock Coarsening）：</h5><pre><code>也就是减少不必要的紧连在一起的unlock，lock操作，将多个连续的锁扩展成一个范围更大的锁。</code></pre><h5 id="锁消除（Lock-Elimination）："><a href="#锁消除（Lock-Elimination）：" class="headerlink" title="锁消除（Lock Elimination）："></a>锁消除（Lock Elimination）：</h5><pre><code>锁削除是指虚拟机即时编译器在运行时，对一些代码上要求同步，但是被检测到不可能存在共享数据竞争的锁进行削除。</code></pre><h5 id="适应性自旋（Adaptive-Spinning）："><a href="#适应性自旋（Adaptive-Spinning）：" class="headerlink" title="适应性自旋（Adaptive Spinning）："></a>适应性自旋（Adaptive Spinning）：</h5><pre><code>自适应意味着自旋的时间不再固定了，而是由前一次在同一个锁上的自旋时间及锁的拥有者的状态来决定。如果在同一个锁对象上，自旋等待刚刚成功获得过锁，并且持有锁的线程正在运行中，那么虚拟机就会认为这次自旋也很有可能再次成功，进而它将允许自旋等待持续相对更长的时间，比如100个循环。另一方面，如果对于某个锁，自旋很少成功获得过，那在以后要获取这个锁时将可能省略掉自旋过程，以避免浪费处理器资源。</code></pre><h4 id="锁的优缺点对比"><a href="#锁的优缺点对比" class="headerlink" title="锁的优缺点对比"></a>锁的优缺点对比</h4><p><img src="/images/pasted-133.png" alt="upload successful"></p>
-<h3 id="CAS"><a href="#CAS" class="headerlink" title="CAS"></a>CAS</h3><pre><code>CAS，在Java并发应用中通常指CompareAndSwap或CompareAndSet，即比较并交换。</code></pre><ol>
-<li>CAS是一个原子操作，它比较一个内存位置的值并且只有相等时修改这个内存位置的值为新的值，保证了新的值总是基于最新的信息计算的，如果有其他线程在这期间修改了这个值则CAS失败。CAS返回是否成功或者内存位置原来的值用于判断是否CAS成功。</li>
-<li>JVM中的CAS操作是利用了处理器提供的CMPXCHG指令实现的。</li>
-</ol>
-<p><strong>优点：</strong><br>竞争不大的时候系统开销小。<br><strong>缺点：</strong><br>【１】循环时间长开销大。CAS长时间自旋不成功，给CPU带来很大的性能开销。解决方法：JVM能支持pause指令，效率会有一定的提升。<br>【２】只能保证一个共享变量的原子操作。对多个共享变量操作时，不能保证原子性。 解决方法：加锁；共享变量合并成一个共享变量<br>【３】ABA的问题。解决方法就是：增加版本号，每次使用的时候版本号+1，每次变量更新的时候版本号+1。java提供AtomicStampzedReference来解决ABA问题。 </p>
-<h2 id="Java中的锁实现"><a href="#Java中的锁实现" class="headerlink" title="Java中的锁实现"></a>Java中的锁实现</h2><h3 id="队列同步器（AQS）"><a href="#队列同步器（AQS）" class="headerlink" title="队列同步器（AQS）"></a>队列同步器（AQS）</h3><p>队列同步器AbstractQueuedSynchronizer（以下简称同步器），是用来构建锁或者其他同步组件的基础框架。</p>
-<h4 id="它使用了一个int成员变量表示同步状态。"><a href="#它使用了一个int成员变量表示同步状态。" class="headerlink" title="它使用了一个int成员变量表示同步状态。"></a>它使用了一个int成员变量表示同步状态。</h4><p><img src="/images/pasted-134.png" alt="upload successful"></p>
-<h4 id="通过内置的FIFO双向队列来完成获取锁线程的排队工作。"><a href="#通过内置的FIFO双向队列来完成获取锁线程的排队工作。" class="headerlink" title="通过内置的FIFO双向队列来完成获取锁线程的排队工作。"></a>通过内置的FIFO双向队列来完成获取锁线程的排队工作。</h4><pre><code>同步器包含两个节点类型的应用，一个指向头节点，一个指向尾节点，未获取到锁的线程会创建节点线程安全（compareAndSetTail）的加入队列尾部。同步队列遵循FIFO，首节点是获取同步状态成功的节点。</code></pre><p><img src="/images/pasted-135.png" alt="upload successful"></p>
-<pre><code>未获取到锁的线程将创建一个节点，设置到尾节点。如下图所示：</code></pre><p><img src="/images/pasted-136.png" alt="upload successful"></p>
-<pre><code>首节点的线程在释放锁时，将会唤醒后继节点。而后继节点将会在获取锁成功时将自己设置为首节点。如下图所示：</code></pre><p><img src="/images/pasted-137.png" alt="upload successful"></p>
-<h3 id="独占式-共享式锁获取"><a href="#独占式-共享式锁获取" class="headerlink" title="独占式/共享式锁获取"></a>独占式/共享式锁获取</h3><pre><code>独占式：有且只有一个线程能获取到锁，如：ReentrantLock。&lt;/pre&gt;
-共享式：可以多个线程同时获取到锁，如：CountDownLatch</code></pre><h4 id="独占式"><a href="#独占式" class="headerlink" title="独占式"></a>独占式</h4><pre><code>每个节点自旋观察自己的前一节点是不是Header节点，如果是，就去尝试获取锁。</code></pre><p><img src="/images/pasted-138.png" alt="upload successful"></p>
-<pre><code>独占式锁获取流程：</code></pre><p><img src="/images/pasted-139.png" alt="upload successful"></p>
-<h4 id="共享式："><a href="#共享式：" class="headerlink" title="共享式："></a>共享式：</h4><p>共享式与独占式的区别：<br><img src="/images/pasted-140.png" alt="upload successful"></p>
-<p>共享锁获取流程：<br><img src="/images/pasted-141.png" alt="upload successful"></p>
-<h2 id="锁的使用用例"><a href="#锁的使用用例" class="headerlink" title="锁的使用用例"></a>锁的使用用例</h2><h3 id="ConcurrentHashMap的实现原理及使用"><a href="#ConcurrentHashMap的实现原理及使用" class="headerlink" title="ConcurrentHashMap的实现原理及使用"></a>ConcurrentHashMap的实现原理及使用</h3><p><img src="/images/pasted-142.png" alt="upload successful"></p>
-<pre><code>ConcurrentHashMap类图</code></pre><p><img src="/images/pasted-143.png" alt="upload successful"></p>
-<pre><code>ConcurrentHashMap数据结构</code></pre><p>结论：ConcurrentHashMap使用的锁分段技术。首先将数据分成一段一段地存储，然后给每一段数据配一把锁，当一个线程占用锁访问其中一个段数据的时候，其他段的数据也能被其他线程访问。</p>
-<pre><code>转自：https://www.cnblogs.com/barrywxx/p/8678698.html</code></pre>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2019/06/12/thread-safe/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
@@ -1350,127 +1284,6 @@
   
   
 
-        
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://www.hardydou.com/2019/05/29/PPP/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.jpg">
-      <meta itemprop="name" content="小鱼先生">
-      <meta itemprop="description" content="相信美好的事情即将发生">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="小鱼先生">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-          
-            <a href="/2019/05/29/PPP/" class="post-title-link" itemprop="url">国家职业资格证</a>
-        </h1>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2019-05-29 16:02:00" itemprop="dateCreated datePublished" datetime="2019-05-29T16:02:00+08:00">2019-05-29</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2019-05-30 22:14:41" itemprop="dateModified" datetime="2019-05-30T22:14:41+08:00">2019-05-30</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/other/" itemprop="url" rel="index">
-                    <span itemprop="name">other</span>
-                  </a>
-                </span>
-            </span>
-
-          
-  
-  <span class="post-meta-item">
-    
-      <span class="post-meta-item-icon">
-        <i class="fa fa-comment-o"></i>
-      </span>
-      <span class="post-meta-item-text">Valine：</span>
-    
-    <a title="valine" href="/2019/05/29/PPP/#valine-comments" itemprop="discussionUrl">
-      <span class="post-comments-count valine-comment-count" data-xid="/2019/05/29/PPP/" itemprop="commentCount"></span>
-    </a>
-  </span>
-  
-  
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h2 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h2><p>职业资格证分为准入类、水平评价类。其中准入类时从事相关职业必须要取得的证书，水平评价类 某些职位会有要去，同时作为国家认可的能力。可以享受很多福利待遇。<br>我们常见的职业资格证有：</p>
-<ul>
-<li>教师资格证</li>
-<li>注册会计师</li>
-<li>法律职业资格证，律师</li>
-<li>注册建筑工程师</li>
-<li>护士职业资格证</li>
-<li>记者</li>
-<li>导游<br>…..</li>
-</ul>
-<h2 id="计算机技术与软件专业技术资格"><a href="#计算机技术与软件专业技术资格" class="headerlink" title="计算机技术与软件专业技术资格"></a>计算机技术与软件专业技术资格</h2><h3 id="说明"><a href="#说明" class="headerlink" title="说明"></a>说明</h3><ul>
-<li>工作非必须、一般工作无用</li>
-<li>在北京可以以此办理《工作居住证》(工作居住证正常是必须本科及以上学历才可以办理的)，大专生的福音。</li>
-<li>待补充</li>
-</ul>
-<h3 id="证件模版"><a href="#证件模版" class="headerlink" title="证件模版"></a>证件模版</h3><p><img src="/images/pasted-116.png" alt="upload successful"></p>
-<h3 id="资格设置"><a href="#资格设置" class="headerlink" title="资格设置"></a>资格设置</h3><p><img src="/images/pasted-117.png" alt="upload successful"></p>
-<h3 id="岗位设置介绍"><a href="#岗位设置介绍" class="headerlink" title="岗位设置介绍"></a>岗位设置介绍</h3><p><img src="/images/pasted-119.png" alt="upload successful"><br><img src="/images/pasted-118.png" alt="upload successful"><br><img src="/images/pasted-120.png" alt="upload successful"></p>
-<h3 id="报考时间"><a href="#报考时间" class="headerlink" title="报考时间"></a>报考时间</h3><ul>
-<li>3月份</li>
-<li>8月份</li>
-</ul>
-<h3 id="考试时间"><a href="#考试时间" class="headerlink" title="考试时间"></a>考试时间</h3><ul>
-<li>5月份</li>
-<li>11月份</li>
-</ul>
-<h3 id="网站"><a href="#网站" class="headerlink" title="网站"></a>网站</h3><ul>
-<li><a href="http://www.ruankao.org.cn" target="_blank" rel="noopener">计算机技术职业资格网-报名入口</a>  </li>
-<li><a href="http://www.ruankao.org.cn/book" target="_blank" rel="noopener">考试用书</a></li>
-<li><a href="http://bm.ruankao.org.cn/sign/welcome" target="_blank" rel="noopener">报名入口</a></li>
-</ul>
-<h2 id="职业资格证目录"><a href="#职业资格证目录" class="headerlink" title="职业资格证目录"></a>职业资格证目录</h2><p><img src="/images/pasted-115.png" alt="职业资格证">，</p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
   </div>
 
   
@@ -1543,7 +1356,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives">
         
-          <span class="site-state-item-count">44</span>
+          <span class="site-state-item-count">45</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>

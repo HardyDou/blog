@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.hardydou.com/"/>
-  <updated>2019-07-24T06:57:30.454Z</updated>
+  <updated>2020-04-10T06:32:35.345Z</updated>
   <id>http://www.hardydou.com/</id>
   
   <author>
@@ -17,11 +17,11 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>策略模式</title>
-    <link href="http://www.hardydou.com/2019/07/24/strategy-pattern/"/>
-    <id>http://www.hardydou.com/2019/07/24/strategy-pattern/</id>
-    <published>2019-07-24T06:43:00.000Z</published>
-    <updated>2019-07-24T06:57:30.454Z</updated>
+    <title>Java引用数据类型</title>
+    <link href="http://www.hardydou.com/2020/04/09/Java%E5%BC%95%E7%94%A8%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/"/>
+    <id>http://www.hardydou.com/2020/04/09/Java引用数据类型/</id>
+    <published>2020-04-09T13:29:00.000Z</published>
+    <updated>2020-04-10T06:32:35.345Z</updated>
     
     <summary type="html">
     
@@ -29,10 +29,33 @@
       
         
         
-          &lt;h2 id=&quot;概述&quot;&gt;&lt;a href=&quot;#概述&quot; class=&quot;headerlink&quot; title=&quot;概述&quot;&gt;&lt;/a&gt;概述&lt;/h2&gt;&lt;p&gt;行为模式，定义一组算法，将每个算法都封装起来，并且使他们之间可以互换。&lt;/p&gt;
-&lt;h2 id=&quot;类图&quot;&gt;&lt;a href=&quot;#类图&quot;
+          &lt;h2 id=&quot;介绍&quot;&gt;&lt;a href=&quot;#介绍&quot; class=&quot;headerlink&quot; title=&quot;介绍&quot;&gt;&lt;/a&gt;介绍&lt;/h2&gt;&lt;p&gt;Java里除了基础数据类型就是引用数据类型。例如：类、接口、数组、枚举、标注&lt;/p&gt;
+&lt;h2 id=&quot;对象内存布局&quot;&gt;&lt;a
         
       
+    
+    </summary>
+    
+      <category term="java" scheme="http://www.hardydou.com/categories/java/"/>
+    
+    
+      <category term="java" scheme="http://www.hardydou.com/tags/java/"/>
+    
+      <category term="java数据类型" scheme="http://www.hardydou.com/tags/java%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>策略模式</title>
+    <link href="http://www.hardydou.com/2019/07/24/strategy-pattern/"/>
+    <id>http://www.hardydou.com/2019/07/24/strategy-pattern/</id>
+    <published>2019-07-24T06:43:00.000Z</published>
+    <updated>2020-02-19T05:35:32.296Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;概述&quot;&gt;&lt;a href=&quot;#概述&quot; class=&quot;headerlink&quot; title=&quot;概述&quot;&gt;&lt;/a&gt;概述&lt;/h2&gt;&lt;p&gt;行为模式，定义一组算法，将每个算法都封装起来，并且使他们之间可以互换。&lt;/p&gt;
+&lt;h2 id=&quot;类图&quot;&gt;&lt;a href=&quot;#类图&quot; class=&quot;headerlink&quot; title=&quot;类图&quot;&gt;&lt;/a&gt;类图&lt;/h2&gt;&lt;p&gt;&lt;img src=&quot;/images/pasted-179.png&quot; alt=&quot;upload successful&quot;&gt;&lt;/p&gt;
     
     </summary>
     
@@ -50,17 +73,12 @@
     <link href="http://www.hardydou.com/2019/07/24/chainofresponsibility-pattern/"/>
     <id>http://www.hardydou.com/2019/07/24/chainofresponsibility-pattern/</id>
     <published>2019-07-24T06:17:00.000Z</published>
-    <updated>2019-07-24T06:39:04.474Z</updated>
+    <updated>2020-02-19T05:35:43.220Z</updated>
     
     <summary type="html">
     
-      
-      
-        
-        
-          &lt;h2 id=&quot;概述&quot;&gt;&lt;a href=&quot;#概述&quot; class=&quot;headerlink&quot;
-        
-      
+      &lt;h2 id=&quot;概述&quot;&gt;&lt;a href=&quot;#概述&quot; class=&quot;headerlink&quot; title=&quot;概述&quot;&gt;&lt;/a&gt;概述&lt;/h2&gt;&lt;p&gt;行为模式，使多个对象都有机会处理请求，从而避免请求的发送者和接收者之间的耦合关系。将这些对象连城一条链，并沿着这条链传递请求，直到有对象处理它为止。&lt;/p&gt;
+&lt;h2 id=&quot;类图&quot;&gt;&lt;a href=&quot;#类图&quot; class=&quot;headerlink&quot; title=&quot;类图&quot;&gt;&lt;/a&gt;类图&lt;/h2&gt;&lt;p&gt;&lt;img src=&quot;/images/pasted-177.png&quot; alt=&quot;upload successful&quot;&gt;&lt;/p&gt;
     
     </summary>
     
@@ -78,17 +96,12 @@
     <link href="http://www.hardydou.com/2019/07/23/command-pattern/"/>
     <id>http://www.hardydou.com/2019/07/23/command-pattern/</id>
     <published>2019-07-23T10:10:00.000Z</published>
-    <updated>2019-07-24T05:49:02.041Z</updated>
+    <updated>2020-02-19T05:35:50.359Z</updated>
     
     <summary type="html">
     
-      
-      
-        
-        
-          &lt;h2 id=&quot;概述&quot;&gt;&lt;a href=&quot;#概述&quot; class=&quot;headerlink&quot;
-        
-      
+      &lt;h2 id=&quot;概述&quot;&gt;&lt;a href=&quot;#概述&quot; class=&quot;headerlink&quot; title=&quot;概述&quot;&gt;&lt;/a&gt;概述&lt;/h2&gt;&lt;p&gt;行为模式，将一个请求封装成一个对象，从而让你使用不同的请求把客户端参数化，对请求排队或者记录请求日志，可以提供命令的撤销和恢复功能。&lt;/p&gt;
+&lt;h2 id=&quot;类图&quot;&gt;&lt;a href=&quot;#类图&quot; class=&quot;headerlink&quot; title=&quot;类图&quot;&gt;&lt;/a&gt;类图&lt;/h2&gt;&lt;p&gt;&lt;img src=&quot;/images/pasted-176.png&quot; alt=&quot;upload successful&quot;&gt;&lt;/p&gt;
     
     </summary>
     
@@ -104,17 +117,12 @@
     <link href="http://www.hardydou.com/2019/07/23/templateMethod-pattern/"/>
     <id>http://www.hardydou.com/2019/07/23/templateMethod-pattern/</id>
     <published>2019-07-23T05:25:00.000Z</published>
-    <updated>2019-07-23T09:59:12.000Z</updated>
+    <updated>2020-02-19T05:36:02.584Z</updated>
     
     <summary type="html">
     
-      
-      
-        
-        
-          &lt;h2 id=&quot;概述&quot;&gt;&lt;a href=&quot;#概述&quot; class=&quot;headerlink&quot;
-        
-      
+      &lt;h2 id=&quot;概述&quot;&gt;&lt;a href=&quot;#概述&quot; class=&quot;headerlink&quot; title=&quot;概述&quot;&gt;&lt;/a&gt;概述&lt;/h2&gt;&lt;p&gt;行为模式，定义一个操作中的算法的框架，而将一些步骤延迟到子类中。使得子类可以不改变一个算法的结构即可重定义该算法的某些特定步骤。&lt;/p&gt;
+&lt;h2 id=&quot;类图&quot;&gt;&lt;a href=&quot;#类图&quot; class=&quot;headerlink&quot; title=&quot;类图&quot;&gt;&lt;/a&gt;类图&lt;/h2&gt;&lt;p&gt;&lt;img src=&quot;/images/pasted-172.png&quot; alt=&quot;upload successful&quot;&gt;&lt;/p&gt;
     
     </summary>
     
@@ -132,17 +140,16 @@
     <link href="http://www.hardydou.com/2019/07/22/flyweight-pattern/"/>
     <id>http://www.hardydou.com/2019/07/22/flyweight-pattern/</id>
     <published>2019-07-22T03:34:55.000Z</published>
-    <updated>2019-07-22T03:58:48.302Z</updated>
+    <updated>2020-02-19T05:36:10.962Z</updated>
     
     <summary type="html">
     
-      
-      
-        
-        
-          &lt;h2 id=&quot;概述&quot;&gt;&lt;a href=&quot;#概述&quot; class=&quot;headerlink&quot;
-        
-      
+      &lt;h2 id=&quot;概述&quot;&gt;&lt;a href=&quot;#概述&quot; class=&quot;headerlink&quot; title=&quot;概述&quot;&gt;&lt;/a&gt;概述&lt;/h2&gt;&lt;p&gt;使用共享对象可有效的支持大量细粒度的对象。享元对象能做到共享的关键是区分内部状态和外部状态。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;内部状态是存储在享元对象内部的、可以共享的信息，并且不会随环境改变而改变。&lt;/li&gt;
+&lt;li&gt;外部状态是随环境改变而改变且不可以共享的状态。享元对象的外部状态必须又客户端保存，并在享元对象被创建之后，在需要使用的时候再传入到享元对象内部。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;类图&quot;&gt;&lt;a href=&quot;#类图&quot; class=&quot;headerlink&quot; title=&quot;类图&quot;&gt;&lt;/a&gt;类图&lt;/h2&gt;&lt;p&gt;&lt;img src=&quot;/images/pasted-170.png&quot; alt=&quot;upload successful&quot;&gt;&lt;/p&gt;
     
     </summary>
     
@@ -154,17 +161,12 @@
     <link href="http://www.hardydou.com/2019/07/22/facade-pattern/"/>
     <id>http://www.hardydou.com/2019/07/22/facade-pattern/</id>
     <published>2019-07-22T03:22:00.000Z</published>
-    <updated>2019-07-22T03:34:29.553Z</updated>
+    <updated>2020-02-19T05:36:36.717Z</updated>
     
     <summary type="html">
     
-      
-      
-        
-        
-          &lt;h2 id=&quot;概述&quot;&gt;&lt;a href=&quot;#概述&quot; class=&quot;headerlink&quot; title=&quot;概述&quot;&gt;&lt;/a&gt;概述&lt;/h2&gt;&lt;p&gt;要求一个子系统的外部与其内部的通信必须通过一个统一的对象进行。外观模式提供一个高层侧的接口，使得子系统更易使用。&lt;br&gt;&lt;img
-        
-      
+      &lt;h2 id=&quot;概述&quot;&gt;&lt;a href=&quot;#概述&quot; class=&quot;headerlink&quot; title=&quot;概述&quot;&gt;&lt;/a&gt;概述&lt;/h2&gt;&lt;p&gt;要求一个子系统的外部与其内部的通信必须通过一个统一的对象进行。外观模式提供一个高层侧的接口，使得子系统更易使用。&lt;br&gt;&lt;img src=&quot;/images/pasted-166.png&quot; alt=&quot;upload successful&quot;&gt;&lt;/p&gt;
+&lt;h2 id=&quot;类图&quot;&gt;&lt;a href=&quot;#类图&quot; class=&quot;headerlink&quot; title=&quot;类图&quot;&gt;&lt;/a&gt;类图&lt;/h2&gt;&lt;p&gt;&lt;img src=&quot;/images/pasted-167.png&quot; alt=&quot;upload successful&quot;&gt;&lt;/p&gt;
     
     </summary>
     
@@ -180,17 +182,11 @@
     <link href="http://www.hardydou.com/2019/07/22/git/"/>
     <id>http://www.hardydou.com/2019/07/22/git/</id>
     <published>2019-07-22T02:17:00.000Z</published>
-    <updated>2019-07-22T02:56:04.028Z</updated>
+    <updated>2020-02-19T05:36:52.754Z</updated>
     
     <summary type="html">
     
-      
-      
-        
-        
-          &lt;h3 id=&quot;开始&quot;&gt;&lt;a href=&quot;#开始&quot; class=&quot;headerlink&quot; title=&quot;开始&quot;&gt;&lt;/a&gt;开始&lt;/h3&gt;&lt;p&gt; 3人通过本地仓库 master 分支向远程仓库 master 分支提交代码&lt;br&gt;&lt;img
-        
-      
+      &lt;h3 id=&quot;开始&quot;&gt;&lt;a href=&quot;#开始&quot; class=&quot;headerlink&quot; title=&quot;开始&quot;&gt;&lt;/a&gt;开始&lt;/h3&gt;&lt;p&gt; 3人通过本地仓库 master 分支向远程仓库 master 分支提交代码&lt;br&gt;&lt;img src=&quot;/images/pasted-161.png&quot; alt=&quot;upload successful&quot;&gt;&lt;/p&gt;
     
     </summary>
     
@@ -206,18 +202,12 @@
     <link href="http://www.hardydou.com/2019/07/19/bridge-pattern/"/>
     <id>http://www.hardydou.com/2019/07/19/bridge-pattern/</id>
     <published>2019-07-19T07:34:00.000Z</published>
-    <updated>2019-07-19T08:14:21.698Z</updated>
+    <updated>2020-02-19T05:37:42.509Z</updated>
     
     <summary type="html">
     
-      
-      
-        
-        
-          &lt;h2 id=&quot;概述&quot;&gt;&lt;a href=&quot;#概述&quot; class=&quot;headerlink&quot; title=&quot;概述&quot;&gt;&lt;/a&gt;概述&lt;/h2&gt;&lt;p&gt;将抽象和实现解耦，使得两者可以独立变化。&lt;/p&gt;
-&lt;h2 id=&quot;类图&quot;&gt;&lt;a href=&quot;#类图&quot; class=&quot;headerlink&quot;
-        
-      
+      &lt;h2 id=&quot;概述&quot;&gt;&lt;a href=&quot;#概述&quot; class=&quot;headerlink&quot; title=&quot;概述&quot;&gt;&lt;/a&gt;概述&lt;/h2&gt;&lt;p&gt;将抽象和实现解耦，使得两者可以独立变化。&lt;/p&gt;
+&lt;h2 id=&quot;类图&quot;&gt;&lt;a href=&quot;#类图&quot; class=&quot;headerlink&quot; title=&quot;类图&quot;&gt;&lt;/a&gt;类图&lt;/h2&gt;&lt;p&gt;&lt;img src=&quot;/images/pasted-159.png&quot; alt=&quot;upload successful&quot;&gt;&lt;/p&gt;
     
     </summary>
     
@@ -233,18 +223,12 @@
     <link href="http://www.hardydou.com/2019/07/10/composite-pattern/"/>
     <id>http://www.hardydou.com/2019/07/10/composite-pattern/</id>
     <published>2019-07-10T03:35:00.000Z</published>
-    <updated>2019-07-10T04:15:52.469Z</updated>
+    <updated>2020-02-19T05:37:48.329Z</updated>
     
     <summary type="html">
     
-      
-      
-        
-        
-          &lt;h2 id=&quot;概述&quot;&gt;&lt;a href=&quot;#概述&quot; class=&quot;headerlink&quot; title=&quot;概述&quot;&gt;&lt;/a&gt;概述&lt;/h2&gt;&lt;p&gt;将对象组合成树形结构以表示”部分-整体“的层次结构，使得用户对单个对象和组合对象的使用具有一致性。&lt;/p&gt;
-&lt;h2 id=&quot;类图&quot;&gt;&lt;a
-        
-      
+      &lt;h2 id=&quot;概述&quot;&gt;&lt;a href=&quot;#概述&quot; class=&quot;headerlink&quot; title=&quot;概述&quot;&gt;&lt;/a&gt;概述&lt;/h2&gt;&lt;p&gt;将对象组合成树形结构以表示”部分-整体“的层次结构，使得用户对单个对象和组合对象的使用具有一致性。&lt;/p&gt;
+&lt;h2 id=&quot;类图&quot;&gt;&lt;a href=&quot;#类图&quot; class=&quot;headerlink&quot; title=&quot;类图&quot;&gt;&lt;/a&gt;类图&lt;/h2&gt;&lt;p&gt;&lt;img src=&quot;/images/pasted-157.png&quot; alt=&quot;upload successful&quot;&gt;&lt;/p&gt;
     
     </summary>
     
@@ -260,18 +244,12 @@
     <link href="http://www.hardydou.com/2019/07/04/adapter-pattern/"/>
     <id>http://www.hardydou.com/2019/07/04/adapter-pattern/</id>
     <published>2019-07-04T04:25:00.000Z</published>
-    <updated>2019-07-10T03:35:19.925Z</updated>
+    <updated>2020-02-19T05:37:54.401Z</updated>
     
     <summary type="html">
     
-      
-      
-        
-        
-          &lt;h2 id=&quot;概述&quot;&gt;&lt;a href=&quot;#概述&quot; class=&quot;headerlink&quot; title=&quot;概述&quot;&gt;&lt;/a&gt;概述&lt;/h2&gt;&lt;p&gt;将一个类的接口变换成客户端所期待的另一种接口，从而使原本因接口不匹配而无从在一起工作的两个类能够在一起工作&lt;/p&gt;
-&lt;h2
-        
-      
+      &lt;h2 id=&quot;概述&quot;&gt;&lt;a href=&quot;#概述&quot; class=&quot;headerlink&quot; title=&quot;概述&quot;&gt;&lt;/a&gt;概述&lt;/h2&gt;&lt;p&gt;将一个类的接口变换成客户端所期待的另一种接口，从而使原本因接口不匹配而无从在一起工作的两个类能够在一起工作&lt;/p&gt;
+&lt;h2 id=&quot;类图&quot;&gt;&lt;a href=&quot;#类图&quot; class=&quot;headerlink&quot; title=&quot;类图&quot;&gt;&lt;/a&gt;类图&lt;/h2&gt;&lt;p&gt;&lt;img src=&quot;/images/pasted-155.png&quot; alt=&quot;upload successful&quot;&gt;&lt;/p&gt;
     
     </summary>
     
@@ -287,18 +265,12 @@
     <link href="http://www.hardydou.com/2019/07/04/decorator-pattern/"/>
     <id>http://www.hardydou.com/2019/07/04/decorator-pattern/</id>
     <published>2019-07-04T02:43:34.000Z</published>
-    <updated>2019-07-04T04:20:09.451Z</updated>
+    <updated>2020-02-19T05:38:03.593Z</updated>
     
     <summary type="html">
     
-      
-      
-        
-        
-          &lt;h2 id=&quot;概述&quot;&gt;&lt;a href=&quot;#概述&quot; class=&quot;headerlink&quot; title=&quot;概述&quot;&gt;&lt;/a&gt;概述&lt;/h2&gt;&lt;p&gt;动态的给一个对象添加一些额外的职责。就增加功能来说，装饰模式比生成子类更为灵活。&lt;/p&gt;
-&lt;h2 id=&quot;类图&quot;&gt;&lt;a
-        
-      
+      &lt;h2 id=&quot;概述&quot;&gt;&lt;a href=&quot;#概述&quot; class=&quot;headerlink&quot; title=&quot;概述&quot;&gt;&lt;/a&gt;概述&lt;/h2&gt;&lt;p&gt;动态的给一个对象添加一些额外的职责。就增加功能来说，装饰模式比生成子类更为灵活。&lt;/p&gt;
+&lt;h2 id=&quot;类图&quot;&gt;&lt;a href=&quot;#类图&quot; class=&quot;headerlink&quot; title=&quot;类图&quot;&gt;&lt;/a&gt;类图&lt;/h2&gt;&lt;p&gt;&lt;img src=&quot;/images/pasted-153.png&quot; alt=&quot;upload successful&quot;&gt;&lt;/p&gt;
     
     </summary>
     
@@ -310,18 +282,12 @@
     <link href="http://www.hardydou.com/2019/07/02/proxy-pattern/"/>
     <id>http://www.hardydou.com/2019/07/02/proxy-pattern/</id>
     <published>2019-07-02T07:28:00.000Z</published>
-    <updated>2019-07-03T10:47:21.569Z</updated>
+    <updated>2020-02-19T05:38:11.853Z</updated>
     
     <summary type="html">
     
-      
-      
-        
-        
-          &lt;h2 id=&quot;概述&quot;&gt;&lt;a href=&quot;#概述&quot; class=&quot;headerlink&quot; title=&quot;概述&quot;&gt;&lt;/a&gt;概述&lt;/h2&gt;&lt;p&gt;为其它对象提供一种代理以控制这个对象的访问。&lt;/p&gt;
-&lt;h2 id=&quot;类图&quot;&gt;&lt;a href=&quot;#类图&quot;
-        
-      
+      &lt;h2 id=&quot;概述&quot;&gt;&lt;a href=&quot;#概述&quot; class=&quot;headerlink&quot; title=&quot;概述&quot;&gt;&lt;/a&gt;概述&lt;/h2&gt;&lt;p&gt;为其它对象提供一种代理以控制这个对象的访问。&lt;/p&gt;
+&lt;h2 id=&quot;类图&quot;&gt;&lt;a href=&quot;#类图&quot; class=&quot;headerlink&quot; title=&quot;类图&quot;&gt;&lt;/a&gt;类图&lt;/h2&gt;&lt;p&gt;&lt;img src=&quot;/images/pasted-151.png&quot; alt=&quot;upload successful&quot;&gt;&lt;/p&gt;
     
     </summary>
     
@@ -337,18 +303,12 @@
     <link href="http://www.hardydou.com/2019/07/02/prototype-pattern/"/>
     <id>http://www.hardydou.com/2019/07/02/prototype-pattern/</id>
     <published>2019-07-02T06:49:00.000Z</published>
-    <updated>2019-07-02T07:18:04.506Z</updated>
+    <updated>2020-02-19T05:38:26.000Z</updated>
     
     <summary type="html">
     
-      
-      
-        
-        
-          &lt;h2 id=&quot;概述&quot;&gt;&lt;a href=&quot;#概述&quot; class=&quot;headerlink&quot; title=&quot;概述&quot;&gt;&lt;/a&gt;概述&lt;/h2&gt;&lt;p&gt;用原型实例指定创建对象的种类，并且通过复制这些原型创建新的对象。&lt;/p&gt;
-&lt;h2 id=&quot;类图&quot;&gt;&lt;a href=&quot;#类图&quot;
-        
-      
+      &lt;h2 id=&quot;概述&quot;&gt;&lt;a href=&quot;#概述&quot; class=&quot;headerlink&quot; title=&quot;概述&quot;&gt;&lt;/a&gt;概述&lt;/h2&gt;&lt;p&gt;用原型实例指定创建对象的种类，并且通过复制这些原型创建新的对象。&lt;/p&gt;
+&lt;h2 id=&quot;类图&quot;&gt;&lt;a href=&quot;#类图&quot; class=&quot;headerlink&quot; title=&quot;类图&quot;&gt;&lt;/a&gt;类图&lt;/h2&gt;&lt;p&gt;&lt;img src=&quot;/images/pasted-150.png&quot; alt=&quot;upload successful&quot;&gt;&lt;/p&gt;
     
     </summary>
     
@@ -364,18 +324,12 @@
     <link href="http://www.hardydou.com/2019/07/02/builder-pattern/"/>
     <id>http://www.hardydou.com/2019/07/02/builder-pattern/</id>
     <published>2019-07-02T06:10:00.000Z</published>
-    <updated>2019-07-02T06:34:45.943Z</updated>
+    <updated>2020-02-19T05:38:34.046Z</updated>
     
     <summary type="html">
     
-      
-      
-        
-        
-          &lt;h2 id=&quot;概述&quot;&gt;&lt;a href=&quot;#概述&quot; class=&quot;headerlink&quot; title=&quot;概述&quot;&gt;&lt;/a&gt;概述&lt;/h2&gt;&lt;p&gt;创建者模式关注的是零件类型和装配工艺顺序，这是与工厂方法模式最大的不同之处，虽然同为创建型模式，但是重点不同。&lt;/p&gt;
-&lt;h2
-        
-      
+      &lt;h2 id=&quot;概述&quot;&gt;&lt;a href=&quot;#概述&quot; class=&quot;headerlink&quot; title=&quot;概述&quot;&gt;&lt;/a&gt;概述&lt;/h2&gt;&lt;p&gt;创建者模式关注的是零件类型和装配工艺顺序，这是与工厂方法模式最大的不同之处，虽然同为创建型模式，但是重点不同。&lt;/p&gt;
+&lt;h2 id=&quot;类图&quot;&gt;&lt;a href=&quot;#类图&quot; class=&quot;headerlink&quot; title=&quot;类图&quot;&gt;&lt;/a&gt;类图&lt;/h2&gt;&lt;p&gt;&lt;img src=&quot;/images/pasted-149.png&quot; alt=&quot;upload successful&quot;&gt;&lt;/p&gt;
     
     </summary>
     
@@ -391,18 +345,11 @@
     <link href="http://www.hardydou.com/2019/07/01/factory-parttern/"/>
     <id>http://www.hardydou.com/2019/07/01/factory-parttern/</id>
     <published>2019-07-01T12:30:00.000Z</published>
-    <updated>2019-07-01T17:17:16.230Z</updated>
+    <updated>2020-02-19T05:38:47.559Z</updated>
     
     <summary type="html">
     
-      
-      
-        
-        
-          &lt;h2 id=&quot;概览&quot;&gt;&lt;a href=&quot;#概览&quot; class=&quot;headerlink&quot; title=&quot;概览&quot;&gt;&lt;/a&gt;概览&lt;/h2&gt;&lt;p&gt;工厂模式是 创建型模式，可以分2大类：工厂方法模式、抽象工厂模式。工厂方法模式又可以分为：简单工厂模式、工厂方法模式。&lt;/p&gt;
-&lt;h2
-        
-      
+      &lt;h2 id=&quot;概览&quot;&gt;&lt;a href=&quot;#概览&quot; class=&quot;headerlink&quot; title=&quot;概览&quot;&gt;&lt;/a&gt;概览&lt;/h2&gt;&lt;p&gt;工厂模式是 创建型模式，可以分2大类：工厂方法模式、抽象工厂模式。工厂方法模式又可以分为：简单工厂模式、工厂方法模式。&lt;/p&gt;
     
     </summary>
     
@@ -418,21 +365,15 @@
     <link href="http://www.hardydou.com/2019/06/24/Knowledge/"/>
     <id>http://www.hardydou.com/2019/06/24/Knowledge/</id>
     <published>2019-06-24T03:40:22.000Z</published>
-    <updated>2019-06-24T03:48:31.337Z</updated>
+    <updated>2020-02-19T05:39:04.037Z</updated>
     
     <summary type="html">
     
-      
-      
-        
-        
-          &lt;font size=6&gt;
+      &lt;font size=6&gt;
 知识如果不能改变行为，就没有用处；
 但是知识一旦改变了行为，知识本身就立刻失去意义  
 &lt;/font &gt;
-&lt;font style=&quot;display:block;text-align:right;&quot; size=6
-        
-      
+&lt;font style=&quot;display:block;text-align:right;&quot; size=6 &gt;--《未来简史》&lt;/font&gt;
     
     </summary>
     
@@ -444,18 +385,11 @@
     <link href="http://www.hardydou.com/2019/06/12/thread-safe/"/>
     <id>http://www.hardydou.com/2019/06/12/thread-safe/</id>
     <published>2019-06-12T09:12:00.000Z</published>
-    <updated>2019-07-01T06:29:57.882Z</updated>
+    <updated>2020-02-19T05:39:26.985Z</updated>
     
     <summary type="html">
     
-      
-      
-        
-        
-          &lt;h2 id=&quot;为什么要用锁？&quot;&gt;&lt;a href=&quot;#为什么要用锁？&quot; class=&quot;headerlink&quot; title=&quot;为什么要用锁？&quot;&gt;&lt;/a&gt;为什么要用锁？&lt;/h2&gt;&lt;p&gt;锁-是为了解决并发操作引起的脏读、数据不一致的问题。&lt;/p&gt;
-&lt;h2
-        
-      
+      &lt;h2 id=&quot;为什么要用锁？&quot;&gt;&lt;a href=&quot;#为什么要用锁？&quot; class=&quot;headerlink&quot; title=&quot;为什么要用锁？&quot;&gt;&lt;/a&gt;为什么要用锁？&lt;/h2&gt;&lt;p&gt;锁-是为了解决并发操作引起的脏读、数据不一致的问题。&lt;/p&gt;
     
     </summary>
     
@@ -523,34 +457,6 @@
       <category term="敏捷" scheme="http://www.hardydou.com/tags/%E6%95%8F%E6%8D%B7/"/>
     
       <category term="scrum" scheme="http://www.hardydou.com/tags/scrum/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>国家职业资格证</title>
-    <link href="http://www.hardydou.com/2019/05/29/PPP/"/>
-    <id>http://www.hardydou.com/2019/05/29/PPP/</id>
-    <published>2019-05-29T08:02:00.000Z</published>
-    <updated>2019-05-30T14:14:41.770Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h2 id=&quot;概述&quot;&gt;&lt;a href=&quot;#概述&quot; class=&quot;headerlink&quot; title=&quot;概述&quot;&gt;&lt;/a&gt;概述&lt;/h2&gt;&lt;p&gt;职业资格证分为准入类、水平评价类。其中准入类时从事相关职业必须要取得的证书，水平评价类
-        
-      
-    
-    </summary>
-    
-      <category term="other" scheme="http://www.hardydou.com/categories/other/"/>
-    
-    
-      <category term="life" scheme="http://www.hardydou.com/tags/life/"/>
-    
-      <category term="软考" scheme="http://www.hardydou.com/tags/%E8%BD%AF%E8%80%83/"/>
     
   </entry>
   
