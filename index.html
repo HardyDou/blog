@@ -161,6 +161,113 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://www.hardydou.com/2020/04/10/boolean%E7%B1%BB%E5%9E%8B/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.jpg">
+      <meta itemprop="name" content="小鱼先生">
+      <meta itemprop="description" content="相信美好的事情即将发生">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="小鱼先生">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          
+            <a href="/2020/04/10/boolean%E7%B1%BB%E5%9E%8B/" class="post-title-link" itemprop="url">boolean类型</a>
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2020-04-10 14:34:00 / 修改时间：15:44:01" itemprop="dateCreated datePublished" datetime="2020-04-10T14:34:00+08:00">2020-04-10</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/java/" itemprop="url" rel="index">
+                    <span itemprop="name">java</span>
+                  </a>
+                </span>
+            </span>
+
+          
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="fa fa-comment-o"></i>
+      </span>
+      <span class="post-meta-item-text">Valine：</span>
+    
+    <a title="valine" href="/2020/04/10/boolean%E7%B1%BB%E5%9E%8B/#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/2020/04/10/boolean%E7%B1%BB%E5%9E%8B/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <blockquote>
+<p>boolean类型 占多大空间   </p>
+</blockquote>
+<ol>
+<li>1个bit</li>
+</ol>
+<p>理由是boolean类型的值只有true和false两种逻辑值，在编译后会使用1和0来表示，这两个数在内存中只需要1位（bit）即可存储，位是计算机最小的存储单位。</p>
+<ol start="2">
+<li>1个字节</li>
+</ol>
+<p>理由是虽然编译后1和0只需占用1位空间，但计算机处理数据的最小单位是1个字节，1个字节等于8位，实际存储的空间是：用1个字节的最低位存储，其他7位用0填补，如果值是true的话则存储的二进制为：0000 0001，如果是false的话则存储的二进制为：0000 0000。</p>
+<ol start="3">
+<li>4个字节</li>
+</ol>
+<p>理由来源是《Java虚拟机规范》一书中的描述：“虽然定义了boolean这种数据类型，但是只对它提供了非常有限的支持。在Java虚拟机中没有任何供boolean值专用的字节码指令，Java语言表达式所操作的boolean值，在编译之后都使用Java虚拟机中的int数据类型来代替，而boolean数组将会被编码成Java虚拟机的byte数组，每个元素boolean元素占8位”。这样我们可以得出boolean类型占了单独使用是4个字节，在数组中又是1个字节。</p>
+<p>显然第三条是更准确的说法，那虚拟机为什么要用int来代替boolean呢？为什么不用byte或short，这样不是更节省内存空间吗。大多数人都会很自然的这样去想，我同样也有这个疑问，经过查阅资料发现，使用int的原因是，对于当下32位的处理器（CPU）来说，一次处理数据是32位（这里不是指的是32/64位系统，而是指CPU硬件层面），具有高效存取的特点。</p>
+<p>总结：</p>
+<p>根据<a href="http://docs.oracle.com/javase/tutorial/java/nutsandbolts/datatypes.html官方文档的描述：" target="_blank" rel="noopener">http://docs.oracle.com/javase/tutorial/java/nutsandbolts/datatypes.html官方文档的描述：</a></p>
+<p>boolean: The boolean data type has only two possible values: true and false. Use this data type for simple flags that track true/false conditions. This data type represents one bit of information, but its “size” isn’t something that’s precisely defined.</p>
+<p>布尔类型：布尔数据类型只有两个可能的值：真和假。使用此数据类型为跟踪真/假条件的简单标记。这种数据类型就表示这一点信息，但是它的“大小”并不是精确定义的。</p>
+<p>可以看出，boolean类型没有给出精确的定义，《Java虚拟机规范》给出了4个字节，和boolean数组1个字节的定义，具体还要看虚拟机实现是否按照规范来，所以1个字节、4个字节都是有可能的。这其实是运算效率和存储空间之间的博弈，两者都非常的重要。</p>
+<p>测试代码</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">public static class A &#123;</span><br><span class="line">    boolean br;</span><br><span class="line">&#125;</span><br><span class="line">A a&#x3D;new A();</span><br><span class="line">ClassLayout layout &#x3D; ClassLayout.parseInstance(a);</span><br><span class="line">System.out.println(layout.toPrintable());</span><br></pre></td></tr></table></figure>
+<p>输出结果</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"># Running 64-bit HotSpot VM.</span><br><span class="line"># Using compressed oop with 3-bit shift.</span><br><span class="line"># Using compressed klass with 3-bit shift.</span><br><span class="line"># Objects are 8 bytes aligned.</span><br><span class="line"># Field sizes by type: 4, 1, 1, 2, 2, 4, 4, 8, 8 [bytes]</span><br><span class="line"># Array element sizes: 4, 1, 1, 2, 2, 4, 4, 8, 8 [bytes]</span><br><span class="line"></span><br><span class="line">com.hardydou.jmm.ObjectSize$A object internals:</span><br><span class="line"> OFFSET  SIZE      TYPE DESCRIPTION                               VALUE</span><br><span class="line">      0     4           (object header)                           01 00 00 00 (00000001 00000000 00000000 00000000) (1)</span><br><span class="line">      4     4           (object header)                           00 00 00 00 (00000000 00000000 00000000 00000000) (0)</span><br><span class="line">      8     4           (object header)                           16 f0 00 f8 (00010110 11110000 00000000 11111000) (-134156266)</span><br><span class="line">     12     1   boolean A.br                                      false</span><br><span class="line">     13     3           (loss due to the next object alignment)</span><br><span class="line">Instance size: 16 bytes</span><br><span class="line">Space losses: 0 bytes internal + 3 bytes external &#x3D; 3 bytes total</span><br></pre></td></tr></table></figure>
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+        
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="http://www.hardydou.com/2020/04/09/Java%E5%BC%95%E7%94%A8%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -192,7 +299,7 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2020-04-10 14:32:35" itemprop="dateModified" datetime="2020-04-10T14:32:35+08:00">2020-04-10</time>
+                <time title="修改时间：2020-04-10 15:37:03" itemprop="dateModified" datetime="2020-04-10T15:37:03+08:00">2020-04-10</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -233,68 +340,14 @@
       
           <h2 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h2><p>Java里除了基础数据类型就是引用数据类型。例如：类、接口、数组、枚举、标注</p>
 <h2 id="对象内存布局"><a href="#对象内存布局" class="headerlink" title="对象内存布局"></a>对象内存布局</h2><p><img src="/images/pasted-192.png" alt="内存布局"></p>
-<h3 id="对象头"><a href="#对象头" class="headerlink" title="对象头"></a>对象头</h3><p>HotSpot虚拟机的对象头包括两部分信息：</p>
-<h4 id="markword"><a href="#markword" class="headerlink" title="markword"></a>markword</h4><p>用于存储对象自身的运行时数据，如哈希码（HashCode）、GC分代年龄、锁状态标志、线程持有的锁、偏向线程ID、偏向时间戳等，这部分数据的长度在32位和64位的虚拟机（未开启压缩指针）中分别为4Byte和8Byte</p>
-<h4 id="klass"><a href="#klass" class="headerlink" title="klass"></a>klass</h4><p>对象头的另外一部分是klass类型指针，即对象指向它的类元数据的指针，虚拟机通过这个指针来确定这个对象是哪个类的实例.在32位虚拟机中 占用 4Byte，64位虚拟机 占 8Byte ，开启压缩后占 4Byte。</p>
-<h4 id="数组长度（只有数组对象有）"><a href="#数组长度（只有数组对象有）" class="headerlink" title="数组长度（只有数组对象有）"></a>数组长度（只有数组对象有）</h4><p>如果对象是一个数组, 那在对象头中还必须有一块数据用于记录数组长度，</p>
-<h3 id="实际数据"><a href="#实际数据" class="headerlink" title="实际数据"></a>实际数据</h3><p>实例数据部分是对象真正存储的有效信息，也是在程序代码中所定义的各种类型的字段内容。无论是从父类继承下来的，还是在子类中定义的，都需要记录起来。</p>
-<h3 id="对齐填充"><a href="#对齐填充" class="headerlink" title="对齐填充"></a>对齐填充</h3><p>不是必然存在的，也没有特别的含义，它仅仅起着占位符的作用。由于HotSpot VM的自动内存管理系统要求对象起始地址必须是8字节的整数倍，换句话说，就是对象的大小必须是8字节的整数倍。而对象头部分正好是8字节的倍数（1倍或者2倍），因此，当对象实例数据部分没有对齐时，就需要通过对齐填充来补全。</p>
-<h3 id="对象头大小"><a href="#对象头大小" class="headerlink" title="对象头大小"></a>对象头大小</h3><table>
-<thead>
-<tr>
-<th>系统</th>
-<th>MarkWord</th>
-<th>数据指针</th>
-<th>数组长度</th>
-<th>非数组对象</th>
-<th>数组对象</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>32位</td>
-<td>4</td>
-<td>4</td>
-<td>4</td>
-<td>8</td>
-<td>12</td>
-</tr>
-<tr>
-<td>64位(指针未压缩)</td>
-<td>8</td>
-<td>8</td>
-<td>8</td>
-<td>16</td>
-<td>24</td>
-</tr>
-<tr>
-<td>64位(指针压缩)</td>
-<td>8</td>
-<td>4</td>
-<td>4</td>
-<td>12</td>
-<td>16</td>
-</tr>
-</tbody></table>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">* 静态属性不算在对象大小内。</span><br></pre></td></tr></table></figure>
-
-<h2 id="算一算"><a href="#算一算" class="headerlink" title="算一算"></a>算一算</h2><h4 id="String对象大小"><a href="#String对象大小" class="headerlink" title="String对象大小"></a>String对象大小</h4><blockquote>
-<p>String str=”abc”;<br>计算下 str 对象的大小？？（64位、未压缩）</p>
-</blockquote>
-<p>String 非静态变量<br><img src="/images/pasted-193.png" alt="String"></p>
-<ul>
-<li>char value[] 对象大小：  </li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line">    public static void main(String[] args) &#123;</span><br><span class="line">        System.out.println(VM.current().details());</span><br><span class="line">        char[] str&#x3D;new char[]&#123;&#39;a&#39;,&#39;b&#39;,&#39;c&#39;&#125;;</span><br><span class="line">        ClassLayout layout &#x3D; ClassLayout.parseInstance(str);</span><br><span class="line">        System.out.println(layout.toPrintable());</span><br><span class="line">    &#125;</span><br><span class="line">&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;jol打印结果</span><br><span class="line">  # Running 64-bit HotSpot VM.</span><br><span class="line">  # Objects are 8 bytes aligned.</span><br><span class="line">  # Field sizes by type: 8, 1, 1, 2, 2, 4, 4, 8, 8 [bytes]</span><br><span class="line">  # Array element sizes: 8, 1, 1, 2, 2, 4, 4, 8, 8 [bytes]</span><br><span class="line"></span><br><span class="line">  [C object internals:</span><br><span class="line">   OFFSET  SIZE   TYPE DESCRIPTION                               VALUE</span><br><span class="line">        0     4        (object header)                           01 00 00 00 (00000001 00000000 00000000 00000000) (1)</span><br><span class="line">        4     4        (object header)                           00 00 00 00 (00000000 00000000 00000000 00000000) (0)</span><br><span class="line">        8     4        (object header)                           08 f2 ad 14 (00001000 11110010 10101101 00010100) (346944008)</span><br><span class="line">       12     4        (object header)                           01 00 00 00 (00000001 00000000 00000000 00000000) (1)</span><br><span class="line">       16     4        (object header)                           03 00 00 00 (00000011 00000000 00000000 00000000) (3)</span><br><span class="line">       20     4        (alignment&#x2F;padding gap)                  </span><br><span class="line">       24     6   char [C.&lt;elements&gt;                             N&#x2F;A</span><br><span class="line">       30     2        (loss due to the next object alignment)</span><br><span class="line">  Instance size: 32 bytes</span><br><span class="line">  Space losses: 4 bytes internal + 2 bytes external &#x3D; 6 bytes total</span><br><span class="line">结论：</span><br><span class="line">24B(对象头)+3*2B（数据）+2B（对齐）&#x3D;32B</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>int hash 对象大小：<br>  4B</li>
-<li>String 对象本身大小：  </li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line">String str&#x3D;&quot;abc&quot;;</span><br><span class="line">        ClassLayout layout &#x3D; ClassLayout.parseInstance(str);</span><br><span class="line">        System.out.println(layout.toPrintable());</span><br><span class="line"></span><br><span class="line">&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;输出&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;</span><br><span class="line"></span><br><span class="line"># Running 64-bit HotSpot VM.</span><br><span class="line"># Objects are 8 bytes aligned.</span><br><span class="line"># Field sizes by type: 8, 1, 1, 2, 2, 4, 4, 8, 8 [bytes]</span><br><span class="line"># Array element sizes: 8, 1, 1, 2, 2, 4, 4, 8, 8 [bytes]</span><br><span class="line"></span><br><span class="line">java.lang.String object internals:</span><br><span class="line"> OFFSET  SIZE     TYPE DESCRIPTION                               VALUE</span><br><span class="line">      0     4          (object header)                           01 00 00 00 (00000001 00000000 00000000 00000000) (1)</span><br><span class="line">      4     4          (object header)                           00 00 00 00 (00000000 00000000 00000000 00000000) (0)</span><br><span class="line">      8     4          (object header)                           c0 2f 22 03 (11000000 00101111 00100010 00000011) (52572096)</span><br><span class="line">     12     4          (object header)                           01 00 00 00 (00000001 00000000 00000000 00000000) (1)</span><br><span class="line">     16     8   char[] String.value                              [a, b, c]</span><br><span class="line">     24     4      int String.hash                               0</span><br><span class="line">     28     4          (loss due to the next object alignment)</span><br><span class="line">Instance size: 32 bytes</span><br><span class="line">Space losses: 0 bytes internal + 4 bytes external &#x3D; 4 bytes total</span><br><span class="line">结论：</span><br><span class="line">16(对象头)+8(char[]引用)+32(char[])+4(hash)+4(补齐)&#x3D;64B</span><br><span class="line"></span><br><span class="line">64位虚拟机压缩、jdk1.8：</span><br><span class="line">12(对象头)+4(char[]引用)+24（char[]）+4(hash)+4(补齐)&#x3D;48B</span><br></pre></td></tr></table></figure>
-
-<h4 id=""><a href="#" class="headerlink" title=""></a></h4><blockquote>
-</blockquote>
-
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2020/04/09/Java%E5%BC%95%E7%94%A8%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
@@ -1085,104 +1138,6 @@
   
   
 
-        
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://www.hardydou.com/2019/07/10/composite-pattern/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.jpg">
-      <meta itemprop="name" content="小鱼先生">
-      <meta itemprop="description" content="相信美好的事情即将发生">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="小鱼先生">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-          
-            <a href="/2019/07/10/composite-pattern/" class="post-title-link" itemprop="url">组合模式</a>
-        </h1>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2019-07-10 11:35:00" itemprop="dateCreated datePublished" datetime="2019-07-10T11:35:00+08:00">2019-07-10</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2020-02-19 13:37:48" itemprop="dateModified" datetime="2020-02-19T13:37:48+08:00">2020-02-19</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1/" itemprop="url" rel="index">
-                    <span itemprop="name">架构设计</span>
-                  </a>
-                </span>
-            </span>
-
-          
-  
-  <span class="post-meta-item">
-    
-      <span class="post-meta-item-icon">
-        <i class="fa fa-comment-o"></i>
-      </span>
-      <span class="post-meta-item-text">Valine：</span>
-    
-    <a title="valine" href="/2019/07/10/composite-pattern/#valine-comments" itemprop="discussionUrl">
-      <span class="post-comments-count valine-comment-count" data-xid="/2019/07/10/composite-pattern/" itemprop="commentCount"></span>
-    </a>
-  </span>
-  
-  
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h2 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h2><p>将对象组合成树形结构以表示”部分-整体“的层次结构，使得用户对单个对象和组合对象的使用具有一致性。</p>
-<h2 id="类图"><a href="#类图" class="headerlink" title="类图"></a>类图</h2><p><img src="/images/pasted-157.png" alt="upload successful"></p>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2019/07/10/composite-pattern/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
   </div>
 
   
@@ -1255,7 +1210,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives">
         
-          <span class="site-state-item-count">45</span>
+          <span class="site-state-item-count">46</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>

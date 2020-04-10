@@ -161,6 +161,243 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://www.hardydou.com/2018/12/02/java%E7%9A%84%E5%9F%BA%E7%A1%80%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.jpg">
+      <meta itemprop="name" content="小鱼先生">
+      <meta itemprop="description" content="相信美好的事情即将发生">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="小鱼先生">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          
+            <a href="/2018/12/02/java%E7%9A%84%E5%9F%BA%E7%A1%80%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/" class="post-title-link" itemprop="url">Java基本数据类型</a>
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2018-12-02 12:13:00" itemprop="dateCreated datePublished" datetime="2018-12-02T12:13:00+08:00">2018-12-02</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2020-04-08 15:21:30" itemprop="dateModified" datetime="2020-04-08T15:21:30+08:00">2020-04-08</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/java/" itemprop="url" rel="index">
+                    <span itemprop="name">java</span>
+                  </a>
+                </span>
+            </span>
+
+          
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="fa fa-comment-o"></i>
+      </span>
+      <span class="post-meta-item-text">Valine：</span>
+    
+    <a title="valine" href="/2018/12/02/java%E7%9A%84%E5%9F%BA%E7%A1%80%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/2018/12/02/java%E7%9A%84%E5%9F%BA%E7%A1%80%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h2 id="基础知识"><a href="#基础知识" class="headerlink" title="基础知识"></a>基础知识</h2><ol>
+<li>原码、反码和补码是计算机存储数字的编码方式（表示方法）。 </li>
+<li>ASCII码、utf-8和utf-16是计算机存储字符的编码方式。</li>
+</ol>
+<h2 id="你需要了解的存储单位"><a href="#你需要了解的存储单位" class="headerlink" title="你需要了解的存储单位"></a>你需要了解的存储单位</h2><table>
+<thead>
+<tr>
+<th>符号</th>
+<th>中文</th>
+<th>解释</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>b (bit)</td>
+<td>比特，位</td>
+<td>存放一位二进制数，即 0 或 1，最小的存储单位</td>
+</tr>
+<tr>
+<td>B (Byte)</td>
+<td>字节</td>
+<td>1B = 8b</td>
+</tr>
+<tr>
+<td>KB</td>
+<td>KB</td>
+<td>1KB = 2^10B = 1024B</td>
+</tr>
+<tr>
+<td>MB</td>
+<td>兆</td>
+<td>1MB = 2^20B = 1024 * 1KB</td>
+</tr>
+<tr>
+<td>GB</td>
+<td>G</td>
+<td>1GB = 2^30B = 1024 * 1MB</td>
+</tr>
+<tr>
+<td>TB</td>
+<td>T</td>
+<td>1TB = 2^40B = 1024 * 1GB</td>
+</tr>
+</tbody></table>
+<ul>
+<li>存储设备一般以B为常用单位；</li>
+<li>宽带传输速度是以Kb为单位，与实际存储单位KB有所不同。（我办理了一个100M带宽，实际速度不会超过100/8=12.5M）</li>
+</ul>
+<h2 id="基本数据类型"><a href="#基本数据类型" class="headerlink" title="基本数据类型"></a>基本数据类型</h2><table>
+<thead>
+<tr>
+<th>类型</th>
+<th>字节数</th>
+<th>位数</th>
+<th>最小</th>
+<th>最大</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>byte</td>
+<td>1Byte</td>
+<td>8Bit</td>
+<td>-2^7(-128)</td>
+<td>2^8-1(127)</td>
+</tr>
+<tr>
+<td>short</td>
+<td>2Byte</td>
+<td>2 * 8Bit</td>
+<td>-2^15(-32768)</td>
+<td>2^15-1(32768)</td>
+</tr>
+<tr>
+<td>int</td>
+<td>4Byte</td>
+<td>4* 8Bit</td>
+<td>-2^31</td>
+<td>2^31-1</td>
+</tr>
+<tr>
+<td>long</td>
+<td>8Byte</td>
+<td>8 * 8Bit</td>
+<td>-2^63</td>
+<td>2^63-1</td>
+</tr>
+<tr>
+<td>float</td>
+<td>4Byte</td>
+<td>4 * 8Bit</td>
+<td>-2^</td>
+<td></td>
+</tr>
+<tr>
+<td>double</td>
+<td>8Byte</td>
+<td>8* 8Bit</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>char</td>
+<td>2Byte</td>
+<td>2* 8Bit</td>
+<td>\u0000</td>
+<td>\uffff</td>
+</tr>
+<tr>
+<td>boolean</td>
+<td>0</td>
+<td>1bit</td>
+<td>0</td>
+<td>1</td>
+</tr>
+</tbody></table>
+<h3 id="浮点型"><a href="#浮点型" class="headerlink" title="浮点型"></a>浮点型</h3><ol>
+<li>float</li>
+<li>double</li>
+</ol>
+<blockquote>
+<p>在数学中，特别是在计算机相关的数字（浮点数）问题的表述中，有一个基本表达法：<br>value of floating-point = significand x base ^ exponent , with sign<br>译为中文表达即为：<br>（浮点）数值 =      尾数    ×    底数 ^ 指数，（附加正负号）<br>于是，float的指数范围为-127<del>128，而double的指数范围  为-1023</del>1024，并且指数位是按补码的形式来划分的。其中负指数决定了浮点数所能表达的绝对值最小的数；而正指数决定了浮点数所能表达的绝对值最大的数，也即决定了浮点数的取值范围。</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">[高位] ------------------------&gt; [低位]                      </span><br><span class="line">[*][********][***********************]                   </span><br><span class="line"> ↑                                                       </span><br><span class="line">1符号位  ↑                                                  </span><br><span class="line">       8位指数              ↑                                 </span><br><span class="line">                 23位尾数(基数是【1.&lt;尾数&gt;】)                        </span><br><span class="line"> 比如：                                                       </span><br><span class="line"> Float Value:0.75                                          </span><br><span class="line"> IEEE Memory:0-01111110-10000000000000000000000            </span><br><span class="line"> 符号位是：正数，                                                  </span><br><span class="line"> 指数部分是：01111110，即126，根据指数的规则-127~128，0在中间.与char不同。         </span><br><span class="line">          也就是01111111代表数字0。 01111110就是-1(126-127&#x3D;-1)       </span><br><span class="line"> 基数就是1.100000000                                           </span><br><span class="line"> 二进制值就是：1.1 * 2^-1 &#x3D; 0.11                                  </span><br><span class="line"> 十进制表示就是:2^-1 + 2^-2 &#x3D; 0.5 + 0.25 &#x3D; 0.75</span><br></pre></td></tr></table></figure>
+<hr>
+<ol>
+<li>原码：符号位+数值的绝对值。<br>（1）以8位为例，1的原码为 0000 0001，-1的原码为 1000 0001。<br>（2）取值范围：11111111 ~ 01111111，即：-127 ~ 127。</li>
+<li>反码：正数的反码是原码，负数的反码是在原码的基础上符号位不变，其他位取反的结果。<br>以8位为例：1的反码为 0000 0001，-1的反码为 1111 1110。</li>
+<li>补码：正数的补码是原码，负数的补码是在原码的基础上符号位不变，其他位取反再加一，即：反码+1。<br>以8位为例：1的补码为 0000 0001，-1的补码为 1111 1111。</li>
+<li>补码存在的意义<br>（1）1 - 1 = 1 + (-1) = (0000 0001)(原) + (1000 0001)(原) = (1000 0010)(原) = -2。错误<br>（2）3 + 5 = (0000 0011)(原) + (0000 0101)(原) = (0000 1000)(原) = 8。正确<br>（3）反码相减：3 - 4 = (0000 0011)(原) + (1000 0100)(原) = (0000 0011)(反) + (1111 1011)(反) = (1111 1110)(反) = (1000 0001)(原) = -1。正确<br>（4）反码相减：5 - 3 = (0000 0101)(原) + (1000 0011)(原) = (0000 0101)(反) + (1111 1100)(反) + 1（循环进位）= (0000 0010)(反) = (0000 0010)(原) = 2。正确<br>（5）1 - 1 = 1 + (-1) = (0000 0001)(反) + (1111 1110)(反) = (1111 1111)(反) = (1000 0000) = -0。<br>（6）1 - 1 = (0000 0001)(原) + (1000 0001)(原) = (0000 0001)(补) + (1111 1111)(补)= (0000 0000) (补) = (0000 0000) (原) = 0。<br>（7）-1-127 = (1000 0001)(原) + (1111 1111)(原) = (1111 1111)(补) + (1000 0001)(补) = (1000 0000)(补) = -128。<br>A、由（1）和（2）可知，原码相加是正确的，但是相减是错误的。<br>B、由（3）和（4）可知，反码相加减都是正确的。<br>C、但是由（5）可知，1-1的反码结果为-0，这个结果在数学上是没有意义的，为了解决这个问题，引入了补码。因为补码是在反码的基础上加1，故补码的加减是没有问题的，关键是1-1了。由（6）可知，补码完美的解决了1-1等于-0的尴尬局面，直接得到0。<br>D、由（7）可知，计算机底层算法规定了补码1000 0000 = -128。这也就导致了补码的取值范围由-127<del>127变为-128</del>127。</li>
+</ol>
+<p>总结：<br>（1）由于原码相减结果不对，故使用了反码。但是反码1-1得到的结果是-0，这个在数学上是无意义的，为了导出1-1=0的正确结果，故使用了补码，同时规定补码1000 0000 = -128，从而可以将-0表示为-128，拓展了一个表示位，故8位二进制取值范围为-128~127。<br>（2）这里再次强调，在计算机中，数据都是以正数的补码的形式存在的。正数的补码是其本身，负数则是以其本身的正数的补码的形式存在的。<br>栗子：-123在计算机中的存储的值是1111 1011 -&gt; 1000 0100 -&gt; 1000 0101。</p>
+<h3 id="int"><a href="#int" class="headerlink" title="int"></a>int</h3><p>占用4个字节，即：32b，有符号位：从左数第一位。<br>取值范围：-2^31 ~ 2^31-1。<br>原因：0 代表 +0，-0 代表 -2^31，故负数比整数多一个。<br>数据以补码的形式存放在内存中。<br>对于+0和-0在内存中的存储方式。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">#include &quot;stdafx.h&quot;</span><br><span class="line">#include &lt;iostream&gt;</span><br><span class="line">using namespace std;</span><br><span class="line">int _tmain(int argc, _TCHAR* argv[])</span><br><span class="line">&#123;</span><br><span class="line">    int i &#x3D; +0;</span><br><span class="line">    int k &#x3D; -0;</span><br><span class="line">    int *pi &#x3D; &amp;i;</span><br><span class="line">    int *pk &#x3D; &amp;k;</span><br><span class="line">    char c &#x3D; &#39;1&#39;;</span><br><span class="line">    char *pc &#x3D; &amp;c;</span><br><span class="line">    cout&lt;&lt;&quot;int: &quot;&lt;&lt;sizeof(int)&lt;&lt;&quot; byte&quot;&lt;&lt;endl;</span><br><span class="line">    cout&lt;&lt;&quot;unsigned int: &quot;&lt;&lt;sizeof(unsigned int)&lt;&lt;&quot; byte&quot;&lt;&lt;endl;</span><br><span class="line">    cout&lt;&lt;&quot;float: &quot;&lt;&lt;sizeof(float)&lt;&lt;&quot; byte&quot;&lt;&lt;endl;</span><br><span class="line">    cout&lt;&lt;&quot;double: &quot;&lt;&lt;sizeof(double)&lt;&lt;&quot; byte&quot;&lt;&lt;endl;</span><br><span class="line">    cout&lt;&lt;&quot;char: &quot;&lt;&lt;sizeof(char)&lt;&lt;&quot; byte&quot;&lt;&lt;endl;</span><br><span class="line">    cin.get();</span><br><span class="line"></span><br><span class="line">    return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="unsigned-int"><a href="#unsigned-int" class="headerlink" title="unsigned int"></a>unsigned int</h3><p>占用4个字节，即：32b，无符号位。<br>取值范围：0 ~ 2^32。<br>数据以补码的形式存放在内存中。</p>
+<h3 id="float"><a href="#float" class="headerlink" title="float"></a>float</h3><ol>
+<li>浮点数在计算机中用科学计数法表示，栗：1.0100011*2^7。 </li>
+<li>符号位：“+”或者“-”。 </li>
+<li>指数部分：2的幂指数，栗子中的“7”。 </li>
+<li>尾数部分：最高位为“1”的底数，栗子中的“10100011”。 </li>
+<li>栗子：15.987在计算机中存储方式。<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">（1）15.987的整数部分原码：1111。</span><br><span class="line">（2）15.987的小数部分原码：11111100……此处省略11位。</span><br><span class="line">（3）经过上述计算，15.987的二进制为1111.11111100……，用科学计数法表示为1.11111111100……*2^3。 </span><br><span class="line">（4）指数部分采用移位存储的方式，即3+（2^7-1） &#x3D; 130。其二进制：10000010。 </span><br><span class="line">（5）尾数部分省略科学计数法的整数部分！！（因为肯定是1）（隐藏位） </span><br><span class="line">（6）15.987在内存中的存放的内容为： </span><br><span class="line">符号位：0（共1位）。 </span><br><span class="line">指数部分：10000010（共8位）。 </span><br><span class="line">尾数部分：111111111000……（共23位）。 </span><br><span class="line">（7）写成完整的二进制：0100 0001 0111 1111 1100 0…… </span><br><span class="line">（8）写成16进制：41 7F C……。 </span><br><span class="line">（9）因为Intel的架构的字节序是小端序，则真正的存放内容为……C 7F 41。</span><br></pre></td></tr></table></figure>
+
+</li>
+</ol>
+<h3 id="double"><a href="#double" class="headerlink" title="double"></a>double</h3><p>原理同上！</p>
+<h3 id="char"><a href="#char" class="headerlink" title="char"></a>char</h3><p>在内存中以ASCII码的形式存储。<br>栗子：<br><img src="/images/pasted-2.png" alt="img"><br>代码中字符是“1”，ASCII码为49，转换为16进制为31。</p>
+<h3 id="拓展"><a href="#拓展" class="headerlink" title="拓展"></a>拓展</h3><p>移位存储：<br>在存储浮点数时，若指数部分若不使用移位存储技术，则会导致0有两种表示方式：1000 000 0和0000 000 0。所以，为了最大化利用价值，同时保留正负性，在原数据的基础上加127，其结果如下： </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">0000 000 0 ~ 0111 111 1代表着 -127~0。 </span><br><span class="line">1000 000 0 ~ 1111 111 1代表着 1~127。</span><br></pre></td></tr></table></figure>
+<p>这样正负指数均可表示的数量保持一致。</p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+        
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="http://www.hardydou.com/2018/11/30/%E4%BA%BA%E7%94%9F%E5%A4%84%E4%B8%96/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -586,7 +823,7 @@ git config --global user.email</code></pre></li>
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2020-04-10 14:33:48" itemprop="dateModified" datetime="2020-04-10T14:33:48+08:00">2020-04-10</time>
+                <time title="修改时间：2020-04-10 15:06:21" itemprop="dateModified" datetime="2020-04-10T15:06:21+08:00">2020-04-10</time>
               </span>
 
           
@@ -628,7 +865,11 @@ git config --global user.email</code></pre></li>
 <li>java数据类型内存布局（对象头、数据、对齐）</li>
 <li>java对象大小</li>
 </ul>
-<h4 id="java基础-amp-引用类型对比"><a href="#java基础-amp-引用类型对比" class="headerlink" title="java基础&amp;引用类型对比"></a>java基础&amp;引用类型对比</h4><h4 id="待完善……"><a href="#待完善……" class="headerlink" title="待完善……"></a>待完善……</h4><h3 id="三、常见系统架构"><a href="#三、常见系统架构" class="headerlink" title="三、常见系统架构"></a>三、常见系统架构</h3><h4 id="待完善……-1"><a href="#待完善……-1" class="headerlink" title="待完善……"></a>待完善……</h4><h3 id="四、代码工具"><a href="#四、代码工具" class="headerlink" title="四、代码工具"></a>四、代码工具</h3><h4 id="JOL"><a href="#JOL" class="headerlink" title="JOL"></a>JOL</h4><h3 id="五、常见面试题"><a href="#五、常见面试题" class="headerlink" title="五、常见面试题"></a>五、常见面试题</h3><h4 id="待完善……-2"><a href="#待完善……-2" class="headerlink" title="待完善……"></a>待完善……</h4><h3 id="六、思考"><a href="#六、思考" class="headerlink" title="六、思考"></a>六、思考</h3><h4 id="Java中boolean类型占用多少个字节"><a href="#Java中boolean类型占用多少个字节" class="headerlink" title="Java中boolean类型占用多少个字节"></a>Java中boolean类型占用多少个字节</h4><h4 id="java中的基本数据类型一定存储在栈中的吗"><a href="#java中的基本数据类型一定存储在栈中的吗" class="headerlink" title="java中的基本数据类型一定存储在栈中的吗"></a>java中的基本数据类型一定存储在栈中的吗</h4>
+<h4 id="boolean类型"><a href="#boolean类型" class="headerlink" title="boolean类型"></a>boolean类型</h4><ul>
+<li>内存大小</li>
+<li><h4 id="待完善……"><a href="#待完善……" class="headerlink" title="待完善……"></a>待完善……</h4></li>
+</ul>
+<h3 id="三、常见系统架构"><a href="#三、常见系统架构" class="headerlink" title="三、常见系统架构"></a>三、常见系统架构</h3><h4 id="待完善……-1"><a href="#待完善……-1" class="headerlink" title="待完善……"></a>待完善……</h4><h3 id="四、代码工具"><a href="#四、代码工具" class="headerlink" title="四、代码工具"></a>四、代码工具</h3><h4 id="JOL"><a href="#JOL" class="headerlink" title="JOL"></a>JOL</h4><h3 id="五、常见面试题"><a href="#五、常见面试题" class="headerlink" title="五、常见面试题"></a>五、常见面试题</h3><h4 id="待完善……-2"><a href="#待完善……-2" class="headerlink" title="待完善……"></a>待完善……</h4><h3 id="六、思考"><a href="#六、思考" class="headerlink" title="六、思考"></a>六、思考</h3><h4 id="Java中boolean类型占用多少个字节"><a href="#Java中boolean类型占用多少个字节" class="headerlink" title="Java中boolean类型占用多少个字节"></a>Java中boolean类型占用多少个字节</h4><h4 id="java中的基本数据类型一定存储在栈中的吗"><a href="#java中的基本数据类型一定存储在栈中的吗" class="headerlink" title="java中的基本数据类型一定存储在栈中的吗"></a>java中的基本数据类型一定存储在栈中的吗</h4>
       
     </div>
 
@@ -806,7 +1047,7 @@ git config --global user.email</code></pre></li>
       <div class="site-state-item site-state-posts">
           <a href="/archives">
         
-          <span class="site-state-item-count">45</span>
+          <span class="site-state-item-count">46</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
