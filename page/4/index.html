@@ -161,6 +161,115 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://www.hardydou.com/2019/05/05/Gradle%E6%9E%84%E5%BB%BA/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.jpg">
+      <meta itemprop="name" content="小鱼先生">
+      <meta itemprop="description" content="相信美好的事情即将发生">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="小鱼先生">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          
+            <a href="/2019/05/05/Gradle%E6%9E%84%E5%BB%BA/" class="post-title-link" itemprop="url">Gradle构建项目</a>
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2019-05-05 14:50:00" itemprop="dateCreated datePublished" datetime="2019-05-05T14:50:00+08:00">2019-05-05</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2019-05-09 14:22:34" itemprop="dateModified" datetime="2019-05-09T14:22:34+08:00">2019-05-09</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E5%B7%A5%E5%85%B7/" itemprop="url" rel="index">
+                    <span itemprop="name">工具</span>
+                  </a>
+                </span>
+            </span>
+
+          
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="fa fa-comment-o"></i>
+      </span>
+      <span class="post-meta-item-text">Valine：</span>
+    
+    <a title="valine" href="/2019/05/05/Gradle%E6%9E%84%E5%BB%BA/#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/2019/05/05/Gradle%E6%9E%84%E5%BB%BA/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h2 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h2><p>自动化构建、分发工具</p>
+<h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><h3 id="准备"><a href="#准备" class="headerlink" title="准备"></a>准备</h3><p>安装java 的Jdk 或者Jre  </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ java -version</span><br><span class="line">java version &quot;1.8.0_121&quot;</span><br></pre></td></tr></table></figure>
+<h3 id="安装Gradle"><a href="#安装Gradle" class="headerlink" title="安装Gradle"></a>安装Gradle</h3><h4 id="MacOs"><a href="#MacOs" class="headerlink" title="MacOs"></a>MacOs</h4><p>通过<a href="https://brew.sh/index_zh-cn" target="_blank" rel="noopener">HomeBrew</a>进行安装</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">brew install gradle</span><br></pre></td></tr></table></figure>
+<h4 id="WinOs"><a href="#WinOs" class="headerlink" title="WinOs"></a>WinOs</h4><p>待完善</p>
+<h4 id="验证安装结果"><a href="#验证安装结果" class="headerlink" title="验证安装结果"></a>验证安装结果</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">gradle -v</span><br><span class="line">------------------------------------------------------------</span><br><span class="line">Gradle 5.4</span><br><span class="line">------------------------------------------------------------</span><br></pre></td></tr></table></figure>
+<h4 id="设置中央仓库"><a href="#设置中央仓库" class="headerlink" title="设置中央仓库"></a>设置中央仓库</h4><p>将中央仓库设置为阿里代理库，否则总会卡死。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">mkdir -p ~&#x2F;.gradle&#x2F;init.d&#x2F; </span><br><span class="line">touch ~&#x2F;.gradle&#x2F;init.d&#x2F;init.gradle</span><br></pre></td></tr></table></figure>
+<p>init.gradle 内容</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">allprojects &#123;</span><br><span class="line">    repositories &#123;</span><br><span class="line">        maven &#123; url &#39;https:&#x2F;&#x2F;maven.aliyun.com&#x2F;repository&#x2F;public‘&#125;</span><br><span class="line">        maven &#123; url &quot;https:&#x2F;&#x2F;maven.aliyun.com&#x2F;repository&#x2F;spring&quot; &#125;</span><br><span class="line">        maven &#123; url &quot;https:&#x2F;&#x2F;maven.aliyun.com&#x2F;repository&#x2F;google&quot; &#125;</span><br><span class="line">        maven &#123; url &quot;https:&#x2F;&#x2F;maven.aliyun.com&#x2F;repository&#x2F;gradle-plugin&quot; &#125;</span><br><span class="line">        maven &#123; url &quot;https:&#x2F;&#x2F;maven.aliyun.com&#x2F;repository&#x2F;spring&quot; &#125;</span><br><span class="line">        maven &#123; url &quot;https:&#x2F;&#x2F;maven.aliyun.com&#x2F;repository&#x2F;spring-plugin&quot; &#125;</span><br><span class="line">        mavenLocal()</span><br><span class="line">        mavenCentral()</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+<h2 id="构建JavaApplication项目"><a href="#构建JavaApplication项目" class="headerlink" title="构建JavaApplication项目"></a>构建JavaApplication项目</h2><h4 id="gradle-构建引导"><a href="#gradle-构建引导" class="headerlink" title="gradle 构建引导"></a>gradle 构建引导</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line">mkdir learn-gradle</span><br><span class="line">cd learn-gradle </span><br><span class="line">gradle init</span><br><span class="line">Select type of project to generate:</span><br><span class="line">  1: basic</span><br><span class="line">  2: cpp-application</span><br><span class="line">  3: cpp-library</span><br><span class="line">  4: groovy-application</span><br><span class="line">  5: groovy-library</span><br><span class="line">  6: java-application</span><br><span class="line">  7: java-library</span><br><span class="line">  8: kotlin-application</span><br><span class="line">  9: kotlin-library</span><br><span class="line">  10: scala-library</span><br><span class="line">Enter selection (default: basic) [1..10] 6</span><br><span class="line"></span><br><span class="line">Select build script DSL:</span><br><span class="line">  1: groovy</span><br><span class="line">  2: kotlin</span><br><span class="line">Enter selection (default: groovy) [1..2] 1</span><br><span class="line"></span><br><span class="line">Select test framework:</span><br><span class="line">  1: junit</span><br><span class="line">  2: testng</span><br><span class="line">  3: spock</span><br><span class="line">Enter selection (default: junit) [1..3] 1</span><br><span class="line"></span><br><span class="line">Project name (default: learn-gradle):</span><br><span class="line">Source package (default: learn.gradle):</span><br><span class="line"></span><br><span class="line">BUILD SUCCESSFUL in 1m 22s</span><br><span class="line">2 actionable tasks: 2 executed</span><br></pre></td></tr></table></figure>
+<h4 id="项目目录结构"><a href="#项目目录结构" class="headerlink" title="项目目录结构"></a>项目目录结构</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">learn-gradle </span><br><span class="line">├── build.gradle</span><br><span class="line">├── gradle</span><br><span class="line">│   └── wrapper</span><br><span class="line">│       ├── gradle-wrapper.jar</span><br><span class="line">│       └── gradle-wrapper.properties</span><br><span class="line">├── gradlew</span><br><span class="line">├── gradlew.bat</span><br><span class="line">├── settings.gradle</span><br><span class="line">└── src</span><br><span class="line">    ├── main</span><br><span class="line">    │   ├── java</span><br><span class="line">    │   │   └── learn</span><br><span class="line">    │   │       └── gradle</span><br><span class="line">    │   │           └── App.java</span><br><span class="line">    │   └── resources</span><br><span class="line">    └── test</span><br><span class="line">        ├── java</span><br><span class="line">        │   └── learn</span><br><span class="line">        │       └── gradle</span><br><span class="line">        │           └── AppTest.java</span><br><span class="line">        └── resources</span><br></pre></td></tr></table></figure>
+<h4 id="运行项目"><a href="#运行项目" class="headerlink" title="运行项目"></a>运行项目</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">gradle run</span><br><span class="line"></span><br><span class="line">&gt; Task :run</span><br><span class="line">Hello world.</span><br><span class="line"></span><br><span class="line">BUILD SUCCESSFUL in 2s</span><br><span class="line">2 actionable tasks: 2 executed</span><br></pre></td></tr></table></figure>
+
+<h3 id="Maven迁移到Gradle"><a href="#Maven迁移到Gradle" class="headerlink" title="Maven迁移到Gradle"></a>Maven迁移到Gradle</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">cd projectRoot</span><br><span class="line">gradle init --type pom</span><br></pre></td></tr></table></figure>
+<p>基于 生成的 build.gradle 自行调整即可</p>
+<h3 id="Idea使用Gradle"><a href="#Idea使用Gradle" class="headerlink" title="Idea使用Gradle"></a>Idea使用Gradle</h3><h4 id="安装Gradle插件"><a href="#安装Gradle插件" class="headerlink" title="安装Gradle插件"></a>安装Gradle插件</h4><p><a href="https://www.jetbrains.com/help/idea/gradle.html" target="_blank" rel="noopener">更多信息看这里</a></p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+        
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="http://www.hardydou.com/2019/05/04/Java%E6%B3%A8%E8%A7%A3/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1224,140 +1333,6 @@ ofo 可以分解为 车子、APP、其它 这些可以被称为容器。
   
   
 
-        
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://www.hardydou.com/2019/02/13/%E6%B8%90%E8%BF%9B%E6%AD%A5%E9%AA%A4/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.jpg">
-      <meta itemprop="name" content="小鱼先生">
-      <meta itemprop="description" content="相信美好的事情即将发生">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="小鱼先生">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-          
-            <a href="/2019/02/13/%E6%B8%90%E8%BF%9B%E6%AD%A5%E9%AA%A4/" class="post-title-link" itemprop="url">熟悉 IntelliJ IDEA</a>
-        </h1>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2019-02-13 00:39:00" itemprop="dateCreated datePublished" datetime="2019-02-13T00:39:00+08:00">2019-02-13</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2019-05-14 09:37:54" itemprop="dateModified" datetime="2019-05-14T09:37:54+08:00">2019-05-14</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E5%B7%A5%E5%85%B7/" itemprop="url" rel="index">
-                    <span itemprop="name">工具</span>
-                  </a>
-                </span>
-            </span>
-
-          
-  
-  <span class="post-meta-item">
-    
-      <span class="post-meta-item-icon">
-        <i class="fa fa-comment-o"></i>
-      </span>
-      <span class="post-meta-item-text">Valine：</span>
-    
-    <a title="valine" href="/2019/02/13/%E6%B8%90%E8%BF%9B%E6%AD%A5%E9%AA%A4/#valine-comments" itemprop="discussionUrl">
-      <span class="post-comments-count valine-comment-count" data-xid="/2019/02/13/%E6%B8%90%E8%BF%9B%E6%AD%A5%E9%AA%A4/" itemprop="commentCount"></span>
-    </a>
-  </span>
-  
-  
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h2 id="安装IntelliJ"><a href="#安装IntelliJ" class="headerlink" title="安装IntelliJ"></a>安装IntelliJ</h2><h3 id="下载地址"><a href="#下载地址" class="headerlink" title="下载地址"></a>下载地址</h3><pre><code>http://www.jetbrains.com/idea/download/</code></pre><h3 id="激活教程"><a href="#激活教程" class="headerlink" title="激活教程"></a>激活教程</h3><pre><code>http://idea.lanyus.com/</code></pre><h3 id="安装插件"><a href="#安装插件" class="headerlink" title="安装插件"></a>安装插件</h3><pre><code>Grep Console
-FindBugs
-CheckStyle
-GsonFormat
-Jrebel
-AceJump
-markdown
-Key promoter
-.ignore
-Maven
-Alibaba Java Coding 
-CamelCase
-Gradle Dependencies Formatter
-Gradle Dependencies Helper
-LiveEdit
-Translation</code></pre><h2 id="熟悉快捷键"><a href="#熟悉快捷键" class="headerlink" title="熟悉快捷键"></a>熟悉快捷键</h2><h3 id="ctrl"><a href="#ctrl" class="headerlink" title="ctrl+?"></a>ctrl+?</h3><ul>
-<li>ctrl+E,打开最近文件</li>
-<li>ctrl+J,快速打开帮助文档</li>
-<li>ctrl+enter ,生成代码</li>
-<li>ctrl+O ,覆盖方法</li>
-<li>ctrl+I,实现接口方法</li>
-<li>ctrl+R,运行程序</li>
-<li>ctrl+D,调试程序 </li>
-</ul>
-<h3 id="ctrl-alt"><a href="#ctrl-alt" class="headerlink" title="ctrl+alt+?"></a>ctrl+alt+?</h3><ul>
-<li>ctrl+alt+o，移除未使用 imports</li>
-<li>ctrl+alt+I, 调整光标所在行缩进</li>
-<li>ctrl+alt+R ,列出可执行菜单</li>
-<li>ctrl+alt+H, 方法调用记录</li>
-</ul>
-<h2 id="调试Java"><a href="#调试Java" class="headerlink" title="调试Java"></a>调试Java</h2><h3 id="打印gc信息"><a href="#打印gc信息" class="headerlink" title="打印gc信息"></a>打印gc信息</h3><p>添加Vm参数：</p>
-<ul>
-<li>-verbose:gc    设置垃圾回收日志打印的文件，文件名称可以自定义） </li>
-<li>-XX:+PrintGCTimeStamps （打印垃圾回收时间信息时的时间格式）</li>
-<li>-XX:+PrintGCDetails（打印垃圾回收详情） </li>
-<li>-Xmx64m （限制内存大小，模拟内存溢出时用）<br>示例：<br><img src="/images/pasted-88.png" alt="upload successful"></li>
-</ul>
-<h3 id="JVM的GC日志的主要参数包括如下几个："><a href="#JVM的GC日志的主要参数包括如下几个：" class="headerlink" title="JVM的GC日志的主要参数包括如下几个："></a>JVM的GC日志的主要参数包括如下几个：</h3><ul>
-<li>-XX:+PrintGC 输出GC日志</li>
-<li>-XX:+PrintGCDetails 输出GC的详细日志</li>
-<li>-XX:+PrintGCTimeStamps 输出GC的时间戳（以基准时间的形式）</li>
-<li>-XX:+PrintGCDateStamps 输出GC的时间戳（以日期的形式，如 2013-05-04T21:53:59.234+0800）</li>
-<li>-XX:+PrintHeapAtGC 在进行GC的前后打印出堆的信息</li>
-<li>-Xloggc:../logs/gc.log 日志文件的输出路径</li>
-</ul>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
   </div>
 
   
@@ -1430,7 +1405,7 @@ Translation</code></pre><h2 id="熟悉快捷键"><a href="#熟悉快捷键" clas
       <div class="site-state-item site-state-posts">
           <a href="/archives">
         
-          <span class="site-state-item-count">46</span>
+          <span class="site-state-item-count">47</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>

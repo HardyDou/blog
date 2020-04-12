@@ -21,20 +21,23 @@
     var CONFIG = {"hostname":"www.hardydou.com","root":"/","scheme":"Pisces","version":"7.7.1","exturl":false,"sidebar":{"position":"left","width":240,"b2t":true,"scrollpercent":true,"display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":true,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
-  <meta name="description" content="常见博客系统 wordpress Zblog Typecho hexo  应该选择哪个选择是恐惧的，所以我总在尝试进行降维选择。这里不会对几个主流博客进行一一对比了，问自己两个问题即可：  工具：你喜欢用word写？还是用md语法写？ 成本：你准备投入多少钱？  结论：  工具选择md语法，别犹豫直接选择 hexo  因为可以是0成本 工具选择word，别犹豫直接选择wordpress 成本为10">
+  <meta name="description" content="演进 Java6 char[]、offset、count、hash 四个成员变量。 offset、count 使得String.subString方法可以共享char[]数组，但是存在内存泄漏问题。  思考： 1234JDK1.6String str1&#x3D;&quot;abc&quot;;String str2&#x3D;str1.subString(0,1);这两个对象占多大内存呢？  J">
 <meta property="og:type" content="article">
-<meta property="og:title" content="选定&amp;搭建博客">
-<meta property="og:url" content="http://www.hardydou.com/2018/11/28/%E9%80%89%E5%AE%9A-%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/index.html">
+<meta property="og:title" content="String类型">
+<meta property="og:url" content="http://www.hardydou.com/2020/04/10/String%E7%B1%BB%E5%9E%8B/index.html">
 <meta property="og:site_name" content="小鱼先生">
-<meta property="og:description" content="常见博客系统 wordpress Zblog Typecho hexo  应该选择哪个选择是恐惧的，所以我总在尝试进行降维选择。这里不会对几个主流博客进行一一对比了，问自己两个问题即可：  工具：你喜欢用word写？还是用md语法写？ 成本：你准备投入多少钱？  结论：  工具选择md语法，别犹豫直接选择 hexo  因为可以是0成本 工具选择word，别犹豫直接选择wordpress 成本为10">
+<meta property="og:description" content="演进 Java6 char[]、offset、count、hash 四个成员变量。 offset、count 使得String.subString方法可以共享char[]数组，但是存在内存泄漏问题。  思考： 1234JDK1.6String str1&#x3D;&quot;abc&quot;;String str2&#x3D;str1.subString(0,1);这两个对象占多大内存呢？  J">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2018-11-28T11:33:00.000Z">
-<meta property="article:modified_time" content="2019-05-05T05:36:02.940Z">
+<meta property="og:image" content="http://www.hardydou.com/images/pasted-194.png">
+<meta property="article:published_time" content="2020-04-10T07:48:00.000Z">
+<meta property="article:modified_time" content="2020-04-12T19:57:50.476Z">
 <meta property="article:author" content="小鱼先生">
-<meta property="article:tag" content="hexo">
+<meta property="article:tag" content="java">
+<meta property="article:tag" content="java数据类型">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://www.hardydou.com/images/pasted-194.png">
 
-<link rel="canonical" href="http://www.hardydou.com/2018/11/28/%E9%80%89%E5%AE%9A-%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/">
+<link rel="canonical" href="http://www.hardydou.com/2020/04/10/String%E7%B1%BB%E5%9E%8B/">
 
 
 <script id="page-configurations">
@@ -46,7 +49,7 @@
   };
 </script>
 
-  <title>选定&搭建博客 | 小鱼先生</title>
+  <title>String类型 | 小鱼先生</title>
   
 
 
@@ -163,7 +166,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block " lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://www.hardydou.com/2018/11/28/%E9%80%89%E5%AE%9A-%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/">
+    <link itemprop="mainEntityOfPage" href="http://www.hardydou.com/2020/04/10/String%E7%B1%BB%E5%9E%8B/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.jpg">
@@ -176,7 +179,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          选定&搭建博客
+          String类型
         </h1>
 
         <div class="post-meta">
@@ -186,14 +189,14 @@
               </span>
               <span class="post-meta-item-text">发表于</span>
 
-              <time title="创建时间：2018-11-28 19:33:00" itemprop="dateCreated datePublished" datetime="2018-11-28T19:33:00+08:00">2018-11-28</time>
+              <time title="创建时间：2020-04-10 15:48:00" itemprop="dateCreated datePublished" datetime="2020-04-10T15:48:00+08:00">2020-04-10</time>
             </span>
               <span class="post-meta-item">
                 <span class="post-meta-item-icon">
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2019-05-05 13:36:02" itemprop="dateModified" datetime="2019-05-05T13:36:02+08:00">2019-05-05</time>
+                <time title="修改时间：2020-04-13 03:57:50" itemprop="dateModified" datetime="2020-04-13T03:57:50+08:00">2020-04-13</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -201,8 +204,8 @@
               </span>
               <span class="post-meta-item-text">分类于</span>
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E5%B7%A5%E5%85%B7/" itemprop="url" rel="index">
-                    <span itemprop="name">工具</span>
+                  <a href="/categories/java/" itemprop="url" rel="index">
+                    <span itemprop="name">java</span>
                   </a>
                 </span>
             </span>
@@ -216,8 +219,8 @@
       </span>
       <span class="post-meta-item-text">Valine：</span>
     
-    <a title="valine" href="/2018/11/28/%E9%80%89%E5%AE%9A-%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/#valine-comments" itemprop="discussionUrl">
-      <span class="post-comments-count valine-comment-count" data-xid="/2018/11/28/%E9%80%89%E5%AE%9A-%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/" itemprop="commentCount"></span>
+    <a title="valine" href="/2020/04/10/String%E7%B1%BB%E5%9E%8B/#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/2020/04/10/String%E7%B1%BB%E5%9E%8B/" itemprop="commentCount"></span>
     </a>
   </span>
   
@@ -232,117 +235,41 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <h3 id="常见博客系统"><a href="#常见博客系统" class="headerlink" title="常见博客系统"></a>常见博客系统</h3><ol>
-<li>wordpress</li>
-<li>Zblog</li>
-<li>Typecho</li>
-<li>hexo</li>
+        <h2 id="演进"><a href="#演进" class="headerlink" title="演进"></a>演进</h2><p><img src="/images/pasted-194.png" alt="String对象演进"></p>
+<h3 id="Java6"><a href="#Java6" class="headerlink" title="Java6"></a>Java6</h3><ol>
+<li>char[]、offset、count、hash 四个成员变量。</li>
+<li>offset、count 使得String.subString方法可以共享char[]数组，但是存在内存泄漏问题。</li>
 </ol>
-<h3 id="应该选择哪个"><a href="#应该选择哪个" class="headerlink" title="应该选择哪个"></a>应该选择哪个</h3><p>选择是恐惧的，所以我总在尝试进行降维选择。这里不会对几个主流博客进行一一对比了，问自己两个问题即可：</p>
-<ol>
-<li>工具：你喜欢用word写？还是用md语法写？</li>
-<li>成本：你准备投入多少钱？</li>
+<p>思考：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">JDK1.6</span><br><span class="line">String str1&#x3D;&quot;abc&quot;;</span><br><span class="line">String str2&#x3D;str1.subString(0,1);</span><br><span class="line">这两个对象占多大内存呢？</span><br></pre></td></tr></table></figure>
+
+<h3 id="Java7、8"><a href="#Java7、8" class="headerlink" title="Java7、8"></a>Java7、8</h3><ol>
+<li>char[]、hash 2个成员变量</li>
+<li>String.substring 方法也不再共享 char[]。</li>
 </ol>
-<p>结论：</p>
-<ol>
-<li>工具选择md语法，别犹豫直接选择 hexo  因为可以是0成本</li>
-<li>工具选择word，别犹豫直接选择wordpress 成本为100+/年</li>
-<li>你想用word 又想降低成本，选择云平台：简书 等</li>
+<h3 id="Java9"><a href="#Java9" class="headerlink" title="Java9"></a>Java9</h3><ol>
+<li>byte[]、coder、hash 三个成员变量</li>
+<li>改用byte[] 为了节约空间，coder 标识编码方式（0：只包含Latin-1、1：包含UTF-16）</li>
 </ol>
-<h3 id="搭建hexo平台"><a href="#搭建hexo平台" class="headerlink" title="搭建hexo平台"></a>搭建hexo平台</h3><h4 id="步骤概览"><a href="#步骤概览" class="headerlink" title="步骤概览"></a>步骤概览</h4><ol>
-<li>安装node</li>
-<li>安装git</li>
-<li>安装hexo</li>
-<li>注册 coding 账号</li>
-<li>注册 github 账号（非必须）</li>
-<li>买域名（非必须）</li>
-<li>开通云主机（非必须）</li>
-</ol>
-<h4 id="步骤拆解"><a href="#步骤拆解" class="headerlink" title="步骤拆解"></a>步骤拆解</h4><h5 id="安装node-已经安装的忽略"><a href="#安装node-已经安装的忽略" class="headerlink" title="安装node(已经安装的忽略)"></a>安装node(已经安装的忽略)</h5><ul>
-<li><p>MAC环境</p>
-<p>  <a href="https://brew.sh/index_zh-cn" target="_blank" rel="noopener">安装homebrew</a></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;usr&#x2F;bin&#x2F;ruby -e &quot;$(curl -fsSL https:&#x2F;&#x2F;raw.githubusercontent.com&#x2F;Homebrew&#x2F;install&#x2F;master&#x2F;install)&quot;</span><br></pre></td></tr></table></figure>
-<p><a href="https://nodejs.org/zh-cn/download/package-manager" target="_blank" rel="noopener">安装node</a></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">brew install node</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>WIN环境</p>
-<p>  <a href="https://nodejs.org/zh-cn/download/package-manager" target="_blank" rel="noopener">安装node</a></p>
-</li>
-</ul>
-<h5 id="安装GIT"><a href="#安装GIT" class="headerlink" title="安装GIT"></a>安装GIT</h5><ul>
-<li><p>MAC环境</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">brew install git</span><br></pre></td></tr></table></figure></li>
-<li><p>WIN环境</p>
-<p>  <a href="https://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000/00137396287703354d8c6c01c904c7d9ff056ae23da865a000" target="_blank" rel="noopener">参考安装教程</a></p>
-</li>
-</ul>
-<h5 id="安装Hexo"><a href="#安装Hexo" class="headerlink" title="安装Hexo"></a>安装Hexo</h5><pre><code>npm install hexo-cli -g
-hexo init blog
-cd blog
-npm install
-hexo server</code></pre><p>浏览器打开 <a href="http://localhost:4000" target="_blank" rel="noopener">http://localhost:4000</a> 就可以访问你刚才安装的hexo了</p>
-<h5 id="搞定Coding环境"><a href="#搞定Coding环境" class="headerlink" title="搞定Coding环境"></a>搞定Coding环境</h5><ul>
-<li><a href="https://coding.net/" target="_blank" rel="noopener">注册</a></li>
-<li><a href="https://coding.net/user/projects" target="_blank" rel="noopener">创建一个项目</a></li>
-<li>配置Page属性，项目—&gt;代码—&gt;Page服务<br>到此，你会得到一个xxx.coding.me/项目名称 网络地址。</li>
-</ul>
-<h5 id="发布"><a href="#发布" class="headerlink" title="发布"></a>发布</h5><ul>
-<li><p>生成静态文件</p>
-<pre><code>hexo generate</code></pre></li>
-<li><p>配置发布地址</p>
-<pre><code>_config.yml 
-deploy:
-    type: git
-    repo:
-      coding: git@git.coding.net:xxx/xxx.git,master
-    name:your name 
-    email: doouxiaoyu@163.com</code></pre></li>
-<li><p>配置GIT账号</p>
-<pre><code>git config --global user.name
-git config --global user.email</code></pre></li>
-<li><p>配置GIT证书</p>
-<pre><code>#生成证书
-#配置coding 部署公钥</code></pre></li>
-<li><p>发布文件</p>
-<pre><code>hexo deploy</code></pre></li>
-</ul>
-<p>到此，你访问你的coding 地址就会看到你的hexo文章信息了。</p>
-<p>这只是开始，你还得学习hexo的以下内容：</p>
-<ol>
-<li>模版 </li>
-<li>主题</li>
-<li>插件</li>
-</ol>
-<h5 id="添加github支持"><a href="#添加github支持" class="headerlink" title="添加github支持"></a>添加github支持</h5><p><strong>目的</strong><br>github功能跟coding一样一样的，增加它的目的有两个</p>
-<ol>
-<li>不要钱，也不增加工作量</li>
-<li>有自己域名的可以 配置中国访问coding，外国访问 github内容。</li>
-</ol>
-<p><strong>开通步骤</strong> </p>
+<h2 id="创建-amp-内存位置"><a href="#创建-amp-内存位置" class="headerlink" title="创建&amp;内存位置"></a>创建&amp;内存位置</h2><p>2中创建方式：字面量（“abc”）、对象（new String()) ，存储位置有所不同。</p>
 <ul>
-<li>注册github账号</li>
-<li>创建项目</li>
-<li>开通page功能</li>
-<li>配置公钥证书</li>
-<li>修改hexo博客配置文件_config.yml<pre><code>deploy:
-    type: git
-    repo:
-      coding: git@git.coding.net:xxx/xxx.git,master
-      github:xxxxxxx,master
-    name:your name 
-    email: xxx@163.com</code></pre></li>
+<li>字面量创建方式：如果<code>字符串常量池</code>存在直接返回、否则在常量池创建然后返回。</li>
+<li>构造方法创建：先在字符串常量池寻找，找到后直接使用，未找到在对象中创建。</li>
 </ul>
-<h5 id="购买域名"><a href="#购买域名" class="headerlink" title="购买域名"></a>购买域名</h5><p><strong>目的</strong></p>
-<ol>
-<li>牛逼</li>
-<li>方便</li>
-</ol>
-<h5 id="开通云主机"><a href="#开通云主机" class="headerlink" title="开通云主机"></a>开通云主机</h5><p><strong>目的</strong></p>
-<ol>
-<li>牛逼</li>
-<li>hexo 部署到云主机上面可以随时写文字</li>
-<li>可以直接部署自己的博客从而不再依赖coding，github。访问速度更快</li>
-</ol>
+<h3 id="字符串常量池"><a href="#字符串常量池" class="headerlink" title="字符串常量池"></a>字符串常量池</h3><p>内存位置：方法区-运行时常量池（jdk1.6）、堆-运行时常量池（jdk.7)、堆-元空间（jdk1.8），目前还存在堆内元空间。</p>
+<h4 id="特点"><a href="#特点" class="headerlink" title="特点"></a>特点</h4><ul>
+<li>共享的：多个对象共用一个真实数据；</li>
+<li>不可变：因为一旦变了所有的都会改变；</li>
+<li>拼接字符串的性能较差的原因，每次都有创建新的；</li>
+</ul>
+<h2 id="比较"><a href="#比较" class="headerlink" title="比较"></a>比较</h2><p>”==“ 当且仅当确定两个对象都在常量池时 可以使用”==“进行比较。任何时候都可以使用equals方法进行比较。</p>
+<h2 id="intern方法"><a href="#intern方法" class="headerlink" title="intern方法"></a>intern方法</h2><p>返回字符串的常量池引用，不存在的话先将对象的字符串<code>引用</code>放入常量池。强制共享对象，使用好了可以降低内存占用。</p>
+<p>思考下面代码、为什么？</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">String str1&#x3D;new String(&quot;c&quot;)+new String(&quot;d&quot;);</span><br><span class="line">str1.intern();</span><br><span class="line">String str2&#x3D;&quot;cd&quot;;</span><br><span class="line">str1&#x3D;&#x3D;str2   is  True</span><br><span class="line">&#x2F;&#x2F; &#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;</span><br><span class="line">String str3&#x3D;&quot;ab&quot;;</span><br><span class="line">String str4&#x3D;new String(&quot;a&quot;)+new String(&quot;b&quot;);</span><br><span class="line">str4.intern();</span><br><span class="line">str3&#x3D;&#x3D;str4  is False</span><br></pre></td></tr></table></figure>
+
+<h2 id="编译优化"><a href="#编译优化" class="headerlink" title="编译优化"></a>编译优化</h2><p>字符串拼接优化（+），编译后实际使用StringBuilder操作。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">String str3&#x3D;new String(&quot;c&quot;)+new String(&quot;d&quot;);</span><br><span class="line"></span><br><span class="line">编译后：</span><br><span class="line">StringBuilder sb&#x3D;new StringBuilder();</span><br><span class="line">sb.append(new String(&quot;c&quot;));</span><br><span class="line">sb.append(new String(&quot;d&quot;));</span><br><span class="line">str3&#x3D;sb.toString();</span><br></pre></td></tr></table></figure>
+
 
     </div>
 
@@ -354,11 +281,11 @@ git config --global user.email</code></pre></li>
 <div>
 <ul class="post-copyright">
   <li class="post-copyright-author">
-    <strong>本文作者： </strong>Hardy Dou
+    <strong>本文作者： </strong>小鱼先生
   </li>
   <li class="post-copyright-link">
     <strong>本文链接：</strong>
-    <a href="http://www.hardydou.com/2018/11/28/%E9%80%89%E5%AE%9A-%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/" title="选定&搭建博客">http://www.hardydou.com/2018/11/28/选定-搭建博客/</a>
+    <a href="http://www.hardydou.com/2020/04/10/String%E7%B1%BB%E5%9E%8B/" title="String类型">http://www.hardydou.com/2020/04/10/String类型/</a>
   </li>
   <li class="post-copyright-license">
     <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fa fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
@@ -369,7 +296,8 @@ git config --global user.email</code></pre></li>
 
       <footer class="post-footer">
           <div class="post-tags">
-              <a href="/tags/hexo/" rel="tag"># hexo</a>
+              <a href="/tags/java/" rel="tag"># java</a>
+              <a href="/tags/java%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/" rel="tag"># java数据类型</a>
           </div>
 
         
@@ -378,13 +306,10 @@ git config --global user.email</code></pre></li>
         
     <div class="post-nav">
       <div class="post-nav-item">
-    <a href="/2018/11/28/%E4%BD%9C%E6%88%98%E8%AE%A1%E5%88%92/" rel="prev" title="作战计划">
-      <i class="fa fa-chevron-left"></i> 作战计划
+    <a href="/2020/04/10/boolean%E7%B1%BB%E5%9E%8B/" rel="prev" title="boolean类型">
+      <i class="fa fa-chevron-left"></i> boolean类型
     </a></div>
-      <div class="post-nav-item">
-    <a href="/2018/11/29/java%E7%AE%80%E4%BB%8B/" rel="next" title="Java简介">
-      Java简介 <i class="fa fa-chevron-right"></i>
-    </a></div>
+      <div class="post-nav-item"></div>
     </div>
       </footer>
     
@@ -445,7 +370,7 @@ git config --global user.email</code></pre></li>
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#常见博客系统"><span class="nav-number">1.</span> <span class="nav-text">常见博客系统</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#应该选择哪个"><span class="nav-number">2.</span> <span class="nav-text">应该选择哪个</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#搭建hexo平台"><span class="nav-number">3.</span> <span class="nav-text">搭建hexo平台</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#步骤概览"><span class="nav-number">3.1.</span> <span class="nav-text">步骤概览</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#步骤拆解"><span class="nav-number">3.2.</span> <span class="nav-text">步骤拆解</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#安装node-已经安装的忽略"><span class="nav-number">3.2.1.</span> <span class="nav-text">安装node(已经安装的忽略)</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#安装GIT"><span class="nav-number">3.2.2.</span> <span class="nav-text">安装GIT</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#安装Hexo"><span class="nav-number">3.2.3.</span> <span class="nav-text">安装Hexo</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#搞定Coding环境"><span class="nav-number">3.2.4.</span> <span class="nav-text">搞定Coding环境</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#发布"><span class="nav-number">3.2.5.</span> <span class="nav-text">发布</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#添加github支持"><span class="nav-number">3.2.6.</span> <span class="nav-text">添加github支持</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#购买域名"><span class="nav-number">3.2.7.</span> <span class="nav-text">购买域名</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#开通云主机"><span class="nav-number">3.2.8.</span> <span class="nav-text">开通云主机</span></a></li></ol></li></ol></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#演进"><span class="nav-number">1.</span> <span class="nav-text">演进</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Java6"><span class="nav-number">1.1.</span> <span class="nav-text">Java6</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Java7、8"><span class="nav-number">1.2.</span> <span class="nav-text">Java7、8</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Java9"><span class="nav-number">1.3.</span> <span class="nav-text">Java9</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#创建-amp-内存位置"><span class="nav-number">2.</span> <span class="nav-text">创建&amp;内存位置</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#字符串常量池"><span class="nav-number">2.1.</span> <span class="nav-text">字符串常量池</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#特点"><span class="nav-number">2.1.1.</span> <span class="nav-text">特点</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#比较"><span class="nav-number">3.</span> <span class="nav-text">比较</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#intern方法"><span class="nav-number">4.</span> <span class="nav-text">intern方法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#编译优化"><span class="nav-number">5.</span> <span class="nav-text">编译优化</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 

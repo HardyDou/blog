@@ -4,6 +4,33 @@
   
     
     <entry>
+      <title>String类型</title>
+      <link href="/2020/04/10/String%E7%B1%BB%E5%9E%8B/"/>
+      <url>/2020/04/10/String%E7%B1%BB%E5%9E%8B/</url>
+      
+        <content type="html"><![CDATA[<h2 id="演进"><a href="#演进" class="headerlink" title="演进"></a>演进</h2><p><img src="/images/pasted-194.png" alt="String对象演进"></p><h3 id="Java6"><a href="#Java6" class="headerlink" title="Java6"></a>Java6</h3><ol><li>char[]、offset、count、hash 四个成员变量。</li><li>offset、count 使得String.subString方法可以共享char[]数组，但是存在内存泄漏问题。</li></ol><p>思考：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">JDK1.6</span><br><span class="line">String str1&#x3D;&quot;abc&quot;;</span><br><span class="line">String str2&#x3D;str1.subString(0,1);</span><br><span class="line">这两个对象占多大内存呢？</span><br></pre></td></tr></table></figure><h3 id="Java7、8"><a href="#Java7、8" class="headerlink" title="Java7、8"></a>Java7、8</h3><ol><li>char[]、hash 2个成员变量</li><li>String.substring 方法也不再共享 char[]。</li></ol><h3 id="Java9"><a href="#Java9" class="headerlink" title="Java9"></a>Java9</h3><ol><li>byte[]、coder、hash 三个成员变量</li><li>改用byte[] 为了节约空间，coder 标识编码方式（0：只包含Latin-1、1：包含UTF-16）</li></ol><h2 id="创建-amp-内存位置"><a href="#创建-amp-内存位置" class="headerlink" title="创建&amp;内存位置"></a>创建&amp;内存位置</h2><p>2中创建方式：字面量（“abc”）、对象（new String()) ，存储位置有所不同。</p><ul><li>字面量创建方式：如果<code>字符串常量池</code>存在直接返回、否则在常量池创建然后返回。</li><li>构造方法创建：先在字符串常量池寻找，找到后直接使用，未找到在对象中创建。</li></ul><h3 id="字符串常量池"><a href="#字符串常量池" class="headerlink" title="字符串常量池"></a>字符串常量池</h3><p>内存位置：方法区-运行时常量池（jdk1.6）、堆-运行时常量池（jdk.7)、堆-元空间（jdk1.8），目前还存在堆内元空间。</p><h4 id="特点"><a href="#特点" class="headerlink" title="特点"></a>特点</h4><ul><li>共享的：多个对象共用一个真实数据；</li><li>不可变：因为一旦变了所有的都会改变；</li><li>拼接字符串的性能较差的原因，每次都有创建新的；</li></ul><h2 id="比较"><a href="#比较" class="headerlink" title="比较"></a>比较</h2><p>”==“ 当且仅当确定两个对象都在常量池时 可以使用”==“进行比较。任何时候都可以使用equals方法进行比较。</p><h2 id="intern方法"><a href="#intern方法" class="headerlink" title="intern方法"></a>intern方法</h2><p>返回字符串的常量池引用，不存在的话先将对象的字符串<code>引用</code>放入常量池。强制共享对象，使用好了可以降低内存占用。</p><p>思考下面代码、为什么？</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">String str1&#x3D;new String(&quot;c&quot;)+new String(&quot;d&quot;);</span><br><span class="line">str1.intern();</span><br><span class="line">String str2&#x3D;&quot;cd&quot;;</span><br><span class="line">str1&#x3D;&#x3D;str2   is  True</span><br><span class="line">&#x2F;&#x2F; &#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;</span><br><span class="line">String str3&#x3D;&quot;ab&quot;;</span><br><span class="line">String str4&#x3D;new String(&quot;a&quot;)+new String(&quot;b&quot;);</span><br><span class="line">str4.intern();</span><br><span class="line">str3&#x3D;&#x3D;str4  is False</span><br></pre></td></tr></table></figure><h2 id="编译优化"><a href="#编译优化" class="headerlink" title="编译优化"></a>编译优化</h2><p>字符串拼接优化（+），编译后实际使用StringBuilder操作。</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">String str3&#x3D;new String(&quot;c&quot;)+new String(&quot;d&quot;);</span><br><span class="line"></span><br><span class="line">编译后：</span><br><span class="line">StringBuilder sb&#x3D;new StringBuilder();</span><br><span class="line">sb.append(new String(&quot;c&quot;));</span><br><span class="line">sb.append(new String(&quot;d&quot;));</span><br><span class="line">str3&#x3D;sb.toString();</span><br></pre></td></tr></table></figure>]]></content>
+      
+      
+      <categories>
+          
+          <category> java </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> java </tag>
+            
+            <tag> java数据类型 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>boolean类型</title>
       <link href="/2020/04/10/boolean%E7%B1%BB%E5%9E%8B/"/>
       <url>/2020/04/10/boolean%E7%B1%BB%E5%9E%8B/</url>
@@ -768,9 +795,9 @@
       
         <tags>
             
-            <tag> java </tag>
-            
             <tag> 刻意练习 </tag>
+            
+            <tag> java </tag>
             
             <tag> 注解 </tag>
             
@@ -1116,7 +1143,7 @@
       <link href="/2018/11/28/%E4%BD%9C%E6%88%98%E8%AE%A1%E5%88%92/"/>
       <url>/2018/11/28/%E4%BD%9C%E6%88%98%E8%AE%A1%E5%88%92/</url>
       
-        <content type="html"><![CDATA[<h3 id="一、准备工作"><a href="#一、准备工作" class="headerlink" title="一、准备工作"></a>一、准备工作</h3><h4 id="选定-amp-搭建好博客环境"><a href="#选定-amp-搭建好博客环境" class="headerlink" title="选定&amp;搭建好博客环境"></a><strong><em>选定&amp;搭建好博客环境</em></strong></h4><h4 id="制定渐进步骤"><a href="#制定渐进步骤" class="headerlink" title="制定渐进步骤"></a><strong><em>制定渐进步骤</em></strong></h4><h3 id="二、java基础"><a href="#二、java基础" class="headerlink" title="二、java基础"></a>二、java基础</h3><h4 id="java简介✅"><a href="#java简介✅" class="headerlink" title="java简介✅"></a>java简介✅</h4><ul><li>java在编程语言中的位置 </li><li>面向对象特点 </li><li>java如何做到写一次到处运行</li></ul><h4 id="java的基础数据类型✅"><a href="#java的基础数据类型✅" class="headerlink" title="java的基础数据类型✅"></a>java的基础数据类型✅</h4><ul><li>8个基本数据类型</li><li>各自内存大小、取值范围</li><li>具体存储方式</li></ul><h4 id="java引用数据类型✅"><a href="#java引用数据类型✅" class="headerlink" title="java引用数据类型✅"></a>java引用数据类型✅</h4><ul><li>java数据类型内存布局（对象头、数据、对齐）</li><li>java对象大小</li></ul><h4 id="boolean类型"><a href="#boolean类型" class="headerlink" title="boolean类型"></a>boolean类型</h4><ul><li>内存大小</li></ul><h4 id="String类型"><a href="#String类型" class="headerlink" title="String类型"></a>String类型</h4><h3 id="三、常见系统架构"><a href="#三、常见系统架构" class="headerlink" title="三、常见系统架构"></a>三、常见系统架构</h3><h4 id="待完善……"><a href="#待完善……" class="headerlink" title="待完善……"></a>待完善……</h4><h3 id="四、代码工具"><a href="#四、代码工具" class="headerlink" title="四、代码工具"></a>四、代码工具</h3><h4 id="JOL"><a href="#JOL" class="headerlink" title="JOL"></a>JOL</h4><h3 id="五、常见面试题"><a href="#五、常见面试题" class="headerlink" title="五、常见面试题"></a>五、常见面试题</h3><h4 id="待完善……-1"><a href="#待完善……-1" class="headerlink" title="待完善……"></a>待完善……</h4><h3 id="六、思考"><a href="#六、思考" class="headerlink" title="六、思考"></a>六、思考</h3><h4 id="Java中boolean类型占用多少个字节"><a href="#Java中boolean类型占用多少个字节" class="headerlink" title="Java中boolean类型占用多少个字节"></a>Java中boolean类型占用多少个字节</h4><h4 id="java中的基本数据类型一定存储在栈中的吗"><a href="#java中的基本数据类型一定存储在栈中的吗" class="headerlink" title="java中的基本数据类型一定存储在栈中的吗"></a>java中的基本数据类型一定存储在栈中的吗</h4>]]></content>
+        <content type="html"><![CDATA[<h3 id="一、准备工作"><a href="#一、准备工作" class="headerlink" title="一、准备工作"></a>一、准备工作</h3><h4 id="选定-amp-搭建好博客环境"><a href="#选定-amp-搭建好博客环境" class="headerlink" title="选定&amp;搭建好博客环境"></a><strong><em>选定&amp;搭建好博客环境</em></strong></h4><h4 id="制定渐进步骤"><a href="#制定渐进步骤" class="headerlink" title="制定渐进步骤"></a><strong><em>制定渐进步骤</em></strong></h4><h3 id="二、java基础"><a href="#二、java基础" class="headerlink" title="二、java基础"></a>二、java基础</h3><h4 id="java简介✅"><a href="#java简介✅" class="headerlink" title="java简介✅"></a>java简介✅</h4><ul><li>java在编程语言中的位置 </li><li>面向对象特点 </li><li>java如何做到写一次到处运行</li></ul><h4 id="java的基础数据类型✅"><a href="#java的基础数据类型✅" class="headerlink" title="java的基础数据类型✅"></a>java的基础数据类型✅</h4><ul><li>8个基本数据类型</li><li>各自内存大小、取值范围</li><li>具体存储方式</li></ul><h4 id="java引用数据类型✅"><a href="#java引用数据类型✅" class="headerlink" title="java引用数据类型✅"></a>java引用数据类型✅</h4><ul><li>java数据类型内存布局（对象头、数据、对齐）</li><li>java对象大小</li></ul><h4 id="boolean类型"><a href="#boolean类型" class="headerlink" title="boolean类型"></a>boolean类型</h4><ul><li>内存大小</li></ul><h4 id="String类型"><a href="#String类型" class="headerlink" title="String类型"></a>String类型</h4><ul><li>演进</li><li>创建方式与在内存中的存放</li><li>比较</li><li>intern</li><li>优化</li></ul><h3 id="三、常见系统架构"><a href="#三、常见系统架构" class="headerlink" title="三、常见系统架构"></a>三、常见系统架构</h3><h4 id="待完善……"><a href="#待完善……" class="headerlink" title="待完善……"></a>待完善……</h4><h3 id="四、代码工具"><a href="#四、代码工具" class="headerlink" title="四、代码工具"></a>四、代码工具</h3><h4 id="JOL"><a href="#JOL" class="headerlink" title="JOL"></a>JOL</h4><h3 id="五、常见面试题"><a href="#五、常见面试题" class="headerlink" title="五、常见面试题"></a>五、常见面试题</h3><h4 id="待完善……-1"><a href="#待完善……-1" class="headerlink" title="待完善……"></a>待完善……</h4><h3 id="六、思考"><a href="#六、思考" class="headerlink" title="六、思考"></a>六、思考</h3><h4 id="Java中boolean类型占用多少个字节"><a href="#Java中boolean类型占用多少个字节" class="headerlink" title="Java中boolean类型占用多少个字节"></a>Java中boolean类型占用多少个字节</h4><h4 id="java中的基本数据类型一定存储在栈中的吗"><a href="#java中的基本数据类型一定存储在栈中的吗" class="headerlink" title="java中的基本数据类型一定存储在栈中的吗"></a>java中的基本数据类型一定存储在栈中的吗</h4>]]></content>
       
       
       
