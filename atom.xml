@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.hardydou.com/"/>
-  <updated>2020-04-12T20:05:47.759Z</updated>
+  <updated>2020-04-30T01:13:36.757Z</updated>
   <id>http://www.hardydou.com/</id>
   
   <author>
@@ -15,6 +15,74 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>影响力</title>
+    <link href="http://www.hardydou.com/2020/04/29/%E5%BD%B1%E5%93%8D%E5%8A%9B/"/>
+    <id>http://www.hardydou.com/2020/04/29/影响力/</id>
+    <published>2020-04-29T01:51:00.000Z</published>
+    <updated>2020-04-30T01:13:36.757Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;作者：【美】罗伯特·西奥迪尼（Robert B.Cialdini)&lt;br&gt;在复杂的社会环境中，人类习惯了使用捷径（由局部特征得出结论）做决定，文明的进步也在于此。这个习惯就像固定的机器行为一旦被触发就会自动执行，即便违背你的意愿。作者将能够激活固定行为的方式方法称作“影响力武器”。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="读书" scheme="http://www.hardydou.com/categories/%E8%AF%BB%E4%B9%A6/"/>
+    
+    
+      <category term="读书" scheme="http://www.hardydou.com/tags/%E8%AF%BB%E4%B9%A6/"/>
+    
+      <category term="营销" scheme="http://www.hardydou.com/tags/%E8%90%A5%E9%94%80/"/>
+    
+      <category term="顺从" scheme="http://www.hardydou.com/tags/%E9%A1%BA%E4%BB%8E/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>collection的mistake</title>
+    <link href="http://www.hardydou.com/2020/04/14/collection%E7%9A%84mistake/"/>
+    <id>http://www.hardydou.com/2020/04/14/collection的mistake/</id>
+    <published>2020-04-14T04:38:00.000Z</published>
+    <updated>2020-04-14T04:52:59.305Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;最近阅读集合源码发现一个问题，collection 下面的对象总有父类实现某接口子类再次实现次接口。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="思考" scheme="http://www.hardydou.com/categories/%E6%80%9D%E8%80%83/"/>
+    
+    
+      <category term="java" scheme="http://www.hardydou.com/tags/java/"/>
+    
+      <category term="思考" scheme="http://www.hardydou.com/tags/%E6%80%9D%E8%80%83/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Java基础知识面试题</title>
+    <link href="http://www.hardydou.com/2020/04/14/Java%E5%9F%BA%E7%A1%80%E9%9D%A2%E8%AF%95%E9%A2%98/"/>
+    <id>http://www.hardydou.com/2020/04/14/Java基础面试题/</id>
+    <published>2020-04-14T03:01:00.000Z</published>
+    <updated>2020-05-18T05:31:54.934Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;初级，语言特点、数据类型、数据结构、字符串对象、异常处理、lang包&lt;br&gt;中级，内存模型、内存结构、加载机制、语法糖、虚拟机性能监控工具、多线程&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="java" scheme="http://www.hardydou.com/categories/java/"/>
+    
+    
+      <category term="java" scheme="http://www.hardydou.com/tags/java/"/>
+    
+      <category term="面试题" scheme="http://www.hardydou.com/tags/%E9%9D%A2%E8%AF%95%E9%A2%98/"/>
+    
+  </entry>
   
   <entry>
     <title>String类型</title>
@@ -377,66 +445,6 @@
     
     
       <category term="设计模式" scheme="http://www.hardydou.com/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>工厂模式</title>
-    <link href="http://www.hardydou.com/2019/07/01/factory-parttern/"/>
-    <id>http://www.hardydou.com/2019/07/01/factory-parttern/</id>
-    <published>2019-07-01T12:30:00.000Z</published>
-    <updated>2020-02-19T05:38:47.559Z</updated>
-    
-    <summary type="html">
-    
-      &lt;h2 id=&quot;概览&quot;&gt;&lt;a href=&quot;#概览&quot; class=&quot;headerlink&quot; title=&quot;概览&quot;&gt;&lt;/a&gt;概览&lt;/h2&gt;&lt;p&gt;工厂模式是 创建型模式，可以分2大类：工厂方法模式、抽象工厂模式。工厂方法模式又可以分为：简单工厂模式、工厂方法模式。&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="架构设计" scheme="http://www.hardydou.com/categories/%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1/"/>
-    
-    
-      <category term="设计模式" scheme="http://www.hardydou.com/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>知识经济</title>
-    <link href="http://www.hardydou.com/2019/06/24/Knowledge/"/>
-    <id>http://www.hardydou.com/2019/06/24/Knowledge/</id>
-    <published>2019-06-24T03:40:22.000Z</published>
-    <updated>2020-02-19T05:39:04.037Z</updated>
-    
-    <summary type="html">
-    
-      &lt;font size=6&gt;
-知识如果不能改变行为，就没有用处；
-但是知识一旦改变了行为，知识本身就立刻失去意义  
-&lt;/font &gt;
-&lt;font style=&quot;display:block;text-align:right;&quot; size=6 &gt;--《未来简史》&lt;/font&gt;
-    
-    </summary>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>Java线程安全</title>
-    <link href="http://www.hardydou.com/2019/06/12/thread-safe/"/>
-    <id>http://www.hardydou.com/2019/06/12/thread-safe/</id>
-    <published>2019-06-12T09:12:00.000Z</published>
-    <updated>2020-02-19T05:39:26.985Z</updated>
-    
-    <summary type="html">
-    
-      &lt;h2 id=&quot;为什么要用锁？&quot;&gt;&lt;a href=&quot;#为什么要用锁？&quot; class=&quot;headerlink&quot; title=&quot;为什么要用锁？&quot;&gt;&lt;/a&gt;为什么要用锁？&lt;/h2&gt;&lt;p&gt;锁-是为了解决并发操作引起的脏读、数据不一致的问题。&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="java" scheme="http://www.hardydou.com/categories/java/"/>
-    
-    
-      <category term="thread" scheme="http://www.hardydou.com/tags/thread/"/>
     
   </entry>
   
